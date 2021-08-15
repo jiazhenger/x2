@@ -1,0 +1,1 @@
+(this.webpackJsonpreact18=this.webpackJsonpreact18||[]).push([[34],{308:function(t,c,a){"use strict";a.r(c);a(9);var e=a(1);c.default=function(t){var c=t.href,a=t.title,s=t.className;return Object(e.jsx)("a",{href:c,target:"_black",className:"c0 tu ".concat(window.$.css(s)),children:a})}}}]);
