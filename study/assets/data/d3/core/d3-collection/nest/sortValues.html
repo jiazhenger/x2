@@ -1,0 +1,12 @@
+<u># 用法</u>
+<em>1、使用指定的参数 comparator 来给当前键值排序，等效于 d3.descending。如果没有指定 comparator 参数键的排序则返回 undefined</em>
+<em>2、注意：只影响实体操作符的结果；map操作符返回键的顺序永远是undefined，无论什么比较器</em>
+<u># 语法</u>
+<q>nest</q>.<b>sortKeys</b>(<s>comparator</s>)
+<u># 参数</u>
+<s>comparator</s> ：<em>必需，函数</em>
+<u># 示例</u>
+<em>// 从小到大排序</em>
+<em>const arr</em> = <q>d3</q>.<q>nest( )</q>.<b>sortValues</b>(<q>d3</q>.<u>ascending</u>).<q>entries</q>(<em>[3,5,2,1]</em>) 		<em>// => [1, 2, 3, 5]</em>
+<em>// 从大到小排序</em>
+<em>const arr</em> = <q>d3</q>.<q>nest( )</q>.<b>sortValues</b>(<q>d3</q>.<u>descending</u>).<q>entries</q>(<em>[3,5,2,1]</em>) 		<em>// => [5, 3, 2, 1]</em>

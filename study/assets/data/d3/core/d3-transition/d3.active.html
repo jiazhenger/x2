@@ -1,0 +1,21 @@
+<u># 用法</u>
+<em>1、返回指定 node 上指定 name 的活动的过渡(如果存在的话)</em>
+<em>2、如果没有指定 name 则使用 null</em>
+<em>3、如果指定的 node 上没有对应的过渡则返回 null</em>
+<em>4、这个方法在创建循环过渡时很有用</em>
+<u># 语法</u>
+<q>d3</q>.<b>active</b>(<s>node</s>, <s>name</s>)
+<u># 参数</u>
+<s>node</s> ：<em>必需，node 节点</em>（<u>node</u>）
+<s>name</s> ：<em>可选，默认为 null</em>
+<u># 示例</u>
+<em># 创建循环过渡：</em>
+<q>d3</q>.<q>selectAll</q>(<em>'circle'</qm>)
+		.<q>transition( )</q>
+		.<q>delay</q>((<s>d</s>, <s>i</s>) => <s>i</s> * <em>50</em> )
+		.<q>on</q>(<em>'start'</em>,<u>function repeat( )</u>{
+			<q>d3</q>	.<b>active</b>(<u>this</u>).<q>style<q>(<em>'fill'</em>, <em>'red'</em>)
+				.<q>transition( )</q>.<q>style<q>(<em>'fill'</em>, <em>'green'</em>)
+				.<q>transition( )</q>.<q>style<q>(<em>'fill'</em>, <em>'blue'</em>)
+				.<q>transition( )</q>.<q>on<q>(<em>'start'</em>, <u>repeat</u>)
+		})

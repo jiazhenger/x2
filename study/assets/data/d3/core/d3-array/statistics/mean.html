@@ -1,0 +1,17 @@
+<u># 用法</u>
+<em>1、返回给定数组（array）的平均数</em>
+<em>2、如果数组为空，返回 undefined</em>
+<em>3、此方法忽略无效值(如 NaN 和 undefined)</em>
+<u># 语法</u>
+<q>d3</q>.<b>mean</b>(<s>array</s>, <s>accessor</s>)
+<u># 参数</u>
+<s>array</s> ： <em>必需，数组</em>
+<s>accessor</s> ： <em>可选，一个处理数据的函数</em>
+<u># 示例</u>
+<em># 无 accessor 函数</em>
+<em>const r</em> = <q>d3</q>.<b>mean</b>(<em>[ ]</em>) 		<em>// => undefined</em>
+<em>const r</em> = <q>d3</q>.<b>mean</b>(<em>[ 1, 7, 10 ]</em>) 		<em>// => 6</em>
+<em># 有 accessor 函数，相当于 map( )，返回处理后的数组，再取平均数</em>
+<em>const r</em> = <q>d3</q>.<b>mean</b>(<em>[ 1, 7, 10 ]</em>,<u>function</u>(<s>value</s>, <s>index</s>, <s>arr</s>){ 		<em>// => 16</em>
+	<u>return</u>  <s>value</s> + <em>10</em>
+})

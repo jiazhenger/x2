@@ -1,0 +1,15 @@
+<em>const</em> <q>browser</q> = ( ) => {
+	const u = <b>navigator.userAgent</b>
+	return {
+		<s>isTrident</s> 	: u.indexOf('<u>Trident</u>') > -1, 							<em>// IE内核</em>
+		<s>isPresto</s>		: u.indexOf('<u>Presto</u>') > -1, 							<em>// opera 内核</em>
+		<s>isWebKit</s> 	: u.indexOf('<u>AppleWebKit</u>') > -1, 						<em>// 苹果、谷歌内核</em>
+		<s>isGecko</s>		: u.indexOf('<u>Gecko</u>') > -1 && u.indexOf('<u>KHTML</u>') == -1, 	<em>// 火狐内核</em>
+		<s>isMobile</s> 	: !!u.match(/<u>AppleWebKit</u>.*<u>Mobile</u>.*/), 					<em>// 是否为移动终端</em>
+		<s>isIos</s> 		: !!u.match(/\(i[^;]+;( <u>U</u>;)? <u>CPU</u>.+<u>Mac OS X</u>/), 			<em>// ios 终端</em>
+		<s>isAndroid</s> 	: u.indexOf('<u>Android</u>') > -1 || u.indexOf('<u>Linux</u>') > -1, 		<em>// android 终端或 uc 浏览器</em>
+		<s>isIphone</s> 	: u.indexOf('<u>iPhone</u>') > -1 , 							<em>// 是否为 iPhone 或者 QQHD 浏览器</em>
+		<s>isIpad</s> 		: u.indexOf('<u>iPad</u>') > -1, 								<em>// 是否 iPad</em>
+		<s>isWebApp</s> 	: u.indexOf('<u>Safari</u>') == -1 							<em>// 是否web应该程序，没有头部与底部</em>
+	}
+}

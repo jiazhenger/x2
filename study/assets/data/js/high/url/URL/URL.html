@@ -1,0 +1,12 @@
+<u># 用法</u>
+<em>创建并返回一个URL对象，该URL对象引用使用绝对URL字符串，相对URL字符串和基本URL字符串指定的URL</em>
+<u># 语法</u>
+<em>const url</em> = <b>new URL</b>(<s>url</s>, <s>base</s>)
+<u># 参数</u>
+<s>url</s> 	: <em>必需。是一个表示绝对或相对 URL 的 DOMString。如果url 是相对 URL，则会将 base 用作基准 URL。如果 url 是绝对URL，则将忽略 base，无论是否有给出</em>
+<s>base</s> : <em>可选。是一个表示基准 URL 的 DOMString，在 url 是相对 URL 时，它才会起效。如果未指定，则默认为 ''</em>
+<u># 用法</u>
+<em>const a</em> = <b>new URL</b>('<s>/</s>', '<s>https://developer.mozilla.org</s>')
+<em>const b</em> = <b>new URL</b>('<s>https://developer.mozilla.org</s>')
+<em>const c</em> = <b>new URL</b>('<s>en-US/docs</s>', <s>b</s>)
+<em>const c</em> = <b>new URL</b>('<s>http://www.example.com</s>', '<s>https://developers.mozilla.com</s>')

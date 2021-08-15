@@ -1,0 +1,12 @@
+<u># 用法</u>
+<em>请求的 Body 信息</em>
+<u># 语法</u>
+<em>fetch('/api/search'</em>, {
+	<q>method</q> 	:	'<u>post</u>',						<em>// 仅 POST 才有 body </em>
+	<b>body</b>	:	<u>'a=0&b=1'</u> 					<em>// URLSearchParams</em>
+				<q>JSON.stringify(</q><u>{ a:0, b:1 }</u><q>)</q>		<em>// json 字符串</em>
+				<i>' '</i> 							<em>// FormData</em>
+				<i>' '</i>							<em>// Blob</em>
+				<i>' '</i> 							<em>// USVString</em>
+				<i>' '</i> 							<em>// BufferSource</em>
+})

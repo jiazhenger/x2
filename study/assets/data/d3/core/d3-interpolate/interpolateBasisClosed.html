@@ -1,0 +1,10 @@
+<u># 用法</u>
+<em>根据给定的一组 values 返回一个 B-splibe 插值器, 输入值必须为数值类型, 控制点是隐式重复的，这样得到的一维样条在 [0, 1] 中重复出现时会保持周期连贯性, 参考 d3.curveBasisClosed</em>
+<u># 语法</u>
+<em>const interpolate</em> = <q>d3</q>.<b>interpolateBasisClosed</b>(<s>values/s>)(<u>t</u>)
+<u># 参数</u>
+<s>values</s> ：<em>必需，数组</em>
+<s>t</s> ：<em>区间 [ 0, 1 ]</em>
+<u># 示例：</u>
+<em>const r</em> = <q>d3</q>.<b>interpolateBasisClosed</b>(<em>[ 0, 10 ]</em>)(<em>.5</em>) 				<em>// => 6.666666666666667</em>
+<em>const r</em> = <q>d3</q>.<b>interpolateBasisClosed</b>(<em>[ 10, 0 ]</em>)(<em>.5</em>) 				<em>// => 3.3333333333333335</em>

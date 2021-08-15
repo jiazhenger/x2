@@ -1,0 +1,10 @@
+<u># 用法</u>
+<em>1、当前过渡结束时，在相同的选定元素上返回一个新的过渡，这个过渡将在当前过渡结束时开始</em>
+<em>2、新的过渡继承了参考时间，也就是新的过渡的开始时间等于之前过渡的 delay 和 duration] 之和</em>
+<em>3、新的过渡也继承了当前过渡的 name, duration 以及 easing</em>
+<u># 语法</u>
+<em>transition</em>.<b>transition( )</b>
+<u># 创建链式过渡</u>
+<q>d3</q>.<q>selectAll</q>(<em>'div'</em>)	.<b>transition( )</b>.<q>style</q>(<em>'fill'</em>, <em>'red'</em>)
+				.<b>transition( )</b>.<q>style</q>(<em>'fill'</em>, <em>'green'</em>)
+				.<b>transition( )</b>.<q>delay</q>(<em>1000</em>).<q>style</q>(<em>'fill'</em>, <em>'green'</em>).<q>remove( )</q>

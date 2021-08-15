@@ -1,0 +1,10 @@
+<u># 用法</u>
+<em>注册一个新的键函数function。键函数将被输入数组中的每个元素调用，并且必须返回一个用于分配元素到它的组内的字符串标识符</em>
+<u># 语法</u>
+<q>nest</q>.<b>key</b>(<s>function</s>)
+<u># 参数</u>
+<s>function</s> ：<em>必需，函数</em>
+<u># 示例</u>
+<em>const arr</em> = <q>d3</q>.<q>nest( )</q>.<b>key</b>(<u>function</u>(<s>value</s>){
+	<u>return</u> <s>value</s>.<em>year</em>
+}).<q>entries</q>(<em>[{ year:2020, name:'d3' },{ year:2020, name:'three' }]</em>)		<em>// => [{key:"2020", values:[{ year:2020, name:'d3' },{ year:2020, name:'three' }]}]</em>

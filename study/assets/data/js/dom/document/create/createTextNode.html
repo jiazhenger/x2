@@ -1,0 +1,15 @@
+<u># 用法</u>
+<em>创建文本节点</em>
+<u># 语法</u>
+<em>const textNode</em> = <q>document</q>.<b>createTextNode</b>(<s>text</s>)
+<u># 参数</u>
+<s>text</s>: <em>必需。字符串。文本节点的文本</em>
+<u># 示例</u>
+<em>const</em> <u>textNode</u> =  <q>document</q>.<b>createTextNode</b>(<s>'文本内容'</s>) 		<em>// 创建一个文本节点</em>
+<em>document.body</em>.<q>appendChild</q>(<u>textNode</u> ) 					<em>// => 将文本节点 textNode 放入 body：&lt;body&gt;文本内容&lt;/body&gt;</em>
+
+<u># 示例</u>
+<em>const node</em> =  <q>document</q>.<q>createElement</q>(<em>'div'</em>)				<em>// 创建一个元素节点</em>
+<em>const</em> <u>textNode</u> =  <q>document</q>.<b>createTextNode</b>(<s>'文本内容'</s>) 		<em>// 创建一个文本节点</em>
+<em>node</em>.<q>appendChild</q>(<u>textNode</u> ) 							<em>// => 将文本节点 textNode 放入 node</em>
+<em>document.body</em>.<q>appendChild</q>(<em>node</em>) 						<em>// => 将创建的 div 放入 body 最后</em>

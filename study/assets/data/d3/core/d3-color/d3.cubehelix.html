@@ -1,0 +1,17 @@
+<u># 用法</u>
+<em>构建一个 HSL 颜色通道的颜色对象. 返回的颜色对象中包含 h, s 和 l 三个属性</em>
+<u># 语法</u>
+<q>d3</q>.<b>cubehelix</b>(<s>h</s>, <s>s</s>, <s>l</s>, <s>opacity</s>)
+<q>d3</q>.<b>cubehelix</b>(<s>specifier</s>)
+<q>d3</q>.<b>cubehelix</b>(<s>color</s>)
+<u># 参数</u>
+<s>h</s> ： <em>必需，h 值</em>
+<s>s</s> ： <em>必需，s 值</em>
+<s>l</s> ： <em>必需，l 值</em>
+<s>opacity</s> ： <em>可选，透明度，[0,1]</em>
+<s>specifier</s> ： <em>必需，颜色字符串</em>
+<s>color</s> ： <em>必需，颜色字符串</em>
+<u># 示例</u>
+<em>const r</em> = <q>d3</q>.<q>cubehelix</q>(<em>0,0,0,0.5</em>)		<em>// => Cubehelix {h: 0, s: 0, l: 0, opacity: 0.5}</em>
+<em>const r</em> = <q>d3</q>.<q>cubehelix</q>(<em>red</em>)		<em>// => Cubehelix {h: 351.8102617708421, s: 1.9488976453722686, l: 0.2999994453152424, opacity: 1}</em>
+<em>const r</em> = <q>d3</q>.<q>cubehelix</q>(<em>rgba(0,0,0,.5)</em>)		<em>// => Cubehelix {h: NaN, s: NaN, l: 0, opacity: 0.5}</em>

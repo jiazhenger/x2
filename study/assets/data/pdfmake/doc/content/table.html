@@ -1,0 +1,28 @@
+<em>const docDefinition</em> = {
+	<q>content</q> : [
+		{
+			<em>// 边框设置，默认有边框</em>
+			<b>layout</b>	:	<i>'lightHorizontalLines'</i>, 		<em>// 横线分隔</em>
+						<i>'noBorders'</i>, 				<em>// 无边框</em>
+						<i>'headerLineOnly'</i>, 				<em>// 无边框</em>
+			<b>table</b> : {
+				<s>headerRows</s>	: <em>1</em>		<em>// </em>
+				<s>widths</s>	: <i>[</i> <em>'*', 'auto', 100, '*'</em> <i>]</i>		<em>// 列宽</em>
+			}
+			<em>// tr、td</em>
+			<b>body</b> : <i>[</i>
+				<i>[</i> <em>'columns1'</em>,	<em>'columns2'</em>,	<em>'columns3'</em>,	<em>'columns4'</em> <i>]</i>,
+				<i>[</i> 
+					<em>'columns1'</em>,
+					<em>'columns2'</em>,
+					<em>'columns3'</em>,
+					{ 
+						<u>text</u>			: <em>'columns4'</em>, 
+						<s>fillColor</s>		: <em>'red'</em>		<em>// 单元格的背景色</em>,
+						<s>fillOpacity</s>	: <em>'red'</em>		<em>// 表格单元格的背景透明度</em>
+					} 
+				<i>]</i>,
+			<i>]</i>	
+		}
+	]
+}

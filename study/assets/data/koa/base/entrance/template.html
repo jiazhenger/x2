@@ -1,0 +1,21 @@
+<em>const Koa= require('koa')</em>
+<em>const</em> <u>path</u> = <em>require('path')</em>
+<em>const</em> <b>views</b> = <em>require</em>('<u>koa-views</u>') 		<em>//</em> <u>npm i koa-views ejs --only=dev</u>
+<em>const app = new Koa( )</em>
+<em># 使用模板引擎中间件</em>
+<s>app</s>.<i>use</i>( 
+	<b>views</b>( 
+		<u>path</u>.<em>join</em>(<em>__dirname</em>, '<em>./views</em>'), 		<em>// 模板路由 = 绝对路由 + '/views'</em>
+		{ 		
+			<b>extension</b>: '<b>ejs</b>'				<em>// 模板引擎为 ejs</em>
+		} 
+	) 
+)
+<em># 使用模板</em>
+<s>app</s>.<i>use</i>( <em>async</em> <u>ctx</u> => {
+	<em>await</em> <u>ctx</u>.<b>render</b>(
+		<em>'index'</em>, 						<em>// 模板文件名：views/index.ejs</em>
+		<i>{</i> <em>title: 'hello koa2'</em> <i>}</i> 			<em>// 传递到模板的参数：&lt;%= title %&gt;</em>
+	)
+})
+<em>app.listen(3005)</em>

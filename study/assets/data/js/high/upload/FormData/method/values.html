@@ -1,0 +1,11 @@
+<u># 用法</u>
+<em>返回一个允许遍历该对象中所有值的 迭代器 。这些值是 USVString 或是Blob 对象</em>
+<u># 语法</u>
+<em>const value</em> = <em>fd</em>.<b>values( )</b>
+<u># 示例</u>
+<em>const fd</em> = <q>new FormData( )</q>
+<em>fd</em>.<q>append</q>(<s>'name'</s>, <em>'javascript'</em>)
+<em>fd</em>.<q>append</q>(<s>'name'</s>, <em>'flutter'</em>)
+<u>for</u>(<em>let</em> <s>v</s> <u>of</u> <em>fd</em>.<b>values( )</b>){
+	<em>console.log</em>(<s>v</s>)		<em>// => javascript </em>
+}

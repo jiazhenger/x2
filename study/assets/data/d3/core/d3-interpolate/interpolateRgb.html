@@ -1,0 +1,11 @@
+<u># 用法</u>
+<em>返回一个 a 和 b 两种颜色值之间的 RGB 颜色空间插值器</em>
+<u># 语法</u>
+<em>const interpolate</em> = <q>d3</q>.<b>interpolateRgb</b>(<s>a</s>, <s>b</s>)(<u>t</u>)
+<u># 参数</u>
+<s>a</s> ：<em>必需，开始值</em>
+<s>b</s> ：em>必需，结束值</em>
+<s>t</s> ：<em>区间 [ 0, 1 ]</em>
+<u># 示例：</u>
+<em>const r</em> = <q>d3</q>.<b>interpolateRgb</b>(<em>'#f00'</em>, <em>'#cff'</em>)(<em>.5</em>) 				<em>// => rgb(230, 128, 128)</em>
+<em>const r</em> = <q>d3</q>.<b>interpolateRgb</b>(<em>'#cff'</em>, <em>'#f00'</em>)(<em>.5</em>) 				<em>// => rgb(230, 128, 128)</em>

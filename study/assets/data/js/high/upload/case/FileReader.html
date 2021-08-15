@@ -1,0 +1,78 @@
+const { $fn } = window
+const imageType = ['jpg','png','jpeg','gif']
+const maxMB = 2
+const maxKB = 1024 * 1024 * maxMB 			
+<em># 获取 base64</em>
+<em># 单图上传</em>
+const <s>FileReaderUploader</s> = e => {
+	const file = e.target.files[0]
+	const reader = <b>new FileReader()</b>
+	reader.<b>readAsDataURL</b>(file)
+	return <u>new Promise</u>(resolve => {
+		reader.<b>onload</b> = function (e) {
+			resolve(this.<b>result</b>)
+		}
+	})
+}
+<em># 多图上传</em>
+const <i>getBase64</i> = async file => {
+	const reader = <b>new FileReader()</b>
+	reader.<b>readAsDataURL</b>(file)
+	let base64 = null
+	return <u>new Promise</u>(resolve => {
+		reader.<b>onload</b> = function (e) {
+			resolve(this.<b>result</b>)
+		}
+	})
+}
+const <s>FileReaderUploaders</s> = e => {
+	const uploadFiles = e.target.files
+	const files = Array.prototype.slice.call(uploadFiles,0)
+	let result = { }
+	return <u>new Promise</u>(resolve=>{
+		arr.forEach(file => {
+			<i>getBase64</i>(file).then( base64 => {
+				resolve(base64)
+			})
+		})
+	})
+}
+<em># 上传并判断</em>
+const <q>getValid</q> = e => {
+	if(!(e instanceof Event) || !e.target || !( e.target.files instanceof FileList)){  return $fn.toast('未选择要上传的图片') }
+	const files = e.target.files
+	let bool = true
+	for(var i=0; i&lt;files.length; i++){
+		const file = files[i]
+		<em>// 判断上传文件格式</em>
+		const suffix = file.name.substring(file.name.lastIndexOf('.')+1).toLowerCase()
+		if(imageType.indexOf(suffix) === -1){
+			$fn.toast( file.name + '的格式必须为png、jpg、jpeg！')
+			bool = false
+			break
+		}
+		<em>// 限制图片上传大小</em>
+		if(file.size &gt; maxKB){
+			$fn.toast( file.name + '文件尺寸超过最大限制' + maxMB + 'M')
+			bool = false
+			break
+		}
+	}
+	return bool 
+}
+<em># 判断 + 上传</em>
+const Upload = <u>async</u> e => {
+	if(<q>getValid</q>(e)){
+		return <u>await</u> <s>FileReaderUploader</s>(e)
+		return <u>await</u> <s>FileReaderUploaders</s>(e)
+	}
+}
+<em># 使用</em>
+document.querySelector('#upload').onchange = e => {
+	<q>Upload</q>(e).then( base64 => {
+		<em>$http.submit(this,'api',{ param: { base64 } })</em>
+	})
+	<q>Uploads</q>(e).then( { base64, file, files } => {
+		<em>$http.submit(this,'api',{ param: { base64 } })</em>
+	})
+}

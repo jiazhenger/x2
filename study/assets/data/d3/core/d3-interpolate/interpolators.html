@@ -1,0 +1,10 @@
+<u># 用法</u>
+<em>内置插值器工厂的数组，是 d3.interpolate 所使用的</em>
+<u># 示例：</u>
+<q>d3</q>.<b>interpolators</b>.<u>push</u>(<u>function</u>(<s>a</s>,<s>b</s>){
+	return <u>function</u>(<s>t</s>){
+		return <s>a</s> * (1 - <s>t</s>) + <s>b</s> * <s>t</s>
+	}
+})
+<u># 使用：</u>
+<em>const r</em> = <q>d3</q>.<q>interpolate</q>(<em>1</em>,<em>2</em>)(<em>0.5</em>) 		<em>// => </em>

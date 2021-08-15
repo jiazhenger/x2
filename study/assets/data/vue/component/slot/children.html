@@ -1,0 +1,12 @@
+<em># 子组件 my-component</em>
+<em>&lt;template&gt;</em>
+	<em>&lt;div&gt;</em><b>&lt;slot&gt;&lt;/slot&gt;</b><em>&lt;/div&gt;</em>				<em>// 无默认值</em>
+	<em>&lt;div&gt;</em><b>&lt;slot&gt;</b><em>后备内容</em><b>&lt;/slot&gt;</b><em>&lt;/div&gt;</em>		<em>// 有默认值</em>
+<em>&lt;/template&gt;</em>
+
+<em># 父组件</em>
+<em>&lt;template&gt;</em>
+	<em>&lt;div&gt;</em>
+		<em>&lt;my-component&gt;</em><b>slot</b><em>&lt;/my-component&gt;</em>
+	<em>&lt;/div&gt;</em>
+<em>&lt;/template&gt;</em>

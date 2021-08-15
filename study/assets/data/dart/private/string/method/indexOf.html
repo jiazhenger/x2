@@ -1,0 +1,13 @@
+<u># 用法</u>
+<em>查找字符串索引值。找到返回 index 的位置；反之，返回 -1</em>
+<u># 语法</u>
+<tt>int</tt> <b>indexOf</b>(
+	<tt>Pattern</tt> <em>pattern</em>,		<em># 匹配字符串，或正则表达式</em>
+	[ <tt>int</tt> <em>start</em> ] 			<em># 开始位置</em>
+)
+<u># 示例</u>
+<tt>int</tt> <em>num</em> = (<em>'123'</em>).<b>indexOf</b>(<em>'1'</em>); 					<em>// => 0</em>
+<tt>int</tt> <em>num</em> = (<em>'123'</em>).<b>indexOf</b>(<em>'2'</em>,<em>2</em>); 					<em>// 从第2个位置开始查找字符串</em>
+<tt>int</tt> <em>num</em> = (<em>'123'</em>).<b>indexOf</b>(<em>RegExp(r'[A-Z][a-z]')</em>); 		<em>// 正则表达式</em>
+<tt>bool</tt> <em>bool</em> = (<em>'123'</em>).<b>indexOf</b>(<em>'1'</em>) == <u>-1</u>; 				<em>// 未找到 => false</em>
+<tt>bool</tt> <em>bool</em> = (<em>'123'</em>).<b>indexOf</b>(<em>'1'</em>) != <u>-1</u>; 				<em>// 找到 => true</em>

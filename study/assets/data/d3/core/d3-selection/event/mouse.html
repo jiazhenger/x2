@@ -1,0 +1,15 @@
+<u># 用法</u>
+<em>1、返回 current event 相对于指定 container 的 x 和 y 坐标</em>
+<em>2、container 可以是一个 HTML 或 SVG 容器元素，比如 G element 或者 SVG element</em>
+<em>3、坐标以二元数组的形式返回: [x, y]</em>
+<u># 语法</u>
+<q>d3</q>.<b>mouse</b>(<s>container</s>)
+<u># 参数</u>
+<s>container</s> ：<em>必需，node</em>（<u>html、svg 节点</u>））
+<u># 示例</u>
+<em># 获取元素</em>
+<q>d3</q>.<b>mouse</b>(<em>document.querySelector('#box')</em>) 		<em>// => [ 10, 20 ]</em>
+<em># 函数添加属性</em>
+<em>d3</em>.<b>on</b>(<em>'click'</em>,<u>function</u>(<q>data</q>,<q>index</q>){
+	<em>const xy</em> = <q>d3</q>.<b>mouse</b>(<q>this</q>) 					<em>// => [ 10, 20 ]</em>
+})

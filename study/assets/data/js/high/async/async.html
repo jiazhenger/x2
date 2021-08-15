@@ -1,0 +1,82 @@
+<u># async 异步声明：</u>
+<em>async 函数对 Generator 函数的改进，async 函数必定返回 Promise，我们把所有返回 Promise 的函数都可以认为是异步函数。特点体现在以下四点：</em>
+		<em>内置执行器</em>
+		<em>更好的语义</em>
+		<em>更广的适用性</em>
+		<em>返回值是 Promise</em>
+<u># await 等待执行：只能在函数内部使用</u>
+<em>1、await：等待。</em>
+<em>2、正常情况下，await 命令后面是一个 Promise 对象，返回该对象的结果</em>
+<em>3、如果不是 Promise 对象，就直接返回对应的值</em>
+<em>4、另一种情况是，await命令后面是一个thenable对象（即定义then方法的对象），那么await会将其等同于 Promise 对象</em>
+<u># 语法</u>
+<em># 方式 1</em>
+<b>async</b> <em>function</em> <em>handle</em>( ){ 
+	<em>const value</em> = <b>await</b> <em>sleep( )</em> 		<em>// 获取异步函数返回值</em>
+	<b>await</b> <em>sleep( )</em>
+	<em>...</em>
+	<em>if</em> (<em>state === 1</em>) {
+		<u>return</u> <em>1</em>
+	} <em>else if</em> (<em>state === 2</em>){
+		<u>return</u> <em>2</em>
+	} <em>else</em> {
+		<em>// 没有返回值 data = undefined</em>
+	}
+}
+<em># 方式 2</em>
+<em>const handle</em> = <b>async</b> <em>function</em>( ) => { <b>await</b> <em>sleep( )</em> }
+<em># 方式3</em>
+<em>const handle</em> = <b>async</b> ( ) => { <b>await</b> <em>sleep( )</em> }
+<em># 方式 4</em>
+<b>async</b> <em>handle</em>( ){ <b>await</b> <em>sleep( )</em> }
+<em># 在方法上声明</em>
+<em>const obj</em> = {
+	<b>async</b> <em>handle</em>( ){	},
+	<em>handle</em> : <b>async</b> <em>function</em>( ){	},
+	<em>handle</em> : <b>async</b> ( ) => { },
+}
+
+<u># 用法（ 获取返回值 ）</u>
+<em>handle</em>(<em>100</em>).<b>then</b>( <s>data</s> => {		}).<b>catch</b>( <s>err</s>=>{	<em>// 错误处理</em>	})
+<b>async</b> <em>function</em> <em>fn</em>( ){
+	<em>const</em> <s>data</s> = <b>await</b> <em>sleep( )</em>
+}
+<u># await 后面是 Promise</u>
+<em># then 无参数</em>
+<b>async</b> <em>function</em> <em>handle</em>( ){ <b>await</b> <em>new Promise( )</em> }
+<em># then 有参数</em>
+<b>async</b> <em>function</em> <em>handle</em>( <s>data</s> ){
+	<u>return</u> <b>await</b> <q>new Promise</q>( <u>resolve</u> => {
+		<u>resolve</u>(<s>data</s>)
+	})
+}
+
+<u># await 后面不是 Promise</u>
+<em># then 无参数</em>
+<b>async</b> <em>function</em> <em>handle</em>( ){ <b>await</b> <em>sleep( )</em> }
+<em># then 有参数</em>
+<b>async</b> <em>function</em> <em>handle</em>( <s>data</s> ){
+	<u>return</u> <b>await</b> <s>data</s> 			<em>// return 相当于是传递 then 中的参数</em>
+}
+<b>async</b> <em>function</em> <em>handle</em>( ){
+	<u>return</u> <b>await</b> <em>sleep( )</em> 		<em>// 参数为 sleep( ) 的返回值</em>
+}
+<b>async</b> <em>function</em> <em>handle</em>( <s>data</s> ){
+	<b>await</b> <em>sleep( )</em>				<em>// sleep( ) 执行完后，才会执行后面的代码</em>
+	<u>return</u> <s>data</s> 				<em>// return 相当于是传递 then 中的参数</em>
+}
+
+<u># 无 await</u>
+<em># then 无参数</em>
+<b>async</b> <em>function</em> <em>handle</em>( ){ 	}
+<em># then 有参数</em>
+<b>async</b> <em>function</em> <em>handle</em>( <s>data</s> ){
+	<u>return</u> <s>data</s> 				<em>// return 相当于是传递 then 中的参数</em>
+} )
+
+<u># 获取 Promise 的 resolve 值</u>
+<em>const promise = data => new Promise( resolve => resolve( 100 ) )</em>
+<em>promise.<q>then</q>( data => {	} )</em>				<em>// promise 获取 data</em>
+<em>const fn</em> = <b>async</b> ( ) => {					<em>// await 获取 data</em>
+	<em>const data</em> = <b>await</b> <em>promise( )</em> 		<em>// => 100</em>
+}

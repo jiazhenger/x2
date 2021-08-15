@@ -1,0 +1,15 @@
+<u># 用法</u>
+<em>存储函数（或函数名），每当 readyState 属性改变时，就会调用该函数</em>
+<u># 语法</u>
+<em>xhr</em>.<b>onreadystatechange</b>(<s>function</s>)
+<u># 参数</u>
+<s>function</s>	: <em>必需。函数</em>
+<u># 示例</u>
+<em>xhr</em>.<b>onreadystatechange</b>(<s>function( )</s>{
+	if(<em>xhr</em>.<q>readyState</q> === <i>4</i> <em>&&</em> <em>xhr</em>.<q>status</q> === <i>200</i>){
+		<em>const data</em> = <em>xhr</em>.<q>responseText</q>
+	}
+	if(<u>this</u>.<q>readyState</q> === <i>4</i> <em>&&</em> <u>this</u>.<q>status</q> === <i>200</i>){
+		<em>const data</em> = <u>this</u>.<q>responseText</q>
+	}
+})

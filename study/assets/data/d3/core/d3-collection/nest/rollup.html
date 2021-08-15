@@ -1,0 +1,10 @@
+<u># 用法</u>
+<em>为每组中的叶子元素指定汇总函数（rollup ）function。汇总函数的返回值会覆盖叶子值数组。不论是由map操作符返回的关联数组，还是实体操作符返回的每个实体的值属性</em>
+<u># 语法</u>
+<q>nest</q>.<b>rollup</b>(<s>function</s>)
+<u># 参数</u>
+<s>function</s> ：<em>必需，函数</em>
+<u># 示例</u>
+<em>const arr</em> = <q>d3</q>.<q>nest( )</q>.<b>rollup</b>(<u>function</u>(<s>value</s>){
+	<u>return</u> <s>value</s>
+}).<q>entries</q>(<em>[3,5,2,1]</em>)		<em>// => [3, 5, 2, 1]</em>

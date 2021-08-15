@@ -1,0 +1,14 @@
+<u># 用法</u>
+<em>可以在已经声明中的 headers 对象修改已有的一组键值对或者创建一个新的键值对</em>
+<u># 语法</u>
+<em>headers</em>.<b>set</b>(<s>name</s>, <s>value</s>)
+<u># 参数</u>
+<s>name</s> : <em>必需。要追加给标头对象的 HTTPHeader 名称</em>
+<s>value</s> : <em>必需。要追加给标头对象的 HTTPHeader 值</em>
+<u># 示例</u>
+<s>headers</s>.<b>set</b>(<i>'Content-Type'</i>, <u>'application/json;charset=utf-8'</u>)
+<s>headers</s>.<b>set</b>(<i>'Content-Type'</i>, <u>'application/x-www-form-urlencoded'</u>)
+<s>headers</s>.<b>set</b>(<i>'Content-Type'</i>, <u>'multipart/form-data'</u>)
+<s>headers</s>.<b>set</b>(<i>'Content-Type'</i>, <u>'image/jpeg'</u>)
+<s>headers</s>.<b>set</b>(<i>'Accept-Encoding'</i>, <u>'gzip'</u>)
+<s>headers</s>.<b>set</b>(<i>'X-Token'</i>, <em>token</em>)

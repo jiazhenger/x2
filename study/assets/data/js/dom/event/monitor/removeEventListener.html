@@ -1,0 +1,21 @@
+<u># 用法</u>
+<em>用于移除由 addEventListener( ) 方法添加的事件句柄</em>
+<u># 语法</u>
+<q>window</q>.<b>removeEventListener</b>(<s>event</s>, <s>function</s>, <s>useCapture</s>)
+<q>document</q>.<b>removeEventListener</b>(<s>event</s>, <s>function</s>, <s>useCapture</s>)
+<q>document.body</q>.<b>removeEventListener</b>(<s>event</s>, <s>function</s>, <s>useCapture</s>)
+<q>document.getElementById( )</q>.<b>removeEventListener</b>(<s>event</s>, <s>function</s>, <s>useCapture</s>)
+<q>document.querySelector( )</q>.<b>removeEventListener</b>(<s>event</s>, <s>function</s>, <s>useCapture</s>)
+<u># 参数</u>
+<s>event</s>		: <em>必需。字符串，指定事件名。事件句柄没有 on</em>
+<s>function</s>		: <em>必需。指定要事件触发时执行的函数</em>
+<s>useCapture</s>	: <em>可选。布尔值，指定事件是否在捕获或冒泡阶段执行， 默认 false</em>
+			<i>true</i>：<em>事件句柄在捕获阶段执行</em>
+			<i>false</i>：<em>事件句柄在冒泡阶段执行，默认</em>
+			<em><u>注意</u>：如果添加两次事件句柄，一次在捕获阶段，一次在冒泡阶段，你必须单独移除该事件</em>
+<u># 兼容性</u>
+<i>ie9 +</i>
+<u># 示例</u>
+<em>const <s>fn</s> = function( ){	}</em>
+<em>document.body</em>.<q>addEventListener</q>('<s>click</s>', <s>fn</s>, <s>false</s>)
+<em>document.body</em>.<b>removeEventListener</b>('<s>click</s>', <s>fn</s>, <s>false</s>)

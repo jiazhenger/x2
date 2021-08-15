@@ -1,0 +1,28 @@
+<u># 用法</u>
+<em>1、创建透视投影相机对象</em>
+<em>2、左右边界的距离与上下边界的距离比值与画布的渲染窗口的宽高比例要一致，否则三维模型的显示效果会被单方向不等比例拉伸</em>
+<u># 语法</u>
+<em>const camera</em> = <u>new</u> <q>Three</q>.<b>PerspectiveCamera</b>(<s>fov</s>, <s>aspect</s>, <s>near</s>, <s>far</s>)
+<u># 参数解释一</u>
+<s>fov</s> ：	<em>必需，摄像机视锥体垂直视野角度。即视场，所谓视场就是能够看到的角度范围，人的眼睛大约能够看到180度的视场，视角大小设置要根据具体应用，一般游戏会设置60~90度。默认 45</em>
+<s>aspect</s> ：	<em>必需，摄像机视锥体长宽比。即：表示渲染窗口的长宽比，如果一个网页上只有一个全屏的canvas画布且画布上只有一个窗口，那么aspect的值就是网页窗口客户区的宽高比。默认 window.innerWidth/window.innerHeight</em>
+<s>near</s> ：	<em>必需，摄像机视锥体近端面。即：从距离相机多远的位置开始渲染，一般情况会设置一个很小的值。 默认值 </em><u>0.1</u>
+<s>far</s> ：	<em>必需，摄像机视锥体远端面。即：距离相机多远的位置截止渲染，如果设置的值偏过小，会有部分场景看不到。 默认值 </em><u>1000</u>
+<u># 参数解释二</u>
+<s>fov</s> ：	<em>必需，眼球张开的角度，0°时相当于闭眼</em>
+<s>aspect</s> ：	<em>必需，可视区域横纵比</em>
+<s>near</s> ：	<em>必需，眼睛能看到的最近垂直距离</em>
+<s>far</s> ：	<em>必需，眼睛能看到的最远垂直距离</em>
+<u># 示例</u>
+<em>const camera</em> = <u>new</u> <q>Three</q>.<b>PerspectiveCamera</b>(<u>45</u>, <u>window.innerWidth/window.innerHeight</u>, <em>0.1</em>, <em>1000</em>)
+<u># 自适应渲染</u>
+<u>window.onresize</u> = <u>function</u>( ){
+	<em>// 重置渲染器输出画布canvas尺寸</em>
+	<em>renderer</em>.<b>setSize</b>(<u>window.innerWidth</u>, <u>window.innerHeight</u>)
+	<em>// 全屏情况下：设置观察范围长宽比 aspect 为窗口宽高比</em>
+	<em>camera</em>.<s>aspect</s> = <u>window.innerWidth</u>/<u>window.innerHeight</u>
+	<em>// 渲染器执行render方法的时候会读取相机对象的投影矩阵属性 projectionMatrix</em>
+	<em>// 但是不会每渲染一帧，就通过相机的属性计算投影矩阵(节约计算资源)</em>
+	<em>// 如果相机的一些属性发生了变化，需要执行 updateProjectionMatrix () 方法更新相机的投影矩阵</em>
+	<em>camera</em>.<q>updateProjectionMatrix( )</q>
+}

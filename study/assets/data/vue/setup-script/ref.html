@@ -1,0 +1,10 @@
+<em>&lt;template&gt;&lt;button</em> <s>@click</s><em>='</em><u>run</u><em>'&gt;{{</em> <u>obj.x</u> <em>}}&lt;/button&gt;</em><em>&lt;/template&gt;</em>
+
+<em>&lt;script <i>setup</i>&gt;</em>
+	<em># 特有语法</em>
+	<b>ref:</b> <u>obj</u> = <em>{ x: { m:{ n:1 } } }</em>		
+	<em>const</em> <u>run</u> = ( ) => <u>obj</u>.<em>x.m.n ++</em>
+	<em># setup( ) 语法</em>
+	<em>const</em> <u>obj</u> = <b>ref</b>( <em>{ x: { m:{ n:1 } } }</em> )
+	<em>const</em> <u>run</u> = ( ) => <u>obj</u>.<s>value</s>.<em>x.m.n ++</em>
+<em>&lt;/script&gt;</em>

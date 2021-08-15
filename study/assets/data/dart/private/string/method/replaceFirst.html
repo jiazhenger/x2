@@ -1,0 +1,10 @@
+<u># 用法</u>
+<em>字符串中第一个出现的 from 替换为 to ，从 startIndex 开始</em>
+<u># 语法</u>
+<tt>String</tt> <b>replaceFirst</b>(
+ 	<tt>Pattern</tt> <em>from</em> , 					<em># 匹配字符串，或正则表达式</em>
+ 	<tt>String</tt> <em>to</em>, 		<em># 替换字符串</em>
+	[ <tt>int</tt> <em>startIndex</em> = <i>0</i> ] 			<em># 开始位置</em>
+)
+<u># 示例</u>
+<tt>String</tt> <em>str</em>= (<em>'123456'</em>).<b>replaceFirst</b>(<em>'1'</em>, <em>'abc'</em>); 					<em>// => abc23456</em>

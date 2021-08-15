@@ -1,0 +1,16 @@
+<u># 用法</u>
+<em>事件监听</em>
+<u># 语法</u>
+<em>selection</em>.<b>on</b>(<s>name</s>, <s>listener</s>, <s>capture</s>)
+<u># 参数</u>
+<s>name</s> ：<em>必需，事件名</em>（<u>字符串</u>
+<s>listener</s> ：<em>必需，监听函数</em>（<u>函数、null</u>
+<s>capture</s> ：<em>可选，指定类型</em>
+<u># 函数 this 指向当前 dom</u>
+<u># 示例</u>
+<em>selection</em>.<b>on</b>(<u>'click'</u>,<u>function</u>(<q>data</q>,<q>index</q>){ })
+<em># 可选的命名空间</em>
+<em>selection</em>.<b>on</b>(<em>'click.foo'</em>, <em>(d,i)=>{ }</em>)
+<em>selection</em>.<b>on</b>(<em>'click.boo'</em>, <em>(d,i)=>{ }</em>)
+<em># 删除监听</em>
+<em>selection</em>.<b>on</b>(<em>'click'</em>, <q>null</q>)

@@ -1,0 +1,10 @@
+<u># 用法</u>
+<em>指定了HTTP头部Referer字段的值</em>
+<u># 语法</u>
+<em>fetch('/api/search'</em>, {
+	<b>referrerPolicy</b>	: 	<i>'no-referrer'</i>						<em>// </em>
+					<i>'no-referrer-when-downgrade'</i> 		<em>// </em>
+					<i>'origin'</i> 							<em>// </em>
+					<i>'origin-when-cross-origin'</i> 			<em>// </em>
+					<i>'unsafe-url'</i> 						<em>// </em>
+})

@@ -1,0 +1,18 @@
+<em># 判断浏览器是否支持 WebGL</em>
+<em>const</em> <s>isWebGL</s> = ( ) => {
+	<em>try {</em>
+		<u>const canvas = document.createElement( 'canvas' )</u>
+		<u>return !! ( window.<b>WebGL</b>RenderingContext && ( canvas.getContext( '<b>webgl</b>' ) || canvas.getContext( 'experimental-<b>webgl</b>' ) ) )</u>
+	<em>} catch ( e ) {</em>
+		<u>return false</u>
+	<em>}</em>
+}
+<em># 判断浏览器是否支持 WebGL2</em>
+<em>const</em> <s>isWebGL2</s> = ( ) => {
+	<em>try {</em>
+		<u>const canvas = document.createElement( 'canvas' )</u>
+		<u>return !! ( window.<b>WebGL2</b>RenderingContext && canvas.getContext( '<b>webgl2</b>' ) )</u>
+	<em>} catch ( e ) {</em>
+		<u>return false</u>
+	<em>}</em>
+}

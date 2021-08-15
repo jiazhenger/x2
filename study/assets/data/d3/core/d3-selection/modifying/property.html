@@ -1,0 +1,25 @@
+<u># 用法</u>
+<em>一些 HTML 元素具有特殊的属性，使用标准的属性或样式是不可寻址的，如：className、checked、disabled</em>
+<u># 语法</u>
+<em>selection</em>.<b>property</b>(<s>name</s>, <s>value</s>)
+<u># 参数</u>
+<s>name</s> ：<em>必需，属性名（<u>字符串</u>）、<em>属性对象</em>（<u>对象字面量</u>）
+<s>value</s> ：<em>可选，属性值</em>（<u>字符串、布尔值、函数</u>）
+<u># 函数 this 指向当前 dom</u>
+<u># 示例</u>
+<em># 判断指定 property 的真假</em>
+<em>const bool</em> = <em>selection</em>.<b>property</b>(<em>'checked'</em>)
+<em>const bool</em> = <em>selection</em>.<b>property</b>(<em>'disabled'</em>)
+<em># 设置属性为 true</em>
+<em>selection</em>.<b>property</b>(<em>'checked'</em>, <q>true</q>)
+<em>selection</em>.<b>property</b>(<em>'disabled'</em>, <q>true</q>)
+<em># 设置属性为 false</em>
+<em>selection</em>.<b>property</b>(<em>'checked'</em>, <q>false</q>)
+<em>selection</em>.<b>property</b>(<em>'disabled'</em>, <q>false</q>)
+<em># 函数添加属性</em>
+<em>selection</em>.<b>property</b>(<em>'checked'</em>,<u>function</u>(<q>data</q>,<q>index</q>){
+	<u>return</u> <q>index</q> <em>% 2 === 0</em>
+})
+<em># 添加多个属性</em>
+<q>setObj</q>('<b>property</b>') 							<em>// 重写 property</em>
+<em>selection</em>.<b>property</b>(<b>{</b> <em>checked</em>:<q>true</q>, <em>disabled</em>:<q>true</q> <b>}</b>)

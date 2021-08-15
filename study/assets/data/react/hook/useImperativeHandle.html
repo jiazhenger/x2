@@ -1,0 +1,21 @@
+<em>import React from 'react'</em>;
+
+<em>const</em> Component = (<u>props</u>, <b>ref</b>) => {
+	<em>const</em> <s>onScroll</s> = <u>React</u>.<q>useCallback</q>(( <em>param</em> )=>{ }, [ ])
+	<u>React</u>.<b>useImperativeHandle</b>( <b>ref</b>, ( ) => ({
+		<i>onScroll</i> : ( <em>param</em> ) => <s>onScroll(</s> <em>param</em> <s>)</s>,			<em>// 从父级接收参数</em>
+		<i>onScroll</i> : ( ) => <s>onScroll( )</s>,						<em>// 无参数简写</em>
+		<i>onScroll</i> : <s>onScroll</s>,								<em>// 无参数简写</em>	
+		<i>onScroll</i>,										<em>// 无参数简写</em>
+	}))
+	<em>return &lt;div /&gt;</em>
+}
+
+<em>const</em> <u>ComponentRef</u> = <u>React</u>.<b>forwardRef</b>(Component)
+
+<em>class Index extends React.Component</em>{
+	<u>resize</u> = ( <em>param</em> ) => {
+		<b>this.refs</b>.<q>table</q>.<i>onScroll(</i> <em>param</em> <i>)</i>
+	}
+	<em>return</em> &lt;<u>ComponentRef</u> <b>ref</b>='<q>table</q>' /&gt;
+}

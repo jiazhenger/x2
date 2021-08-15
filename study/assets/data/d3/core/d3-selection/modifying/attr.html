@@ -1,0 +1,22 @@
+<u># 用法</u>
+<em>设置属性</em>
+<u># 语法</u>
+<em>selection</em>.<b>attr</b>(<s>name</s>, <s>value</s>)
+<u># 参数</u>
+<s>name</s> ：<em>必需，html 属性</em>（<u>字符串</u>）、<em>属性对象</em>（<u>对象字面量</u>）
+<s>value</s> ：<em>可选，属性值</em>（<u>字符串、函数</u>）
+<u># 函数 this 指向当前 dom</u>
+<u># 示例</u>
+<em># 获取属性</em>
+<em>const href</em> = <em>selection</em>.<b>attr</b>(<em>'href'</em>)
+<em>const style</em> = <em>selection</em>.<b>attr</b>(<em>'style'</em>)
+<em># 添加属性</em>
+<em>selection</em>.<b>attr</b>(<em>'href'</em>,<em>'http://www.x.com'</em>)
+<em>selection</em><b>attr</b>(<em>'style'</em>,<em>'color:red'</em>)
+<em># 函数添加属性</em>
+<em>selection</em>.<b>attr</b>(<em>'style'</em>,<u>function</u>(<q>data</q>,<q>index</q>){
+	<u>return</u> <q>index</q> <em>% 2 === 0</em> <u>?</u> <em>'color:red'</em> <u>:</u> <em>'color:blue'</em>
+})
+<em># 添加多个属性</em>
+<q>setObj</q>('<b>attr</b>') 							<em>// 重写 attr</em>
+<em>selection</em>.<b>attr</b>(<b>{</b> <em>id:'box'</em>, <em>style:'color:red'</em> <b>}</b>)

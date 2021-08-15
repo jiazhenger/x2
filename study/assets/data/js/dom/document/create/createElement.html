@@ -1,0 +1,14 @@
+<u># 用法</u>
+<em>通过指定名称创建一个元素</em>
+<u># 语法</u>
+<em>const node</em> = <q>document</q>.<b>createElement</b>(<s>nodename</s>)
+<u># 参数</u>
+<s>nodename</s>: <em>必需。是创建元素的名称：html 标签元素</em>
+<u># 示例</u>
+<em>const</em> <u>node</u> =  <q>document</q>.<b>createElement</b>(<s>'div'</s>) 		<em>// &lt;div&gt;&lt;/div&gt;</em>
+<em>node.innerHTML = ' '</em>
+<em>node.style.color = 'red'</em>
+<em>node.id = 'box'</em>
+<em>node.className = 'wraper'</em>
+<em>...</em>
+<u>document.body</u>.<q>appendChild</q>(<u>node</u>) 		<em>// => 将创建的 div 放入 body 最后</em>

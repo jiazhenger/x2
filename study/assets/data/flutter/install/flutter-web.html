@@ -1,0 +1,18 @@
+<em># 切换到 master 分支（只有master和develop等分支支持flutter web，stable是不行的）</em>
+&gt; <b>flutter channel</b> <u>master</u>
+<em># 开启 flutter web 支持</em>
+&gt; <b>flutter config</b> <u>--enable-web</u>
+<em># 为已存在的项目添加 flutter web 支持，默认 web</em>
+&gt; <b>flutter create .</b>
+&gt; <b>flutter create</b> <u>web</u>
+&gt; <b>flutter create</b> <u>myApp</u>
+<em># 运行到移动设备</em>
+&gt; <b>flutter run</b>
+<em># 运行到浏览器</em>
+&gt; <b>flutter run</b> <u>-d chrome</u>
+<em># 打包成 fluuter web</em>
+&gt; <b>flutter build</b> <u>web</u>
+<em># 热加载</em>
+<em>按 </em><b>R 键</b>
+<em># 退出</em>
+<em>按 </em><b>Q 键</b>

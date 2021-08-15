@@ -1,0 +1,12 @@
+<u># 用法</u>
+<em>与 d3.tickStep 类似, 但是要求 start 总是小于等于 step, 如果给定的 start, stop 以及 count 计算出来的步长小于 1 时则对步长求反. 这个方法始终保持返回整数, 并且被 d3.ticks 使用以避免生成不精确的浮点数. 与 d3.tickStep 类似，除了要求 start 始终小于或等于 step，如果根据给定的 start, stop 和 count 计算出来的 tick 步长小于 1 则返回负值. 这个方法永远保证返回一个整数提供给 d3.ticks, 避免浮点数达到精确表示的目的</em>
+<u># 语法</u>
+<q>d3</q>.<b>tickIncrement</b>(<s>start</s>, <s>stop</s>, <s>count</s>)
+<u># 参数</u>
+<s>start</s> ：<em>可选，开始索引</em>
+<s>stop</s> ：<em>可选，结束索引</em>
+<s>count</s> ：<em>可选，次数</em>
+<u># 示例</u>
+<em>const arr</em> = <q>d3</q>.<b>tickIncrement</b>(<em>0</em>, <em>10</em>, <em>3</em>)			<em>// => 5</em>
+<em>const arr</em> = <q>d3</q>.<b>tickIncrement</b>(<em>0</em>, <em>10</em>, <em>4</em>)			<em>// => 2</em>
+<em>const arr</em> = <q>d3</q>.<b>tickIncrement</b>(<em>0</em>, <em>10</em>, <em>5</em>)			<em>// => 2</em>

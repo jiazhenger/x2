@@ -1,0 +1,24 @@
+<em># 开始加载</em>
+<em>document</em>.<b>onloadstart</b> = <u>function</u>( ){	}
+<em># 加载完成</em>
+<em>document</em>.<b>onload</b> = <u>function</u>( ){	}
+<em># 加载结束</em>
+<em>document</em>.<b>onloadend</b> = <u>function</u>( ){	}
+<em># 加载进程</em>
+<em>document</em>.<b>onprogress</b> = <u>function</u>( ){	}
+<em># 加载超时</em>
+<em>document</em>.<b>ontimeout</b> = <u>function</u>( ){	}
+<em># 加载出错</em>
+<em>document</em>.<b>onerror</b> = <u>function</u>( ){	}
+<em># 加载状态</em>
+<em>document</em>.<b>onreadystatechange</b> = <u>function</u>( ) {
+	if ( <em>document.readyState === 'uninitialized'</em> ) {		
+		<em>// 还未开始载入</em>
+	}else if( <em>document.readyState === 'loading'</em> ){
+		<em>// 载入中</em>
+	}else if( <em>this.readyState === 'interactive'</em> ){
+		<em>// 已加载，文档与用户可以开始交互</em>
+	}else if( <em>this.readyState === 'complete'</em> ){
+		<em>// 载入完成</em>
+	}
+}

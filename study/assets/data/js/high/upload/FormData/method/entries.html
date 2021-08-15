@@ -1,0 +1,18 @@
+<u># 用法</u>
+<em>返回一个 iterator对象 ，此对象可以遍历访问FormData中的键值对。其中键值对的key是一个 USVString 对象；value是一个 USVString , 或者 Blob对象</em>
+<u># 语法</u>
+<em>const value</em> = <em>fd</em>.<b>entries( )</b>
+
+<u># 获取键值</u>
+<em>const fd</em> = <q>new FormData( )</q>
+<em>fd</em>.<q>append</q>(<s>'name'</s>, <em>'javascript'</em>)
+<em>fd</em>.<q>append</q>(<s>'name'</s>, <em>'flutter'</em>)
+<u>for</u>(<em>let</em> <s>v</s> <u>of</u> <em>fd</em>.<b>entries( )</b>){
+	<em>console.log</em>(<s>v</s>)		<em>// => ['name', 'javascript'] </em>
+}
+
+<u># 转化为对象</u>
+<em>const</em> <i>model</i> = {	}
+<u>for</u>(<em>let</em> <s>v</s> <u>of</u> <em>fd</em>.<b>entries( )</b>){
+	<i>model[</i> <s>v</s><u>[ 0 ]</u> <i>]</i> = <s>v</s><u>[ 1 ]</u>		<em>// => { name:'javascript' } </em>
+}

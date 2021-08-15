@@ -1,0 +1,14 @@
+<u># 用法</u>
+<em>返回一个新数组</em>
+<u># 语法</u>
+<em>const array</em> = <b>Array.prototype.map.call</b>(<s>array</s>, <s>function</s>)
+<em>const array</em> = <b>[ ].map.call</b>(<s>array</s>, <s>function</s>)
+<u># 参数</u>
+<s>array</s>		: <em>必需。数组</em>
+<s>function</s>		: <em>必需。map 中的回调函数</em>
+<u># 返回值</u>
+<em>原数组</em>
+<u># 示例</u>
+<em>const array</em> = <b>Array.prototype.map.call</b>(<s>document.body.childNodes</s>, <s>(v,i)=> v</s>)
+<em># 相当于</em>
+<em>const array</em> = <s>document.body.childNodes</s>.<b>map</b>(<s>(v,i)=> v</s>)

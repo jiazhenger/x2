@@ -1,0 +1,33 @@
+<u># 用法</u>
+<em>1、根据指定的补间函数指定的名称过渡CSS样式属性的值</em>
+<em>2、过渡的起始和结束值由补间函数决定</em>
+<em>3、延迟总是相对一系列过渡中的第一个而言</em>
+<u># 语法</u>
+<em>transition</em>.<b>attrTween</b>(<s>name</s>, <s>tween</s>)
+<u># 参数</u>
+<s>name</s> ：<em>必需，属性名</em>（<u>字符串</u>）
+<s>tween</s> ：<em>必需，补间函数，返回值必须是一个插值器</em>（<u>常量、函数</u>）
+<u># 补间函数参数</u>
+<s>d</s>	: <em>当前数据</em>
+<s>i</s>	: <em>当前索引</em>
+<s>a</s>	: <em>当前 dom 元素数组</em>
+<s>t</s>	: <em>范围</em> <u>0~1</u>
+<s>this</s>	: <em>当前 dom 元素</em>
+<u># 示例</u>
+<em># 终值是常量：所有的元素都被指定为相同的样式属性值</em>
+<em>transition</em>.<b>attrTween</b>(<em>'width'</em>,<u>function</u>(<q>d</q>, <q>i</q>, <q>a</q>){
+	<u>return</u> <q>d3.interpolate(a, String('500px'))</q>
+})
+<em># 终值是函数：该函数为每个选定的元件（按顺序）计算属性值，被传递的参数是当前数据d与当前索引i，用this表示当前的DOM元素</em>
+<em>transition</em>.<b>attrTween</b>(<em>'width'</em>,<u>function</u>(<q>d</q>, <q>i</q>, <q>a</q>){
+	<u>return</u> <u>function</u>(<s>t</s>){
+		<u>return</u> <s>t</s> <em>* 500 + 'px'</em>
+	}
+})
+<em># 终值是插值函数：该函数为每个选定的元件（按顺序）计算属性值，被传递的参数是当前数据d与当前索引i，用this表示当前的DOM元素</em>
+<em>const</em> <u>fn</u> = <u>function</u>(<q>d</q>, <q>i</q>, <q>a</q>){
+	<u>return</u> <em>'500px'</em>
+}
+<em>transition</em>.<b>attrTween</b>(<em>'width'</em>,<u>function</u>(<q>d</q>, <q>i</q>, <q>a</q>){
+	<u>return</u> <q>d3.interpolate(a, String(</q><u>fn</u><q>.call(this, d, i, a)))</q>
+})

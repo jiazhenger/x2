@@ -1,0 +1,24 @@
+<u># 用法</u>
+<em>分割字符串，转换成一个新的子符串</em>
+<u># 语法</u>
+<tt>String</tt> <b>splitMapJoin</b>(
+ 	<tt>Pattern</tt> <em>from</em> , 								<em># 匹配字符串，或正则表达式</em>
+ 	<tt>String</tt> <s>onMatch</s>( <tt>Match</tt> <u>match</u> ), 				<em># 替换匹配的字符串</em>
+	<tt>String</tt> <s>onNonMatch</s>( <tt>String</tt> <u>nonMatch</u> ) 		<em># 替换不匹配的字符串</em>
+)
+<u># 示例</u>
+<em># 一般函数</em>
+<tt>String</tt> <em>str</em>  = (<em>'Eats shoots leaves shoots'</em>).<b>splitMapJoin</b>(				<em>// => 0**shoots0**shoots0</em>
+	<q>RegExp</q>(<u>r</u><em>'shoots'</em>),
+	<s>onMatch</s>: (<tt>Match</tt> <u>m</u>){
+		<tt>String</tt> <em>input				=  <u>m</u>.<i>input</i>;				<em>// 原字符串</em>
+		<tt>int</tt> <em>start 					=  <u>m</u>.<i>start</i>;				<em>// 匹配字符串的开始位置</em>
+		<tt>int</tt> <em>end 					=  <u>m</u>.<i>end</i>;				<em>// 匹配字符串的结束位置</em>
+		<tt>int</tt> <em>group 				=  <u>m</u>.<i>group(0)</i>;			<em>// 获取匹配的字符串</em>
+		<tt>List&lt;String&gt;</tt> <em>groups 		=  <u>m</u>.<i>groups([0])</i>;			<em>// 获取匹配的字符串</em>
+		<tt>int</tt> <em>count 					=  <u>m</u>.<i>groupCount</i>;			<em>// group 的数量</em>
+		<tt>int</tt> <em>pattern 				=  <u>m</u>.<i>pattern</i>;				<em>// 返回匹配的正则表达式</em>
+		<u>return</u> <em>'**${</em>'<u>m</u>.<i>group(0)</i><em>'}'</em>;
+	},
+	<s>onNonMatch</s>: (<tt>String</tt> <u>str</u>) => <em>'0'</em>);
+);

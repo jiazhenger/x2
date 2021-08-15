@@ -1,0 +1,10 @@
+<em>const</em> <s>getMouse</s> = <u>function</u> (<q>e</q>) {
+	<u>return</u> {
+		<i>x</i> : <q>e</q>.<b>pageX</b> <em>||</em> <q>e</q>.<b>x</b> <em>||</em> <q>e</q>.<b>screenX</b> <em>||</em> <q>e</q>.<b>clientX</b>,
+		<i>y</i> : <q>e</q>.<b>pageY</b> <em>||</em> <q>e</q>.<b>y</b> <em>||</em> <q>e</q>.<b>screenY</b> <em>||</em> <q>e</q>.<b>clientY</b>
+	}
+}
+<em># 使用</em>
+<em>document.body.onclick = function</em>(<q>e</q>){
+	<em>const</em> { <i>x</i>, <i>y</i> } = <s>getMouse</s>(<q>e</q>)
+}

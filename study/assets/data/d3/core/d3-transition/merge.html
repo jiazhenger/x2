@@ -1,0 +1,10 @@
+<u># 用法</u>
+<em>1、返回一个将当前过渡与指定的 other 过渡合并的新的过渡，并且指定的过渡必须与当前过渡有相同的 id</em>
+<em>2、返回的过渡与当前过渡有相同的分组数量，相同的父节点以及相同的 id</em>
+<em>3、任何当前过渡中缺失(null)的元素将会被来自 other 过渡中对应的元素填充(如果非空)</em>
+<u># 语法</u>
+<em>transition</em>.<b>merge</b>(<s>other</s>)
+<u># 参数</u>
+<s>other</s> ：<em>必需，其它 selection</em>
+<u># 示例</u>
+<em>transition</em>.<q>selection( )</q>.<b>merge</b>(<s>other</s>.<q>selection( )</q>).<q>transition</q>(<em>transition</em>)

@@ -1,0 +1,46 @@
+<u># 语法</u>
+<tt>Uri</tt> <em>u</em> = <b>Uri.parse</b>(</em>
+	<tt>String</tt> <em>url</em>,		<em>// url 字符串</em>
+	[ <tt>int</tt> <em>start</em> = <i>0</i> ] 		<em>// 开始解析位置</em>
+	[ <tt>int</tt> <em>end</em> ] 			<em>// 结束解析位置</em>
+)
+<u># 示例</u>
+<tt>Uri</tt> <em>u</em> = <b>Uri.parse</b>(<em>https://test.com:8080/html5/index?age=10&name=20#fragment</em>)
+
+<tt>bool</tt>  <em>hasScheme</em> = </em><em>u</em>.<q>hasScheme</q>						<em>// 是否有协议 => true</em>
+<tt>bool</tt>  <em>isScheme</em> = </em><em>u</em>.<q>isScheme</q>('<em>https</em>')					<em>// 是否是指定值 => true</em>
+<tt>String</tt> <em>scheme</em> = </em><em>u</em>.<q>scheme</q> 							<em>// 协议 => https</em>
+
+<tt>String</tt>  <em>host</em> = </em><em>u</em>.<q>host</q>  				<em>// 主机 => test.com</em>
+<tt>String</tt>  <em>authority</em> = </em><em>u</em>.<q>authority</q>  		<em>// 主机 => test.com</em>
+<tt>String</tt>  <em>origin</em> = </em><em>u</em>.<q>origin</q>				<em>// 域名 =>  https://test.com</em>
+
+<tt>bool</tt>  <em>hasPort</em> = </em><em>u</em>.<q>hasPort</q>			<em>// 是否有端口 => true</em>
+<tt>String</tt>  <em>port</em> = </em><em>u</em>.<q>port</q>  				<em>// 端口 => 8080</em>
+
+<tt>bool</tt>  <em>hasQuery</em> = </em><em>u</em>.<q>hasQuery</q>										<em>// 是否有参数 => true</em>
+<tt>String</tt>  <em>query</em> = </em><em>u</em>.<q>query</q>												<em>// 可选参数 => age=10&name=20</em>
+<tt>Map&ltString String&gt</tt>  <em>queryParameters</em> = </em><em>u</em>.<q>queryParameters</q>				<em>// 可选参数 =>  {age: 10, name: 20}</em>
+<tt>Map&ltString List&ltString&gt&gt</tt>  <em>queryParameters</em> = </em><em>u</em>.<q>queryParametersAll</q>		<em>// 可选参数 => {age: [10], name: [20]}</em>
+
+<tt>bool</tt>  <em>hasFragment</em> = </em><em>u</em>.<q>hasFragment</q>		<em>// 是否有锚点 => true</em>
+<tt>String</tt>  <em>fragment</em> = </em><em>u</em>.<q>fragment</q>  			<em>// 锚点 => fragment</em>
+<tt>Uri</tt>  <em>url</em> = </em><em>u</em>.<q>removeFragment( )</q>  			<em>// 移除锚点 => </em>
+
+
+<tt>bool</tt>  <em>hasEmptyPath</em> = </em><em>u</em>.<q>hasEmptyPath</q>				<em>// 路径是否为空 => hasEmptyPath</em>
+<tt>bool</tt>  <em>isAbsolute</em> = </em><em>u</em>.<q>isAbsolute</q>						<em>// 是否是绝对路径 => false</em>
+<tt>bool</tt>  <em>hasAbsolutePath</em> = </em><em>u</em>.<q>hasAbsolutePath</q>			<em>// 是否有绝对路径 => false</em>
+<tt>String</tt>  <em>path</em> = </em><em>u</em>.<q>path</q>  								<em>// => </em>
+<tt>List&ltString&gt&gt</tt>  <em>pathSegments</em> = </em><em>u</em>.<q>pathSegments</q>		<em>// 路径片段 => ['html5','index']</em>
+
+
+<tt>UriData</tt>  <em>data</em> = </em><em>u</em>.<q>data</q>  			<em>// => </em>
+<tt>String</tt>  <em>userInfo</em> = </em><em>u</em>.<q>userInfo</q>  	<em>// => </em>
+<tt>int</tt>  <em>hashCode</em> = </em><em>u</em>.<q>hashCode</q>  	<em>// => 954277904</em>
+
+<tt>Uri</tt>  <em>url</em> = </em><em>u</em>.<q>normalizePath( )</q>  	<em>// => </em>
+<tt>Uri</tt>  <em>url</em> = </em><em>u</em>.<q>replace( )</q>  			<em>// => </em>
+<tt>Uri</tt>  <em>url</em> = </em><em>u</em>.<q>resolveUri( )</q>  		<em>// => </em>
+<tt>String</tt>  <em>str</em> = </em><em>u</em>.<q>toFilePath( )</q>  		<em>// => </em>
+<tt>String</tt>  <em>str</em> = </em><em>u</em>.<q>toString( )</q>  		<em>// => </em>

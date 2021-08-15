@@ -1,0 +1,18 @@
+<em># 语言配置包 </em>
+<em>import 'package:flutter_localizations/</em><s>flutter_localizations<s>.<em>dart</em>';
+<em># pubspec.yaml 配置 </em>
+<u>dependencies:</u>
+  <em>flutter:</em>
+    <em>sdk: flutter</em>
+  <em>#配置语言的依赖包</em>
+  <s>flutter_localizations<s>:
+    <u>sdk: flutter</u>
+<em># 中文配置 </em>
+MaterialApp(
+	<b>localizationsDelegates</b>: [ 
+		<q>GlobalMaterialLocalizations</q>.<i>delegate</i>,  		<em>// 提供了 Material 组件库所使用的字符串资源</em>
+		<q>GlobalWidgetsLocalizations</q>.<i>delegate</i>, 		<em>// 定义了在当前的语言中，文字默认的排列方向</em>
+		<q>DemoLocalizationsDelegate</q>.<i>delegate</i>
+	],
+	<b>supportedLocales</b>: [ <em>const</em> <q>Locale</q>(<em>'zh'</em>, <em>'CH'</em>) ]
+)

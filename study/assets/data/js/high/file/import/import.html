@@ -1,0 +1,27 @@
+<u># 第 1 种：同步（打包到当前使用文件）</u>
+<em>1、运行时调用，所以理论上可以运作在代码的任何地方</em>
+<em>2、require 是赋值过程，其实require的结果就是对象、数字、字符串、函数等，再把结果赋值给某个变量。它是普通的值拷贝传递</em>
+<em>const</em> <u>M</u> = <b>require</b>(<em>'./react'</em>)                <em>// var x=M.a、M.b( )</em>
+<em>const</em> <u>{ a, b }</u> = <b>require</b>(<em>'./react'</em>)         <em>// var x=a、b( )</em>
+
+<u># 第 2 种：同步（打包到当前使用文件）</u>
+<em>1、编译时调用，所以必须放在文件的开头</em>
+<em>2、import 是解构过程。使用import导入模块的属性或者方法是引用传递。且import是read-only的，值是单向传递的。default是ES6 模块化所独有的关键字，export default {} 输出默认的接口对象，如果没有命名，则在import时可以自定义一个名称用来关联这个对象</em>
+<b>import</b> <u>M</u> <b>from</b> <em>'./react'</em>                       <em>// var x=M.a、M.b( )</em> <s>export 无法用此种方式引入</s>
+<b>import</b> <u>{ a, b }</u> <b>from</b> <em>'./react'</em>                <em>// var x=a、b( )</em>
+<b>import</b> <u>{ a as n }</u> <b>from</b> <em>'./react'</em>               <em>// as 重命名（把 a 的名称换成 n）： var x = n （命名冲突时常用）</em>
+
+<u># 第 3 种：同步（export 与 export default 混合使用）</u>
+<b>import</b> <u>M</u>, <u>{ a, b }</u> <b>from</b> <em>'./react'</em>               <em>// M 为 default 内容，{ } 为 export 内容</em>
+
+<u># 第 4 种：异步（打包成单独文件）</u>
+<em>const</em> <u>M</u> = <b>import</b>(<em>'./react'</em>)
+<em>// 使用</em>
+<u>M</u><b>.then(f=>{</b> <em>var a = f<em> <b>})</b> 
+<u>M</u><b>.then(f=>{</b> <em>var a = f.default</em> <b>})</b>
+
+<u># 第 5 种：异步（打包成单独文件）</u>
+<em>const</em> <u>M</u> = ( ) => <b>import</b>(<em>'./react'</em>)
+<em>// 使用</em>
+<u>M( )</u><b>.then(f=>{</b> <em>var a = f<em> <b>})</b> 
+<u>M( )</u><b>.then(f=>{</b> <em>var a = f.default</em> <b>})</b>

@@ -1,0 +1,15 @@
+<u># 用法</u>
+<em>设置或获取每个元素的持续时间（duration ），单位为毫秒</em>
+<u># 语法</u>
+<em>transition</em>.<b>duration</b>(<s>duration</s>)
+<u># 参数</u>
+<s>duration</s> ：<em>可选，每个元素的持续时间，单位为毫秒，默认 250 毫秒</em>（<u>常量、函数</u>）
+<u># 示例</u>
+<em># 获取过渡时间：返回绑定过渡（transition）中的第一个非空元素的持续时间</em>
+<em>const time</em> = <em>transition</em>.<b>duration( ) </b>
+<em># 常量：所有的元素被给予相同的持续时间</em>
+<em>transition</em>.<b>duration</b>(<em>1000</em>) 	
+<em># 函数：则该函数为每个选定的元件（按顺序）计算持续时间，被传递的当前数据d与当前索引i，并用this表示当前的DOM元素。该函数的返回值被用于设置每个元素的持续时间</em>
+<em>transition</em>.<b>duration</b>(<u>function</u>(<q>data</q>,<q>index</q>){
+	<u>return</u> <u>i/2 * 10</u>
+})

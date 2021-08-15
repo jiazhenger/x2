@@ -1,0 +1,20 @@
+<u># 用法</u>
+<em>1、定位数组 array 中的 x 的插入点，以保持已有序列</em>
+<em>2、参数 lo 和 hi 用来指定数组的子集</em>
+<em>3、默认情况下整个数组都被使用</em>
+<em>4、如果 x 在 array 中已存在，插入点在所有元素之前（左侧）</em>
+<em>5、返回值适合用作拼接（splice）已经排序的数组array 的第一个参数</em>
+<em>6、返回的插入点i把array 分为两个区：数组中所有array.slice(lo, i)中v < x 的v在左边，数组中所有 array.slice(i, hi)中v >= x 的v在右边</em>
+<u># 语法</u>
+<q>d3</q>.<b>bisectLeft</b>(<s>arry</s>, <s>x</s>, <s>lo</s>, <s>hi</s>)
+<u># 参数</u>
+<s>array</s> ： <em>必需，数组</em>
+<s>x</s> ： <em>可选，</em>
+<s>lo</s> ： <em>可选，</em>
+<s>hi</s> ： <em>可选，</em>
+<u># 示例</u>
+<em>const r</em> = <q>d3</q>.<b>bisectLeft</b>(<em>[ ]</em>) 					<em>// => 0</em>
+<em>const r</em> = <q>d3</q>.<b>bisectLeft</b>(<em>[ 1, 7, 10 ]</em>) 			<em>// => 0</em>
+<em>const r</em> = <q>d3</q>.<b>bisectLeft</b>(<em>[ 1, 7, 10 ]</em>, <em>7</em>) 			<em>// => 1</em>
+<em>const r</em> = <q>d3</q>.<b>bisectLeft</b>(<em>[ 1, 7, 10 ]</em>, <em>7</em>), <em>10</em>) 		<em>// => 10</em>
+<em>const r</em> = <q>d3</q>.<b>bisectLeft</b>(<em>[ 1, 7, 10 ]</em>, <em>7</em>), <em>10</em>, <em>80</em>) 	<em>// => 10</em>

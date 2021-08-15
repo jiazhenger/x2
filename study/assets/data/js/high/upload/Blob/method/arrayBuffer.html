@@ -1,0 +1,9 @@
+<u># 用法</u>
+<em>返回一个 Promise 对象，包含 blob 中的数据，并在 ArrayBuffer 中以二进制数据的形式呈现</em>
+<u># 语法</u>
+<em>const promise</em> = <em>blob</em>.<b>arrayBuffer( )</b>
+<u># 示例</u>
+<em>blob</em>.<b>arrayBuffer( )</b>.<u>then</u>(<s>data</s>=>{
+	<em>console.log</em>(<s>data</s>) 					<em>// ArrayBuffer(32) { }</em>
+})
+<em>const data</em> = <q>await</q> <em>blob</em>.<b>arrayBuffer( )</b>		<em>// ArrayBuffer(32) { }</em>

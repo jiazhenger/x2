@@ -1,0 +1,10 @@
+<u># 用法</u>
+<em>在已有的子节点前插入一个新的子节点</em>
+<u># 语法</u>
+<s>el</s>.<b>insertBefore</b>(<s>newnode</s>, <s>existingnode</s>)
+<u># 参数</u>
+<s>newnode</s>: <em>必需。要插入的节点对象</em>
+<s>existingnode</s>: <em>必需。要添加新的节点前的子节点</em>
+<u># 示例</u>
+<em>const list</em> = <u>document.getElementById</u>(<em>'list'</em>)
+<em>list</em>.<b>appendChild</b>(<s>document.getElementById</s>(<em>'id'</em>), <em>list</em>.<q>childNodes</q><em>[0]</em>)

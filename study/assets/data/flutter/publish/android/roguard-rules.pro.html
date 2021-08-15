@@ -1,0 +1,10 @@
+<u># 手动创建：</u><i>flutter_app/android/app/roguard-rules.pro</i>
+<em># 减小 apk 文件的大小或者防止代码被逆向破解</em>
+<em>#Flutter Wrapper</em>
+<b>-keep class io.flutter.app.** { *; }</b>
+<b>-keep class io.flutter.plugin.**  { *; }</b>
+<b>-keep class io.flutter.util.**  { *; }</b>
+<b>-keep class io.flutter.view.**  { *; }</b>
+<b>-keep class io.flutter.**  { *; }</b>
+<b>-keep class io.flutter.plugins.**  { *; }</b>
+<em>上述配置只混淆了 Flutter 引擎库，任何其他库（比如 Firebase）需要添加与之对应的规则</em>

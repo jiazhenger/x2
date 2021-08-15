@@ -1,0 +1,14 @@
+<em>import</em> { <b>onBeforeMount</b>, <b>onMounted</b>, <b>onBeforeUpdate</b>, <b>onUpdated</b>, <b>onBeforeUnmount</b>, <b>onUnmounted</b>, <b>onActivated</b>, <b>onDeactivated</b>, <b>onErrorCaptured</b> } <em>from 'vue'</em>
+<em>export default</em>{
+	<i>setup( )</i>{
+		<b>onBeforeMount</b><em>		( ( )=>{		} )</em>	<em>// beforeMount 挂载更新前执行</em>
+		<b>onMounted</b><em>			( ( )=>{		} )</em>	<em>// mounted 被创建时执行</em>
+		<b>onBeforeUpdate</b><em>		( ( )=>{		} )</em>	<em>// beforeUpdate 数据更新前执行</em>
+		<b>onUpdated</b><em>			( ( )=>{		} )</em>	<em>// updated 被更新后执行</em>
+		<b>onBeforeUnmount</b><em>	( ( )=>{		} )</em>	<em>// beforeDestroy 销毁之前执行</em>
+		<b>onUnmounted</b><em>		( ( )=>{		} )</em>	<em>// destroyed 销毁之后行</em>
+		<b>onActivated</b><em>			( ( )=>{		} )</em>	<em>// activated keep-alive 组件激活时后行</em>
+		<b>onDeactivated</b><em>		( ( )=>{		} )</em>	<em>// deactivated keep-alive 组件停用时后行</em>
+		<b>onErrorCaptured</b><em>		( ( )=>{		} )</em>	<em>// errorCaptured 出错时后行</em>
+	}
+}

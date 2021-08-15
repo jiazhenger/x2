@@ -1,0 +1,20 @@
+<u># 语法</u>
+<em>const bool</em> = <b>Object.prototype.toString</b>.<i>call</i>(<em>obj</em>) === <u>'[object Number]'</u>
+<em>const bool</em> = <b>Object.prototype.toString</b>.<i>apply</i>(<em>obj</em>) === <u>'[object String]'</u>
+<em>const bool</em> = <b>Object.prototype.toString</b>.<i>call</i>(<em>obj</em>) === <u>'[object Boolean]'</u>
+<em># 简写</em>
+<em>const bool</em> = <b>{ }.toString</b>.<i>call</i>(<em>obj</em>) === <u>'[object Object]'</u>
+<em>const bool</em> = <b>{ }.toString</b>.<i>apply</i>(<em>obj</em>) === <u>'[object Boolean]'</u>
+<em>const bool</em> = <b>{ }.toString</b>.<i>call</i>(<em>obj</em>) === <u>'[object Array]'</u>
+<u># 综合</u>
+(['<i>String</i>', '<i>Number</i>', '<i>Array</i>', '<i>Object</i>', '<i>Boolean</i>', '<i>Function</i>', '<i>Undefined</i>']).<u>forEach</u>(<s>value</s> => {
+	<q>$</q>['is' + <s>value</s>] = <em>obj</em> => <b>{ }.toString.call</b>(<em>obj</em>) === <em>'[object '</em> + <s>value</s> + <em>']'</em>
+})
+<u># 使用</u>
+<em>const bool</em> = <q>$</q>.<i>isString</i>(<em>'abc'</em>)
+<em>const bool</em> = <q>$</q>.<i>isNumber</i>(<em>'abc'</em>)
+<em>const bool</em> = <q>$</q>.<i>isArray</i>(<em>'abc'</em>)
+<em>const bool</em> = <q>$</q>.<i>isObject</i>(<em>'abc'</em>)
+<em>const bool</em> = <q>$</q>.<i>isBoolean</i>(<em>'abc'</em>)
+<em>const bool</em> = <q>$</q>.<i>isFunction</i>(<em>'abc'</em>)
+<em>const bool</em> = <q>$</q>.<i>isUndefined</i>(<em>'abc'</em>)

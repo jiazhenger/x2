@@ -1,0 +1,14 @@
+<u># 用法</u>
+<em>1、用于在指定的毫秒数后调用函数或计算表达式</em>
+<em>2、setTimeout() 只执行 code 一次。如果要多次调用，请使用 setInterval() 或者让 code 自身再次调用 setTimeout()</em>
+<u># 语法</u>
+<u>window</u>.<b>setTimeout</b>(<s>function</s>, <s>millisec</s>)
+<b>setTimeout</b>(<s>function</s>, <s>millisec</s>)
+<u># 参数</u>
+<s>function</s>: <em>必需。要调用的函数或要执行的代码串</em>
+<s>millisec</s>: <em>可选。周期性执行或调用 code 之间的时间间隔，以毫秒计</em>
+<u># 示例</u>
+<em>let</em> <q>clear</q>= <b>setTimeout</b>(<s>function( ){ }</s>, <s>100</s>)
+<em>let</em> <q>clear</q>= <b>setTimeout</b>(<s>'start( )'</s>, <s>100</s>)
+<em># 清除计时器</em>
+<b>clearTimeout</b>(<q>clear</q>)

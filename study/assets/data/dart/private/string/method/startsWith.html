@@ -1,0 +1,11 @@
+<u># 用法</u>
+<em>如果字符串以匹配 pattern 开始，则返回 true</em>
+<u># 语法</u>
+<tt>bool</tt> <b>startsWith</b>(
+	<tt>Pattern</tt> <em>pattern</em>,		<em># 匹配字符串，或正则表达式</em>
+	[ <tt>int</tt> <em>index</em> = <i>0</i> ] 		<em># 索引值</em>
+)
+<u># 示例</u>
+<tt>bool</tt> <em>num</em> = (<em>'123'</em>).<b>startsWith</b>(<em>'1'</em>); 						<em>// 以 1 开始 => true</em>
+<tt>bool</tt> <em>num</em> = (<em>'123'</em>).<b>startsWith</b>(<em>'2'</em>,<em>1</em>); 					<em>// 在第1个，以2开始 => true</em>
+<tt>bool</tt> <em>num</em> = (<em>'123'</em>).<b>startsWith</b>(<em>RegExp(r'[A-Z][a-z]')</em>); 		<em>// 正则表达式</em>

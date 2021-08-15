@@ -1,0 +1,11 @@
+<u># 用法</u>
+<em>将指定的嵌套操作应用到指定的 array, 返回一个嵌套对象。返回的关联数组中的每一项都与第一个 key 函数相关。每一项的值取决于 key 函数的个数：如果不止一个 key 函数则值为一个关联数组，否则是经过 key 函数过滤之后的数组</em>
+<u># 语法</u>
+<q>nest</q>.<b>object</b>(<s>array</s>)
+<u># 参数</u>
+<s>array</s> ：<em>必需，数组</em>
+<u># 示例</u>
+<em>const arr</em> = <q>d3</q>.<q>nest( )</q>.<q>object</q>(<em>[1,2,3]</em>)			<em>// => [0:1,1:2,2:3]</em>
+<em>const arr</em> = <q>d3</q>.<q>nest( )</q>.<b>key</b>(<u>function</u>(<s>value</s>){ 		<em>// => {a:['a'], b:['b'], c:['c']}</em>
+	<u>return</u> <s>value</s>
+}).<q>object</q>(<em>['a', 'b', 'c']</em>)

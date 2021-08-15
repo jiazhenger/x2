@@ -1,0 +1,10 @@
+<u># 用法</u>
+<em>向 nodeMap 添加指定的节点</em>
+<u># 语法</u>
+<u>namednodemap</u>.<b>setNamedItem</b>(<s>node</s>)
+<u># 参数</u>
+<s>node</s>: <em>必需。Node 对象。需要在 namedNodeMap 集合中添加/替换的节点</em>
+<u># 示例</u>
+<em>const</em> <i>attr</i> = <q>document.createAttribute</q>(<em>'class'</em>)		<em>// 创建一个属性名 class</em>
+<i>attr</i>.<q>nodeValue</q> = <em>'red'</em>							<em>// 设置属性名 class 的值为 'red'</em>
+<u>document.body.attributes</u>.<b>setNamedItem</b>(<i>attr</i>)		<em>// 将创建的属性添加到指定节点上去 class='red'</em>

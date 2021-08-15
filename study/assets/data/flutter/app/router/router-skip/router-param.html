@@ -1,0 +1,18 @@
+<em>import 'package:flutter_web/material.dart'</em>;
+<em>class</em> <u>MyPage</u> <em>extends StatefulWidget</em> {
+	<em># 声明变量，声明的变量必须与传入参数个数保持一致</em>
+	<em>final</em> <tt>String</tt> <b>title</b>;
+	<em>final</em> <tt>List &lt;int&gt;</tt> <b>list</b>;
+	<tt>Map&lt;String, int&gt;</tt> <b>map</b>;
+	<em># 声明传入参数</em>
+	<u>MyPage</u>({ <em>Key key</em>, <b>this.title, this.name, this.map</b> }) : <em>super(key: key)</em>;
+	<em># 创建 state</em>
+	<em>@override</em>
+	<em>_State createState() => _State();</em>
+}
+<em>class</em> <em>_State extends State</em>&lt;<u>MyPage</u>&gt; {
+	<em>@override</em>
+	<em>Widget build(BuildContext context)</em> {
+		<em>return Text</em>(<b>widget</b>.<b>title</b>)
+	}
+}

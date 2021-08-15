@@ -1,0 +1,17 @@
+<u># 用法</u>
+<em>构建一个 HCL 颜色通道的颜色对象. 返回的颜色对象中包含 l, c 和 h 三个属性</em>
+<u># 语法</u>
+<q>d3</q>.<b>lch</b>(<s>l</s>, <s>c</s>, <s>h</s>, <s>opacity</s>)
+<q>d3</q>.<b>lch</b>(<s>specifier</s>)
+<q>d3</q>.<b>lch</b>(<s>color</s>)
+<u># 参数</u>
+<s>l</s> ： <em>必需，l 值</em>
+<s>c</s> ： <em>必需，c 值</em>
+<s>h</s> ： <em>必需，h 值</em>
+<s>opacity</s> ： <em>可选，透明度，[0,1]</em>
+<s>specifier</s> ： <em>必需，颜色字符串</em>
+<s>color</s> ： <em>必需，颜色字符串</em>
+<u># 示例</u>
+<em>const r</em> = <q>d3</q>.<q>lch</q>(<em>0,0,0,0.5</em>)		<em>// => Hcl {h: 0, c: 0, l: 0, opacity: 0.5}</em>
+<em>const r</em> = <q>d3</q>.<q>lch</q>(<em>red</em>)		<em>// => Hcl {h: 40.85261277607024, c: 106.83899941284552, l: 54.29173376861782, opacity: 1}</em>
+<em>const r</em> = <q>d3</q>.<q>lch</q>(<em>rgba(0,0,0,.5)</em>)		<em>// => Hcl {h: NaN, c: NaN, l: 0, opacity: 0.5}}</em>

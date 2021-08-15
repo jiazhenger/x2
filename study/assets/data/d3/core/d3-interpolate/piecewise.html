@@ -1,0 +1,9 @@
+<u># 用法</u>
+<em>根据指定的 values 数组返回一个分段的插值器, 其中数组中每两个相邻的值之间会创建一个单独的插值器。返回的插值器在 t 处于[0, 1 / (n - 1)] 时通过 interpolate(values[0], values[1]) 事件, 在 t 处于 [1 / (n - 1), 2 / (n - 1)] 时使用 interpolate(values[1], values[2]) 计算，其中 n 等于 values.length，以此类推。从结果来看，这是一个轻量级的 linear scale</em>
+<u># 语法</u>
+<em>const interpolate</em> = <q>d3</q>.<b>piecewise</b>(<s>interpolate</s>, <s>values</s>)(<u>t</u>)
+<u># 参数</u>
+<s>interpolate</s> ：<em>必需，一个插值器</em>
+<s>values</s> ：<em>必需，数组</em>
+<u># 示例：</u>
+<em>const r</em> = <q>d3</q>.<b>piecewise</b>(<u>d3.interpolateRgb.gamma(2.2)</u>, <em>['reg','green','blue']</em>)

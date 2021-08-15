@@ -1,0 +1,18 @@
+<em>import</em> { <b>ref</b>, <b>onMounted</b>, <b>onUnmounted</b> } <em>from 'vue'</em>
+<em>const</em> <u>useMousePosition</u> = ( ) => {
+	<em>const</em> <s>x</s> = <b>ref</b>(0)
+	<em>const</em> <s>y</s> = <b>ref</b>(0)
+	<b>onMounted</b>(( )=>{		})
+	<b>onUnmounted</b>(( )=>{		})
+	<em>return</em> { <s>x</s>, <s>y</s> }
+}
+<em># 使用</em>
+<em>&lt;script&gt;</em>
+	<em>import</em> { <u>useMousePosition</u> } <em>from '...'</em>
+	<em>export default</em> {
+		<i>setup( )</i>{
+			<em>const</em> {<s>x</s>, <s>y</s> } = <u>useMousePosition</u>( )
+			<em>return</em> { <s>x</s>, <s>y</s> }
+		}
+	}
+<em>&lt;/script&gt;</em>

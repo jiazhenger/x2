@@ -1,0 +1,18 @@
+<em># 父组件</em>
+<em>&lt;template&gt;&lt;ChildComponent <i>ref</i>='<s>formRef</s>' <i>:ref</i>='<u>el => <s>formRef</s> = el</u>' </em><em> /&gt;/template&gt;</em>
+<em>&lt;script <i>setup</i>&gt;</em>
+	<b>ref:</b> <s>formRef</s>
+	<em>const</em> <em>submit</em> = ( )=>{
+		<s>formRef</s>.<u>submit( )</u> 			<em>// 调用子组件方法</em>
+	}
+<em>&lt;/script&gt;</em>
+
+<em># 子组件</em>
+<em>&lt;script <i>setup</i>&gt;</em>
+	<em>import { <q>useContext</q> } from 'vue'</em>
+	<em>const</em> { <b>expose</b> } = <q>useContext( )</q>
+	<b>expose</b>({
+		<u>submit</u> 	: ( ) => {	},			<em>// 暴露方法</em>
+		<u>age</u> 		: <em>100</em>				<em>// 暴露属性</em>
+	})
+<em>&lt;/script&gt;</em>

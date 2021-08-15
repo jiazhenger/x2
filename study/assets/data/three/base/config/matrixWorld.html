@@ -1,0 +1,10 @@
+<u># 用法</u>
+<em>物体的全局形变</em>
+<u># 语法</u>
+<em>Object3D</em>.<b>matrixWorld</b> = <u>new Three.Matrix4( )</u>
+<u># 将向量或矩阵转化到世界空间</u>
+<em>const r</em> =  <u>new</u> <q>Three</q>.<q>Vector2( )</q>.<q>applyMatrix4</q>(<em>Object3D</em>.<b>matrixWorld</b>) 				<em>// => Vector2 {x: 0, y: 0}</em>
+<em>const r</em> =  <u>new</u> <q>Three</q>.<q>Vector3( )</q>.<q>applyMatrix4</q>(<em>Object3D</em>.<b>matrixWorld</b>) 				<em>// => Vector3 {x: 0, y: 0, z: 0}</em>
+<em>const r</em> =  <u>new</u> <q>Three</q>.<q>Vector4( )</q>.<q>applyMatrix4</q>(<em>Object3D</em>.<b>matrixWorld</b>) 				<em>// => Vector4 {x: 0, y: 0, z: 0, w: 1}</em>
+<u># 将向量或矩阵从世界空间转化到本地空间</u>
+<em>const r</em> =  <u>new</u> <q>Three</q>.<q>Vector2( )</q>.<q>applyMatrix4</q>(<em>m1</em>.<q>getInverse</q>(<em>Object3D</em>.<b>matrixWorld</b>)) 	<em>// => Vector2 {x: 0, y: 0}</em>

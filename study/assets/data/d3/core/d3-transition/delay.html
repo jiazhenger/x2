@@ -1,0 +1,17 @@
+<u># 用法</u>
+<em>1、设置或获取每个元素的延迟时间（以毫秒为单位）</em>
+<em>2、默认的延迟是 0</em>
+<em>3、延迟总是相对一系列过渡中的第一个而言</em>
+<u># 语法</u>
+<em>transition</em>.<b>delay</b>(<s>delay</s>)
+<u># 参数</u>
+<s>delay</s> ：<em>可选，指定过渡延迟以毫秒为单位，默认 0</em>（<u>常量、函数</u>）
+<u># 示例</u>
+<em># 获取延迟时间</em>
+<em>transition</em>.<b>delay( )</b>
+<em># 常量</em>
+<em>transition</em>.<b>delay</b>(<em>1000</em>)
+<em># 函数：错开元素过渡</em>
+<em>transition</em>.<b>delay</b>(<u>function</u>(<q>data</q>,<q>index</q>){
+	<u>return</u> <u>i/2 * 10</u>
+})

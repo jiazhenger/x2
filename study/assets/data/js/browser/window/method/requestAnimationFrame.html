@@ -1,0 +1,26 @@
+<u># 用法</u>
+<em>根据显示器的刷新率进行渲染，类似 setTimeout</em>
+<u># 语法</u>
+<u>window</u>.<b>requestAnimationFrame</b>(<s>callback</s>)
+<b>requestAnimationFrame</b>(<s>callback</s>)
+<u># 参数</u>
+<s>callback</s>: <em>必需。一个执行函数</em>
+
+<u># 兼容方法</u>
+<u>window.requestAnimat</u> = (<u>function</u>( ){
+	<em>return</em> <b>window.requestAnimationFrame</b> <em>||</em> <b>window.webkitRequestAnimationFrame</b>  <em>||</em> <b>window.mozRequestAnimationFrame</b> <em>||</em> <b>function(callback)</b>{
+		<u>setTimeout(callback,1000/60)</u>
+	}
+)<u>( )</u>
+
+<u># 示例</u>
+let <i>ret</i> = 0
+
+<u>function</u> <s>loopAnim</s>( ){
+	<em>render( )</em>
+	<i>ret</i> = <u>requestAnimat</u>( <s>loopAnim</s> )
+}
+
+<em>b.onclick</em> = <u>function</u>( ){
+	<b>window.cancelAnimationFrame</b>(<i>ret</i>);		<em>// 取消动画</em>
+};

@@ -1,0 +1,27 @@
+<em># 安装全部依赖</em>
+<b>yarn</b>
+<em># 安装到 dependencies</em>
+<b>yarn add</b> <u>packgeName</u>
+<b>yarn add</b> <u>packgeName</u> <b>--dev</b>
+<em># 安装到不同版本</em>
+<b>yarn add</b> <u>packgeName@v1.1.0</u>
+<em># 升级包</em>
+<b>yarn upgrade</b>
+<b>yarn upgrade</b> <u>packgeName</u>
+<b>yarn upgrade</b> <u>packgeName@v1.1.0</u>
+<em># 移出包</em>
+<b>yarn remove</b> <u>packgeName</u>
+<em># 打包</em>
+<b>yarn build</b>	
+<b>yarn build:no-cache</b>		<em>// 打包，执行之前会先删除缓存</em>
+<b>yarn report</b>				<em>// 生成构建包表表预览</em>
+<em># 格式化</em>
+<b>yarn lint:stylelint</b>
+<b>yarn report</b>				<em>// 样式格式化</em>
+<b>yarn lint:prettier</b>			<em>// js/ts代码格式化</em>
+<em># 其他</em>
+<b>yarn reinstall</b>				<em>// 删除依赖重新装，兼容 window</em>
+<b>yarn preview</b>				<em>// 本地进行打包预览</em>
+<b>yarn log</b>					<em>// 生成 log</em>
+<b>yarn clean:cache</b>			<em>// 删除缓存</em>
+<b>yarn clean:lib</b>				<em>// 删除 node_modules，兼容window系统</em>

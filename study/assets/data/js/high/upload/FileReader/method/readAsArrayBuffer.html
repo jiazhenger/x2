@@ -1,0 +1,18 @@
+<u># 用法</u>
+<em>1、用于启动读取指定的 Blob 或 File 内容</em>
+<em>2、当读取操作完成时，readyState 变成 DONE（已完成），并触发 loadend 事件，同时 result 属性中将包含一个 ArrayBuffer 对象以表示所读取文件的数据</em>
+<u># 语法</u>
+<em>reader</em>.<b>readAsArrayBuffer</b>(<s>blob</s>)
+<u># 参数</u>
+<s>blob</s>: <em>必需。Blob 类型 或 File 类型</em>
+<u># 示例</u>
+<u>funciton</u> <em>upload</em>(<s>e</s>){
+	<em>const</em> <s>file</s>	= <s>e</s>.<u>target.files[0]</u>
+	<em>const</em> <i>reader</i> = <q>new FileReader( )</q>
+	<i>reader</i>.<b>readAsArrayBuffer</b>(<s>file</s>)
+	<em>return new Promise(resolve => {</em>
+		<i>reader</i>.<q>onload</q> = <u>function</u>( <em>e</em> ){
+			<em>resolve</em>(<q>this</q>.<b>result</b>)
+		}
+	<em>})</em>
+}

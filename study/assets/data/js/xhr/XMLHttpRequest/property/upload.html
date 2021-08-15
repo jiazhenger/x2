@@ -1,0 +1,12 @@
+<u># 用法</u>
+<em>用来表示上传的进度.这个对象是不透明的，但是作为一个XMLHttpRequestEventTarget、可以通过对其绑定事件来追踪它的进度</em>
+<u># 语法</u>
+<em>const upload</em> = <em>xhr</em>.<b>upload</b>
+<u># 绑定在上传对象上的事件监听器</u>
+<em>xhr</em>.<b>upload</b>.<q>onloadstart</q> = <u>funciton</u>( ){		}		<em>// 获取开始</em>
+<em>xhr</em>.<b>upload</b>.<q>onload</q> = <u>funciton</u>( ){		}			<em>// 获取成功</em>
+<em>xhr</em>.<b>upload</b>.<q>onloadend</q> = <u>funciton</u>( ){		}		<em>// 获取完成(不论成功与否)</em>
+<em>xhr</em>.<b>upload</b>.<q>onprogress</q> = <u>funciton</u>( ){		}		<em>// 数据传输进行中</em>
+<em>xhr</em>.<b>upload</b>.<q>ontimeout</q> = <u>funciton</u>( ){		}		<em>// 获取操作在用户规定的时间内未完成</em>
+<em>xhr</em>.<b>upload</b>.<q>onabort</q> = <u>funciton</u>( ){		}			<em>// 获取操作终止</em>
+<em>xhr</em>.<b>upload</b>.<q>onerror</q> = <u>funciton</u>( ){		}			<em>// 获取失败</em>

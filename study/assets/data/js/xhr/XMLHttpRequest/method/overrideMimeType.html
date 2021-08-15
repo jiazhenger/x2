@@ -1,0 +1,11 @@
+<u># 用法</u>
+<em>1、指定一个MIME类型用于替代服务器指定的类型，使服务端响应信息中传输的数据按照该指定 MIME 类型处理</em>
+<em>2、此方法必须在派方法之前调用方为有效</em>
+<em>3、XMLHttpRequest 默认 MIME 类型为 'text/xml'</em>
+<u># 语法</u>
+<em>xhr</em>.<b>overrideMimeType</b>(<s>mimeType</s>)
+<u># 参数</u>
+<s>mimeType</s>	: <em>必需。一个 DOMString 指定具体的 MIME 类型去代替有服务器指定的 MIME 类型. 默认 text/xml</em>
+<u># 示例</u>
+<em>xhr</em>.<b>overrideMimeType</b>('<s>text/plain</s>')
+<em>xhr</em>.<b>overrideMimeType</b>('<s>text/html</s>')

@@ -1,0 +1,10 @@
+<u># 用法</u>
+<em>返回在 FormData 对象中与给定键关联的第一个值</em>
+<u># 语法</u>
+<em>const value</em> = <em>fd</em>.<b>get</b>(<s>name</s>)
+<u># 参数</u>
+<s>name</s>: <em>必需。将要获取值的键名</em>
+<u># 示例</u>
+<em>const fd</em> = <q>new FormData( )</q>
+<em>fd</em>.<q>append</q>(<s>'name'</s>, <em>'javascript'</em>)
+<em>const value</em> = <em>fd</em>.<b>get</b>(<s>'name'</s>) 		<em>// => javascript</em>

@@ -1,0 +1,13 @@
+<u># 用法</u>
+<em>删除场景中的内容</em>
+<u># 语法</u>
+<em>scene</em>.<b>remove</b>(<s>mesh</s>，<s>group</s>)
+<u># 参数</u>
+<s>mesh</s> ：<em>必需，模型、场景内容：</em>
+<s>group</s> ：<em>可选，组对象：</em><u>new Three</u>.<q>Group( )</q>
+<u># 删除 mesh</u>
+<em>const</em> <s>mesh</s> =  <u>new</u> <q>Three</q>.<q>Mesh</q>( )
+<em>const</em> <s>group</s> =  <u>new</u> <q>Three</q>.<q>Group</q>( )
+<s>mesh</s>.<q>geometry</q>.<q>dispose( )</q> 			<em>// 释放当前渲染的上下文</em>
+<s>mesh</s>.<q>material</q>.<q>dispose( )</q> 			<em>// 释放当前渲染的上下文</em>
+<s>scene</s>.<b>remove</b>( <s>mesh</s>, <s>group</s> ) 		<em>// 删除场景内容</em>

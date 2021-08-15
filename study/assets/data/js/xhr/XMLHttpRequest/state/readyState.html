@@ -1,0 +1,20 @@
+<u># 用法</u>
+<em>1、存有 XMLHttpRequest 的状态。从 0 到 4 发生变化</em>
+<em>2、每当 readyState 改变时，就会触发 onreadystatechange 事件</em>
+<u># 语法</u>
+<em>const state</em> = <em>xhr</em>.<b>readyState</b>
+<u># readyState 的值</u>
+<i>0</i>	<i>UNSENT</i>				:	<em>请求未初始化（代理被创建，但尚未调用 <u>open( )</u> 方法）</em>
+<i>1</i>	<i>OPENED</i>				:	<em>服务器连接已建立（<u>open( )</u>方法已经被调用）</em>
+<i>2</i>	<i>HEADERS_RECEIVED</i>	:	<em>请求已接收（<u>send( )</u>方法已经被调用，并且头部和状态已经可获得）</em>
+<i>3</i>	<i>LOADING</i>			:	<em>请求处理中（下载中；<u>responseText</u> 属性已经包含部分数据）</em>
+<i>4</i>	<i>DONE</i>				:	<em>请求已完成，且响应已就绪（下载操作已完成）</em>
+<u># 示例</u>
+<em>xhr</em>.<q>onreadystatechange</q>(<s>function( )</s>{
+	if(<em>xhr</em>.<b>readyState</b> === <i>4</i>){
+		<em>const data</em> = <em>xhr</em>.<q>responseText</q>
+	}
+	if(<u>this</u>.<b>readyState</b> === <i>4</i>){
+		<em>const data</em> = <u>this</u>.<q>responseText</q>
+	}
+})

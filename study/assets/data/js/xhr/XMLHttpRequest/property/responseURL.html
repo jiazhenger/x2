@@ -1,0 +1,11 @@
+<u># 用法</u>
+<em>返回响应的序列化网址：</em>
+	<em>(1) 如果网址为空则返回空字符串</em>
+	<em>(2) 如果 url 有锚点，则位于 url# 后面的内容会被删除</em>
+	<em>(3) 如果 url 有重定向 responseURL 的值会是经过多次重定向后的最终网址</em>
+<u># 语法</u>
+<em>const text</em> = <em>xhr</em>.<b>responseURL</b>
+<u># 示例</u>
+<em>xhr</em>.<q>open</q>(<em>'GET'</em>, <em>/api/search</em>, <em>true</em>)
+<em>xhr</em>.<q>send( )</q>
+<em>const text</em> = <em>xhr</em>.<b>responseText</b>

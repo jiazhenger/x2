@@ -1,0 +1,12 @@
+<u># 用法</u>
+<em>1、在两个颜色 a 和 b 之间创建一个 Lab 颜色空间的插值器</em>
+<em>2、a 和 b 不一定使用 Lab 表示，它们将会适用 d3.lab 转为 Lab 表示。返回的值使用 RGB 字符串表示</em>
+<u># 语法</u>
+<em>const interpolate</em> = <q>d3</q>.<b>interpolateLab</b>(<s>a</s>, <s>b</s>)(<u>t</u>)
+<u># 参数</u>
+<s>a</s> ：<em>必需，开始值</em>
+<s>b</s> ：em>必需，结束值</em>
+<s>t</s> ：<em>区间 [ 0, 1 ]</em>
+<u># 示例：</u>
+<em>const r</em> = <q>d3</q>.<b>interpolateLab</b>(<em>'#f00'</em>, <em>'#cff'</em>)(<em>.5</em>) 				<em>// => rgb(253, 162, 128)</em>
+<em>const r</em> = <q>d3</q>.<b>interpolateLab</b>(<em>'#cff'</em>, <em>'#f00'</em>)(<em>.5</em>) 				<em>// => rgb(253, 162, 128)</em>

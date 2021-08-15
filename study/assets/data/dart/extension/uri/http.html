@@ -1,0 +1,8 @@
+<u># 语法</u>
+<tt>Uri</tt> <em>uri</em> = <em>new</em> <b>Uri.http</b>(</em>
+	<tt>String</tt> <em>authority</em>,							<em>// 主机</em>
+	<tt>String</tt> <em>unencodedPath</em>,						<em>// 路径</em>
+	[ <tt>Map&ltString String&gt</tt> ] <em>queryParameters</em> 		<em>// 参数</em>
+)
+<u># 示例</u>
+<tt>Uri</tt> <em>uri</em> = <b>Uri.http</b>(<em>'example.com'</em>, <em>'/path1/path2'</em>, <em>{'param1': '42', 'param2': 'foo'}</em>)	<em>// =>  http://example.com/path1/path2?param1=42&param2=foo</em>

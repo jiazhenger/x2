@@ -1,0 +1,11 @@
+<u># 用法</u>
+<em>创建一个新的 Lab 灰色( a = b = 0)</em>
+<u># 语法</u>
+<q>d3</q>.<b>gray</b>(<s>specifier</s>, <s>opacity</s>)
+<u># 参数</u>
+<s>specifier</s> ： <em>必需，颜色字符串</em>
+<s>opacity</s> ： <em>必需，透明度</em>
+<u># 示例</u>
+<em>const r</em> = <q>d3</q>.<q>gray</q>(<em>0,0.5</em>)		<em>// => Lab {l: 0, a: 0, b: 0, opacity: 0.5}</em>
+<em>const r</em> = <q>d3</q>.<q>gray</q>(<em>red</em>)		<em>// => Lab {l: NaN, a: 0, b: 0, opacity: 1}</em>
+<em>const r</em> = <q>d3</q>.<q>gray</q>(<em>rgba(0,0,0,.5)</em>)		<em>// => Lab {l: NaN, a: 0, b: 0, opacity: 1}</em>

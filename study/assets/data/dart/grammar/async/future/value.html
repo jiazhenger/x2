@@ -1,0 +1,10 @@
+<u># 语法</u> 
+<tt>Future &lt;bool&gt;</tt> <b>Future.value</b>(
+	[ <tt>FutureOr&lt;bool&gt;</tt> <em>value</em> ] 		<em># 设置异步返回值</em>
+)
+<u># 示例</u>
+<tt>Future &lt;bool&gt;</tt> <u>ajax( )</u>{ 
+	<em>return</em> <b>Future.value( )</b>;				<em>// 设置异步返回值为 null</em>
+	<em>return</em> <b>Future.value</b>( <s>true</s> );			<em>// 设置异步返回值为 true</em>
+	<em>return</em> <b>Future.value</b>( <s>false</s> );			<em>// 设置异步返回值为 false</em>
+}

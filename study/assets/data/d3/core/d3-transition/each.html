@@ -1,0 +1,15 @@
+<u># 用法</u>
+<em>1、如果指定了类型（type），就为过渡事件增加一个侦听器(listener)，同时支持 'start', 'end' 和 'interrupt'</em>
+<em>2、侦听器会被过渡中每个单独的元素调用</em>
+<u># 语法</u>
+<em>transition</em>.<b>each</b>(<s>type</s>, <s>listener</s>)
+<u># 参数</u>
+<s>name</s> ：<em>必需，样式名</em>（<u>字符串</u>）
+<s>value</s> ：<em>必需，样式值</em>（<u>常量、函数</u>）
+<u># 函数 this 指向当前 dom</u>
+<u># 示例</u>
+<q>d3.transition( )</q>.<q>duration</q>(<em>750</em>).<q>ease</q>(<em>d3.easeLinear</em>).<b>each</b>(<u>function</u>(<q>data</q>, <q>index</q>){
+	<u>d3.selectAll('.foo').transition( ).style('opacity', 0).remove( )</u>
+}).<q>transition( )</q>.<b>each</b>(<u>function</u>(<q>data</q>, <q>index</q>){
+	<u>d3.selectAll('.bar').transition( ).style('opacity', 0).remove( )</u>
+})

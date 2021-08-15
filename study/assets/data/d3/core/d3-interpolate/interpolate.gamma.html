@@ -1,0 +1,8 @@
+<u># 用法</u>
+<em>根据指定的 values 数组返回一个分段的插值器, 其中数组中每两个相邻的值之间会创建一个单独的插值器。返回的插值器在 t 处于[0, 1 / (n - 1)] 时通过 interpolate(values[0], values[1]) 事件, 在 t 处于 [1 / (n - 1), 2 / (n - 1)] 时使用 interpolate(values[1], values[2]) 计算，其中 n 等于 values.length，以此类推。从结果来看，这是一个轻量级的 linear scale</em>
+<u># 语法</u>
+<em>const interpolator</em> = <em>interpolate</em>.<b>gamma</b>(<s>gamma</s>)
+<u># 参数</u>
+<s>gamma</s> ：<em>必需</em>
+<u># 示例：</u>
+<em>const interpolator</em> = <q>d3</q>.<q>interpolateRgb</q>.<b>gamma</b>(<em>2.2</em>)(<em>'red'</em>,<em>'blue'</em>)

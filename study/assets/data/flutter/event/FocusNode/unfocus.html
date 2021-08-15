@@ -1,0 +1,19 @@
+<em># 声明焦点事件</em>
+<tt>FocusNode</tt> <i>_focusNode</i> = <em>new</em> <q>FocusNode( )</q>;
+<u>@override</u>
+<tt>void</tt> <u>initState( )</u> {
+	<i>_focusNode</i>.<s>addListener</s>(( ){
+		<u>if</u> (<i>_focusNode</i>.<s>hasFocus</s>) { <em>// 得到焦点</em>	} <u>else</u> { <em>// 失去焦点</em>	}
+	});
+	<em>super.initState()</em>;
+}
+<em># 销毁和清除焦点</em>
+<u>@override</u>
+<tt>void</tt> <u>dispose( )</u> {
+	<i>_focusNode</i>.<b>unfocus( )</b>;
+	<em>super.dispose()</em>;
+}
+<em># 使用</em>
+<u>C</u>(
+	<s>focusNode</s> : <i>_focusNode</i>
+)

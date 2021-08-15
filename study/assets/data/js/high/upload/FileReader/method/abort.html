@@ -1,0 +1,11 @@
+<u># 用法</u>
+<em>用于取消 FileReader 的读取操作，触发之后 readyState 为已完成（DONE）</em>
+<u># 语法</u>
+<em>reader</em>.<b>abort( )</b>
+<u># 示例</u>
+<em>const</em> <i>reader</i> = <q>new FileReader( )</q>
+<i>reader</i>.<b>error</b> = <u>function</u>( <s>e</s> ){		
+	<i>reader</i>.<b>abort( )</b>
+	<q>this</q>.<b>abort( )</b>
+	<s>e.target</s>.<b>abort( )</b>
+}

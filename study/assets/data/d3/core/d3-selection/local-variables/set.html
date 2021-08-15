@@ -1,0 +1,16 @@
+<u># 用法</u>
+<em>1、将指定的 value 设置为指定 node 的局部变量，并返回指定的 value</em>
+<em>2、这个方法经常和 selection.each 结合使用</em>
+<u># 语法</u>
+<em>local</em>.<b>set</b>(<s>node</s>, <s>value</s>)
+<u># 参数</u>
+<s>node</s> ：<em>必需，node 节点</em>（<u>node</u>）
+<s>value</s> ：<em>必需，值</em>
+<u># 示例</u>
+<em>const</em>  <u>local</u> = <q>d3</q>.<q>local( )</q>
+<em># 与 selection.each 结合使用：</em>
+<q>d3</q>.<q>select(<em>'p'</em>)</q>.<q>data(<em>[ 1 ]</em>)</q>.<q>each</q>(<u>function</u>(<s>d</s>) { <u>local</u>.<b>set</b>(<u>this</u>, <s>d</s>) })
+<em># 如果设置的是单一变量，则考虑使用 selection.property</em>
+<q>d3</q>.<q>select(<em>'p'</em>)</q>.<q>data(<em>[ 1 ]</em>)</q>.<q>property</q>(<u>local</u>, <u>function</u>(<s>d</s>) { <u>return</u> <s>d</s>)
+<em># 直接绑定 node</em>
+<u>local</u>.<b>set</b>(<u>document.querySelector</u>(<em>'#box'</em>), <em>'100'</em>)

@@ -1,0 +1,10 @@
+<u># 用法</u>
+<em>如果集合中含有指定参数 value 字符串相同元素，返回 true 并删除元素。否则，这个方法不做任何操作，并返回false</em>
+<u># 语法</u>
+<em>set</em>.<b>remove</b>(<s>value</s>)
+<u># 参数</u>
+<s>value</s> ：<em>必需，一个新值</em>
+<u># 示例</u>
+<em>const s</em> = <q>d3</q>.<q>set</q>(<em>[ 'a', 'b' ]</em>) 		<em>// => Set {$a: "a", $b:"b"}<</em>
+<em>const bool</em> = <em>s</em>.<b>remove</b>(<em>'a'</em>)		<em>// => true</em>
+<em>const r</em> = <em>s</em> 					<em>// => Set {$b: "b"}</em>

@@ -1,0 +1,22 @@
+<em>子组件</em>
+<em>&lt;template&gt;&lt;button</em> <s>@click</s><em>='</em><u>onClick</u><em>'&gt;&lt;/button&gt;</em><em>&lt;/template&gt;</em>
+<em>&lt;script&gt;</em>
+	<em>export default</em> {
+		<em>// 事件校验</em>
+		<s>emits</s> : {
+			<u>'update:value'</u>: <em>null</em>,
+			<u>change</u>: <em>null</em>,
+			<u>click</u>: <em>payload=>payload.type==='close'</em>,
+		},
+		<i>setup</i>( <em>props</em>, <s>context</s> ){
+			<em>const</em> <u>onClick</u> = ( ) => {
+				<s>context</s>.<b>emit</b>('<u>'update:value'</u>', <em>1</em> ) 			<em>// 双向绑定更新值</em>
+				<s>context</s>.<b>emit</b>('<u>change</u>', <em>2</em> ) 				<em>// 双向绑定改变值</em>
+				<s>context</s>.<b>emit</b>('<u>click</u>', <em>{ x:1, y:2 }</em> )
+			}
+			<em>return</em> { <u>onClick</u>  } 				<em>// 暴露给模板使用的变量或方法</em>
+		}
+	}
+<em>&lt;/script&gt;</em>
+<em># 父组件</em>
+<em>&lt;template&gt;&lt;MyComponent</em> <u>@onClick</u><em>='</em><em>onSubmit</em><em>'/&gt;</em><em>&lt;/template&gt;</em>

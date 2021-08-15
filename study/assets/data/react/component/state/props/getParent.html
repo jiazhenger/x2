@@ -1,0 +1,13 @@
+<em>import React from 'react'</em>
+
+<em>class</em>  <s>Parent</s> <em>extends React.Component</em>{
+	<em>render( )</em>{
+		<em>return</em>  <em>&lt;<q>this.props</q>.<b>ChildComponent</b> <s>data</s>='react' /&gt;</em>
+	}
+}
+
+<em>export default ( ) =></em> {
+	<em>return </em> (
+		&lt;<u>Parent</u> <b>ChildComponent</b>= { <q>props</q> => <em>&lt;div&gt;</em> { <q>props</q>.<s>data</s> } <em>&lt;/div&gt;</em> } /&gt;		<em>// == react</em>
+	)
+}

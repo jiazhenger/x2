@@ -1,0 +1,11 @@
+<u># 用法</u>
+<em>将当前WebGLFramebuffer中的像素复制到2D纹理中</em>
+<u># 语法</u>
+<em>renderer</em>.<b>copyFramebufferToTexture</b>(<s>position</s>, <s>teture</s>,<s>level</s>)
+<u># 参数</u>
+<s>position</s>		：<em>必需，位置</em>（<u>new Three.Vector2( )</u>）
+<s>teture</s> 		：<em>必需，纹理</em>（<u>new THREE.Texture( )</u>）
+<s>level</s> 		：<em>必需，层别级</em>（<u>Number</u>）
+<u># 示例</u>
+<em>const renderer</em> = <q>new Three.WebGLRenderer( )</q>
+<em>renderer</em>.<b>copyFramebufferToTexture</b>( <s>new Three.Vector2( )</s>, <s>new THREE.Texture( )</s>, <s>1</s>)

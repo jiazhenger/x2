@@ -1,0 +1,30 @@
+<em># 子组件异步 my-component</em>
+<em>&lt;template&gt;&lt;</em> {{ <u>result</u> }} <em>&lt;/template&gt;</em>
+<em>&lt;script&gt;</em>
+	<em>export default</em> {
+		<i>setup( )</i>{
+			<em>return</em> <b>new Promise</b>( <s>resolve</s> => {
+				<s>resolve</s>({ <u>result</u>: <em>10</em> })
+			})
+		},
+		<b>async</b> <i>setup( )</i>{
+			<em>return</em> {
+				<em>data</em>: <b>await</b> <em>$http.get( )</em>
+			}
+		}
+	}
+<em>&lt;/script&gt;</em>
+
+<em># 父组件使用</em>
+<em>&lt;template&gt;</em> 
+	<em>&lt;<b>Suspense</b>&gt;</em>
+		<em>// 显示组件</em>
+		<em>&lt;template <s>#default</s>&gt;</em>
+			<em>&lt;my-component /&gt;</em>
+		<em>&lt;/template&gt;</em>
+		<em>// 加载效果组件</em>
+		<em>&lt;template <s>#fallback</s>&gt;</em>
+			<em>&lt;div&gt;&lt;</em><em>loading!!!</em><em>&lt;/div&gt;</em> 
+		<em>&lt;/template&gt;</em>
+	<em>&lt;/<b>Suspense</b>&gt;</em> 
+<em>&lt;/template&gt;</em>

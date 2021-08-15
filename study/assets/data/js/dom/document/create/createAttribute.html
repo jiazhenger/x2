@@ -1,0 +1,17 @@
+<u># 用法</u>
+<em>创建一个指定名称的属性，并返回 Attr 对象属性</em>
+<u># 语法</u>
+<em>const attr</em> = <q>document</q>.<b>createAttribute</b>(<s>attributename</s>)
+<u># 参数</u>
+<s>attributename</s>: <em>必需。要创建的属性名称</em>
+<u># 示例</u>
+<em>const</em> <u>attr</u> =  <q>document</q>.<b>createAttribute</b>(<s>'class'</s>)		<em>// 创建一个属性名 class</em>
+<u>attr</u>.<q>nodeValue</q> = <em>'red'</em>							<em>// 设置属性名 class 的值为 'red'</em>
+<em>document.body</em>.<q>setAttributeNode</q>(<u>attr</u>) === <em>document.body</em>.<q>attributes</q>.<q>setNamedItem</q>(<u>attr</u>) 		<em>// => &lt;div class='red'&gt;&lt;/div&gt;</em>
+
+<u># 示例</u>
+<em>const node</em> =  <q>document</q>.<q>createElement</q>(<em>'div'</em>)						<em>// 创建一个元素节点</em>
+<em>const</em> <u>attr</u> =  <q>document</q>.<b>createAttribute</b>(<s>'class'</s>)						<em>// 创建一个属性名 class</em>
+<u>attr</u>.<q>nodeValue</q> = <em>'red'</em>											<em>// 设置属性名 class 的值为 'red'</em>
+<em>node</em>.<q>setAttributeNode</q>(<u>attr</u>) === <em>node</em>.<q>attributes</q>.<q>setNamedItem</q>(<u>attr</u>) 	<em>// 将创建的属性添加到指定节点上去 class='red'</em>
+<em>document.body</em>.<q>appendChild</q>(<em>node</em>) 								<em>// => 将创建的 div 放入 body 最后</em>

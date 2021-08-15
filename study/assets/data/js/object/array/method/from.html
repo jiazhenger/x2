@@ -1,0 +1,16 @@
+<u># 用法</u>
+<em>用于通过拥有 length 属性的对象或可迭代的对象来返回一个数组</em>
+<u># 语法</u>
+<em>const arr</em> = <q>Array</q>.<b>from</b>(<s>object</s>, <s>mapFunction</s>, <s>thisValue</s>)
+<u># 参数</u>
+<s>object</s>: <em>必需。要转换为数组的对象</em>
+<s>mapFunction</s>: <em>可选。数组中每个元素要调用的函数</em>
+<s>thisValue</s>: <em>可选。映射函数(mapFunction)中的 this 对象</em>
+<u># 返回值</u>
+<em>Array</em>
+<u># 数组去重</u>
+<em>const arr</em> =  <q>Array</q>.<b>from</b>(<q>new Set</q>(<em>[1,2,2,3]</em>)) 		<em>// => [1,2,3]</em>
+<u># map 功能</u>
+<em>const arr</em> =  <q>Array</q>.<b>from</b>(<em>[1,2,3]</em>, <s>(value, index) => value * 10</s>)  	<em>// => [10,20,30]</em>
+<u># 构造数据</u>
+<em>const arr</em> =  <q>Array</q>.<b>from</b>(<em>{</em> <u>'0'</u>: <em>100</em>, <u>'1'</u>: <em>200</em>, <s>length</s>: <em>10</em> }<em></em>, <s>(value, index) => { index }</s>)  	<em>// 构造 10 个对象数据 => [ {index:0}, {index:1}, ... ]</em>

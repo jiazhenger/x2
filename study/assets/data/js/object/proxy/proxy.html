@@ -1,0 +1,11 @@
+<u># 用法</u>
+<em>用于创建一个对象的代理，从而实现基本操作的拦截和自定义（如属性查找、赋值、枚举、函数调用等）</em>
+<u># 语法</u>
+<em>const p</em> = <b>new Proxy( <s>target</s>, <s>handler</s>)</b>
+<u># 参数说明</u>
+<s>target</s> : 		<em>必需，要使用 Proxy 包装的目标对象（可以是任何类型的对象，包括原生数组，函数，甚至另一个代理）,即:<i>{ }、 [ ]、Proxy</i></em>
+<s>handler</s> : 	<em>必需，一个通常以函数作为属性的对象，各属性中的函数分别定义了在执行各种操作时代理 p 的行为</em>
+<u># 示例</u>
+<em>const p</em> = <b>new Proxy( <s>{ x:1 }</s>, <s>{ }</s>)</b>
+<em>const p</em> = <b>new Proxy( <s>[ ]</s>, <s>{ }</s>)</b>
+<em>const p</em> = <b>new Proxy( <s>new Proxy({x:1},{ })</s>, <s>{ }</s>)</b>

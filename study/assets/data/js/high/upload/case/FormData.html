@@ -1,0 +1,59 @@
+const { $fn } = window
+const imageType = ['jpg','png','jpeg','gif']
+const maxMB = 2
+const maxKB = 1024 * 1024 * maxMB 			
+<em># FormData 上传</em>
+const <s>FormDataUploader</s> = (e, option) => {
+	const opt = {
+		name:'files',
+		param:{},
+		...option
+	}
+	const name = opt.name
+	const param = opt.param
+	const files = e.target.files
+	let fd = <b>new FormData()</b>;
+	for(let i=0; i&lt;files.length; i++){ fd.<b>append</b>(name,files[i]) }
+	if(fd.<b>get</b>(name) === null){ return null }
+	if(param){
+		for(var i in param){
+			if(param.hasOwnProperty(i)){ fd.append(i,param[i]) }
+		}
+	}
+	return fd 	<em>// 相当于 { 'name':, ...param }</em>
+}
+<em># 上传并判断</em>
+const <q>getValid</q> = e => {
+	if(!(e instanceof Event) || !e.target || !( e.target.files instanceof FileList)){  return $fn.toast('未选择要上传的图片') }
+	const files = e.target.files
+	let bool = true
+	for(var i=0; i&lt;files.length; i++){
+		const file = files[i]
+		<em>// 判断上传文件格式</em>
+		const suffix = file.name.substring(file.name.lastIndexOf('.')+1).toLowerCase()
+		if(imageType.indexOf(suffix) === -1){
+			$fn.toast( file.name + '的格式必须为png、jpg、jpeg！')
+			bool = false
+			break
+		}
+		<em>// 限制图片上传大小</em>
+		if(file.size &gt; maxKB){
+			$fn.toast( file.name + '文件尺寸超过最大限制' + maxMB + 'M')
+			bool = false
+			break
+		}
+	}
+	return bool 
+}
+<em># 判断 + 上传</em>
+const Upload = <u>async</u> (e,option) => {
+	if(<q>getValid</q>(e)){
+		return <u>await</u> <s>FormDataUploader</s>(e,option)
+	}
+}
+<em># 使用</em>
+document.querySelector('#upload').onchange = e => {
+	<q>Upload</q>(e, { name:'myFile', sort: 0 }).then( fd => {
+		<em>$http.submit(this,'api',{ param: fd })</em>
+	})
+}

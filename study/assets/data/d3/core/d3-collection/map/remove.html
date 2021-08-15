@@ -1,0 +1,12 @@
+<u># 用法</u>
+<em>1、若 map 有指定 key 的实体，删除此实体并返回 true。否则，此方法不做任何操作，返回false</em>
+<em>2、删除整个 Map 数据，而不是删除 Map 中的某个 key</em>
+<em>3、若 map 有指定 key 的实体，删除此实体并返回 true。否则，此方法不做任何操作，返回false</em>
+<u># 语法</u>
+<em>map</em>.<b>remove</b>(<s>key</s>)
+<u># 参数</u>
+<s>key</s> ：<em>可选，Map 的 key 值</em>
+<u># 示例</u>
+<em>const m</em> = <q>d3</q>.<q>map</q>(<em>{ a:0, b: 1}</em>) 		<em>// => Map {$a:0, $b;1}</em>
+<em>const bool</em> = <em>m</em>.<b>remove</b>(<em>'a'</em>)		<em>// => true</em>
+<em>const r</em> = <em>m</em> 					<em>// => Map {$b;1}</em>

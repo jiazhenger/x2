@@ -1,0 +1,34 @@
+&lt;<i>template</i>&gt;
+	<em>&lt;div @click='run' &gt;{{ name }}&lt;/div&gt; {{ msg }} {{book}}</em>
+&lt;/<i>template</i>&gt;
+
+&lt;script&gt;
+	<b>export default</b> {
+		<s>name</s>		: <em>'Index'</em>								<em>// 名称</em>
+		<s>props</s>		: <q>[</q><em> 'name' </em><q>]</q>,							<em>// 接收参数，及校验</em>
+		<s>emits</s>		: {<em> run: payload=>payload.type==='close'</em> },<em>	// 事件校验</em>
+		<s>data( ){</s> 											<em>// 模板变量</em>
+			return <q>{</q> 
+				<u>msg<u>: <em>'变量'</em> 
+			<q>}</q>
+		<s>}</s>,
+		<s>mounted</s>( ){	},									<em>// 生命周期</em>
+		<s>methods: {</s> 										<em>// 方法</em>
+			<u>run<u>( ){	}
+		<s>}</s>,
+		<s>computed: {</s> 										<em>// 计算属性</em>
+			<u>book<u>( ){	
+				return <em>100</em>
+			}
+		<s>}</s>，
+		<s>watch: {</s> 										<em>// 侦听器</em>
+			<u>msg</u>( <u>value</u> ){	
+				return <u>this.msg</u><em>+ ' ' + </em><u>value</u>
+			}
+		<s>}</s>
+	}
+&lt;/script&gt;
+
+&lt;style scope&gt;
+	<em>// css 样式</em>
+&lt;/style&gt;

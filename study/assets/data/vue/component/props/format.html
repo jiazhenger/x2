@@ -1,0 +1,11 @@
+<em>&lt;script&gt;</em>
+	<em>export default</em> {
+		<q>props</q> : [ 'data' ],										<em>// 无类型</em>
+		<q>props</q> : {
+			<em>data</em>: <b>String</b>,								<em>// 单一类型</em>
+			<em>data</em>: [<b>String</b>, <b>Number</b>],						<em>// 多个类型</em>
+			<em>data</em>: { <s>type</s>: <b>String</b>, <s>default</s>:'' },				<em>// 单一类型</em>
+			<em>data</em>: { <s>type</s>: [<b>String</b>, <b>Number</b>], <s>default</s>:'' }, 		<em>// 多个类型</em>
+		}
+	}
+<em>&lt;/script&gt;</em>

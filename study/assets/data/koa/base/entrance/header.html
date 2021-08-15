@@ -1,0 +1,15 @@
+<em>const Koa= require('koa')</em>
+<em>const app = new Koa( )</em>
+
+<q>app.use</q>( <em>async</em> (<s>ctx</s>,<q>next</q>) => {
+	<s>ctx</s>.<b>set</b>(<em>'Access-Control-Allow-Origin'</em>, <em>'*'</em>)									<em>// 允许跨域的域名（跨域必设）</em>
+	<s>ctx</s>.<b>set</b>(<em>'Access-Control-Allow-Headers'</em>, <em>'Token'</em>)								<em>// 表明服务器支持的所有头信息字段</em>
+	<s>ctx</s>.<b>set</b>(<em>'Access-Control-Allow-Methods'</em>, <em>'PUT, POST, GET, DELETE, OPTIONS'</em>)		<em>// 设置所允许的HTTP请求方法</em>
+	<s>ctx</s>.<b>set</b>(<em>'Content-Type'</em>, <em>'application/json;charset=utf-8'</em>)						<em>// post 接收数据格式</em>
+	<s>ctx</s>.<b>set</b>(<em>'Access-Control-Allow-Credentials'</em>, <em>true</em>)								<em>// 是否允许发送Cookie</em>
+	<s>ctx</s>.<b>set</b>(<em>'Access-Control-Max-Age'</em>, <em>300</em>)										<em>// 指定本次预检请求的有效期，单位为秒</em>
+	<s>ctx</s>.<b>set</b>(<em>'Access-Control-Expose-Headers'</em>, <em>'myData'</em>)							<em>// XMLHttpRequest 获取额外数据：getResponseHeader('myData')</em>
+	<em>await</em> <q>next( )</q>
+})
+
+<em>app.listen(3005)</em>

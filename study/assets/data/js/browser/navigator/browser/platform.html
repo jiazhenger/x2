@@ -1,0 +1,18 @@
+<em>const platform</em> = (option) => {
+	const opt = option
+	const u = <b>navigator.userAgent</b>
+	const isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1
+	const isIos = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/)
+	const isMobile = !!u.match(/<u>AppleWebKit</u>.*<u>Mobile</u>.*/)
+	if(isAndroid){
+		opt.onAndroid && opt.<i>onAndroid</i>( )
+	}else if(isIos){
+		opt.onIos && opt.<i>onIos</i>( )
+	}
+	if(isMobile){
+		opt.onMobile && opt.<i>onMobile</i>( )
+	}else{
+		opt.onPc && opt.<i>onPc</i>( )
+	}
+	return { <i>isAndroid</i>, <i>isIos</i>, <i>isMobile</i> }
+}

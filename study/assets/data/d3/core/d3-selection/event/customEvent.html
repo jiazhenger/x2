@@ -1,0 +1,12 @@
+<u># 用法</u>
+<em>1、调用指定的 listener, 使用指定的 that 作为 this 上下文并传递指定的 arguments(如果有的话)</em>
+<em>2、在调用期间，d3.event 被设置为指定的 event; 当事件监听器返回(或抛出错), d3.event 被重置为之前的值</em>
+<em>3、此外，设置 event.sourceEvent 为 d3.event 的预设值，允许自定义事件对原生事件的引用</em>
+<em>4、返回由 listener 返回的值</em>
+<u># 语法</u>
+<q>d3</q>.<b>customEvent</b>(<s>event</s>, <s>listener</s>, <s>that</s>, <s>arguments</s>)
+<u># 参数</u>
+<s>event</s> ：<em>必需，事件名</em>（<u>字符串</u>
+<s>listener</s> ：<em>必需，监听函数</em>（<u>函数、null</u>
+<s>that</s> ：<em>可选，指定类型</em>
+<s>arguments</s> ：<em>可选，指定类型</em>

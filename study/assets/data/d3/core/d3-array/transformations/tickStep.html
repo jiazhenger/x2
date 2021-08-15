@@ -1,0 +1,12 @@
+<u># 用法</u>
+<em>返回刻度之间的差值, 差值将相同的参数传递给 d3.ticks 时相邻的两个刻度之间的差值: 会计算一个 10 的 1, 2 或 5 的次幂 的舍入值. 要注意的是因为 IEEE 754 浮点数的存储原因, 返回的值可能不精确. 使用 d3-format 可以将其转换为人类友好的值</em>
+<u># 语法</u>
+<q>d3</q>.<b>tickStep</b>(<s>start</s>, <s>stop</s>, <s>count</s>)
+<u># 参数</u>
+<s>start</s> ：<em>可选，开始索引</em>
+<s>stop</s> ：<em>可选，结束索引</em>
+<s>count</s> ：<em>可选，次数</em>
+<u># 示例</u>
+<em>const arr</em> = <q>d3</q>.<b>tickStep</b>(<em>0</em>, <em>10</em>, <em>3</em>)			<em>// => 5</em>
+<em>const arr</em> = <q>d3</q>.<b>tickStep</b>(<em>0</em>, <em>10</em>, <em>4</em>)			<em>// => 2</em>
+<em>const arr</em> = <q>d3</q>.<b>tickStep</b>(<em>0</em>, <em>10</em>, <em>5</em>)			<em>// => 2</em>

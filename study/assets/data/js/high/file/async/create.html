@@ -1,0 +1,20 @@
+<em># 动态加载 js 文件</em>
+const <s>loadJs</s> = function( <u>src</u> ){
+    var <q>node</q> = document.createElement('script');
+    <q>node</q>.<b>type</b> = 'text/javasctipt';
+    <q>node</q>.<b>async</b> = true;
+    <q>node</q>.<b>src</b> = <u>src</u> + '.js';
+    document.querySelector('head').appendChild(<q>node</q>)     
+}
+<em># 使用</em>
+<s>loadJs</s>(<em>'./jquery'</em>)
+
+<em># 动态加载 css 文件</em>
+const <s>loadCss</s> = function( <u>src</u> ){
+    var <q>node</q> = document.createElement('link');
+    <q>node</q>.<b>rel</b> = 'stylesheet';
+    <q>node</q>.<b>href</b> = <u>src</u> + '.css';
+    document.querySelector('head').appendChild(<q>node</q>)
+}
+<em># 使用</em>
+<s>loadCss</s>(<em>'./style'</em>)

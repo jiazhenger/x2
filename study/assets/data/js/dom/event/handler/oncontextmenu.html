@@ -1,0 +1,10 @@
+<u># 用法</u>
+<em>监听鼠标右键菜单</em>
+<u># 语法</u>
+<em>document</em>.<b>oncontextmenu</b> = <u>function</u>( <em>e</em> ){		}
+<em>document</em>.<q>addEventListener</q>('<b>contextmenu</b>',  <u>e</u> => {
+	<em>// 屏蔽鼠标右键菜单</em>
+	<i>window.event.<s>returnValue</s> = false</i>
+	<u>e</u>.<i><s>returnValue</s> = false</i>
+	<em>return false</em>
+})

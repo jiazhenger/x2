@@ -1,0 +1,12 @@
+<u># 用法</u>
+<em>1、将 CSS Color Module Level 3 指定的颜色字符串转换并返回 RGB 或 HSL 颜色表示</em>
+<em>2、如果指定的字符串不可用, 则返回null</em>
+<u># 语法</u>
+<em>const color</em> = <q>d3</q>.<b>color</b>(<s>specifier</s>)
+<u># 参数</u>
+<s>specifier</s> ： <em>必需，颜色字符串</em>
+<u># 示例</u>
+<em>const color</em> = <q>d3</q>.<b>color</b>(<em>'red'</em>) 				<em>// => Rgb {r: 255, g: 0, b: 0, opacity: 1}</em>
+<em>const color</em> = <q>d3</q>.<b>color</b>(<em>'#cff'</em>) 				<em>// => Rgb {r: 204, g: 255, b: 255, opacity: 1}</em>
+<em>const color</em> = <q>d3</q>.<b>color</b>(<em>'rgb(10,20,25)'</em>) 		<em>// => Rgb {r: 10, g: 20, b: 25, opacity: 1}</em>
+<em>const color</em> = <q>d3</q>.<b>color</b>(<em>'rgba(0,0,0,.5)'</em>) 		<em>// => Rgb {r: 0, g: 0, b: 0, opacity: 0.5}</em>

@@ -1,0 +1,10 @@
+<u># 用法</u>
+<em>将某个子节点替换为另一个。新节点可以是文本中已存在的，或者是你新创建的</em>
+<u># 语法</u>
+<s>el</s>.<b>replaceChild</b>(<s>newnode</s>, <s>oldnode</s>)
+<u># 参数</u>
+<s>newnode</s>: <em>必需。要插入的节点对象</em>
+<s>oldnode</s>: <em>必需。要移除的节点对象</em>
+<u># 示例</u>
+<em>const</em> <s>removeNode</s> = <u>document.getElementById</u>(<em>'li'</em>)
+<s>removeNode</s>.<q>parentNode</q>.<b>replaceChild</b>( <s>document.getElementById</s>(<em>'newnode'</em>), <s>removeNode</s> )

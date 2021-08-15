@@ -1,0 +1,16 @@
+<u># 用法</u>
+<em>1、返回给定数组（array）中自然排序最大的值</em>
+<em>2、如果数组为空，返回undefined。如果指定了accessor 参数，等同与在计算最大值之前调用了array.map(accessor)方法</em>
+<em>3、不同于内置的Math.max，这个方法会忽略未定义的值</em>
+<u># 语法</u>
+<q>d3</q>.<b>max</b>(<s>array</s>, <s>accessor</s>)
+<u># 参数</u>
+<s>array</s> ： <em>必需，数组</em>
+<s>accessor</s> ： <em>可选，一个处理数据的函数</em>
+<u># 示例</u>
+<em># 无 accessor 函数</em>
+<em>const max</em> = <q>d3</q>.<b>max</b>(<em>[ 1, 5, 10 ]</em>) 		<em>// => 10</em>
+<em># 有 accessor 函数，相当于 map( )，返回处理后的数组，再取最大值</em>
+<em>const max</em> = <q>d3</q>.<b>max</b>(<em>[ 1, 5, 10 ]</em>,<u>function</u>(<s>value</s>, <s>index</s>, <s>arr</s>){ 		<em>// => 20</em>
+	<u>return</u>  <s>value</s> + <em>10</em>
+})

@@ -1,0 +1,14 @@
+<u># 用法</u>
+<em>用于将 JavaScript 值转换为 JSON 字符串</em>
+<u># 语法</u>
+<em>const string</em> = <q>JSON</q>.<b>stringify</b>(<s>value</s>, <s>replacer</s>, <s>space</s>)
+<u># 参数</u>
+<s>value</s>: <em>必需。要转换的 JavaScript 值（通常为对象或数组）</em>
+<s>replacer</s>: <em>可选。用于转换结果的函数或数组</em>
+<s>space</s>: <em>可选。文本添加缩进、空格和换行符，如果 space 是一个数字，则返回值文本在每个级别缩进指定数目的空格，如果 space 大于 10，则文本缩进 10 个空格。space 也可以使用非数字，如：\t</em>
+<u># 返回值</u>
+<em>String</em>
+<u># 示例</u>
+<em>const string</em> = <q>JSON</q>.<b>stringify</b>(<s>{a:0}</s>, <s>null</s>, <s>4</s>) 	<em>// 使用四个空格缩进</em>
+<em>const string</em> = <q>JSON</q>.<b>stringify</b>(<s>{a:0}</s>, <s>(key,value)=>value</s>)
+<em>const string</em> = <q>JSON</q>.<b>stringify</b>(<s>{a:0}</s>, <s>[1]</s>)

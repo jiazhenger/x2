@@ -1,0 +1,17 @@
+<u># 用法</u>
+<em>构建一个 Lab 颜色通道的颜色对象. 返回的颜色对象中包含 l, a 和 b 三个属性</em>
+<u># 语法</u>
+<q>d3</q>.<b>lab</b>(<s>l</s>, <s>a</s>, <s>b</s>, <s>opacity</s>)
+<q>d3</q>.<b>lab</b>(<s>specifier</s>)
+<q>d3</q>.<b>lab</b>(<s>color</s>)
+<u># 参数</u>
+<s>l</s> ： <em>必需，l 值</em>
+<s>a</s> ： <em>必需，a 值</em>
+<s>b</s> ： <em>必需，b 值</em>
+<s>opacity</s> ： <em>可选，透明度，[0,1]</em>
+<s>specifier</s> ： <em>必需，颜色字符串</em>
+<s>color</s> ： <em>必需，颜色字符串</em>
+<u># 示例</u>
+<em>const r</em> = <q>d3</q>.<q>lab</q>(<em>0,0,0,0.5</em>)		<em>// => Lab {l: 0, a: 0, b: 0, opacity: 0.5}</em>
+<em>const r</em> = <q>d3</q>.<q>lab</q>(<em>red</em>)		<em>// => Lab {l: 54.29173376861782, a: 80.8124553179771, b: 69.88504032350531, opacity: 1}</em>
+<em>const r</em> = <q>d3</q>.<q>lab</q>(<em>rgba(0,0,0,.5)</em>)		<em>// => Lab {l: 0, a: 0, b: 0, opacity: 0.5}</em>

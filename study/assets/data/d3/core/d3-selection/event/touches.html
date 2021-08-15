@@ -1,0 +1,13 @@
+<u># 用法</u>
+<em>1、返回 current event(当前触摸事件) 相对于指定 container 的 x 和 y 坐标</em>
+<em>2、container 可以是一个 HTML 或 SVG 容器元素，比如 G element 或者 SVG element</em>
+<em>3、返回的坐标以二维数组的形式返回: [[x1, y1], [x2, y2], …]</em>
+<em>4、如果 touches 没有被指定则默认为当前事件的 touches 属性</em>
+<u># 语法</u>
+<q>d3</q>.<b>touch</b>(<s>container</s>, <s>touches</s>)
+<u># 参数</u>
+<s>container</s> ：<em>必需，node</em>（<u>html、svg 节点</u>））
+<s>touches</s> ：<em>可选，</em>
+<u># 示例</u>
+<em># 获取元素</em>
+<q>d3</q>.<b>touches</b>(<em>document.querySelector('#box')</em>) 		<em>// => [ [x1,y1], [x2,y2] ]</em>

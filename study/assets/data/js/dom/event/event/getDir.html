@@ -1,0 +1,30 @@
+let prevX = 0
+let prevY = 0
+let curX = 0
+let curY = 0
+<em>const</em> <s>getDir</s> = function (e, opt) {
+	const { x, y } = <q>getMouse</q>(e)
+	prevX = curX
+	prevY = curY
+	curX = x
+	curY = y
+	if(curY > prevY){ 
+		opt.down && opt.<b>down</b>(y)
+	}else if(curY < prevY){
+		opt.up && opt.<b>up</b>(y)
+	}
+	if(curX > prevX){
+		opt.right && opt.<b>right</b>(x)
+	}else if(curX < prevX){
+		opt.left && opt.<b>left</b>(x)
+	}
+}
+<em># 使用</em>
+document.addEventListener('mousemove',e => {
+	<s>getDir</s>(e,{
+		<b>up</b> 		: ( y ) => {	}, 		<em>// 上滑</em>
+		<b>down</b> 	: ( y ) => {	},		<em>// 下滑</em>
+		<b>left</b>		: ( x ) => {	},		<em>// 左滑</em>
+		<b>right</b> 	: ( x ) => {	},		<em>// 右滑</em>
+	})
+})

@@ -1,0 +1,11 @@
+<u># 用法</u>
+<em>返回一个迭代器（iterator），遍历了该 formData  包含的所有key ，这些 key 是 USVString 对象</em>
+<u># 语法</u>
+<em>const value</em> = <em>fd</em>.<b>keys( )</b>
+<u># 示例</u>
+<em>const fd</em> = <q>new FormData( )</q>
+<em>fd</em>.<q>append</q>(<s>'name'</s>, <em>'javascript'</em>)
+<em>fd</em>.<q>append</q>(<s>'name'</s>, <em>'flutter'</em>)
+<u>for</u>(<em>let</em> <s>v</s> <u>of</u> <em>fd</em>.<b>keys( )</b>){
+	<em>console.log</em>(<s>v</s>)		<em>// => name </em>
+}

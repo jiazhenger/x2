@@ -1,0 +1,14 @@
+<u># 用法</u>
+<em>返回给定数组（array）自然排序的最小值和最大值</em>
+<u># 语法</u>
+<q>d3</q>.<b>extent</b>(<s>array</s>, <s>accessor</s>)
+<u># 参数</u>
+<s>array</s> ： <em>必需，数组</em>
+<s>accessor</s> ： <em>可选，一个处理数据的函数</em>
+<u># 示例</u>
+<em># 无 accessor 函数</em>
+<em>const r</em> = <q>d3</q>.<b>extent</b>(<em>[ 1, 5, 10 ]</em>) 		<em>// => [ 1, 10 ]/em>
+<em># 有 accessor 函数，相当于 map( )，返回处理后的数组，再取结果</em>
+<em>const r</em> = <q>d3</q>.<b>extent</b>(<em>[ 1, 5, 10 ]</em>,<u>function</u>(<s>value</s>, <s>index</s>, <s>arr</s>){ 		<em>// => [ 11, 20 ]</em>
+	<u>return</u>  <s>value</s> + <em>10</em>
+})

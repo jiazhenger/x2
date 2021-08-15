@@ -1,0 +1,15 @@
+<u># 用法</u>
+<em>读取渲染目标的像素到缓冲区</em>
+<u># 语法</u>
+<em>renderer</em>.<b>readRenderTargetPixels</b>(<s>renderTarget</s>, <s>x</s>, <s>y</s>, <s>width</s>, <s>height</s>, <s>buffer</s>)
+<u># 参数</u>
+<s>renderTarget</s>		：<em>必需，渲染目标的一个缓冲区</em>（<u>new Three.WebGLRenderTarget( )</u>）
+<s>x</s> 				：<em>必需，x 轴坐标</em>（<u>Number</u>）
+<s>y</s> 				：<em>必需，y 轴坐标</em>（<u>Number</u>）
+<s>width</s> 			：<em>必需，宽度</em>（<u>Number</u>）
+<s>height</s> 			：<em>必需，高度</em>（<u>Number</u>）
+<s>buffer</s> 			：<em>必需，</em>（<u>Number</u>）
+<u># 示例</u>
+<em>const renderer</em> = <q>new Three.WebGLRenderer( )</q>
+<em>const</em> <s>renderTarget</s> = <q>new Three.WebGLRenderTarget( )</q>
+<em>renderer</em>.<b>readRenderTargetPixels</b>( <s>renderTarget</s>, <s>0</s>, <s>0</s>, <s>100</s>, <s>100</s>, <s>buffer</s>)

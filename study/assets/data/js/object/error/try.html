@@ -1,0 +1,28 @@
+<u># 语法</u>
+<b>try</b>{
+	<u>return</u> 
+}<b>catch</b>(<s>err</s>){									<em>// 如果 try 中产生错误，则在此输出该错误的信息</em>
+	<em>const name</em> 			= <s>err</s>.<i>name</i>			<em>// 设置或返回一个错误名</em>
+	<em>const message</em> 		= <s>err</s>.<i>message</i> 		<em>// 设置或返回一个错误信息(字符串)</em>
+	<em>const description</em> 		= <s>err</s>.<i>description</i> 		<em>// 返回错误描述</em>
+	<em>const fileName</em> 		= <s>err</s>.<i>fileName</i> 		<em>// 返回出错文件名</em>
+	<em>const lineNumber</em> 		= <s>err</s>.<i>lineNumber</i> 		<em>// 返回第几行</em>
+	<em>const columnNumber</em>	= <s>err</s>.<i>columnNumber</i> 	<em>// 返回第几列</em>
+	<u>return</u> 
+}
+<u># err.name 的值</u>
+<i>EvalError</i> 		: <em>eval() 函数产生的错误。 注意: 新版的 JavaScript 使用 SyntaxError 替代 EvalError</em>
+<i>RangeError</i>		: <em>数值超出规定的范围</em>
+<i>ReferenceError</i>	: <em>非法引用</em>
+<i>SyntaxError</i>		: <em>语法错误</em>
+<i>TypeError</i>		: <em>类型错误</em>
+<i>URIError</i>			: <em>encodeURI() 函数产生的错误</em>
+
+<u># 示例</u>
+<em>const getJson</em> = <s>str</s> => {
+	<b>try</b>{
+		<u>return</u> <b>JSON.parse<b>(<s>str</s>)
+	}<b>catch( )</b>{
+		<u>return</u> <s>str</s>
+	}
+}

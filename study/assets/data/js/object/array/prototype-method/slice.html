@@ -1,0 +1,24 @@
+<u># 用法</u>
+<em>将 NodeList 对象转为数组</em>
+<u># 语法</u>
+<em>const array</em> = <b>Array.prototype.slice.call</b>(<s>nodeList</s>, <s>startIndex</s>, <s>endIndex</s>)
+<em>const array</em> = <b>[ ].slice.call</b>(<s>arguments</s>, <s>startIndex</s>, <s>endIndex</s>)
+
+<em>const array</em> = <b>Array.prototype.slice.apply</b>(<s>nodeList</s>, [<s>startIndex</s>, <s>endIndex</s>])
+<em>const array</em> = <b>[ ].slice.apply</b>(<s>arguments</s>, [<s>startIndex</s>, <s>endIndex</s>])
+<u># 参数</u>
+<s>nodeList</s>		: <em>必需。nodeList 列表</em>
+<s>startIndex</s>	: <em>可选。数字。开始索引。默认 0</em>
+<s>endIndex</s>	: <em>可选。数字。结束索引</em>
+<u># 返回值</u>
+<em>一个数组</em>
+<u># 示例</u>
+<em>const array</em> = <b>Array.prototype.slice.call</b>(<s>document.querySelectorAll</s>(<s>'div'</s>))
+<em>const array</em> = <b>[ ].slice.call</b>(<s>document.querySelectorAll</s>(<em>'div'</em>), <s>0</s>, <s>1</s>)
+
+<em>const array</em> = <b>Array.prototype.slice.apply</b>(<s>document.querySelectorAll</s>(<em>'div'</em>))
+<em>const array</em> = <b>[ ].slice.apply</b>(<s>document.querySelectorAll</s>(<em>'div'</em>), <s>[0,1]</s>)
+
+<em># 相当于</em>
+<em>const array</em> = <s>document.querySelectorAll</s>(<em>'div'</em>).<b>slice( )</b>
+<em>const array</em> = <s>document.querySelectorAll</s>(<em>'div'</em>).<b>slice</b>(<s>0</s>, <s>1</s>)

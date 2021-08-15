@@ -1,0 +1,16 @@
+<em>class</em> <u>MyPage</u> <em>extends StatefulWidget</em>{
+    <em>final String</em> <s>title</s>;
+     <u>MyPage</u>({ <em>Key key</em>, <s>this.title</s>}) : <em>super(key: key)</em>;
+    <em>@override</em>
+    <em>_State createState( ) => _State( )</em>;
+}
+<em># 获取参数</em>
+<em>class _State extends State</em>&lt;<u>MyPage</u>&gt; {
+	<em>@override</em>
+	<em>Widget build</em>(<em>BuildContext</em> <i>context</i>) {
+		<em># 获取  push( ) 参数，即： 通过 Page(title:'') 形式传递的参数</em>
+		<em>var v</em> = <b>widget</b>.<s>title</s>;
+		<em># 获取 路由 settings</em>
+		<em>var v</em> = <b>ModalRoute.of(<i>context</i>).settings</b>.<s>arguments</s>		<em>// arguments 参数，即：通过路由传递的参数  <u>Object</u> => {'a':1,'b':2}</em>
+	}
+}

@@ -1,0 +1,15 @@
+<u># 用法</u>
+<em>比较两个节点，并返回描述它们在文档中位置的整数</em>
+<u># 语法</u>
+<em>const node</em> = <s>el</s>.<b>compareDocumentPosition</b>(<s>node</s>)
+<u># 参数</u>
+<s>node</s>: <em>必需。规定于当前节点作比较的节点</em>
+<u># 返回值</u>
+<i>1</i>	: <em>两个节点不属于同一个文档</em>
+<i>2</i>	: <em>第一节点位于第二个节点后</em>
+<i>4</i>	: <em>第一节点定位在第二节点前</em>
+<i>8</i>	: <em>第一节点位于第二节点内</em>
+<i>16</i>	: <em>第二节点位于第一节点内</em>
+<i>32</i>	: <em>两个节点是同一元素的两个属性</em>
+<u># 示例</u>
+<em>const num</em> = <s>document.body</s>.<b>compareDocumentPosition</b>( <s>document.body.firstChild</s> )

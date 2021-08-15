@@ -1,0 +1,14 @@
+<u># 用法</u>
+<em>使用 Headers( ) 构造方法创建一个新的 Headers 对象</em>
+<u># 语法</u>
+<em>const</em> <s>headers</s> = <b>new Headers</b>(<s>init</s>)
+<u># 参数</u>
+<s>init</s> : <em>可选。通过一个包含任意http标头的对象来预设你的Headers。可以是一个ByteString对象；或者是一个已存在的Headers对象</em>
+<u># 用法</u>
+<em># 1、添加配置</em>
+<em>const</em> <s>headers</s> = <b>new Headers( )</b>
+<s>headers</s>.<q>append</q>(<em>'Content-Type'</em>, <em>'image/jpeg'</em>)
+<em># 2、字面量配置</em>
+<em>const</em> <s>headers</s> = <b>new Headers</b>(<i>{</i>  <u>'Content-Type'</u> : <u>'image/jpeg'</u>, <u>'Accept-Charset'</u> : <u>'utf-8'</u> <i>}</i>)
+<em># 3、已存在的Headers对象</em>
+<em>const</em> <em>myHeaders</em> = <b>new Headers</b>(<s>headers</s>)

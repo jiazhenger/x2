@@ -1,0 +1,9 @@
+<em>import React, { <b>lazy</b>, <b>Suspense</b> } from 'react'</em>
+
+<em>const</em> <u>MyComponent</u> = <b>lazy</b>(( ) => <q>import</q>(<em>'./index'</em>))		<em>// 异步加载</em>
+
+<em>const</em> <u>Index</u>  = ( ) => (
+	&lt;<b>Suspense</b> <s>fallback</s>={<em>Loading</em>}&gt; 	<em>// 加载效果</em>
+		<u>&lt;MyComponent /&gt;</u>
+	&lt;<b>/Suspense</b>&gt;
+)

@@ -1,0 +1,21 @@
+<u># 用法</u>
+<em>1、可以将 Blob 或者 File 对象转根据特殊的编码格式转化为内容(字符串形式)</em>
+<em>2、这个方法是异步的，也就是说，只有当执行完成后才能够查看到结果，如果直接查看是无结果的，并返回undefined</em>
+<em>3、也就是说必须要挂载 实例下的 onload 或 onloadend 的方法处理转化后的结果</em>
+<em>4、当转化完成后， readyState 这个参数就会转换 为 done 即完成态， onloadend 挂载的事件会被触发，并可以通过事件返回的形参得到中的 FileReader.result 属性得到转化后的结果</em>
+<u># 语法</u>
+<em>reader</em>.<b>readAsText</b>(<s>blob</s>, <s>encoding</s>)
+<u># 参数</u>
+<s>blob</s>: <em>必需。Blob 类型 或 File 类型</em>
+<s>encoding</s>: <em>可选。传入一个字符串类型的编码类型，如缺省，则默认为 utf-8</em>
+<u># 示例</u>
+<u>funciton</u> <em>upload</em>(<s>e</s>){
+	<em>const</em> <s>file</s>	= <s>e</s>.<u>target.files[0]</u>
+	<em>const</em> <i>reader</i> = <q>new FileReader( )</q>
+	<i>reader</i>.<b>readAsText</b>(<s>file</s>)
+	<em>return new Promise(resolve => {</em>
+		<i>reader</i>.<q>onload</q> = <u>function</u>( <em>e</em> ){
+			<em>resolve</em>(<q>this</q>.<b>result</b>)
+		}
+	<em>})</em>
+}

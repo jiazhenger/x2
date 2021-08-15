@@ -1,0 +1,20 @@
+<u># 用法</u>
+<em>1、置HTTP请求头部</em>
+<em>2、此方法必须在 open( ) 方法和 send( ) 之间调用</em>
+<em>3、如果多次对同一个请求头赋值，只会生成一个合并了多个值的请求头</em>
+<em>3、如果没有设置 Accept 属性，则此发送出 send( ) 的值为此属性的默认值 */*</em>
+<em>4、安全起见，有些请求头的值只能由user agent设置</em>
+<u># 语法</u>
+<em>xhr</em>.<b>setRequestHeader</b>(<s>header</s>, <s>value</s>)
+<u># 参数</u>
+<s>header</s>	: <em>必需。规定头的名称</em>
+<s>value</s>	: <em>必需。规定头的值</em>
+<u># 固定位置：open( ) 之后，send( ) 之前</u>
+<em>xhr</em>.<q>open( )</q>
+<em>xhr</em>.<b>setRequestHeader</b>('<s>Content-type</s>', '<i>application/x-www-form-urlencoded</i>') 	<em>// post 发送参数格式：表单格式： a=0&b=1&c=2</em>
+<em>xhr</em>.<b>setRequestHeader</b>('<s>Content-type</s>', '<i>application/json;charset=utf-8</i>') 		<em>// post 发送参数格式：json 格式：{a:0,b:1,c:2}</em>
+<em>xhr</em>.<b>setRequestHeader</b>('<s>Content-type</s>', '<i>multipart/form-data</i>')					<em>// post 发送参数格式：FormData 格式：FormData { }</em>
+<em>xhr</em>.<q>send( )</q>
+<u># 自定义数据</u>
+<em>自定义一些 header 属性进行跨域请求时，可能会遇到 'not allowed by Access-Control-Allow-Headers in preflight response'，需要在服务端设置 'Access-Control-Allow-Headers'</em>
+<em>xhr</em>.<b>setRequestHeader</b>('<s>Token</s>', <i>token</i>)

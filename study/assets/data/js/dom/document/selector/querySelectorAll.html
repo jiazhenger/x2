@@ -1,0 +1,19 @@
+<u># 用法</u>
+<em>返回文档中匹配指定 CSS 选择器的所有元素集合</em>
+<u># 语法</u>
+<em>const nodeList</em> = <q>document</q>.<b>querySelectorAll</b>(<s>selectors</s>)
+<u># 参数</u>
+<s>selectors</s>: <em>必需。字符串。指定一个或多个匹配元素的 CSS 选择器。 可以使用它们的 id, 类, 类型, 属性, 属性值等来选取元素。对于多个选择器，使用逗号隔开，返回一个匹配的元素</em>
+<u># 返回值</u>
+<u>NodeList</u> <em>对象</em>
+<u># 兼容性</u>
+<i>ie8 +</i>
+<u># 将 NodeList 转为数组</u>
+<em>const array </em> = <q>Array.prototype.slice.call</q>(<em>nodeList</em>,<u>0</u>)
+<em>const array </em> = <q>[ ].prototype.slice.call</q>(<em>nodeList</em>,<u>0</u>)
+<u># 示例</u>
+<em>const nodeList</em> = <q>document</q>.<b>querySelectorAll</b>('<s>div</s>') 			<em>// html 标签名</em>
+<em>const nodeList</em> = <q>document</q>.<b>querySelectorAll</b>('<s>#id</s>') 			<em>// id</em>
+<em>const nodeList</em> = <q>document</q>.<b>querySelectorAll</b>('<s>.class</s>') 		<em>// className</em>
+<em>const nodeList</em> = <q>document</q>.<b>querySelectorAll</b>('<s>p.class</s>') 		<em>// css 限制选择器</em>
+<em>const nodeList</em> = <q>document</q>.<b>querySelectorAll</b>('<s>a[target]</s>') 		<em>// css 属性选择器</em>

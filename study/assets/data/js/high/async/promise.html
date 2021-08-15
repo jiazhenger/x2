@@ -1,0 +1,49 @@
+<u># 特点</u>
+<em>1、对象的状态不受外界影响：3种状态</em>
+		<em>Pending 状态（进行中）</em>
+		<em>Fulfilled 状态（已成功）</em>
+		<em>Rejected 状态（已失败）</em>
+<em>2、一旦状态改变就不会再变：两种状态改变：成功或失败</em>
+		<em>Pending -> Fulfilled</em>
+		<em>Pending -> Rejected</em>
+<u># 优点</u>
+<em>1、解决回调</em>
+<em>2、链式调用</em>
+<em>3、减少嵌套</em>
+<u># 缺点</u>
+<em>1、无法监测进行状态</em>
+<em>2、新建立即执行且无法取消</em>
+<em>3、内部错误无法抛出</em>
+<u># 语法</u>
+<em>const promise</em> = <b>new Promise</b>(<em>function</em>(<s>resolve</s>, <s>reject</s>){
+	<em>if</em> (<em>state === 1</em>) {
+		<s>resolve</s>(<em>1</em>) 		<em>// 成功：Pending -> Fulfilled</em>
+	} <em>else if</em> (<em>state === 2</em>){
+		<s>resolve</s>(<em>2</em>) 		<em>// 成功：Pending -> Fulfilled</em>
+	} <em>else</em> {
+		<s>reject</s>(<em>0</em>)			<em>// 失败：Pending -> Rejected</em>
+	}
+})
+<em>promise</em>.<b>then</b>(<em>function</em>(<s>value</s>){
+	<em>// 成功：执行 resolve( )</em>
+},<em>function</em>(<s>value</s>){
+	<em>// 失败：执行 reject( )</em>
+})
+<u># 参数</u>
+<s>resolve</s>: <em>必需。将 Promise 对象状态由'<u>未完成</u>'变为'<u>成功</u>'，也就是 <u>Pending -> Fulfilled</u>，并传递仅只能是一个参数</em>
+<s>reject</s>: <em>可选。将 Promise 对象状态由'<u>未完成</u>'变为'<u>失败</u>'，也就是 <u>Pending -> Rejected</u>，并传递仅只能是一个参数</em>
+<u># 示例</u>
+<em>function</em> <q>post</q>(<em>state</em>){
+	<u>return</u> <b>new Promise</b>((<s>resolve</s>, <s>reject</s>) => {
+		if (<em>state === 1</em>) {
+			<s>resolve</s>(<em>value</em>)
+		} else {
+			<s>reject</s>(<em>value</em>)
+		}
+	})
+}
+<q>post</q>(<em>1</em>).<b>then</b>(<s>value</s> => {
+	<em>// 成功：执行 resolve( )</em>
+},<s>value</s> => {
+	<em>// 失败：执行 reject( )</em>
+})

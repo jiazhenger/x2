@@ -1,0 +1,17 @@
+<u># 用法</u>
+<em>返回一个新选择集，其中包含了当前选择集中所有元素的经过 compare 函数排序之后的副本。在排序后，将排序后的元素重新插入原来的文档中替换未排序的元素/em>
+<u># 语法</u>
+<em>selection</em>.<b>sort</b>(<s>compare</s>)
+<u># 参数</u>
+<s>compare</s> ：<em>可选，比较函数，默认 d3.ascending( )</em>
+<u># 示例</u>
+<em># 升序</em>
+<q>d3.select</q>(<em>'#box'</em>).<q>selectAll</q>(<em>'p'</em>).<q>data</q>(<em>[1,2,3]</em>).<b>sort( )</b>
+<em># 自定义：升序</em>
+<q>d3.select</q>(<em>'#box'</em>).<q>selectAll</q>(<em>'p'</em>).<q>data</q>(<em>[1,2,3]</em>).<b>sort</b>(<u>function</u>(<s>a</s>, <s>b</s>){
+	<u>return</u> <s>a</s> - <s>b</s>
+})
+<em># 自定义：降序</em>
+<q>d3.select</q>(<em>'#box'</em>).<q>selectAll</q>(<em>'p'</em>).<q>data</q>(<em>[1,2,3]</em>).<b>sort</b>(<u>function</u>(<s>a</s>, <s>b</s>){
+	<u>return</u> <s>b</s> - <s>a</s>
+})

@@ -1,0 +1,24 @@
+<em>import React, { Component } from 'react'</em>
+<em>import PageLoading from '@cpx/page-loading'</em>
+
+<em>const</em> <u>Bundle</u> = <u>importComponent</u> => {
+    <em>return class extends Component</em> {
+		state = { <s>component</s>: <em>( ) => &lt;PageLoading/&gt;</em> }
+		
+		<b>async</b> componentDidMount( ) {
+			<em>const</em> <b>{ default: <s>component</s> }</b> = <b>await</b> <u>importComponent( )</u>
+			this.setState({ <q>Component</q>: <s>component</s> })
+		}
+		
+		render( ) {
+			<em>const</em> <q>Component</q> = this.state.<s>component</s>
+			<b>return</b> <q>Component</q> ? <<q>Component</q> <b>{...this.props}</b>/> : <em>null</em>
+		}
+	}
+}
+
+<em>export default <u>path</u></em> => <u>Bundle</u>(<b>( ) => import</b>(<em>'@pages/' + <u>path</u></em>))
+
+<em># 使用</em>
+<em>import <q>Import</q> from '@com/bundle'</em>
+<em>const Index</em> = <q>Import</q>(<em>'index'</em>)

@@ -1,0 +1,18 @@
+<u># 用法</u>
+<em>用于重新加载当前文档</em>
+<u># 语法</u>
+<u>window</u>.<q>location</q>.<b>reload</b>(<s>force</s>)
+<q>location</q>.<b>reload</b>(<s>force</s>)
+<u># 参数</u>
+<s>force</s>: <em>必需。默认 false</em>
+<em># force = false</em>
+<em>1、它就会用 HTTP 头 If-Modified-Since 来检测服务器上的文档是否已改变</em>
+<em>2、如果文档已改变，reload() 会再次下载该文档</em>
+<em>3、如果文档未改变，则该方法将从缓存中装载文档</em>
+<em>4、这与用户单击浏览器的刷新按钮的效果是完全一样的</em>
+<em># force = true</em>
+<em>1、那么无论文档的最后修改日期是什么，它都会绕过缓存，从服务器上重新下载该文档</em>
+<em>2、这与用户在单击浏览器的刷新按钮时按住 Shift 健的效果是完全一样</em>
+<u># 示例</u>
+<u>window</u>.<q>location</q>.<b>reload</b>(<s>false</s>)		<em>// 从缓存加载文档，默认</em>
+<u>window</u>.<q>location</q>.<b>reload</b>(<s>true</s>) 		<em>// 无缓存加载文档</em>

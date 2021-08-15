@@ -1,0 +1,21 @@
+<u># 用法</u>
+<em>1、通过改变属性的值来实现过渡变化</em>
+<em>2、过渡的初始值是当前属性值（<u>一定要事先设定一个初始值</u>，如果你不想坏的意外），结束值是指定的值</em>
+<em>3、延迟总是相对一系列过渡中的第一个而言</em>
+<u># 语法</u>
+<em>transition</em>.<b>attr</b>(<s>name</s>, <s>value</s>)
+<u># 参数</u>
+<s>name</s> ：<em>必需，样式名</em>（<u>字符串</u>）
+<s>value</s> ：<em>必需，样式值</em>（<u>常量、函数</u>）
+<u># 函数 this 指向当前 dom</u>
+<u># 示例</u>
+<em># value 是常量：所有的元素被给予相同的属性值 </em>
+<em>transition</em>.<b>attr</b>(<em>'style'</em>,<em>'color:red'</em>)
+<em># value 是函数：该函数为每个选定的元件（按顺序）计算属性值，被传递的参数是当前数据d与当前索引i，用this表示当前的DOM元素</em>
+<em>transition</em>.<b>attr</b>(<em>'width'</em>,<u>function</u>(<q>data</q>, <q>index</q>){
+	if( <em>i%2 === 0</em>){
+		<u>return</u> <em>'100px'</em> 		<em>// 返回值被用于设置每个元素的属性</em>
+	}else{
+		<u>return</u> <em>'500px'</em>
+	}
+})

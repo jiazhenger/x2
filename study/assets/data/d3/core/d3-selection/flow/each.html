@@ -1,0 +1,12 @@
+<u># 用法</u>
+<em>1、为当前选择的每个元素，调用指定的函数，传递当前数据 d 和索引 i，与当前的 DOM 元素的 this 上下文</em>
+<em>2、这个操作符几乎被所有的其他操作符内部使用，并可以用于调用任意代码为每个选定的元素</em>
+<em>3、可以用来处理递归的选择，通过在回调函数内使用 d3.select(this)</em>
+<u># 语法</u>
+<em>selection</em>.<b>each</b>( <u>function(<q>data</q>,<q>index</q>){  }</u> )
+<u># 函数 this 指向当前 dom</u>
+<u># 方式</u>
+<em># 递归选择</em>
+<q>d3.selectAll</q>(<em>'p'</em>).<b>each</b>( <u>function</u>(<q>data</q>,<q>index</q>){ 
+	<q>d3.select(this)</q>
+})

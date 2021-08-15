@@ -1,0 +1,14 @@
+<u># 用法</u>
+<em>获取 url，放入 iframe</em>
+<u># 语法</u>
+<em>pdf</em>.<b>getDataUrl</b>(<s>callback</s>, <s>options</s>)
+<u># 参数</u>
+<s>callback</s>	: <em>必需。回调函数</em>
+<s>options</s>	: <em>可选。选项</em>
+<u># 示例</u>
+<em>pdf</em>.<b>getDataUrl</b>(<s>url</s> => {
+	<em>const iframe = document.createElement('iframe')</em>
+	<em>iframe.</em><i>src<i> = <s>url</s>
+	<em>iframe.className = 'wh fix_lt'</em>
+	<em>document.body.appendChild(iframe)</em>
+})

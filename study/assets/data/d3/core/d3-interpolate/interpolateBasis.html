@@ -1,0 +1,10 @@
+<u># 用法</u>
+<em>根据给定的一组 values 返回一个 B-splibe 插值器, 输入值必须为数值类型，隐式控制点的生成会使得在 t = 0 时返回 values[0] 并且 t = 1 时返回 values[values.length - 1], 参考 d3.curveBasis</em>
+<u># 语法</u>
+<em>const interpolate</em> = <q>d3</q>.<b>interpolateBasis</b>(<s>values/s>)(<u>t</u>)
+<u># 参数</u>
+<s>values</s> ：<em>必需，数组</em>
+<s>t</s> ：<em>区间 [ 0, 1 ]</em>
+<u># 示例：</u>
+<em>const r</em> = <q>d3</q>.<b>interpolateBasis</b>(<em>[ 0, 10 ]</em>)(<em>.5</em>) 				<em>// => 5</em>
+<em>const r</em> = <q>d3</q>.<b>interpolateBasis</b>(<em>[ 10, 0 ]</em>)(<em>.5</em>) 				<em>// => 5</em>

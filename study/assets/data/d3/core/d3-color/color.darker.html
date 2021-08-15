@@ -1,0 +1,13 @@
+<u># 用法</u>
+<em>1、返回基于某个颜色的更暗的副本</em>
+<em>2、如果指定了 k 则表示调整的暗度系数</em>
+<em>3、如果没有指定 k 则默认为 1</em>
+<em>4、这个操作的实现依赖于具体的颜色空间</em>
+<u># 语法</u>
+<em>color</em>.<b>darker</b>(<s>k</s>)
+<u># 参数</u>
+<s>k</s> ： <em>必需，亮度系数</em>
+<u># 示例</u>
+<em>const color</em> = <q>d3</q>.<q>color</q>(<em>'red'</em>)
+<em>const r</em> = <em>color</em>.<b>darker( )</b> 				<em>// => Rgb {r: 178.5, g: 0, b: 0, opacity: 1}</em>
+<em>const r</em> = <em>color</em>.<b>darker</b>(<em>2</em>) 				<em>// => Rgb {r: 124.94999999999999, g: 0, b: 0, opacity: 1}</em>

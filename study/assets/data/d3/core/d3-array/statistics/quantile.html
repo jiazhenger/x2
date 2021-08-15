@@ -1,0 +1,12 @@
+<u># 用法</u>
+<em>返回给定数组 numbers 的 p 分位数，其中p 是一个0到1范围的数</em>
+<u># 语法</u>
+<q>d3</q>.<b>quantile</b>(<s>numbers</s>, <s>p</s>)
+<u># 参数</u>
+<s>numbers</s> ： <em>必需，数字数组</em>
+<s>p</s> ： <em>必需，0 ~ 1 的数</em>
+<u># 示例</u>
+<em>const r</em> = <q>d3</q>.<b>quantile</b>(<em>[ 1, 7, 10 ]</em>，<em>0</em>) 		<em>// => 1</em>
+<em>const r</em> = <q>d3</q>.<b>quantile</b>(<em>[ 1, 7, 10 ]</em>，<em>0.5</em>) 		<em>// => 7</em>
+<em>const r</em> = <q>d3</q>.<b>quantile</b>(<em>[ 1, 7, 10 ]</em>，<em>0.2</em>) 		<em>// => 3.4000000000000004</em>
+<em>const r</em> = <q>d3</q>.<b>quantile</b>(<em>[ 1, 7, 10 ]</em>，<em>1</em>) 		<em>// => 10</em>

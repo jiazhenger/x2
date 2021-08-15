@@ -1,0 +1,21 @@
+<em>&lt;template&gt;</em>{{ <u>value</u> }}<em>&lt;/template&gt;</em>
+<em>&lt;script&gt;</em>
+	<em>import</em> { <b>watch</b>, <q>ref</q> } <em>from 'vue'</em>
+	<em>export default</em> {
+		<i>setup(<q>props</q>)</i>{
+			<em>const data</em> = <q>ref</q>( 0 )
+			
+			<em>// 监听 ref</em>
+			<b>watch</b>(<em>data</em>, ( <s>newValue</s>, <s>oldValue</s>) => {		})
+			
+			<em>// 监听多个 ref</em>
+			<b>watch</b>(<u>[</u> <em>data1</em>, <em>data2</em> <u>]</u>, ( <s>newValue</s>, <s>oldValue</s>) => {		})
+			
+			<em>// 当监听的是多个对象，且包含 reactive 对象内的数据时</em>
+			<b>watch</b>(<u>[</u> <em>data1</em>, <em>( ) => data.data2</em> <u>]</u>, ( <s>newValue</s>, <s>oldValue</s>) => {		})
+			
+			<em>// 监听 props</em>
+			<b>watch</b>(<q>( )=>props</q>.<u>value</u>, ( <s>newValue</s>, <s>oldValue</s>) => {		})
+		}
+	}
+<em>&lt;/script&gt;</em>

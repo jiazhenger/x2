@@ -1,0 +1,20 @@
+<u># 获取全部样式</u>
+<em>const r</em> = <s>el</s>.<b>style</b>
+<u># 获取单个样式：无法获取 style 属性中不存在的样式</u>
+<em>const r</em> = <s>el</s>.<b>style</b>.<i>color</i>
+<em>const r</em> = <s>el</s>.<b>style</b>.<i>fontSize</i>
+<em>const r</em> = <s>el</s>.<b>style</b><u>['</u><i>font-size</i><u>']</u>
+<u># 获取整个 style 属性的值</u>
+<em>const r</em> = <s>el</s>.<b>style</b>.<i>cssText</i>
+<em>const r</em> = <s>el</s>.<q>getAttribute</q>('<b>style</b>')
+<u># 获取所有样式，包括隐藏样式</u>
+<em># 仅所有 ie 支持</em>
+<em>const r</em> = <s>el</s>.<b>currentStyle</b> <em>&&</em> <s>el</s>.<b>currentStyle</b><u>['</u><i>font-size</i><u>']</u>
+<em># ie9、ie9+、非ie 支持</em>
+<em>const r</em> = <q>document.defaultView</q> <em>&&</em> <q>document.defaultView</q>.<b>getComputedStyle</b>(<s>el</s>, <u>null</u>).<i>fontSize</i>
+<em>const r</em> = <q>window</q>.<b>getComputedStyle</b> <em>&&</em> <q>window</q>.<b>getComputedStyle</b>(<s>el</s>, <u>null</u>)<u>['</u><i>font-size</i><u>']</u>
+<u># 封装</u>
+<em>const getStyle</em> = ( <s>el</s>, <s>value</s> ) => {
+	return <s>el</s>.<b>currentStyle</b>	?	<s>el</s>.<b>currentStyle</b>[<s>value</s>]
+							:	( <q>document.defaultView</q>.<b>getComputedStyle</b>(<s>el</s>, <u>null</u>)[<s>value</s>] <em>||</em> <q>window</q>.<b>getComputedStyle</b>(<s>el</s>, <u>null</u>)[<s>value</s>] )
+}

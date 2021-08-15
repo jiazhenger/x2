@@ -1,0 +1,29 @@
+<u># 用法</u>
+<em>1、注册一个自定义补间指定的名称（name）/em>
+<em>2、当在过渡开始时，指定的工厂函数将被过渡中每个选定的元素调用，传递该元素的数据（d）和索引（ⅰ）作为参数，元素作为上下文（this）</em>
+<em>3、工厂应反回补间函数，在整个过渡过程中被调用</em>
+<em>4、补间函数之后被反复调用，传递当前的归一化时间t在[0，1]范围内</em>
+<em>5、工厂应反回补间函数，在整个过渡过程中被调用</em>
+<em>6、如果工厂返回null，则补间不会在选定元素上运行</em>
+<em>7、 补间函数是用来内部实现attr和style补间，并可以用来对其它文档内容进行内插</em>
+<u># 语法</u>
+<em>transition</em>.<b>tween</b>(<s>name</s>, <s>factory</s>)
+<u># 参数</u>
+<s>name</s> ：<em>必需，自定义补间名称</em>（<u>字符串</u>）
+<s>factory</s> ：<em>必需，工厂函数，反回补间函数，在整个过渡过程中被调用</em>（<u>常量、函数</u>）
+<u># 函数参数</u>
+<s>d</s>	: <em>当前数据</em>
+<s>i</s>	: <em>当前索引</em>
+<s>a</s>	: <em>当前 dom 元素数组</em>
+<s>t</s>	: <em>范围</em> <u>0~1</u>
+<s>this</s>	: <em>当前 dom 元素</em>
+<u># 示例</u>
+<em># 终值是常量：所有的元素都被指定为相同的样式属性值</em>
+<em>transition</em>.<b>tween</b>(<em>'myName'</em>,<u>function</u>(<q>d</q>, <q>i</q>, <q>a</q>){
+	<em>const</em> <u>f</u> = <q>d3.interpolateRound</q>(<u>0</u>, <u>1000</u>) 	<em>// 内容从 0 到 1000 依次递增</em>
+	<u>return function</u>(<s>t</s>) {
+		<u>this.textContent</u> = <u>f</u>(<s>t</s>)
+		<u>this.innerText</u> = <u>f</u>(<s>t</s>)
+		<u>this.innerHTML</u> =  <u>f</u>(<s>t</s>)
+	}
+})

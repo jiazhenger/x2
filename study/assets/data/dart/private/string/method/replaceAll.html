@@ -1,0 +1,10 @@
+<u># 用法</u>
+<em>替换所有匹配的字符串</em>
+<u># 语法</u>
+<tt>String</tt> <b>replaceAll</b>(
+ 	<tt>Pattern</tt> <em>from</em> , 			<em># 匹配字符串，或正则表达式</em>
+ 	<tt>String</tt> <em>replace</em> </em> 		<em># 替换字符串</em>
+)
+<u># 示例</u>
+<tt>String</tt> <em>str</em> = (<em>'123456'</em>).<b>replaceAll</b>(<em>'1'</em>, <em>'abc'</em>)						<em>// 字符串匹配替换 => abc23456</em>
+<tt>String</tt> <em>str</em> = (<em>'123'</em>).<b>replaceAll</b>(<q>RegExp</q>(<s>r</s>'<u>[A-Z][a-z]</u>'), <em>'abc'</em>)			<em>// 正则匹配替换 => abcabcabc</em>

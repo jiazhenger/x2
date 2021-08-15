@@ -1,0 +1,15 @@
+<q>import * as d3 from 'd3'</q>
+<u># 用法</u>
+<em>选择全部元素</em>
+<u># 语法</u>
+<em>d3</em>.<b>selectAll</b>(<s>name</s>)
+<u># 参数</u>
+<s>name</s> ：<em>必需，要选择的 css 选择器</em>（<u>字符串</u>）、<em>node 数组</em>（<u>nodes</u>）
+<u># 示例</u>
+<em># 字符串选择器</em>
+<em>const</em> <u>selection</u> = <em>d3</em>.<b>selectAll</b>(<s>'p'</s>) 			<em>// html 选择器</em>
+<em>const</em> <u>selection</u> = <em>d3</em>.<b>selectAll</b>(<s>'.class'</s>) 		<em>// class 选择器</em>
+<em># node 选择器。选择指定的元素数组</em>
+<em>const</em> <u>selection</u> = <em>d3</em>.<b>select</b>(<s>document.links</s>)
+<em>const</em> <u>selection</u> = <em>d3</em>.<b>select</b>(<s>this.childNodes</s>)
+<em>const</em> <u>selection</u> = <em>d3</em>.<b>select</b>(<s>document.querySelectorAll('.class')</s>)

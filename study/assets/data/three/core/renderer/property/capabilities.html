@@ -1,0 +1,22 @@
+<u># 用法</u>
+<em>一个包含当前渲染环境(RenderingContext)的功能细节的对象</em>
+<u># 语法</u>
+<em>const renderer</em>.<b>capabilities</b> = {
+	<i>floatFragmentTextures</i> 	: <em>true</em> 						<em>// 环境是否支持 OES_texture_float扩展</em>
+	<i>floatVertexTextures</i> 		: <em>true</em>						<em>// 如果 <i>floatFragmentTextures</i> 和 <i>vertexTextures</i> 都是 true， 则此值为true</em>
+	<i>getMaxAnisotropy</i> 		: <em>ƒ getMaxAnisotropy()</em>			<em>// 返回最大可用各向异性</em>
+	<i>getMaxPrecision</i> 			: <em>ƒ getMaxPrecision(precision)</em>	<em>// 返回顶点着色器和片元着色器的最大可用精度 </em>
+	<i>isWebGL2</i> 				: <em>false</em>						<em>// 是否是 WebGL2</em>
+	<i>logarithmicDepthBuffer</i> 	: <em>false</em>						<em>// 如果 logarithmicDepthBuffer 在构造器中被设为true且 环境支持EXT_frag_depth扩展，则此值为true </em>
+	<i>maxAttributes</i> 			: <em>16</em>							<em>// <u class='g0'>gl.MAX_VERTEX_ATTRIBS</u> 的值</em>
+	<i>maxCubemapSize</i> 			: <em>16384</em>						<em>// <u class='g0'>gl.MAX_CUBE_MAP_TEXTURE_SIZE</u> 的值，着色器可使用的立方体贴图纹理的最大宽度*高度</em>
+	<i>maxFragmentUniforms</i>		: <em>1024</em>						<em>// <u class='g0'>gl.MAX_FRAGMENT_UNIFORM_VECTORS</u> 的值，片元着色器可使用的全局变量(uniforms)数量</em>
+	<i>maxSamples</i> 				: <em>0</em>							<em>// </em>
+	<i>maxTextureSize</i> 			: <em>16384</em>						<em>// <u class='g0'>gl.MAX_TEXTURE_SIZE</u> 的值，着色器可使用纹理的最大宽度*高度</em>
+	<i>maxTextures</i> 				: <em>16</em>							<em>// <u class='g0'>gl.MAX_TEXTURE_IMAGE_UNITS</u> 的值，着色器可使用的纹理数量</em>
+	<i>maxVaryings</i> 				: <em>30</em>							<em>// <u class='g0'>gl.MAX_VARYING_VECTORS</u> 的值，着色器可使用矢量的数量</em>
+	<i>maxVertexTextures</i> 		: <em>16</em>							<em>//  <u class='g0'>gl.MAX_VERTEX_TEXTURE_IMAGE_UNITS</u> 的值，顶点着色器可使用的纹理数量</em>
+	<i>maxVertexUniforms</i> 		: <em>4096</em>						<em>// <u class='g0'>gl.MAX_VERTEX_UNIFORM_VECTORS</u> 的值，顶点着色器可使用的全局变量</em>
+	<i>precision</i> 				: <em>"highp"</em>						<em>// 染器当前使用的着色器的精度</em>
+	<i>vertexTextures</i> 			: <em>true</em>						<em>// 如果 <i>maxVertexTextures</i> 大于0，此值为true (即可以使用顶点纹理)</em>
+}

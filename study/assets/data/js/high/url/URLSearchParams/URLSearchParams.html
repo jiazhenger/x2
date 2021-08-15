@@ -1,0 +1,13 @@
+<u># 用法</u>
+<em>处理 URL 的查询字符串</em>
+<u># 语法</u>
+<em>const param</em> = <b>new URLSearchParams</b>(<s>init</s>)
+<u># 参数</u>
+<s>init</s> 	: <em>可选。一个 USVString 实例，一个 URLSearchParams 实例，一个 USVString，或者一个包含 USVString 的记录。注意使用一个 URLSearchParams 实例作为参数已经被弃用了，以后的浏览器将会只使用一个 USVString 作为参数</em>
+<u># 用法</u>
+<em>const param</em> = <b>new URLSearchParams</b>('<u>?a=0&b=1&c=2</u>') 				<em>// 可选参数</em>
+<em>const param</em> = <b>new URLSearchParams</b>('<u>a=0&b=1&c=2</u>')
+<em>const param</em> = <b>new URLSearchParams</b>('<u>location.search</u>')
+<em>const param</em> = <b>new URLSearchParams</b>(<u><i>(</i> new URL('https://example.com?foo=1&bar=2') <i>)</i>.search</u>)
+<em>const param</em> = <b>new URLSearchParams</b>(<u><i>(</i> new URL(window.location) <i>)</i>.search</u>)
+<em>const param</em> = <b>new URLSearchParams</b>(<u>[ ['a', '10'], ['b', 2] ]</u>)

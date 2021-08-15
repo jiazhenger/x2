@@ -1,0 +1,22 @@
+<u># 用法</u>
+<em>过滤选择元素</em>
+<u># 语法</u>
+<em>selection</em>.<b>filter</b>(<s>selector</s>)
+<u># 参数</u>
+<s>selector</s> ：<em>必需，css 选择器</em>（<u>字符串、函数</u>）
+<q>:first-child</q> : 		<em>// 第一个元素</em>
+<q>:last-child</q> :  		<em>// 最后一个元素</em>
+<q>:nth-child(even)</q> : 	<em>// 偶数</em>
+<q>:nth-child(odd)</q> : 	<em>// 奇数</em>
+<q>:nth-child(2n)</q> : 	<em>// 偶数</em>
+<q>:nth-child(2n+1)</q> : 	<em>// 奇数</em>
+<q>:nth-child(3)</q> : 	<em>// 第3个子元素</em>
+<u># 函数 this 指向当前 dom</u>
+<u># 示例</u>
+<em># 字符串选择器</em>
+<em>const</em> <u>selection</u> = <q>d3</q>.<q>selectAll</q>(<em>'div'</em>).<b>filter</b>(<s>:nth-child(even)</s>) 			<em>// 选择偶数</em>
+<em>const</em> <u>selection</u> = <q>d3</q>.<q>selectAll</q>(<em>'div'</em>).<b>filter</b>(<s>:nth-child(odd)</s>) 			<em>// 选择奇数</em>
+<em># 函数</em>
+<q>d3</q>.<q>selectAll</q>(<em>'div'</em>).<b>filter</b>(<u>function</u>(<q>data</q>,<q>index</q>){
+	<u>return</u> <em>':nth-child(2)'</em>
+})

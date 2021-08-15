@@ -1,0 +1,13 @@
+<u># 用法</u>
+<em>设置渲染器尺寸</em>
+<u># 语法</u>
+<em>renderer</em>.<b>getSize</b>(<s>target</s>)
+<u># 参数</u>
+<s>target</s> ：<em>必需</em>（<u>new Three.Vector2( )</u>）
+<u># 示例</u>
+<em>const renderer</em> = <q>new Three.WebGLRenderer( )</q>
+<em>const</em> <u>Vector2</u> = <em><q>renderer</em>.<b>getSize</b>( <s>new Three.Vector2( )</s> ) 		<em>// => Vector2 { x: 1920, y: 427, width: 1920, height: 427 }</em>
+<em>const x</em> = <u>Vector2</u>.<b>x</b> 										<em>// 获取 x 轴坐标</em>
+<em>const y</em> = <u>Vector2</u>.<b>y</b> 										<em>// 获取 y 轴坐标</em>
+<em>const width</em> = <u>Vector2</u>.<b>width</b> 								<em>// 获取宽</em>
+<em>const height</em> = <u>Vector2</u>.<b>height</b> 								<em>// 获取高</em>

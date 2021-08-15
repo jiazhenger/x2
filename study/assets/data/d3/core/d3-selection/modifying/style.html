@@ -1,0 +1,18 @@
+<u># 用法</u>
+<em>设置 style 样式</em>
+<u># 语法</u>
+<em>selection</em>.<b>style</b>(<s>name</s>, <s>value</s>)
+<u># 参数</u>
+<s>name</s> ：<em>必需，css 样式名</em>（<u>字符串</u>）、<em>样式对象</em>（<u>对象字面量</u>）
+<s>value</s> ：<em>可选，属性值</em>（<u>字符串、函数</u>）
+<u># 函数 this 指向当前 dom</u>
+<u># 示例</u>
+<em># 添加样式</em>
+<em>selection</em>.<b>style</b>(<em>'color'</em>,<em>'red'</em>)
+<em># 函数添加属性</em>
+<em>selection</em>.<b>style</b>(<em>'color'</em>,<u>function</u>(<q>data</q>,<q>index</q>){
+	<u>return</u> <q>index</q> <em>% 2 === 0</em> <u>?</u> <em>'red'</em> <u>:</u> <em>'blue'</em>
+})
+<em># 添加多个属性</em>
+<q>setObj</q>('<b>style</b>') 							<em>// 重写 style</em>
+<em>selection</em>.<b>style</b>(<b>{</b> <em>color:'red'</em>, <em>fontSize:'16px'</em> <b>}</b>)

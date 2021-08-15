@@ -1,0 +1,15 @@
+<u># 用法</u>
+<em>设置或获取过渡的缓动函数</em>
+<u># 语法</u>
+<em>transition</em>.<b>ease</b>(<s>value</s>)
+<u># 参数</u>
+<s>delay</s> ：<em>可选，指定过渡延迟以毫秒为单位，默认 <q>d3.easeCubic</q></em>（<u>过渡对象、函数</u>）
+<u># 示例</u>
+<em># 获取 easing function (过渡方式)</em>
+<em>transition</em>.<b>ease( )</b>
+<em># 过渡对象</em>
+<em>transition</em>.<b>ease</b>(<em>d3.easeCubic</em>)
+<em># 缓动函数：被用于缓解当前参数定时值 t，t 通常在范围[0,1]内；在过渡结束时，t可以是稍大于1</em>
+<em>transition</em>.<b>ease</b>(<u>function</u>(<q>data</q>,<q>index</q>){
+	<u>return</u> <u>i/2 * 10</u>
+})

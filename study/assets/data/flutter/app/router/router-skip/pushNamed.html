@@ -1,0 +1,18 @@
+<u># Navigator.of(context).pushNamed( )</u>
+<b>Navigator.of(context).pushNamed</b>(
+	<tt>String</tt> <em>routeName</em>, 			<em>// 路由名称  => /login</em>
+	{ <tt>Object</tt> <s>arguments</s> }, 		<em>// 携带参数 => arguments:{ a:1, b:2 }</em>
+).<b>then</b>((<tt>Object</tt> <u>value</u>){ 			
+	<em>// 页面返回后执行  => value： <q>Navigator.of(context).pop(value)</q> 中返回携带的参数 value</em>
+});
+<u># Navigator.pushNamed( )</u>
+<b>Navigator.pushNamed</b>(
+	<tt>BuildContext</tt> <i>context</i>,
+	<tt>String</tt> <em>routeName</em>,			<em>// 路由名称  => /login</em>
+	{ <tt>Object</tt> <s>arguments</s> }, 		<em>// 携带参数 => arguments:{ a:1, b:2 }</em>
+).<b>then</b>((<tt>Object</tt> <u>value</u>){
+	<em>// 页面返回后执行  => value： <q>Navigator.of(context).pop(value)</q> 中返回携带的参数 value</em>
+})
+<em># 示例</em>
+<b>Navigator.of(context).pushNamed</b>(<em>'/login'</em>, <s>arguments</s>:<em>{ a:1, b:2 }</em>).<b>then</b>((<tt>dynamic</tt> <u>value</u>){		})
+<b>Navigator.pushNamed</b>(<i>context</i>, <em>'/login'</em>, <s>arguments</s>:<em>{ a:1, b:2 }</em>).<b>then</b>((<tt>dynamic</tt> <u>value</u>){		})

@@ -1,0 +1,17 @@
+<em>import React from 'react'</em>;
+<em>const</em> <q>Tree</q> = ({ <s>data</s>, <s>layer</s> }) => {
+	<em>const</em> <s>index</s> = <em>isNaN(<s>layer</s>) ? 0 : <s>layer</s></em>
+	return (
+		&lt;<i>ul</i> <em>layer</em>={ <s>index</s> }/&gt;
+			{
+				<em>{}.toString.call(<s>data</s>) === '[object Array]' && <s>data</s>.map(( v, i )</em> => (
+					&lt;<i>li</i> <em>key={ i } style={ <s>index</s> === 0 ? { } : { <u>marginLeft:'2em'</u>} }</em>&gt;
+						<em>&lt;h2&gt;{v.<u class='g0'>label</u>}&lt;/h2&gt;</em>
+						<em>&lt;<q>Tree</q> <s>data</s>={ v.<u class='g0'>children</u> } layer={ <s>index+1</s> }/&gt;</em>
+					&lt;/<i>li</i> &gt;
+				))
+			}
+		&lt;/<i>ul</i> &gt;
+	)
+}
+<em>export default</em>  <q>Tree</q>

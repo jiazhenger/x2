@@ -1,0 +1,13 @@
+<u># 用法</u>
+<em>1、提供了一种表示表单数据的键值对的构造方式，经过它的数据可以使用 XMLHttpRequest.send( ) 方法送出</em>
+<em>2、如果送出时的编码类型被设为 'multipart/form-data'，它会使用和表单一样的格式 (a=0&b=1&c=2)</em>
+<u># 语法</u>
+<em>const fd</em> = <b>new FormData</b>(<s>formNode</s>)
+<u># 参数</u>
+<s>formNode</s>: <em>可选。一个 HTML 上的 form 表单元素，这种方式创建的 FormData 对象会自动将form中的表单值也包含进去，包括文件内容也会被编码之后包含进去</em>
+<u># 示例</u>
+<em>&lt;form <i>id</i>='<s>myForm</s>'&gt;</em>
+	<em>&lt;input <q>name='username'</q> /&gt;</em>		<em>// 必需设置 name</em>
+	<em>&lt;input <q>name='password'</q> /&gt;</em>			<em>// 必需设置 name</em>
+<em>&lt;/form'&gt;</em>
+<em>const fd</em> = <b>new FormData</b>( <u>document.querySelector('<s>#myForm</s>')</u> )

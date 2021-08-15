@@ -1,0 +1,13 @@
+<u># 用法</u>
+<em>1、把一个节点从另一个文档复制到该文档以便应用</em>
+<em>2、节点可以是任何节点类型</em>
+<em>3、如果 第二个值设置为 true，那么还要复制该节点的所有子孙节点</em>
+<u># 语法</u>
+<q>document</q>.<b>importNode</b>(<s>node</s>, <s>deep</s>)
+<u># 参数</u>
+<s>node</s>: <em>必需。另外一个文档的节点，可以是任何节点类型</em>
+<s>deep</s>: <em>可选。如果为 true，还要递归复制 importedNode 节点的所有子孙节点</em>
+<u># 示例</u>
+<em>const iframe</em> = <u>document.querySelector</u>(<em>'#iframe'</em>)
+<em>const node</em> = <em>iframe</em>.<q>contentWindow</q>.<u>document.querySelector</u>(<em>'#box'</em>)
+<em>const myNode</em> = <q>document</q>.<b>importNode</b>(<s>node</s>,<s>true</s>)

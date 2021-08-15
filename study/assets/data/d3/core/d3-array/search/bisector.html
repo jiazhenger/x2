@@ -1,0 +1,17 @@
+<u># 用法</u>
+<em>使用指定参数 accessor 或者 comparator 函数返回一个二等分线。返回的对象有 left 和 right 属性，分别类似于 bisectLeft 和 bisectRight 方法</em>
+<u># 语法</u>
+<em>const bisector</em> = <q>d3</q>.<b>bisector</b>(<s>accessor</s>)
+<em>const bisector</em> = <q>d3</q>.<b>bisector</b>(<s>comparator</s>)
+<u># 参数</u>
+<s>accessor</s> ：<em>必需，访问器</em>
+<s>comparator</s> ：<em>必需，比较器</em>
+<u># 示例</u>
+<em># accessor</em>
+<em>const r</em> = <q>d3</q>.<b>bisector</b>(<u>function</u>(<s>d</s>){
+	<u>return</u>  <s>d.x</s>
+}).<b>right</b>
+<em># comparator</em>
+<em>const r</em> = <q>d3</q>.<b>bisector</b>(<u>function</u>(<s>a</s>,<s>b</s>){
+	<u>return</u>  <s>a.x</s> - <s>b.x</s>
+}).<b>right</b>

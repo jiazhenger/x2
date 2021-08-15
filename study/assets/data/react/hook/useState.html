@@ -1,0 +1,25 @@
+<em>import React</em>, { <b>useState</b> } <em>from 'react'</em>;
+
+<em>const</em> Component = ( <em>props</em> ) => {
+	<em># 声明一个新的叫做 'count' 的 state 变量，初始值为 0</em>
+	<em>const</em> <i>[</i> <u>count</u>, <b>set</b><u>Count</u> <i>]</i> = <b>useState</b>( 0 );
+	
+	<em># 惰性初始 state；传入函数，由函数计算出的值作为 state</em>
+	<em>// 此函数只在初始渲染时被调用</em>
+	<em>const</em> <i>[</i> <u>count</u>, <b>set</b><u>Count</u> <i>]</i> = <b>useState</b>( ( ) => {
+		<em>return</em> <q>someExpensiveComputation</q>( <em>props</em> )
+	} );
+	<q>someExpensiveComputation</q> = ( <em>props</em> ) => {	}
+	
+	<em># 累计改变状态</em>
+	<b>set</b><u>Count</u>( <s>prevCount</s> => <s>prevCount</s> + 1  }
+	<b>set</b><u>Count</u>( <s>prevCount</s> => {
+		<em>return</em> <s>prevCount</s> + 1
+	}  }
+	
+	<em>return</em> &lt;&gt;
+		<em>&lt;button</em> onClick={ ( ) => <b>setCount</b>(<u>count</u> + 1) }&gt;<em>Click</em><em>&lt;button/&gt;</em>
+		<em>&lt;button</em> onClick={ ( <s>prevCount</s> ) => <b>setCount</b>(<s>prevCount</s> + 1) }&gt;<em>Click</em><em>&lt;button/&gt;</em>
+		{<u>count</u>}
+	&lt;/&gt;
+}

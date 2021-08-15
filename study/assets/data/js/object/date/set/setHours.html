@@ -1,0 +1,14 @@
+<u># 用法</u>
+<em>设置小时</em>
+<u># 语法</u>
+<em>(new Date)</em>.<b>setHours</b>( <s>hour</s>, <s>min</s>, <s>sec</s>, <s>millisec</s> )
+<em>(new Date)</em>.<b>setUTCHours</b>( <s>hour</s>, <s>min</s>, <s>sec</s>, <s>millisec</s> )
+<u># 参数</u>
+<s>hour</s>	: <em>必需。表示小时的数值，介于 0（午夜） ~ 23（晚上11点） 之间，以本地时间计（下同）</em>
+<s>min</s>		: <em>可选。表示分钟的数值，介于 0 ~ 59 之间</em>
+<s>sec</s>		: <em>可选。表示秒的数值，介于 0 ~ 59 之间</em>
+<s>millisec</s>	: <em>可选。表示毫秒的数值，介于 0 ~ 999之间</em>
+<u># 示例</u>
+<em>const date</em> = <q>new Date( )</q>
+<em>date</em>.<b>setHours</b>( <s>15</s> )
+<em>date</em>.<b>setUTCHours</b>( <s>15</s>, <s>35</s>, <s>1</s> )

@@ -1,0 +1,17 @@
+<u># 用法</u>
+<em>返回请求结果</em>
+<u># 语法</u>
+<em>const status</em> = <em>xhr</em>.<b>status</b>
+<u># status 的值</u>
+<i>200</i>	:	<em>OK，请求成功</em>
+<i>400</i>	:	<em>未找到页面</em>
+<i>500</i>	:	<em>服务器错误</em>
+<u># 示例</u>
+<em>xhr</em>.<q>onreadystatechange</q>(<s>function( )</s>{
+	if(<em>xhr</em>.<b>status</b> === <i>200</i>){
+		<em>const data</em> = <em>xhr</em>.<q>responseText</q>
+	}
+	if(<u>this</u>.<b>status</b> === <i>200</i>){
+		<em>const data</em> = <u>this</u>.<q>responseText</q>
+	}
+})

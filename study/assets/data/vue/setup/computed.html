@@ -1,0 +1,11 @@
+<em>&lt;template&gt;</em>{{ <u>value</u> }}<em>&lt;/template&gt;</em>
+<em>&lt;script&gt;</em>
+	<em>import</em> { <q>ref</q>, <b>computed</b> } <em>from 'vue'</em>
+	<em>export default</em> {
+		<i>setup( )</i>{
+			<em>const</em> <em>count</em> = <q>ref</q>( <em>0</em> ) 								<em>// 声明一个响应值</em>
+			<em>const</em> <u>value</u> = <b>computed</b>( ( ) => { <em>count</em>.<s>value</s> * 10 } ) 		<em>// 计算响应值</em>
+			<em>return</em> { <u>value</u> } 									<em>// 暴露给模板使用的变量或方法</em>
+		}
+	}
+<em>&lt;/script&gt;</em>

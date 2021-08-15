@@ -1,0 +1,39 @@
+<u># 用法</u>
+<em>1、发布-订阅模式里面包含了三个模块，发布者，订阅者和处理中心</em>
+<em>2、处理中心相当于报刊办事大厅。发布者相当与某个杂志负责人，他来中心这注册一个的杂志，而订阅者相当于用户，我在中心订阅了这分杂志。每当发布者发布了一期杂志，办事大厅就会通知订阅者来拿新杂志</em>
+<u># 语法</u>
+<em>const proxy</em> = {
+	<em># 处理中心：接收动态添加的监听函数。可当作一个存储全局数据的对象</em>
+	<b>Class</b>: { },
+	<em># 订阅者：在处理中心订阅一份杂志：在 Class 上添加一个函数</em>			
+	<b>on</b>(<s>key</s>, <s>fn</s>) {
+		if(<q>this</q>.<b>Class</b>[<s>key</s>] === undefined) {
+			<q>this</q>.<b>Class</b>[<s>key</s>] = [ ]
+		}
+		<q>this</q>.<b>Class</b>[<s>key</s>].push(<s>fn</s>)
+	},
+	<em># 订阅者：在处理中心取消订阅一份杂志：在 Class 上移除一个函数</em>	
+	<b>off</b>(<s>key</s>) {
+		<q>this</q>.<b>Class</b>[<s>key</s>] = [ ]
+	},
+	<em># 发布者：通知订阅者来拿新杂志：调用 Class 中的函数</em>
+	<b>publish</b>( ) {
+		if(arguments.length === 0){ return false }
+		setTimeout(( )=>{
+	    	const <s>key</s> = arguments[0];		<em>// key 为事件句柄</em>
+	    	const args  = [ ].concat(Array.prototype.slice.call(arguments, 1))  <em>// 处理参数</em>
+			if(<q>this</q>.<b>Class</b>[<s>key</s>] !== undefined && <q>this</q>.<b>Class</b>[key].length > 0) {
+				for(var i in <q>this</q>.<b>Class</b>[<s>key</s>]) {
+					<q>this</q>.<b>Class</b>[<s>key</s>][i].apply(null, args) 	<em>// 执行 Class 中的函数</em>
+				}
+			}
+		})
+	}
+}
+<u># 示例</u>
+<em># 订阅者：创建一个监听函数</em>
+<em>proxy</em>.<b>on</b>(<em>'listener'</em>,<u>function</u>(<s>value</s>){	
+	<q>this</q>.<em>name</em> = <s>value</s> 		<em>// 在处理中心添加一个变量</em>
+})
+<em># 发布者：执行 Class 中的函数</em>
+<em>proxy</em>.<b>publish</b>(<em>'listener'</em>, <em>100</em>)

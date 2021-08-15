@@ -1,0 +1,14 @@
+<u># 用法</u>
+<em>获取或设置每个选定的元素绑定的数据。这种方法不计算一个连接（并因此不计算enter和exit的选择）</em>
+<u># 语法</u>
+<em>selection</em>.<b>datum</b>(<s>value</s>)
+<u># 参数</u>
+<s>value</s> ：<em>可选</em>（<u>字符串、函数</u>）
+<u># 函数 this 指向当前 dom</u>
+<u># 示例</u>
+<em># 返回在选择中绑定第一个非空的元素的数据</em>
+<em>const d</em> = <em>selection</em>.<b>datum( )</b>
+<em># 返回自定义数据属性，格式必须是</em> <u>&lt;div <b>data-x</b>='' /&gt;</u>
+<em>selection</em>.<b>datum</b>(<u>function</u>(<q>data</q>,<q>index</q>){
+	<u>return</u> <q>this.dataset</q>
+})

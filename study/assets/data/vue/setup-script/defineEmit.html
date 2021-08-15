@@ -1,0 +1,8 @@
+<em>&lt;script <i>setup</i>&gt;</em>
+	<em>import { <b>defineEmit</b> } from 'vue'</em>
+	<em>const</em> <u>emit</u> = <b>defineEmit</b>([ <em>'submit'</em>,<em>'click'</em> ])
+	<em>const onSubmit</em> = ( ) =>{
+		<u>emit</u>(<em>'submit'</em>)
+		<u>emit</u>(<em>'click'</em>, <em>'100'</em>)
+	}
+<em>&lt;/script&gt;</em>

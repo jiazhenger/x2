@@ -1,0 +1,8 @@
+<q>document.addEventListener</q>(<em>'click'</em>, <s>e</s> => {
+	<em># 不再派发事件，即：阻止冒泡</em>
+	<s>e</s>.<b>stopPropagation( )</b>
+	<em># 通知浏览器不要执行与事件关联的默认动作，即：阻止默认动作</em>
+	<s>e</s>.<b>preventDefault( )</b>
+	<em># 初始化新创建的 Event 对象的属性</em>
+	<s>e</s>.<b>initEvent( )</b>
+}, <em>false</em>)

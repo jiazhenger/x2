@@ -1,0 +1,48 @@
+<em># 项目名称</em>
+<i>name:</i> <em>project_name</em>
+<em># 项目描述</em>
+<i>description:</i> <em>A new Flutter application.</em>
+
+<em># 项目依赖包</em>
+<i>dependencies:</i>
+  flutter:
+    sdk: flutter
+  <em>#配置语言的依赖包</em>
+  <u>flutter_localizations</u>:
+    <u>sdk: flutter</u>
+  <em># icon</em>
+  cupertino_icons: ^0.1.2
+  <em># 访问本地图片</em>
+  <u>image_picker</u>: ^0.5.0+6
+  <em># 扫描二维码及条形码</em>
+  <u>barcode_scan</u>: ^1.0.0
+ 
+<em># 开发环境依赖包</em>
+<i>dev_dependencies:</i>
+  flutter_test:
+    sdk: flutter
+
+<em># 项目配置</em>    
+<i>flutter:</i>
+  <em>#使用 material UI</em>
+  uses-material-design: true
+  <em># 配置访问具体图片</em>
+  <q>assets:</q>
+  <b>- lib/assets/images/logo.png</b>
+  <b>- lib/assets/images/user.png</b>
+  <em># 配置访问所有图片</em>
+  <b>- lib/assets/images/</b>
+  <em># 配置访问 json 文件</em>
+  <b>- lib/assets/json/my.json</b>
+  <em># 字体配置</em>
+  <q>fonts:</q>
+  - family: Schyler
+    fonts:
+      - asset: lib/assets/fonts/Schyler-Regular.ttf
+      - asset: lib/assets/fonts/Schyler-Italic.ttf
+        style: italic
+  - family: Trajan Pro
+    fonts:
+      - asset: lib/assets/fonts/TrajanPro.ttf
+      - asset: lib/assets/fonts/TrajanPro_Bold.ttf
+        weight: 700

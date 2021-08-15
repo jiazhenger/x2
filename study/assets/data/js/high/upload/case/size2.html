@@ -1,0 +1,9 @@
+const <s>getSize</s> = function(b){
+	return {
+		<b>B</b>: b.toFixed(2),
+		<b>KB</b>: (b/1024).toFixed(2),
+		<b>MB</b>: (b/(1024 * 1024)).toFixed(2),
+		<b>GB</b>: (b/(1024 * 1024 * 1024)).toFixed(2)
+	}
+}
+<em>const r</em> = <s>getSize</s>(<em>1048576</em>)

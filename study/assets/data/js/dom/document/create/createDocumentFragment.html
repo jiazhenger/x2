@@ -1,0 +1,14 @@
+<u># 用法</u>
+<em>1、创建空的 DocumentFragment 对象，并返回此对象</em>
+<em>2、创建了一虚拟的节点对象，节点对象包含所有属性和方法</em>
+<em>3、一般用于，一次性插入多个节点对象到 dom 中</em>
+<u># 语法</u>
+<em>const fragment</em> = <q>document</q>.<b>createDocumentFragment( )</b>
+<u># 示例</u>
+<em>const</em> <u>fragment</u> =  <q>document</q>.<b>createDocumentFragment( )</b> 		<em>// 创建文档片段</em>
+<em>fragment</em>.<q>appendChild</q>(<em>document.querySelector('div')</em> ) 			<em>// 给片段添加节点</em>
+<em>fragment</em>.<q>appendChild</q>(<em>document.querySelector('q')</em> ) 				<em>// 给片段添加节点</em>
+<em>fragment</em>.<q>appendChild</q>(<em>document.querySelector('span')</em> ) 			<em>// 给片段添加节点</em>
+<em>...</em>
+<u>fragment</u>.<q>childNodes[0]</q>.<q>nodeValue</q> = <em>'fool'</em>
+<em>document.body</em>.<q>appendChild</q>(<u>fragment</u> ) 						<em>// => 将文档片段 fragment 放入 body</em>

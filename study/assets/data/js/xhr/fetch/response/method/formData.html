@@ -1,0 +1,8 @@
+<u># 用法</u>
+<em>读取Response对象并且将它设置为已读(因为响应对象被设置为了流的方式，所以它们只能被读取一次)，并返回一个被解析为 FormData 格式的答应对象</em>
+<u># 语法</u>
+<em>const formData</em> = <em>response</em>.<b>formData( )</b>
+<u># 示例</u>
+<q>fetch</q>( ).<u>then</u>(<em>response</em> => {
+	<em>response</em>.<b>formData( )</b>.<u>then</u>( <em>formData</em> => { 	})
+})

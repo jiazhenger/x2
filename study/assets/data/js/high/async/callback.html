@@ -1,0 +1,12 @@
+<u># 用法</u>
+<em>回调函数，参数为函数</em>
+<u># 语法</u>
+<u>function</u> <em>fn</em>(<b>callback</b>){
+	setTimeout(function(){
+		<b>callback</b>(<em>100</em>)
+	},1000)
+}
+<u># 示例</u>
+<em>fn</em>(<b>function(<s>value</s>){</b>
+	<em>console.log(<s>value</s>)</em> 		<em>// => 100</em>
+<b>}</b>)

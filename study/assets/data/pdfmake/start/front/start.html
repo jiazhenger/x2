@@ -1,0 +1,31 @@
+<em>import <b>pdfMake</b> from 'pdfmake/build/pdfmake'</em>
+<em>// import <u>pdfFonts</u> from 'pdfmake/build/vfs_fonts'</em>
+<em># 中文字体配置：可从 <u>C:\Windows\Fonts</u> 复制 <b>.ttf</b> 格式的字体到 public/assets/fonts/</em>
+<em>const</em> <i>fontUrl</i> = <em>window.location.origin + '/assets/fonts/<i>STXIHEI.TTF</i>'</em>
+<em>const</em> <s>fonts</s> = {
+	<b>Roboto</b>: {
+		<em>normal</em>: <i>fontUrl</i>,
+		<em>bold</em>: <i>fontUrl</i>,
+		<em>italics</em>: <i>fontUrl</i>,
+		<em>bolditalics</em>: <i>fontUrl</i>
+	},
+	<b>YaHei</b>: {
+		<em>normal</em>: <i>fontUrl</i>,
+		<em>bold</em>: <i>fontUrl</i>,
+		<em>italics</em>: <i>fontUrl</i>,
+		<em>bolditalics</em>: <i>fontUrl</i>
+	}
+}
+<em># pdf 内容</em>
+<em>const</em> <u>docDefinition</u> = {
+	<em>header: '页头'</em>
+	<em>content: '主体'</em>
+	<em>content: '页脚'</em>
+}
+<em># 引用默认字体</em>
+<em>// pdfMake.vfs = pdfFonts.pdfMake.vfs</em>
+<em># 自定义字体</em>
+<b>pdfMake</b>.<q>fonts</q> = <s>fonts</s>
+<em># 创建 pdf</em>
+<s>pdfMake</s>.<q>createPdf</q>(<u>docDefinition</u>).<q>open( )</q>
+<s>pdfMake</s>.<q>createPdf</q>(<u>docDefinition</u>, <u>null</u>, <s>fonts</s>).<q>open( )</q> 	<em>//  创建 pdf，并配置字体</em>

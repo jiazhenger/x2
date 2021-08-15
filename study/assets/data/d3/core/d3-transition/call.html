@@ -1,0 +1,19 @@
+<u># 用法</u>
+<em>1、调用指定的*函数（function）一次，通过一些可选的参数（arguments）*传递当前的过渡</em>
+<em>2、call 操作符总是返回当前的过渡，与指定函数的返回值无关</em>
+<u># 语法</u>
+<em>transition</em>.<b>each</b>(<s>function</s>, <s>arguments</s>)
+<u># 参数</u>
+<s>function</s> ：<em>必需，函数</em>
+<s>arguments</s> ：<em>可选，传递参数</em>
+<u># 函数 this 指向当前过渡 transition</u>
+<u># 示例</u>
+<em># 拆分</em>
+<em>const </em> <u>fn</u> = <u>function</u>(<s>transition</s>){
+	<s>transition</s>.<q>attr</q>(<em>'width'</em>,<em>'200px'</em>).<q>attr</q>(<em>'height'</em>,<em>'200px'</em>)
+}
+<q>d3.selectAll</q>(<em>'div'</em>).<q>transition( )</q>.<b>call</b>(<u>fn</u>) === <u>fn</u>(<q>d3.selectAll</q>(<em>'div'</em>).<q>transition( )</q>)
+<em># 合并</em>
+<q>d3.selectAll</q>(<em>'div'</em>).<q>transition( )</q>.<b>call</b>(<u>function</u>(<s>transition</s>){
+	<s>transition</s>.<q>attr</q>(<em>'width'</em>,<em>'200px'</em>).<q>attr</q>(<em>'height'</em>,<em>'200px'</em>)
+})

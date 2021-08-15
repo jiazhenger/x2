@@ -1,0 +1,23 @@
+<u># 语法</u> 
+<tt>Future &lt;bool&gt;</tt> <b>Future.delayed</b>(
+	<tt>Duration</tt> <em>duration</em>, 							<em># 延迟时间</em>
+	[ <tt>FutureOr&lt;void&gt;</tt> <tt>Function</tt><s>( )</s> <em>computation</em> ] 		<em># 延迟后执行的函数，相当于 then( )</em>
+)
+<u># 示例</u>
+<tt>Future &lt;void&gt;</tt> <u>ajax( )</u>{ 
+	<u>return</u> <b>Future.delayed</b>(<em>Duration(seconds: 5)</em>, <s>( )</s>{
+		<em>// 延迟 5s 执行</em>
+	}); 	
+}
+<u># 示例</u> 
+<em># 定义一个异步函数，没有 return 返回值时 value = null<em>
+<tt>Future &lt;String&gt;</tt> <u>ajax( )</u>{ 
+	<b>Future.delayed(Duration(seconds: 5))</b>; 	<em>// 延迟 5s 执行后面的代码</em>
+	<b>return</b> <em>'123'</em>;
+}
+<em># 获取异步返回值 1：<em>
+<tt>Future &lt;String&gt;</tt> <em>request( )</em> <b>async</b> {
+	<tt>String</tt> <s>value</s> = <b>await</b> <u>ajax( )</u>		<em>// await 直接返回 ajax( ) 的返回值</em>
+}
+<em># 获取异步返回值 2：<em>
+<u>ajax( )</u>.<b>then</b>( ( <s>value</s> ) {		})

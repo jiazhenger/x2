@@ -1,0 +1,11 @@
+<u># 用法</u>
+<em>文件（File）接口提供有关文件的信息，并允许网页中的 JavaScript 访问其内容</em>
+<u># 来源</u>
+<em>1、File 对象可以是来自用户在一个 input 元素上选择文件后返回的 FileList 对象</em>
+<em>2、来自拖放操作生成的 DataTransfer 对象</em>
+<em>3、来自在一个HTMLCanvasElement上执行mozGetAsFile()方法后返回结果</em>
+<u># html</u>
+<em>&lt;input type='<i>file</i>' /&gt;</em>
+<u># 语法</u>
+<em>const</em> <u>FileList</u> = <s>event.target</s>.<b>files</b>	==  <s>document.querySelector('input')</s>.<b>files</b>			<em>// 用来存储用户所选择的文件</em>
+<em>const</em> <u>File</u> = <u>FileList</u><b>[ 0 ]</b>		<em>// 获取到一个FileList对象中的第一个文件(File 对象)</em>

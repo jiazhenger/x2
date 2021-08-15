@@ -1,0 +1,16 @@
+<em># 相对偏移</em>
+<em>const</em> <s>offsetLeft</s> 		= <em>id</em>.<b>offsetLeft</b> 		<em>//</em> <u>上边框外边缘</u><em>距离</em><u>最近的已定位父级（默认 body）</u><em>的距离。滚动条不影响</em>
+<em>const</em> <s>offsetTop</s> 		= <em>id</em>.<b>offsetTop</b>		<em>//</em> <u>上边框外边缘</u><em>距离</em><u>最近的已定位父级（默认 body）</u><em>的距离。滚动条不影响</em>
+<em>const</em> <s>offsetParent</s>		= <em>id</em>.<b>offsetParent</b>		<em>// 获取已定位父级，默认 body</em>
+<em># 绝对偏移</em>
+<em>const</em> <s>getOffset</s> = <u>function</u>(<q>el</q>){
+	<em>let</em> <i>offsetTop</i> = <q>el</q>.<b>offsetTop</b>
+	<em>let</em> <i>offsetLeft</i> = <q>el</q>.<b>offsetLeft</b> 
+	<em>let</em> <u>parent</u> = <q>el</q>.<b>offsetParent</b>
+	while(<u>parent</u>){
+		<i>offsetTop</i> += <u>parent</u>.<b>offsetTop</b>
+		<i>offsetLeft</i> += <u>parent</u>.<b>offsetLeft</b> 
+		<u>parent</u> = <u>parent</u>.<b>offsetParent</b>
+	}
+	return { <i>offsetTop</i>, <i>offsetLeft</i>}
+}

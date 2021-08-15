@@ -1,0 +1,16 @@
+<em>const</em> <q>browser</q> = ( ) => {
+	const s = (<b>navigator.userAgent</b>.toLowerCase()).match(/msie ([\d.]+)/)
+	return parseInt(s ? s[1] : 0)
+}
+<em># ie 小于等于某个版本时执行</em>
+<em>const</em> <s>ieRun</s> = (v,opt) => {
+	const version = <q>browser</q>( )
+	if( v > 0 && v <= version) || (document.documentMode != undefined && document.documentMode <= version) ){
+		opt.onIe && opt.<i>onIe</i>( )
+	}else{
+		opt.onElse && opt.<i>onElse</i>( )
+	}
+}
+<em># 使用</em>
+<s>ieRun</s>( <u>8</u> ,{<i>onIe</i>( ){ },<i>onElse</i>( ){ }}) 		<em>// ie8 及 ei8 以下执行</em>
+<s>ieRun</s>( <u>9</u> ,{<i>onIe</i>( ){ },<i>onElse</i>( ){ }}) 		<em>// ie9 及 ei9 以下执行</em>

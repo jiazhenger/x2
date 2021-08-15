@@ -1,0 +1,14 @@
+<u># 用法</u>
+<em>向 FormData 中添加新的属性值，FormData 对应的属性值存在也不会覆盖原值，而是新增一个值，如果属性不存在则新增一项属性值</em>
+<u># 语法</u>
+<em>fd</em>.<b>set</b>(<s>name</s>, <s>value</s>, <s>filename</s>)
+<u># 参数</u>
+<s>name</s>: <em>必需。字段名称</em>
+<s>value</s>: <em>必需。字段的值，如果是传入两个参数的方式，那么该值是一个 USVString，如果不是，将被转成一个字符串。如果是传入三个参数的方式，那么该值将是一个布尔值（Blob），文件（File），或者一个 USVString，如果不是，将被转成一个字符串</em>
+<s>filename</s>: <em>可选。传给服务端的文件名（一个USVString）。Blob 对象的默认文件名是 'blob'</em>
+<u># 示例</u>
+<em>const fd</em> = <q>new FormData( )</q>
+<em>fd</em>.<q>append</q>(<em>'name'</em>, <em>'javascript'</em>)
+<em>set</em>.<b>set</b>(<s>'name'</s>, <s>'flutter'</s>) 					<em>// 覆盖值</em>
+<em>set</em>.<b>set</b>(<s>'age'</s>, <s>'20'</s>)							<em>// 新增值</em>
+<em>set</em>.<b>set</b>(<em>'file'</em>, <u>e.target.files[0]</u>, <s>'pic.png'</s>)		<em>// 将文件名传给服务器</em>

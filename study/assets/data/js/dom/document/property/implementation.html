@@ -1,0 +1,12 @@
+<u># 用法</u>
+<em>返回一个和当前文档相关联的 DOMImplementation 对象</em>
+<u># 语法</u>
+<em>const DOMImpObj</em> = <em>window</em>.<q>document</q>.<b>implementation</b>
+<u># 判断浏览器是否支持 HTML2.0 特性</u>
+<em>const bool</em> = <em>window</em>.<q>document</q>.<b>implementation</b>.<i>hasFeature</i>(<em>'HTML'</em>, <em>'2.0'</em>)
+<u># js 读取 xml 文件里的内容</u>
+<em>const</em> <s>xmlDoc</s> = <q>ActiveXObject</q> ?	<q>new ActiveXObject</q>('<u>Microsoft.XMLDOM</u>') :
+							<em>window</em>.<q>document</q>.<b>implementation</b>.<i>createDocument</i>('','',<em>null</em>)		<em>// 将 xml 转换成 document 对象</em>
+<s>xmlDoc</s>.<q>async</q> = <u>false</u>
+<s>xmlDoc</s>.<q>load</q>(<em>'../xml/test.xml'</em>)
+<q>document.body.innerHTML</q> = <s>xmlDoc</s>.<em>getElementsByTagName('to')[0].childNodes[0].nodeValue</em>

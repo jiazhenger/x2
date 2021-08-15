@@ -1,0 +1,16 @@
+<em># 子组件 my-component</em>
+<em>&lt;template&gt;</em>
+	&lt;<q>slot</q> <b>name</b>='<i>header</i>'&gt;&lt;/<q>slot</q>&gt;
+	&lt;<q>slot</q> <b>name</b>='<i>footer</i>'&gt;&lt;/<q>slot</q>&gt;
+<em>&lt;/template&gt;</em>
+
+<em># 父组件</em>
+<em>&lt;template&gt;</em>
+	<em>&lt;div&gt;</em>
+		<em>&lt;my-component&gt;</em>
+			<em>&lt;<q>template</q> <s>v-for="name in ['header', 'footer']"</s> <b>v-slot : </b><b>[ name ]</b>&gt;</em> <em>default</em> <em>&lt;/<q>template</q>&gt;</em> 
+			<em># 缩写</em>
+			<em>&lt;<q>template</q> <s>v-for="name in ['header', 'footer']"</s> <b>#</b><b>[ name ]</b>&gt;</em> <em>default</em> <em>&lt;/<q>template</q>&gt;</em>
+		<em>&lt;/my-component&gt;</em>
+	<em>&lt;/div&gt;</em>
+<em>&lt;/template&gt;</em>

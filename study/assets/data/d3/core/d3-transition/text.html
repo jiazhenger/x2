@@ -1,0 +1,20 @@
+<u># 用法</u>
+<em>设置文本内容将取代任何现有的子元素</em>
+<u># 语法</u>
+<em>transition</em>.<b>text</b>(<s>value</s>)
+<u># 参数</u>
+<s>value</s> ：<em>必需，文本内容</em>（<u>常量、函数</u>）
+<u># 函数 this 指向当前 dom</u>
+<u># 示例</u>
+<em># value 是常量：所有的元素被给予相同的属性值 </em>
+<em>transition</em>.<b>text</b>(<em>'d3.js'</em>)
+<em># value 是函数：该函数为每个选定的元件（按顺序）计算，被传递的参数是当前数据d与当前索引i，用this表示当前的DOM元素</em>
+<em>transition</em>.<b>text</b>(<em>'style'</em>,<u>function</u>(<q>data</q>, <q>index</q>){
+	if( <em>i%2 === 0</em> ){
+		<u>return</u> <em>'d3.js'</em> 		<em>// 返回值被用于设置每个元素的属性</em>
+	}else{
+		<u>return</u> <em>'three.js'</em>
+	}
+})
+<em># 清除内容</em>
+<em>transition</em>.<b>text</b>(<u>null</u>)

@@ -1,0 +1,10 @@
+<u># 用法</u>
+<em>删除 namedNodeMap 中带有指定名称的节点</em>
+<u># 语法</u>
+<em>const attr</em> = <u>nodename</u>.<b>removeNamedItem</b>(<s>nodename</s>)
+<u># 参数</u>
+<s>nodename</s>: <em>必需。希望删除的 namedNodeMap 中节点的名称</em>
+<u># 示例</u>
+<em>const nodemap</em> = <u>document.body</u>.<q>attributes</q>			<em>// namedNodeMap</em>
+<em>const attr</em> = <em>nodemap</em>.<b>removeNamedItem</b>(<s>'class'</s>)		<em>// => class='red'</em>
+<em>const value</em> = <em>attr</em>.<q>textContent</q>						<em>// => red</em>

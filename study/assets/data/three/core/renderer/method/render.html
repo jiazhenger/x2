@@ -1,0 +1,15 @@
+<u># 用法</u>
+<em>用相机(camera)渲染一个场景(scene)</em>
+<u># 语法</u>
+<em>renderer</em>.<b>render</b>(<s>scene</s>, <s>camera</s>, <s>renderTarget</s>, <s>forceClear</s>)
+<u># 参数</u>
+<s>scene</s> 			：<em>必需，场景对象</em>（<u>new Three.Scene( )</u>）
+<s>camera</s> 			：<em>必需，相机对象</em>（<u>new Three.OrthographicCamera( )</u>）
+<s>renderTarget</s>		：<em>必需，渲染目标的一个缓冲区</em>（<u>new Three.WebGLRenderTarget( )</u>）
+<s>forceClear</s> 		：<em>可选，如果为true，颜色、深度及模板缓存将会在渲染之前清除</em>（<u>Boolean</u>）。<em>如果 forceClear 为 true，则即使渲染器的 autoClear 属性为 false，也会在渲染之前清除深度，模板和颜色缓冲区</em>
+<u># 示例</u>
+<em>const</em> <s>scene</s> = <q>new Three.Scene( )</q>						<em>// 场景对象</em>
+<em>const</em> <s>camera</s> = <q>new Three.OrthographicCamera( )</q>			<em>// 相机对象</em>
+<em>const</em> <s>renderTarget</s> = <q>new Three.WebGLRenderTarget( )</q>		<em>// 渲染目标的一个缓冲区</em>
+<em>const renderer</em> = <q>new Three.WebGLRenderer( )</q>				<em>// 渲染器</em>
+<em>renderer</em>.<b>render</b>( <s>scene</s>, <s>camera</s>, <s>renderTarget</s>, <s>true</s>) 			<em>// 渲染场景</em>

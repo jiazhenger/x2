@@ -1,0 +1,13 @@
+<u># 用法</u>
+<em>等价于 bisectRight, 但是使用的是 bisector 的访问比较器</em>
+<u># 语法</u>
+<em>bisector</em>.<b>right</b>(<s>arry</s>, <s>x</s>, <s>lo</s>, <s>hi</s>)
+<u># 参数</u>
+<s>array</s> ： <em>必需，数组</em>
+<s>x</s> ： <em>可选，</em>
+<s>lo</s> ： <em>可选，</em>
+<s>hi</s> ： <em>可选，</em>
+<u># 示例</u>
+<em>const r</em> = <q>d3</q>.<b>bisector</b>(<u>function</u>(<s>d</s>){
+	<u>return</u>  <s>d.x</s>
+}).<b>right</b>(<em>[ 1, 2, 3 ]</em>)

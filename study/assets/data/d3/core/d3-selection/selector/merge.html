@@ -1,0 +1,20 @@
+<u># 用法</u>
+<em>1、返回一个将当前选择集和指定的 other 选择集合并之后的新的选择集</em>
+<em>2、返回的选择集与当前选择集有相同数量的分组以及相同的父元素</em>
+<em>3、当前选择集中的任何空缺 (null) 都会被指定的 other 中的对应的元素填充(如果存在的话)，如果 other 选择集有附加的组或者父元素，则将其忽略</em>
+<em>4、这个方法通常用来在 data-join 操作之后合并 enter 和 update。在单独修改输入和更新元素之后对其进行合并执行其他的操作而不需要额外的代码</em>
+<u># 语法</u>
+<em>selection</em>.<b>merge</b>(<s>other</s>)
+<u># 参数</u>
+<s>other</s> ：<em>必需，要合并的 selection</em>
+<u># 函数 this 指向当前 dom</u>
+<u># 示例</u>
+<em>var</em> <u>circle</u> = <q>svg</q>.<q>selectAll</q>(<em>'circle'</em>).<q>data</q>(<em>data</em>) 		<em>// UPDATE</em>
+    .<q>style</q>(<em>'fill'</em>, <em>'blue'</em>)
+
+<u>circle</u>.<q>exit( )</q>.<q>remove( )</q> 	<em>// EXIT</em>
+
+<u>circle</u> = <u>circle</u>.<q>enter( )</q>.<q>append</q>(<em>'circle'</em>) 	<em>// ENTER</em>
+		.<q>style</q>(<em>'fill'</em>, <em>'green'</em>)
+		.<b>merge</b>(<u>circle</u>) 			<em>// ENTER + UPDATE</em>
+		.<q>style</q>(<em>'stroke'</em>, <em>'black'</em>);

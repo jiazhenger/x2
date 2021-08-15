@@ -1,0 +1,13 @@
+<u># 用法</u>
+<em>将请求发送到服务器</em>
+<u># 语法</u>
+<em>xhr</em>.<b>send</b>(<s>string</s>)
+<u># 参数</u>
+<s>string</s>	: <em>可选。仅用于 POST 请求</em>
+<u># get 发送参数</u>
+<em>xhr</em>.<q>open</q>(<u>'GET'</u>, '<em>/api/search</em><i>?a=0&b=1&c=2</i>', <em>true</em>)
+<em>xhr</em>.<b>send( )</b>
+<u># post 发送参数</u>
+<em>xhr</em>.<q>open</q>(<u>'POST'</u>, <em>/api/search</em>, <em>true</em>)
+<em>xhr</em>.<b>send</b>('<i>a=0&b=1&c=2</i>') 					<em>// URLSearchParams 参数</em>
+<em>xhr</em>.<b>send</b>(<q>JSON.stringify(</q> <i>{ a:0, b:1 }</i> <q>)</q>) 			<em>// JSON 字符串参数</em>

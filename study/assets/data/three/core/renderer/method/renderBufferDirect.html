@@ -1,0 +1,18 @@
+<u># 用法</u>
+<em>渲染一个几何体的缓冲组</em>
+<u># 语法</u>
+<em>renderer</em>.<b>renderBufferDirect</b>(<s>camera</s>, <s>lights</s>, <s>fog</s>, <s>material</s>, <s>geometryGroup</s>)
+<u># 参数</u>
+<s>camera</s> 			：<em>必需，相机对象</em>（<u>new Three.OrthographicCamera( )</u>）
+<s>lights</s>			：<em>必需，灯光组对象</em>（<u>Array</u>,<u>[new Three.AmbientLight( ),new Three.PointLight( )]</u>）
+<s>fog</s>				：<em>必需，雾对象</em>（<u>new Three.Fog( )</u>）
+<s>material</s>			：<em>必需，材质对象</em>（<u>new Three.MeshBasicMaterial( )</u>）
+<s>geometryGroup</s>	：<em>必需，几何体对象</em>（<u>new Three.BoxGeometry( )</u>）
+<u># 示例</u>
+<em>const</em> <s>camera</s> 			= <q>new Three.OrthographicCamera( )</q>						<em>// 相机对象</em>
+<em>const</em> <s>lights</s> 			= <q>[new Three.AmbientLight( ),new Three.PointLight( )]</q>		<em>// 灯光组对象</em>
+<em>const</em> <s>fog</s> 			= <q>new Three.Fog( )</q>									<em>// 雾对象</em>
+<em>const</em> <s>material</s> 		= <q>new Three.MeshBasicMaterial( )</q>						<em>// 材质对象</em>
+<em>const</em> <s>geometryGroup</s> 	= <q>new Three.BoxGeometry( )</q>							<em>// 几何体对象</em>
+<em>const renderer</em> 		= <q>new Three.WebGLRenderer( )</q>							<em>// 渲染器</em>
+<em>renderer</em>.<b>render</b>( <s>camera</s>, <s>lights</s>, <s>fog</s>, <s>material</s>, <s>geometryGroup</s>)					<em>// 渲染场景</em>

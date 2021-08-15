@@ -1,0 +1,12 @@
+<u># 用法</u>
+<em>1、如果指定了 domain 则设置当前直方图生成器的输入区间为指定的 domain 并返回直方图生成器</em>
+<em>2、如果没有指定 domain 则返回当前的输入区间, 默认为 extent</em>
+<em>3、直方图的输入区间由数组 [min, max] 定义. min 表示直方图生成器可以读取的最小值, max 表示直方图生成器可以读取到的最大值</em>
+<em>4、任何不属于 [min, max] 的值将会被忽略</em>
+<u># 语法</u>
+<em>histogram</em>.<b>domain</b>(<s>domain</s>)
+<u># 参数</u>
+<s>domain</s> ：<em>可选，一个值</em>
+<u># 示例</u>
+<em># 回当前的输入区间, 默认为 extent</em>
+<em>const histogram</em> = <q>d3</q>.<q>histogram( )</q>.<b>domain</b>(<em>x.domain( )</em>)

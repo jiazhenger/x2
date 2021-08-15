@@ -1,0 +1,13 @@
+<u># 语法</u>
+<em>const promise</em> = <u>function</u>(<em>state</em>){
+	<em>if</em> (<em>state === 1</em>) {
+		<b>Promise.resolve</b>(<em>1</em>) 		<em>// 成功</em>
+	} <em>else</em> {
+		<b>Promise.reject</b>(<em>0</em>)			<em>// 失败</em>
+	}
+}
+<em>promise</em>.<b>then</b>( <u>function</u>(<s>value</s>){
+	<em>// 成功：执行 resolve( )</em>
+}, <u>function</u>(<s>value</s>){
+	<em>// 失败：执行 reject( )</em>
+})

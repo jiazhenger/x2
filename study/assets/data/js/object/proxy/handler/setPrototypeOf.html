@@ -1,0 +1,19 @@
+<u># 用法</u>
+<em>当读取代理对象的原型时，该方法就会被调用</em>
+<u># 语法</u>
+<em>const p</em> = <q>new Proxy<q>(
+	{ }, 				<em>// 被代理的目标对象 target</em>
+	{
+		<b>setPrototypeOf</b>( <s>target</s>, <s>prototype</s> ){
+			return <em>{  x:1 }</em>
+		}
+	}
+)
+<u># 参数说明</u>
+<s>target</s> : <em>被拦截目标对象</em>
+<s>prototype</s> : <em>对象新原型或为null</em>
+<u># 返回值</u>
+<em>如果成功修改了 Prototype, setPrototypeOf 方法返回 true, 否则返回 false</em>
+<u># 拦截以下 2 种操作</u>
+<i>Object.setPrototypeOf</i>( <em>{ }</em>， <em>null</em> )
+<i>Reflect.setPrototypeOf</i>( <em>{ }</em>， <em>null</em> )

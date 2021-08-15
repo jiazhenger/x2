@@ -1,0 +1,21 @@
+<em>import React, { Component } from 'react'</em>
+
+<em>export default</em> <u>importComponent</u> => {
+    <em>return class extends Component</em> {
+		state = { <s>component</s>: <em>null</em> }
+		
+		componentDidMount( ) {
+			<u>importComponent( )</u>.<b>then(f => {</b>
+				this.setState({ <s>component</s>: <b>f.default</b> } )
+			<b>})</b>
+		}
+		
+		render( ) {
+			<em>const</em> <q>Component</q> = this.state.<s>component</s>
+			<b>return</b> <q>Component</q> ? <<q>Component</q> <b>{...this.props}</b>/> : <em>null</em>
+		}
+	}
+}
+<em># 使用</em>
+<em>import <q>Async</q> from '@com/async'</em>
+<em>const Button</em> = <q>Async</q>(<b>( )=>import(</b><em>'@cpx/button'</em></em><b>)</b>)

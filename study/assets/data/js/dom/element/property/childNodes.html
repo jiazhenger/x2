@@ -1,0 +1,9 @@
+<u># 用法</u>
+<em>返回节点的子节点集合，以 NodeList 对象，包括html元素、文本(包括空格)、注释节点等</em>
+<u># 语法</u>
+<em>const nodeList</em> = <s>el</s>.<b>childNodes</b>
+<u># 获取  NodeList 对象长度</u>
+<em>const len</em>= <em>nodeList</em>.<b>length</b>
+<u># 示例</u>
+<em>const array</em> = <q>[ ].slice.call</q>(<s>el</s>.<b>childNodes</b>) 				<em>// => [div, text, span#id, comment]</em>
+<em>const array</em> = <q>[ ].map.call</q>(<s>el</s>.<b>childNodes</b>, <u>v => v</u>) 		<em>// => [div, text, span#id, comment]</em>

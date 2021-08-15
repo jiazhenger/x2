@@ -1,0 +1,14 @@
+<u># 用法</u>
+<em>添加 dom 到元素内部</em>
+<u># 语法</u>
+<em>selection</em>.<b>append</b>(<s>name</s>)
+<u># 参数</u>
+<s>name</s> ：<em>必需，要添加的 html 元素</em>（<u>字符串</u>）<em>或 已存在的 node 元素</em>（<u>函数</u>）
+<u># 函数 this 指向当前 dom</u>
+<u># 示例</u>
+<em># 添加 html 元素到子元素最后</em>
+<em>selection</em>.<b>append</b>(<em>'div'</em>)
+<em># 函数添加 html 元素</em>
+<em>selection</em>.<b>append</b>(<u>function</u>(<q>data</q>,<q>index</q>){
+	<u>return</u> <q>index</q> <em>% 2 === 0</em> <u>?</u> <u>document.querySelector('.class')</u> : <u>document.querySelector('#id')</u>
+})

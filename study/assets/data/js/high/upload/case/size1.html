@@ -1,0 +1,20 @@
+const <s>getSize</s> = function(B){
+	var size = ''
+	if(B < 0.1 * 1024){									<em>// 小于0.1KB，则转化成B</em>
+		size = B.toFixed(2) + 'B'
+	}else if(B < 0.1 * 1024 * 1024){						<em>// 小于0.1MB，则转化成KB</em>
+		size = (B/1024).toFixed(2) + 'KB'
+	}else if(B < 0.1 * 1024 * 1024 * 1024){					<em>// 小于0.1GB，则转化成MB</em>
+		size = (B/(1024 * 1024)).toFixed(2) + 'MB'
+	}else{ 											<em>// 其他转化成GB</em>
+		size = (B/(1024 * 1024 * 1024)).toFixed(2) + 'GB'
+	}
+	var sizeStr = size + ''                        		<em>// 转成字符串</em>
+	var index = sizeStr.indexOf('.')                    	<em>// 获取小数点处的索引</em>
+	var dou = sizeStr.substr(index + 1 ,2)            	<em>// 获取小数点后两位的值</em>
+	if(dou == '00'){                                		<em>// 判断后两位是否为00，如果是则删除00</em>   
+		return sizeStr.substring(0, index) + sizeStr.substr(index + 3, 2)
+	}
+	return size
+}
+<em>const r</em> = <s>getSize</s>(<em>1048576</em>)

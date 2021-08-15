@@ -1,0 +1,17 @@
+<u># 用法</u>
+<em>提供了一种简单，合理的方式来跨网络异步获取资源</em>
+<u># 语法</u>
+<b>fetch</b>(<s>input</s>,<s>init</s>).<b>then</b>(<u>response </u> => {	})
+<u># 参数</u>
+<s>input</s> : <em>必需。一个 USVString 字符串，包含要获取资源的网址。一些浏览器会接受 blob: 和 data: 作为方案</em>
+<s>init</s> : <em>可选。一个配置项对象，包括所有对请求的设置</em>
+<u># 示例</u>
+<b>fetch</b>(<s>'/api/search'</s>,{ <em>method: 'POST'</em> }).<b>then</b>(<u>response </u> => {	})
+<u># input 值</u>
+<em># url 地址</em>
+<b>fetch</b>(<s>'/api/search</s>')
+<em># img 地址</em>
+<b>fetch</b>(<s>'./tortoise.png'</s>')
+<em># Blob</em>
+<em>const</em> <s>req</s> = <q>new Request</q>(<em>'flowers.jpg'</em>)
+<b>fetch</b>(<s>req</s>)

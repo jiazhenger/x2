@@ -1,0 +1,15 @@
+<u># 用法</u>
+<em>返回两个数组 a 和 b 的 Cartesian product(笛卡尔积)</em>
+<u># 语法</u>
+<q>d3</q>.<b>cross</b>(<s>a</s>, <s>b</s>, <s>reducer</s>)
+<u># 参数</u>
+<s>a</s> ：<em>必需，数组</em>
+<s>b</s> ：<em>必需，数组</em>
+<s>reducer</s> ：<em>可选，函数</em>
+<u># 示例</u>
+<em># 无函数</em>
+<em>const arr</em> = <q>d3</q>.<b>cross</b>(<em>[1, 2]</em>, <em>['x', 'y']</em>)				<em>// => [[1,x],[1,y],[2,x],[2,y]]</em>
+<em># 有函数</em>
+<em>const arr</em> = <q>d3</q>.<b>cross</b>(<em>[1, 2]</em>, <em>['x', 'y']</em>,<u>function</u>(<s>a</s>, <s>b</s>){ 	<em>// => ["1x", "1y", "2x", "2y"]</em>
+	<u>return</u> <s>a</s> + <s>b</s>
+}) 

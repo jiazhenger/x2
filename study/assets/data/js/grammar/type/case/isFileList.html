@@ -1,0 +1,9 @@
+<em>document.querySelector('#upload')</em>.<q>onChange</q> = <em>function(e)</em>{
+	<em>const bool</em> = <b>{ }.toString.call</b>(<s>e.target.files</s>) === <u>'[object FileList]'</u>
+	<em>const bool</em> = <s>e.target.files</s>.<b>constructor</b> === <u>FileList</u>
+	<em>const bool</em> = <s>e.target.files</s> <b>instanceof</b> <u>FileList</u>
+	
+	<em>const bool</em> = <b>{ }.toString.call</b>(<s>e.target.files[0]</s>) === <u>'[object File]'</u>
+	<em>const bool</em> = <s>e.target.files[0]</s>.<b>constructor</b> === <u>File</u>
+	<em>const bool</em> = <s>e.target.files[0]</s> <b>instanceof</b> <u>File</u>
+}

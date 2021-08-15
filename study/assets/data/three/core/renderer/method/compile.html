@@ -1,0 +1,12 @@
+<u># 用法</u>
+<em>渲染器将相机放入场景编译</em>
+<u># 语法</u>
+<em>renderer</em>.<b>compile</b>(<s>scene</s>, <s>camera</s>)
+<u># 参数</u>
+<s>scene</s> ：<em>必需，场景对象</em>（<u>new Three.Scene( )</u>）
+<s>camera</s> ：<em>必需，相机对象</em>（<u>new Three.Camera( )</u>）
+<u># 示例</u>
+<em>const</em> <s>scene</s> = <q>new Three.Scene( )</q>					<em>// 场景对象</em>
+<em>const</em> <s>camera</s> = <q>new Three.OrthographicCamera( )</q>		<em>// 相机对象</em>
+<em>const renderer</em> = <q>new Three.WebGLRenderer( )</q>			<em>// 渲染器</em>
+<em>renderer</em>.<b>compile</b>( <s>scene</s>, <s>camera</s>) 					<em>// 编译场景与相机</em>

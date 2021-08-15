@@ -1,0 +1,22 @@
+<u># 用法</u>
+<em>为每个选中的元素的指定的事件</em>
+<u># 语法</u>
+<em>transition</em>.<b>on</b>(<s>typenames</s>, <s>listener</s>)
+<u># 参数</u>
+<s>typenames</s> ：<em>必需，事件类型</em>
+<s>listener</s> ：<em>可选，添加或移除一个监听函数</em>
+<u># typenames</u>
+<s>start</s> ：<em>过渡开始</em>
+<s>end</s> ：<em>过渡结束</em>
+<s>interrupt</s> ：<em>过渡被中断</em>
+<u># 示例</u>
+<u># 添加事件</u>
+<q>d3</q>.<q>selectAll</q>(<em>'div'</em>).<q>transition( )</q>
+	.<b>on</b>(<s>'start'</s>,<u>function</u>( ){ 	})
+	.<b>on</b>(<s>'end'</s>,<u>function</u>( ){ 	})
+	.<b>on</b>(<s>'interrupt'</s>,<u>function</u>( ){ 	})
+<u># 移除事件</u>
+<q>d3</q>.<q>selectAll</q>(<em>'div'</em>).<q>transition( )</q>
+	.<b>on</b>(<s>'start'</s>, <u>null</u>)
+	.<b>on</b>(<s>'end'</s>, <u>null</u>)
+	.<b>on</b>(<s>'interrupt'</s>, <u>null</u>)

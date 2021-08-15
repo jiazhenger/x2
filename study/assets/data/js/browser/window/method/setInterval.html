@@ -1,0 +1,14 @@
+<u># 用法</u>
+<em>1、按照指定的周期（以毫秒计）来调用函数或计算表达式</em>
+<em>2、会不停地调用函数，直到 clearInterval() 被调用或窗口被关闭。由 setInterval() 返回的 ID 值可用作 clearInterval() 方法的参数</em>
+<u># 语法</u>
+<u>window</u>.<b>setInterval</b>(<s>function</s>, <s>millisec</s>)
+<b>setInterval</b>(<s>function</s>, <s>millisec</s>)
+<u># 参数</u>
+<s>function</s>: <em>必需。要调用的函数或要执行的代码串</em>
+<s>millisec</s>: <em>可选。周期性执行或调用 code 之间的时间间隔，以毫秒计</em>
+<u># 示例</u>
+<em>let</em> <q>clear</q>= <b>setInterval</b>(<s>function( ){ }</s>, <s>100</s>)
+<em>let</em> <q>clear</q>= <b>setInterval</b>(<s>'start( )'</s>, <s>100</s>)
+<em># 清除计时器</em>
+<b>clearInterval</b>(<q>clear</q>)

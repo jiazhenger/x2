@@ -1,0 +1,26 @@
+<em># 引入插件</em>
+<em>import * as <q>Three</q> from 'three'</em>
+<em># 一、创建场景：创建一个容纳三维空间的场景 Scene</em>
+<em>const</em> <s>scene</s> = <u>new</u> <q>Three</q>.<b>Scene( )</b>
+<em># 二、创建一个立方体模型：将需要绘制的元素加入到场景中，对元素的形状、材料、阴影等进行设置</em>
+<em>const geometry</em> =  <u>new</u> <q>Three</q>.<q>BoxGeometry</q>( <em>1, 1, 1 </em> )				<em>// 几何对象</em>
+<em>const material</em>  =  <u>new</u> <q>Three</q>.<q>MeshBasicMaterial</q>( <em> { color: 0x00ff00 }</em> ) 	<em>// 材质对象</em>
+<em>const</em> <s>cube</s> =  <u>new</u> <q>Three</q>.<q>Mesh</q>( <em>geometry</em>, <em>material</em> ) 					<em>// 模型对象</em>
+<s>scene</s>.<b>add</b>( <s>cube</s> ) 												<em>// 将立方体添加到场景</em>
+<em># 三、创建相机：给定一个观察场景的位置和角度</em>
+<em>const</em> <s>camera</s> = <u>new</u> <q>Three</q>.<b>PerspectiveCamera</b>( <em>75</em>, <em>window.innerWidth / window.innerHeight</em>, <em>0.1</em>, <em>1000</em> ) 	<em>// 创建一个透视摄像机</em>
+<s>camera</s>.<u>position</u>.<u>z</u> = <em>5</em> 	<em>// 设置相机坐标</em>	
+<em># 四、创建一个渲染器：将相机和场景通过渲染器呈现到页面上</em>
+<em>const</em> <s>renderer</s> = <u>new</u> <q>Three</q>.<b>WebGLRenderer( )</b> 									<em>// 创建渲染器</em>
+<s>renderer</s>.<b>setSize</b>( <u>window.innerWidth</u>, <u>window.innerHeight</u> ) 							<em>//  设置一个渲染器的尺寸</em>
+<u>document.body.appendChild</u>( <s>renderer</s>.<u>domElement</u> ) 								<em>// 添加渲染器到 HTML 文档中</em>
+<u>window.onresize</u> = ( ) => <s>renderer</s>.<b>setSize</b>( <u>window.innerWidth</u>, <u>window.innerHeight</u> )	<em>// 动态设置渲染器的尺寸</em>
+<em># 添加动画</em>
+<em>const</em> <s>animate</s> = ( ) => {
+	<b>requestAnimationFrame</b>( <s>animate</s> ) 		<em>// 请求动画函数</em>
+	<s>cube</s>.<u>rotation</u>.<u>x</u> += <em>0.05</em> 				<em>// x 轴旋转</em>
+	<s>cube</s>.<u>rotation</u>.<u>y</u> += <em>0.05</em> 				<em>// y 轴旋转</em>
+	<s>renderer</s>.<b>render</b>( <s>scene</s>, <s>camera</s> ) 		<em>// 将相机渲染到场景</em>
+}
+<em># 执行动画</em>
+<s>animate( )</s>

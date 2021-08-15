@@ -1,0 +1,13 @@
+<u># 用法</u>
+<em>1、用于检测字符串是否以指定的子字符串开始，如果是以指定的子字符串开头返回 true，否则 false</em>
+<em>2、对大小写敏感</em>
+<u># 语法</u>
+<em>const bool</em> = <em>stringObject</em>.<b>startsWith</b>(<s>searchvalue</s>, <s>start</s>)
+<u># 参数</u>
+<s>searchvalue</s>	: <em>必需。要查找的字符串</em>
+<s>start</s>		: <em>可选。查找的开始位置，默认为 0</em>
+<u># 示例</u>
+<em>const str</em> = <em>'abc'</em>
+<em>const bool</em> = <em>str<em>.<b>startsWith</b>(<s>'a'</s>)			<em>// => true</em>
+<em>const bool</em> = <em>str<em>.<b>startsWith</b>(<s>'b'</s>)			<em>// => false</em>
+<em>const bool</em> = <em>str<em>.<b>startsWith</b>(<s>'b'</s>, <s>1</s>)			<em>// => true</em>

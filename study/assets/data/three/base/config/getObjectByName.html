@@ -1,0 +1,10 @@
+<u># 用法</u>
+<em>创建对象的时候,可以通过name属性为对象指定一个名字,然后可以通过这个方法,根据 name 来查找该对象,并这个对象,Object3D的方法中还可以根据 id 进行查找</em>
+<u># 语法</u>
+<em>3d</em>.<b>getObjectByName</b>(<s>name</s>)
+<u># 参数</u>
+<s>name</s> ：<em>必需，模型 name </em>（<u>String</u>）
+<u># 示例</u>
+<em>const mesh</em>  =  <u>new</u> <q>Three</q>.<q>Mesh( )</q>
+<em>mesh</em>.<q>name</q> = <em>'myName'</em>
+<em>const name</em> = <em>scene</em>.<b>getObjectByName</b>(<s>'myName'</s>)

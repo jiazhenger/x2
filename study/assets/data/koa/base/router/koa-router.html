@@ -1,0 +1,21 @@
+<em>const Koa= require('koa')</em>
+<em>const</em> <b>Router</b> = <em>require</em>('<u>koa-router</u>') 		<em>//</em> <u>npm i koa-router --only=dev</u>
+<em>const app = new Koa( )</em>
+<em>const</em> <s>router</s> =  <b>new <b>Router( )</b>
+<em># get 路由：请求指定的资源</em>
+<s>router</s>.<i>get</i>(<em>'/'</em>, <em>async</em> (<u>ctx</u>,<u>next</u>) => {
+	<em>ctx.body = Hello Koa'</em>
+})
+<em># post 路由：发送数据给服务器</em>
+<s>router</s>.<i>post</i>(<em>'/index'</em>, <em>async</em> (<u>ctx</u>,<u>next</u>) => {
+	<em>ctx.body = Hello Koa'</em>
+})
+<s>router</s>.<i>put</i>( )			<em>// 使用请求中的负载创建或者替换目标资源<em>
+<s>router</s>.<i>head</i>( )			<em>// 请求资源的头部信息<em>
+<s>router</s>.<i>delete</i>( )		<em>// 删除指定的资源<em>
+<s>router</s>.<i>options</i>( )		<em>// 获取目的资源所支持的通信选项<em>
+<s>router</s>.<i>patch</i>( )		<em>// 对资源进行部分修改<em>
+<em># 使用路由中间件，必须在路由的最后</em>
+<q>app.use</q>( <s>router</s>.<b>routes( )</b> ).<q>use</q>( <s>router</s>.<b>allowedMethods( )</b> )
+<em># 启用 HTTP 服务</em>
+<em>app.listen(3005)</em>

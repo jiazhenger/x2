@@ -1,0 +1,33 @@
+<em>const fs = require('fs')</em>
+<em>const path = require('path')</em>
+<em># 中文字体配置：可从 <u>C:\Windows\Fonts</u> 复制 <b>.ttf</b> 格式的字体到 fonts</em>
+<em>const</em> <q>fonts</q> = {
+	<em>Roboto</em>: {
+		<em>normal: path.join(__dirname, '../core/fonts/<i>STXIHEI.TTF</i>')</em>,
+		<em>bold: path.join(__dirname, '../core/fonts/<i>STXIHEI.TTF</i>')</em>,
+		<em>italics: path.join(__dirname, '../core/fonts/<i>STXIHEI.TTF</i>')</em>,
+		<em>bolditalics: path.join(__dirname, '../core/fonts/<i>STXIHEI.TTF</i>')</em>
+	},
+	<em>Roboto</em>: {
+		<em>normal: 'node_modules/pdfmake/fonts/<i>STXIHEI.TTF</i>'</em>,
+		<em>bold: 'node_modules/pdfmake/fonts/<i>STXIHEI.TTF</i>'</em>,
+		<em>italics:'node_modules/pdfmake/fonts/<i>STXIHEI.TTF</i>'</em>,
+		<em>bolditalics: 'node_modules/pdfmake/fonts/<i>STXIHEI.TTF</i>'</em>
+	},
+}
+<em># 实例化对象并配置字体</em>
+<em>const</em> <s>PdfPrinter</s> = <em>require('pdfmake/src/<b>printer</b>')</em>;
+<em>const</em> <s>printer</s> = <u>new</u> <s>PdfPrinter</s>(<q>fonts</q>);
+<em># pdf 内容</em>
+<em>const</em> <u>docDefinition</u> = {
+	<em>header: '页头'</em>
+	<em>content: '主体'</em>
+	<em>content: '页脚'</em>
+}
+<em># 创建 pdf</em>
+<em>const</em> <s>pdfDoc</s> = <s>printer</s>.<b>createPdfKitDocument</b>(<u>docDefinition</u>)
+<em># 将生成的 pdf 存储到指定文件目录</em>
+<s>pdfDoc</s>.<q>pipe</q>(<u>fs.createWriteStream</u>(<em>path.join(__dirname, '../pdf/report.pdf')</em>)).<q>on</q>('<em>finish</em>', ( ) => {
+   
+})
+<s>pdfDoc</s>.<q>end( )</q> 	<em>// 结束创建</em>

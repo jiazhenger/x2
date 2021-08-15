@@ -1,0 +1,17 @@
+<em>&lt;template&gt;&lt;button</em> <em>&gt;{{</em> <u>count</u> <em>}}&lt;/button&gt;</em><em>&lt;/template&gt;</em>
+<em>&lt;script&gt;</em>
+	<em>import</em> { <b>toRefs</b>, <b>reactive</b> } <em>from 'vue'</em>
+	<em>export default</em> {
+		<i>setup( )</i>{
+			<em># 完整写法</em>
+			<em>const</em> <em>obj</em> = <b>toRefs</b>( <b>reactive</b>({ <u>count</u>:1 }) )			<em>// 只能转换 reactive 包裹的数据</em>
+			<em>const</em> { <u>count</u> } = <em>obj</em>							<em>// 将变暴露给模板</em>
+			<em>const</em> <u>run</u> = ( ) => <em>obj</em>.<u>count</u>.<s>value</s> <em>++</em>
+			<em># 简写</em>
+			<em>const</em>  { <u>count</u> }= <b>toRefs</b>( <b>reactive</b>({ <u>count</u>:1 }) )		<em>// 声明并将变暴露给模板</em>
+			<em>const</em> <u>run</u> = ( ) => <u>count</u>.<s>value</s> <em>++</em>
+			
+			<em>return</em> { <u>count</u>, <u>run</u> }
+		}
+	}
+<em>&lt;/script&gt;</em>

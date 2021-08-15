@@ -1,0 +1,10 @@
+<u># 用法</u>
+<em>重命名已有的元素节点或属性节点</em>
+<u># 语法</u>
+<q>document</q>.<b>renameNode</b>(<s>node</s>, <s>namespaceURI</s>, <s>nodename</s>)
+<u># 参数</u>
+<s>node</s>			: <em>必需。需要重命名的节点对象</em>
+<s>namespaceURI</s>	: <em>必需。如果你不想指定可以设置 namespace URI 的节点可以设置为 null </em>
+<s>nodename</s>		: <em>必需。新的节点名, html 元素名</em>
+<u># 示例</u>
+<q>document</q>.<b>renameNode</b>(<s>document.body</s>, <s>null</s>, 'h1')

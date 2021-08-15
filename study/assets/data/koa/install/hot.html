@@ -1,0 +1,21 @@
+<u># 方法 1：nodemon</u>
+<em># 安装 nodemon 插件</em>
+<q>npm install</q> <b>nodemon</b> <em>--only=dev</em>
+<em># 直接启动</em>
+<b>nodemon</b> <q>node</q> <em>index</em> === <b>nodemon</b> <q>node</q> <em>index.js</em>
+<em># config.josn 配置快捷启动</em>
+<em>"scripts": {</em>
+	"<s>start</s>" : "<b>nodemon</b> <q>node</q> <em>folder</em>" === "<b>nodemon</b> <q>node</q> <em>folder/index</em>" === "<b>nodemon</b> <q>node</q> <em>folder/index.js</em>"
+<em>}</em>
+<q>npm start</q>
+
+<u># 方法 2：supervisor</u>
+<em># 安装 supervisor 插件</em>
+<q>npm install</q> <b>supervisor</b> <em>--only=dev</em>
+<em># 直接启动</em>
+<b>supervisor</b> <em>index</em> === <b>supervisor</b> <em>index.js</em>
+<em># config.josn 配置快捷启动</em>
+<em>"scripts": {</em>
+	"<s>start</s>" : "<b>supervisor</b> <em>folder</em>" === "<b>supervisor</b> <em>folder/index</em>"  === "<b>supervisor</b> <em>folder/index.js</em>"
+<em>}</em>
+<q>npm start</q>

@@ -1,0 +1,24 @@
+&lt;script src='x.js' <b>async</b>&gt;&lt;/script&gt;
+<u># async</u>
+<em>1、HTML5新增属性，需要Chrome、FireFox、IE9+浏览器支持</em>
+<em>2、规定一旦脚本可用，则会异步执行</em>
+<em>3、仅适用于外部脚本</em>
+<em>4、此方法不能保证脚本按顺序执行</em>
+<em>5、将在 onload 事件之前完成</em>
+
+&lt;script src='x.js' <b>defer</b><em>&gt;&lt;/script&gt;
+<u># defer</u>
+<em>1、延迟执行脚本，直到页面加载为止</em>
+<em>2、如果脚本不会改变文档的内容，加上则可以加快处理文档的速度</em>
+<em>3、兼容所有浏览器</em>
+<em>4、所有设置了defer 属性的脚本按顺序执行</em>
+
+<u># type='module'</u>
+<em>// src 导入文件</em>
+&lt;script src='x.js' <b>type='module'</b>&gt;&lt;/script&gt;
+<em>// import 导入文件</em>
+&lt;script <b>type='module'</b>&gt;
+    <em>import Utils from './utils.js'</em>
+&lt;/script&gt;
+<em>1、es6模块模属性</em>
+<em>2、都是异步加载，不会造成堵塞浏览器，即等到整个页面渲染完，再执行模块脚本，等同于 defer</em>

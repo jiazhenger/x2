@@ -1,0 +1,25 @@
+<u># 用法</u>
+<em>Response( ) 构造函数创建了一个新的 Response 对象</em>
+<u># 语法</u>
+<em>const</em> <s>headers</s> = <b>new Response</b>(<s>body</s>, <s>init</s>)
+<u># 参数</u>
+<s>body</s> 	: <em>可选。一个定义Response中Body的对象</em>
+		<i>Blob</i>			:	<em>new Blob( )</em>
+		<i>BufferSource</i>		:	<em></em>
+		<i>FormData</i>		:	<em>new FormData( )</em>
+		<i>URLSearchParams</i>	:	<em>new URLSearchParams('a=0&b=1&c=2')</em>
+		<i>USVString</i>		:	<em>类似 DOMString</em>
+<s>init</s> : 		<em>可选。一个参数(选项)对象，包含要应用到 Response 上的任何自定义设置</em>
+		<i>status</i>			:	<em>回应的状态码，例如：200</em>
+		<i>statusText</i>		:	<em>状态码关联的状态消息，例如：OK</em>
+		<i>headers</i>			:	<em>响应上的任何标头。包含了一个 new Headers( ) 对象或满足对象语法的ByteString键/值对</em>
+<u># 用法</u>
+<em>const</em> <s>headers</s> = <b>new Response</b>(<s>new Blob()</s>,{
+	<i>status</i>		: 	<u>200</u>
+					<u>400</u>
+	<i>statusText</i>	: 	<u>'OK'</u>
+					<u>'SuperSmashingGreat'</u>
+	<i>headers</i>		:	<u>new Headers( )</u>
+					<u>new Headers({ 'Content-Type', 'image/jpeg' })</u>
+					<u>{ 'Content-Type', 'image/jpeg' }</u>
+})

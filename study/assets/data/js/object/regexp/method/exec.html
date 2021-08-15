@@ -1,0 +1,11 @@
+<u># 用法</u>
+<em>用于检测一个字符串是否匹配某个模式</em>
+<u># 语法</u>
+<em>const arr</em> = <em>RegExpObject</em>.<b>exec</b>(<s>string</s>)
+<u># 参数</u>
+<s>string</s>: <em>必需。要检测的字符串</em>
+<u># 返回值</u>
+<em>返回一个数组，其中存放匹配的结果。如果未找到匹配，则返回值为 null</em>
+<u># 示例</u>
+<em>const str</em> = <em>'123'</em>
+<em>const arr</em> = <em>str</em>.<b>exec</b>(<s>/\w/gi</s>) 		<em>// => [ ]、null</em>

@@ -1,0 +1,23 @@
+<tt>DateTime</tt> <s>date</s> = <em>new</em> <b>DateTime(</b>2019, 1, 1, 5, 45, 55, 1,1000<b>)</b>;
+<em># 年-月-日 时:分:秒:毫秒:微秒</em>
+<tt>int</tt> <em>year</em> = <s>date</s>.<b>year</b>;						<em>// 年 => 2019</em>
+<tt>int</tt> <em>month</em> = <s>date</s>.<b>month</b>;					<em>// 月 => 1</em>
+<tt>int</tt> <em>day</em> = <s>date</s>.<b>day</b>;							<em>// 日 => 1</em>
+<tt>int</tt> <em>hour</em> = <s>date</s>.<b>hour</b>;						<em>// 时 => 5</em>
+<tt>int</tt> <em>minute</em> = <s>date</s>.<b>minute</b>;					<em>// 分 => 45</em>
+<tt>int</tt> <em>second</em> = <s>date</s>.<b>second</b>;					<em>// 秒  => 55</em>
+<tt>int</tt> <em>millisecond</em> = <s>date</s>.<b>millisecond</b>;			<em>// 毫秒 => 0</em>
+<tt>int</tt> <em>microsecond</em> = <s>date</s>.<b>microsecond</b>;			<em>// 微秒 => 0</em>
+<em># 年-月-日 时:分:秒:毫秒:微秒</em>
+<tt>String</tt> <em>year</em> = <s>date</s>.<b>year</b>.<u>toString( )</u>;									<em>// 年 => 2019</em>
+<tt>String</tt> <em>month</em> = <s>date</s>.<b>month</b>.<u>toString( )</u>.<i>padLeft(2,'0')</i>;					<em>// 月 => 01</em>
+<tt>String</tt> <em>day</em> = <s>date</s>.<b>day</b>.<u>toString( )</u>.<i>padLeft(2,'0')</i>;							<em>// 日 => 01</em>
+<tt>String</tt> <em>hour</em> = <s>date</s>.<b>hour</b>.<u>toString( )</u>.<i>padLeft(2,'0')</i>;						<em>// 时 => 05</em>
+<tt>String</tt> <em>minute</em> = <s>date</s>.<b>minute</b>.<u>toString( )</u>.<i>padLeft(2,'0')</i>;					<em>// 分 => 45</em>
+<tt>String</tt> <em>second</em> = <s>date</s>.<b>second</b>.<u>toString( )</u>.<i>padLeft(2,'0')</i>;					<em>// 秒  => 55</em>
+<tt>String</tt> <em>millisecond</em> = <s>date</s>.<b>millisecond</b>.<u>toString( )</u>.<i>padLeft(2,'0')</i>;			<em>// 毫秒 => 002</em>
+<tt>String</tt> <em>microsecond</em> = <s>date</s>.<b>microsecond</b>.<u>toString( )</u>.<i>padLeft(2,'0')</i>;			<em>// 微秒 => 002</em>
+<em># 星期几</em>
+<tt>int</tt> <em>weekday</em>  = <s>date</s>.<b>weekday</b>;										<em>// => 1~7</em>
+<em># 格式化时间</em>
+<tt>String</tt> <em>time</em>  = '${<strong>year</strong>}-${<strong>month</strong>}-${<strong>day</strong>} ${<strong>hour</strong>}:${<strong>minute</strong>}:${<strong>second</strong>}:${<strong>millisecond</strong>}:${<strong>microsecond</strong>}'

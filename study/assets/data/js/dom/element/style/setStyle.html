@@ -1,0 +1,13 @@
+<u># 设置单个样式</u>
+<em># 追加或覆盖某个样式</em>
+<s>el</s>.<b>style</b>.<i>color</i> = <em>'red'</em>
+<s>el</s>.<b>style</b>.<i>fontSize</i> = <em>'20px'</em>
+<s>el</s>.<b>style</b>.<u>['</u><i>font-size</i><u>']</u> = <em>'20px'</em>
+<em># 追加或覆盖某个样式，并可设置优先级</em>
+<s>el</s>.<b>style</b>.<b>setProperty</b>(<i>'font-size'</i>,<em>'20px'</em>)
+<s>el</s>.<b>style</b>.<b>setProperty</b>(<i>'font-size'</i>,<em>'20px'</em>,<u>'important'</u>) 		<em>// 在样式后加 !important</em>
+<u># 设置多个样式</u>
+<em># 重写整个样式</em>
+<s>el</s>.<b>style</b>.<b>cssText</b> = <em>'color:red;font-size:20px'</em>
+<em># 设置 style 属性</em>
+<s>el</s>.<b>setAttribute</b>('<b>style</b>',<em>'color:red;font-size:20px'</em>)

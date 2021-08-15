@@ -1,0 +1,13 @@
+<u># 用法</u>
+<em>设置雾化效果。</em>
+<u># 语法</u>
+<em>scene</em>.<b>fog</b> = <u>new</u>.<q>Three</q>.<b>Fog</b>( <s>color</s>, <s>near</s>, <s>far</s> )	<em>// 场景中的物体离摄像机越远就会变得越模糊</em>
+<em>scene</em>.<b>fog</b> = <u>new</u>.<q>Three</q>.<b>FogExp2</b>( <s>color</s>, <s>exp</s> ) 	<em>// 随着距离呈指数增长的雾化效果</em>
+<u># 参数</u>
+<s>color</s> 	：<em>必需，颜色</em>（<u>Color</u>）
+<s>near</s>	：<em>必需，雾化开始时距离，默认 1</em>（<u>Float</u>）
+<s>far</s> 		：<em>必需，全雾化处距离，默认 1000</em>（<u>Float</u>）
+<s>exp</s>		：<em>必需，指数</em>（<u>Float</u>）
+<u># 示例</u>
+<em>scene</em>.<b>fog</b> = <u>new</u><q>Three</q>.<b>Fog</b>( <s>0xf7d9aa</s>, <s>1</s>, <s>1000</s> )
+<em>scene</em>.<b>fog</b> = <u>new</u><q>Three</q>.<b>FogExp2</b>( <s>0xf7d9aa</s>, <s>0.02</s> )

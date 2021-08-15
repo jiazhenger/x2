@@ -1,0 +1,18 @@
+<u># 用法</u>
+<em>打开一个新文档，并擦除当前文档的内容</em>
+<u># 语法</u>
+<q>document</q>.<b>open</b>(<s>mimetype</s>, <s>replace</s>)
+<u># 参数</u>
+<s>mimetype</s>: <em>可选。规定正在写的文档的类型。默认值是 text/html</em>
+<s>replace</s>: <em>可选。当此参数设置后，可引起新文档从父文档继承历史条目。值为：replace</em>
+
+<u># 在当前 html 文档写入内容</u>
+<em>const</em> <em>doc</em> = <q>document</q>.<b>open</b>(<em>'text/html'</em>,<em>'replace'</em>) 		<em>// 打开当前文档流</em>
+<em>doc</em>.<q>write</q>( <em>'&lt;html&gt;&lt;body&gt;html 内容&lt;/body&gt;&lt;/html&gt;'</em>)	<em>// 在当前文档流写入内容</em>
+<em>doc</em>.<b>open( )</b> 										<em>// 关闭当前文档流</em>
+
+<u># 在 iframe 中写入内容</u>
+<em>const doc</em> = <q>document.getElementById</q>(<em>'iframe'</em>).<i>contentDocument</i>		<em>// 返回 iframe 中的 document</em>
+<em>doc</em>.<b>open( )</b> 													<em>// 打开当前文档流</em>
+<em>doc</em>.<q>write</q>( <em>'&lt;html&gt;&lt;body&gt;html 内容&lt;/body&gt;&lt;/html&gt;'</em>)				<em>// 在当前文档流写入内容</em>
+<em>doc</em>.<b>close( )</b> 													<em>// 关闭当前文档流</em>

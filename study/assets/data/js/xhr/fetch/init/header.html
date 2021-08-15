@@ -1,0 +1,10 @@
+<u># 用法</u>
+<em>请求的头信息，形式为 Headers 的对象或包含 ByteString 值的对象字面量</em>
+<u># 语法</u>
+<em>const</em> <s>headers</s> = <b>new Headers( )</b>
+<s>headers</s>.<q>append</q>(<em>'Content-Type'</em>, <em>'text/xml'</em>)
+<em>fetch('/api/search'</em>, {
+	<b>header</b>	: 	<s>headers</s>								<em>// Headers 对象</em>
+				<i>{</i> <u>'Content-Type'</u>: <u>'image/jpeg'</u> <i>}</i> 			<em>// 对象字面量</em>
+				<b>new Headers</b>(<i>{</i>  <u>'Content-Type'</u> : <u>'image/jpeg'</u>, <u>'Accept-Charset'</u> : <u>'utf-8'</u> <i>}</i>)
+})

@@ -1,0 +1,40 @@
+<q>document.addEventListener</q>(<em>'click'</em>, <s>e</s> => {
+	<em>const m</em> = <s>e</s>.<b>target</b> == <s>window.event</s>.<b>target</b>
+	<em># 当前节点</em>
+	<em>const m</em> = <s>e</s>.<b>target</b>					<em>// 返回触发此事件的元素（事件的目标节点）</em>
+	<em>const m</em> = <s>e</s>.<b>target</b>.<i>value</i> 			<em>// 输入值，常用于表单元素</em>
+	<em>const m</em> = <s>e</s>.<b>relatedTarget</b> 			<em>// 返回与事件的目标节点相关的节点</em>
+	<em>const m</em> = <s>e</s>.<b>currentTarget</b> 			<em>// 返回其事件监听器触发该事件的元素</em>
+	<em>const m</em> = <s>e</s>.<b>srcElement</b> 			<em>// 对于生成事件的 Window 对象、Document 对象或 Element 对象的引用</em> <q>ie</q>
+	<em>const m</em> = <s>e</s>.<b>toElement</b> 				<em>// 对于 mouseover 和 mouseout 事件，该属性引用移入鼠标的元素</em> <q>ie</q>
+	<em># 按键</em>
+	<em>const m</em> = <s>e</s>.<b>keyCode</b> 				<em>// 按键码</em>
+	<em>const m</em> = <s>e</s>.<b>which</b> 					<em>// 按键码</em>	<i>ie9 +</i>
+	<em>const m</em> = <s>e</s>.<b>key</b> 					<em>// 按下按键时返回按键的标识符</em>	<i>ie9 +</i>
+	<em>const m</em> = <s>e</s>.<b>charCode</b> 				<em>// 返回触发键值的字母代码</em>
+	<em>const m</em> = <s>e</s>.<b>location</b> 				<em>// 返回按键在设备上的位置</em>
+	<em>const m</em> = <s>e</s>.<b>altKey</b> 				<em>// <u>Alt</u> 键是否被按下</em>
+	<em>const m</em> = <s>e</s>.<b>ctrlKey</b> 				<em>// <u>Ctrl</u> 键是否被按下</em>
+	<em>const m</em> = <s>e</s>.<b>metaKey</b> 				<em>// <u>Meta</u> 键是否被按下</em>
+	<em>const m</em> = <s>e</s>.<b>shiftKey</b> 				<em>// <u>Shift</u> 键是否被按下</em>
+	<em># 鼠标指针坐标</em>
+	<em>const m</em> = <s>e</s>.<b>clientX</b> 				<em>// 鼠标指针的水平坐标</em>
+	<em>const m</em> = <s>e</s>.<b>clientY</b> 				<em>// 鼠标指针的垂直坐标</em>
+	<em>const m</em> = <s>e</s>.<b>screenX</b> 				<em>// 鼠标指针的水平坐标</em>
+	<em>const m</em> = <s>e</s>.<b>screenY</b> 				<em>// 鼠标指针的垂直坐标</em>
+	<em>const m</em> = <s>e</s>.<b>offsetX</b> 				<em>// 鼠标指针的水平坐标</em> <q>ie</q>
+	<em>const m</em> = <s>e</s>.<b>offsetY</b> 				<em>// 鼠标指针的垂直坐标</em> <q>ie</q>
+	<em>const m</em> = <s>e</s>.<b>x</b> 						<em>// 鼠标指针的水平坐标</em> <q>ie</q>
+	<em>const m</em> = <s>e</s>.<b>y</b> 						<em>// 鼠标指针的垂直坐标</em> <q>ie</q>
+	<em># 其它</em>
+	<em>const m</em> = <s>e</s>.<b>button</b> 				<em>// 返回鼠标迎按键：0：左键、1：滚轮、2：右键</em>
+	<em>const m</em> = <s>e</s>.<b>bubbles</b> 				<em>// 返回布尔值，指示事件是否是起泡事件类型</em>
+	<em>const m</em> = <s>e</s>.<b>cancelable</b>				<em>// 返回布尔值，指示事件是否可拥可取消的默认动作</em>
+	<em>const m</em> = <s>e</s>.<b>eventPhase</b> 			<em>// 返回事件传播的当前阶段</em>
+	<em>const m</em> = <s>e</s>.<b>timeStamp</b> 			<em>// 返回事件生成的日期和时间</em>
+	<em>const m</em> = <s>e</s>.<b>type</b> 					<em>// 返回当前 Event 对象表示的事件的名称</em>
+	<em>const m</em> = <s>e</s>.<b>returnValue</b> 			<em>// 如果设置了该属性，它的值比事件句柄的返回值优先级高。把这个属性设置为 fasle，可以取消发生事件的源元素的默认动作</em>
+	<em># ie 支持</em>
+	<em>const m</em> = <s>e</s>.<b>cancelBubble</b> 			<em>// 如果事件句柄想阻止事件传播到包容对象，必须把该属性设为 true</em>
+	<em>const m</em> = <s>e</s>.<b>fromElement</b> 			<em>// 对于 mouseover 和 mouseout 事件，fromElement 引用移出鼠标的元素</em>
+}, <em>false</em>)

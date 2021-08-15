@@ -1,0 +1,12 @@
+<u># 用法</u>
+<em>以迭代器的形式返回对象中所有的键值对</em>
+<u># 语法</u>
+<em>const entries</em> = <em>params</em>.<b>entries( )</b>
+<u># 示例</u>
+<em>const params</em> = <b>new URLSearchParams</b>('<u>?a=0&b=1&c=2</u>')
+<em>const model</em> = { } 
+<u>for</u> (<em>var</em> <s>v</s> <u>of</u>  <em>params</em>.<b>entries( )</b>) {
+	<em>const key</em> = <s>v</s><u>[ 0 ]</u>
+	<em>const value</em> = <s>v</s><u>[ 1 ]</u>
+	<em>model</em>[ <em>key</em> ] = <em>value</em> 			<em>// => { a:0, b:2 }</em>
+}

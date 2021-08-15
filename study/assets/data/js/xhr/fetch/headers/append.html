@@ -1,0 +1,14 @@
+<u># 用法</u>
+<em>在一个 Headers 对象内部，Headers 接口的 append( ) 方法可以追加一个新值到已存在的标头上，或者新增一个原本不存在的头</em>
+<u># 语法</u>
+<em>headers</em>.<b>append</b>(<s>name</s>, <s>value</s>)
+<u># 参数</u>
+<s>name</s> : <em>必需。要追加给标头对象的 HTTPHeader 名称</em>
+<s>value</s> : <em>必需。要追加给标头对象的 HTTPHeader 值</em>
+<u># 示例</u>
+<s>headers</s>.<b>append</b>(<i>'Content-Type'</i>, <u>'application/json;charset=utf-8'</u>)
+<s>headers</s>.<b>append</b>(<i>'Content-Type'</i>, <u>'application/x-www-form-urlencoded'</u>)
+<s>headers</s>.<b>append</b>(<i>'Content-Type'</i>, <u>'multipart/form-data'</u>)
+<s>headers</s>.<b>append</b>(<i>'Content-Type'</i>, <u>'image/jpeg'</u>)
+<s>headers</s>.<b>append</b>(<i>'Accept-Encoding'</i>, <u>'gzip'</u>)
+<s>headers</s>.<b>append</b>(<i>'X-Token'</i>, <em>token</em>)

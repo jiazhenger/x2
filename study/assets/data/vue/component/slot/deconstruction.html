@@ -1,0 +1,20 @@
+<em># 子组件 my-component</em>
+<em>&lt;template&gt;</em>
+	&lt;<q>slot</q>  <b>:data</b>='<em>{ x: 1 }</em> <b>:rows</b>='<em>{ x: 1 }</em>' <b>:index</b>='<em>1</em>'&gt;&lt;/<q>slot</q>&gt;
+<em>&lt;/template&gt;</em>
+
+<em># 父组件</em>
+<em>&lt;template&gt;</em>
+	<em>&lt;div&gt;</em>
+		<em>&lt;my-component&gt;</em>
+			<em>&lt;<q>template</q> <b>v-slot</b>='<b>{ data, rows, index }</b>'&gt; {{</em> <b>data</b>.<em>x</em> <em>}} &lt;/<q>template</q>&gt;</em>	
+			<em>&lt;<q>template</q> <b>v-slot</b>='<b>{ data</b>=<em>{x:'默认'}</em> <b>}</b>'&gt; {{</em> <b>data</b>.<em>x</em> <em>}} &lt;/<q>template</q>&gt;</em>			<em>// 设置默认值</em>
+			<em>&lt;<q>template</q> <b>v-slot</b>='<b>{ data:<s>list</s> }</b>'&gt; {{</em> <s>list</s>.<em>x</em>  <em>}} &lt;/<q>template</q>&gt;</em>					<em>// 重命名</em>
+			<em>&lt;<q>template</q> <b>#</b>='<b>{ data, rows, index }</b>'&gt; {{</em> <b>data</b>.<em>x</em> <em>}} &lt;/<q>template</q>&gt;</em>						<em>// 缩写</em>
+		<em>&lt;/my-component&gt;</em>
+		<em>&lt;<q>my-component</q> <b>v-slot</b>='<b>{data, rows, index}</b>'&gt; {{ <b>data</b>.<em>x</em> }} &lt;/<q>my-component</q>&gt;</em>	
+		<em>&lt;<q>my-component</q> <b>v-slot</b>='<b>{ data</b>=<em>{x:'默认'}</em> <b>}</b>'&gt;</em> <em>{{ <b>data</b>.<em>x }}</em> <em>&lt;/<q>my-component</q>&gt;</em>		<em>// 设置默认值</em>
+		<em>&lt;<q>my-component <b>v-slot</b>='<b>{data:<s>list</s>}</b></q>'&gt; {{ <s>list</s>.<em>x</em> }} &lt;/<q>my-component</q>&gt;</em>			<em>// 重命名</em>
+		<em>&lt;<q>my-component</q> <b>#</b>='<b>{data, rows, index}</b>'&gt; {{ <b>data</b>.<em>x</em> }} &lt;/<q>my-component</q>&gt;</em>					<em>// 缩写</em>
+	<em>&lt;/div&gt;</em>
+<em>&lt;/template&gt;</em>

@@ -1,0 +1,11 @@
+<u># 用法</u>
+<em>1、获取当前 this 上的属性或方法</em>
+<em>2、当前 node，与原生 js 用法一样</em>
+<u># 示例</u>
+<em>selection</em>.<b>datum</b>(<u>function</u>(<q>data</q>,<q>index</q>){
+	<em># 返回自定义数据属性，固定格式：&lt;div</em> <b>data-x</b>='' <em>/&gt;</em>
+	<em>const dataset</em> = <b>this</b>.<q>dataset</q>
+	<em># 获取 style 上的属性</em>
+	<em>const color</em> = <b>this</b>.<q>style.color</q>
+	<em>const cssText</em> = <b>this</b>.<q>style.cssText</q>
+})

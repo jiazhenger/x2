@@ -1,0 +1,8 @@
+<u># 用法</u>
+<em>读取 Response 对象并且将它设置为已读(因为响应对象被设置为了流的方式，所以它们只能被读取一次)，并返回一个被解析为 Blob 格式的答应对象</em>
+<u># 语法</u>
+<em>const blob</em> = <em>response</em>.<b>blob( )</b>
+<u># 示例</u>
+<q>fetch</q>( ).<u>then</u>(<em>response</em> => {
+	<em>response</em>.<b>blob( )</b>.<u>then</u>( <em>blob</em> => {	})
+})

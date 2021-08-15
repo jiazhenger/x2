@@ -1,0 +1,21 @@
+<u># 用法</u>
+<em>构建一个新的 map，如果指定参数 object，复制参数object对象内所有枚举属性到map中</em>
+<u># 语法</u>
+<q>d3</q>.<b>map</b>(<s>object</s>, <s>key</s>)
+<u># 参数</u>
+<s>object</s> ：<em>必需，一个数组或对象类型数据</em>
+<s>key</s> ：<em>可选，key 函数，用来计算数组里每个数值的键</em>
+<u># 示例</u>
+<em># 对象</em>
+<em>const map</em> = <q>d3</q>.<b>map</b>(<em>{ a:0, b: 1}</em>)		<em>// => Map {$a: 0, $b: 1}</em>
+<em># 数组</em>
+<em>const map</em> = <q>d3</q>.<b>map</b>(<em>[ 'a', 'b' ]</em>)			<em>// => Map {$0: "a", $1: "b"}</em>
+<em># 字符串</em>
+<em>const map</em> = <q>d3</q>.<b>map</b>(<em>'abc'</em>)			<em>// => Map {$0: "a", $1: "b", $2: "c"}</em>
+<em># 数字</em>
+<em>const map</em> = <q>d3</q>.<b>map</b>(<em>123</em>)			<em>// => Map { }</em>
+<em># key 函数：重新定义键名</em>
+<em>const map</em> = <q>d3</q>.<b>map</b>(<em>[ {name: 'foo'},  {name: 'bar'} ]</em>) 							<em>// => Map { $0: {name: "foo"}, $1: {name: "bar"}} </em>
+<em>const map</em> = <q>d3</q>.<b>map</b>(<em>[ {name: 'foo'},  {name: 'bar'} ]</em>, <u>function</u>(<s>value</s>, <s>index</s>, <s>arr</s>){		<em>// => Map { $foo: {name: "foo"}, $bar: {name: "bar"} }</em>
+	<u>return</u> <s>value</s>.<em>name</em> 	<em>// 返回新的键名</em>
+})

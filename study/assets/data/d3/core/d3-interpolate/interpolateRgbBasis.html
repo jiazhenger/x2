@@ -1,0 +1,11 @@
+<u># 用法</u>
+<em>1、根据指定的颜色数组返回一个 uniform nonrational B-样条插值器, 这些颜色都会被转为 RGB color space</em>
+<em>2、隐式控制点的生成会使得 t = 0 时返回 colors[0] 并且在 t = 1 时返回 [colors.length - 1]</em>
+<em>3、目前支持不透明度的插值</em>
+<u># 语法</u>
+<em>const interpolate</em> = <q>d3</q>.<b>interpolateRgbBasis</b>(<s>colors</s>)(<u>t</u>)
+<u># 参数</u>
+<s>colors</s> ：<em>必需，颜色数组</em>
+<u># 示例：</u>
+<em>const r</em> = <q>d3</q>.<b>interpolateRgbBasis</b>([<em>'#f00'</em>, <em>'#cff'</em>])(<em>.5</em>) 				<em>// => rgb(230, 128, 128)</em>
+

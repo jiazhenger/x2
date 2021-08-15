@@ -1,0 +1,14 @@
+<em>1、当只提供用户密码时，具有用户密码的用户可以解密文件并完全访问文档</em>
+<em>2、当只提供所有者密码时，用户可以在不提供任何密码的情况下解密和打开文档，但访问权限仅限于明确允许的那些操作。拥有所有者密码的用户可以完全访问文档</em>
+<em>3、当提供两个密码时，具有用户密码的用户可以解密该文件，但根据权限设置只能有限地访问该文件。拥有所有者密码的用户可以完全访问文档</em>
+<em>const docDefinition</em> = {
+	<b>permissions</b>	: 	{
+		<i>printing</i> 				: '<u>highResolution、lowResolution</u>', 		<em>// 是否允许印刷，highResolution：允许高分辨率打印；lowResolution：允许降级打印</em>
+		<i>modifying</i> 			: <u>false</u>, 								<em>// 是否允许修改文件</em>
+		<i>copying</i> 				: <u>false</u>, 								<em>// 是否允许复制文本或图形</em>
+		<i>annotating</i> 			: <u>false</u>, 								<em>// 是否允许填写附加说明的表格</em>
+		<i>fillingForms</i> 			: <u>false</u>, 								<em>// 是否允许填写和签署表格</em>
+		<i>contentAccessibility</i>	: <u>false</u>, 								<em>// 是否允许复制文本以便于查阅</em>
+		<i>documentAssembly</i> 	: <u>false</u>, 								<em>// 是否允许装配文件</em>
+	}
+}

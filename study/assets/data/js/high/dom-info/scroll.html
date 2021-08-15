@@ -1,0 +1,13 @@
+<em>const</em> <s>width</s> 	= <em>id</em>.<b>scrollWidth</b> 		<em>// 滚动宽度 ===</em> <q>可视区域宽度 + 被隐藏区域宽度</q> <em>没有滚动条时 ===</em> <q>clientWidth</q>
+<em>const</em> <s>height</s> 	= <em>id</em>.<b>scrollHeight</b>		<em>// 滚动高度 ===</em> <q>可视区域高度 + 被隐藏区域高度</q> <em>没有滚动条时 ===</em> <q>clientHeight</q>
+<em>const</em> <s>left</s> 	= <em>id</em>.<b>scrollTop</b>			<em>//</em> <u>内容层左端</u><em>距离</em><u>可视区域左端</u><em>的距离</em>
+<em>const</em> <s>top</s> 	= <em>id</em>.<b>scrollLeft</b>			<em>//</em> <u>内容层顶部</u><em>距离</em><u>可视区域顶部</u><em>的距离</em>
+<em># 仅支持 window</em>
+<em>const</em> <s>left</s> 	= <q>window</q>.<b>pageYOffset</b>			<em>//</em> <u>内容层左端</u><em>距离</em><u>可视区域左端</u><em>的距离</em>
+<em>const</em> <s>top</s> 	= <q>window</q>.<b>pageXOffset</b>			<em>//</em> <u>内容层顶部</u><em>距离</em><u>可视区域顶部</u><em>的距离</em>
+<em># 获取默认 body 上的滚动信息</em>
+<em>const</em> <s>scrollTop</s> = <u>document.documentElement</u>.<b>scrollTop</b> <em>||</em> <u>window</u>.<b>pageYOffset</b> <em>||</em> <u>document.body</u>.<b>scrollTop</b>
+<em>const</em> <s>scrollLeft</s> = <u>document.documentElement</u>.<b>scrollLeft</b> <em>||</em> <u>window</u>.<b>pageXOffset</b> <em>||</em> <u>document.body</u>.<b>scrollLeft</b>
+<em># 设置滚动距离</em>
+<u>document.documentElement</u>.<b>scrollTop</b> = <em>20</em>
+<u>document.documentElement</u>.<b>scrollLeft</b> = <em>20</em>

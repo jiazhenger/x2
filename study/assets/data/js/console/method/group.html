@@ -1,0 +1,20 @@
+<u># 用法</u>
+<em>信息分组</em>
+<u># 语法</u>
+<q>console</q>.<b>group</b>(<s>label</s>)				<em>// 在控制台创建一个信息分组</em>
+<q>console</q>.<b>groupCollapsed</b>(<s>label</s>)		<em>// 创建一个折叠分组信息</em>
+<q>console</q>.<b>groupEnd( )</b>			<em>// 用于结束分组标签</em>
+<u># 参数</u>
+<s>label</s>: <em>可选。分组标签</em>
+<u># 示例</u>
+<q>console</q>.<i>log</i>(<em>'aaaa'</em>)
+<q>console</q>.<b>group</b>(<em>'第一组'</em>)
+<q>console</q>.<i>log</i>(<em>'bbbb'</em>)
+<q>console</q>.<b>groupEnd( )</b> 
+<q>console</q>.<i>log</i>(<em>'cccc'</em>)
+<u># 示例</u>
+<q>console</q>.<i>log</i>(<em>'aaaa'</em>)
+<q>console</q>.<b>groupCollapsed</b>(<em>'第一组'</em>)
+<q>console</q>.<i>log</i>(<em>'bbbb'</em>)
+<q>console</q>.<b>groupEnd( )</b> 
+<q>console</q>.<i>log</i>(<em>'cccc'</em>)

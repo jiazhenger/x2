@@ -1,0 +1,17 @@
+<u># 第 1 步：设置 draggable = true</u>
+<em>&lt;p id='drag' <b>draggable</b>='true'&gt;拖动我&lt;/p&gt;</em><em>&lt;div id='target'&gt;&lt;/div&gt;</em>
+<u># 第 2 步：dragstart</u>
+<i>document.querySelector('#drag').addEventListener</i>(<b>'dragstart'</b>, <q>e</q> =>{
+	<u>e.dataTransfer.setData</u>(<em>'pid'</em>, <q>e</q>.<u>target.id</u>)			<em>// 通过setData方法向dataTransfer对象添加一个属性名 pid，值为拖动元素的ID</em>
+})
+<u># 第 3 步：drop</u>
+<em>const</em> <s>$target</s> = <i>document.querySelector('#target')</i>
+<s>$target</s>.<i>addEventListener</i>(<b>'drop'</b>, <q>e</q> =>{
+	<em>const data =</em> <q>e</q>.<u>dataTransfer.getData</u>(<em>'pid'</em>)			<em>// 获取到拖动元素的id</em>
+	<em>const p =</em> <u>document.getElementById</u>(<em>data</em>) 		<em>// 通过id获取到拖动元素</em>
+	<s>$target</s>.<u>appendChild</u>(<em>p</em>)							<em>// 把拖动数据添加到目标元素</em>
+})
+<u># 第 4 步：dragover</u>
+<i>document.body.addEventListener</i>(<b>'dragover'</b>, <q>e</q> => {
+	<q>e</q>.<u>preventDefault( )</u>							<em>// 阻止默认动作</em>
+})

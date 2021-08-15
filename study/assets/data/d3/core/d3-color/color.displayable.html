@@ -1,0 +1,8 @@
+<u># 用法</u>
+<em>1、当且仅当在标准的硬件上支持显示该颜色时才会返回 true</em>
+<em>2、例如当使用 RGB 颜色空间时, 其中一个颜色通道值小于 0 或大于 255 或者透明度值不在 [0, 1] 范围内都会返回 false</em>
+<u># 语法</u>
+<em>const bool</em> = <em>color</em>.<b>displayable( )</b>
+<u># 示例</u>
+<em>const color</em> = <q>d3</q>.<q>color</q>(<em>'red'</em>)
+<em>const bool</em> = <em>color</em>.<b>displayable( )</b> 				<em>// => true</em>

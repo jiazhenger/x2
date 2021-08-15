@@ -1,0 +1,14 @@
+<u># 用法</u>
+<em>为每个选中的元素根据指定的 type 按序派发一个 custom event. 可以指定一个可选的 parameters 映射来设置事件的附加属性</em>
+<u># 语法</u>
+<em>selection</em>.<b>dispatch</b>(<s>type</s>, <s>parameters</s>)
+<u># 参数</u>
+<s>type</s> ：<em>必需，类型</em>（<u>字符串</u>
+<s>parameters</s> ：<em>可选，附加属性</em>
+{
+	<s>bubbles</s>: <u>true</u>,		<em>// 如果为 true, 这个事件会冒泡给祖先节点</em>
+	<s>cancelable </s>: <u>true</u>,	<em>// 如果为 true, 则 event.preventDefault 会被允许</em>
+	<s>detail</s>: <em>abc</em>,		<em>//任何关联事件的其他自定义数据</em>
+}
+<u># 示例</u>
+<em>selection</em>.<b>dispatch</b>(<em>'myEvent'</em>, { <s>bubbles</s>:<em>true</em>, <s>cancelable </s>:<em>true</em>, <s>detail</s>:<em>{ }</em> })

@@ -1,0 +1,17 @@
+<u># 用法</u>
+<em>1、与 write() 方法作用相同，但会在每个表达式后写一个换行符</em>
+<em>2、在编写 &lt;pre&gt; 标签的内容时，该方法很有用</em>
+<u># 语法</u>
+<q>document</q>.<b>writeln</b>(<s>exp1</s>, <s>exp2</s>, <s>exp3</s>, <s>...</s>)
+<u># 参数</u>
+<s>exp</s>: <em>必需。文本字符串、html字符串、js 代码字符串</em>
+<u># 示例</u>
+<em># 写入 html</em>
+<q>document</q>.<b>writeln</b>(<em>'&lt;b&gt;Hello World&lt;/b&gt;'</em>)
+<q>document</q>.<b>writeln</b>(<em>'&lt;b&gt;Hello'&lt;/b&gt;</em>, <em>'&lt;b&gt;World&lt;/b&gt;'</em>)
+<em># 写入 js</em>
+<q>document</q>.<b>writeln</b>(<em>'&lt;script&gt;alert(0)&lt;/script&gt;'</em>)
+<q>document</q>.<b>writeln</b>(<em>'&lt;b&gt;Hello World&lt;/b&gt;'</em>,<em>'&lt;script&gt;alert(0)&lt;/script&gt;'</em>)
+<em># 依次写入，不会覆盖</em>
+<q>document</q>.<b>writeln</b>(<em>'&lt;b&gt;Hello'&lt;/b&gt;</em>)
+<q>document</q>.<b>writeln</b>(<em>'&lt;b&gt;World'&lt;/b&gt;</em>)

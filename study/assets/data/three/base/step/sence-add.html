@@ -1,0 +1,48 @@
+<u># 一、2 种雾</u>
+<s>scene</s>.<b>fog</b> = <em>new Three</em>.<b>Fog( )</b> 			<em>// 场景中的物体离摄像机越远就会变得越模糊</em>
+<s>scene</s>.<b>FogExp2</b> = <em>new Three</em>.<b>Fog( )</b>		<em>// 随着距离呈指数增长的雾化效果</em>
+<u># 二、11 个模型</u>
+<em>const</em> <i>add</i> = <em>new Three</em>.<b>Mesh( )</b> 					<em>// 网络模型</em>
+<em>const</em> <i>add</i> = <em>new Three</em>.<b>Sprite( )</b>					<em>// 精灵模型</em>
+<em>const</em> <i>add</i> = <em>new Three</em>.<b>Points( )</b>					<em>// 点模型</em>
+<em>const</em> <i>add</i> = <em>new Three</em>.<b>Group( )</b>					<em>// 组模型</em>
+<em>const</em> <i>add</i> = <em>new Three</em>.<b>LOD( )</b>					<em>// 多细节层次</em>
+<em># 线</em>
+<em>const</em> <i>add</i> =  <em>new Three</em>.<b>Line( )</b>					<em>// 线模型</em>
+<em>const</em> <i>add</i> =  <em>new Three</em>.<b>LineLoop( )</b>				<em>// 环线模型</em>
+<em>const</em> <i>add</i> =  <em>new Three</em>.<b>LineSegments( )</b>			<em>// 线段模型</em>
+<em># 骨架</em>
+<em>const</em> <i>add</i> =  <em>new Three</em>.<b>Bone( )</b>					<em>// 骨骼模型</em>
+<em>const</em> <i>add</i> =  <em>new Three</em>.<b>Skeleton( )</b>				<em>// 骨架模型</em>
+<em>const</em> <i>add</i> =  <em>new Three</em>.<b>SkinnedMesh( )</b>			<em>// 蒙皮网格 == 骨骼 + 骨架</em>
+<u># 三、7 种灯光</u>
+<em>const</em> <i>add</i> = <em>new Three</em>.<b>Light( )</b> 					<em>// 光源的基类</em>
+<em>const</em> <i>add</i> = <em>new Three</em>.<b>AmbientLight( )</b> 			<em>// 环境光</em>
+<em>const</em> <i>add</i> = <em>new Three</em>.<b>PointLight( )</b> 				<em>// 点光源</em>
+<em>const</em> <i>add</i> = <em>new Three</em>.<b>DirectionalLight( )</b>			<em>// 平行光</em>
+<em>const</em> <i>add</i> = <em>new Three</em>.<b>SpotLight( )</b> 				<em>// 聚光源</em>
+<em>const</em> <i>add</i> = <em>new Three</em>.<b>HemisphereLight( )</b>			<em>// 半球光</em>
+<em>const</em> <i>add</i> = <em>new Three</em>.<b>RectAreaLight( )</b>			<em>// 平面光光源</em>
+<em>const</em> <i>add</i> = <em>new Three</em>.<b>AxesHelper( )</b>
+<u># 四、1 个音频</u>
+<em>const</em> <i>add</i> = <em>new Three</em>.<b>Audio( )</b>
+<u># 五、17 个辅助对象</u>
+<em>const</em> <i>add</i> = <em>new Three</em>.<b>DirectionalLightHelper( )</b> 		<em>// 平行光</em>
+<em>const</em> <i>add</i> = <em>new Three</em>.<b>SpotLightHelper( )</b> 				<em>// 聚光灯</em>
+<em>const</em> <i>add</i> = <em>new Three</em>.<b>PointLightHelper( )</b> 			<em>// 点光源</em>
+<em>const</em> <i>add</i> = <em>new Three</em>.<b>GridHelper( )</b> 					<em>// 坐标格</em>
+<em>const</em> <i>add</i> = <em>new Three</em>.<b>PolarGridHelper( )</b> 				<em>// 极坐标格</em>
+<em>const</em> <i>add</i> = <em>new Three</em>.<b>AxesHelper( )</b> 					<em>// 三维坐标系</em>
+<em>const</em> <i>add</i> = <em>new Three</em>.<b>ArrowHelper( )</b> 				<em>// 三维箭头</em>
+<em>const</em> <i>add</i> = <em>new Three</em>.<b>BoxHelper( )</b> 					<em>// 包围盒</em>
+<em>const</em> <i>add</i> = <em>new Three</em>.<b>Box3Helper( )</b> 					<em>// 3维包围盒</em>
+<em>const</em> <i>add</i> = <em>new Three</em>.<b>CameraHelper( )</b> 				<em>// 模拟相机</em>
+<em>const</em> <i>add</i> = <em>new Three</em>.<b>FaceNormalsHelper( )</b> 			<em>// 渲染箭头</em>
+<em>const</em> <i>add</i> = <em>new Three</em>.<b>VertexNormalsHelper( )</b> 		<em>// 渲染箭头</em>
+<em>const</em> <i>add</i> = <em>new Three</em>.<b>PositionalAudioHelper( )</b> 		<em>// 方向锥</em>
+<em>const</em> <i>add</i> = <em>new Three</em>.<b>HemisphereLightHelper( )</b>		<em>// 虚拟的球形网格</em>
+<em>const</em> <i>add</i> = <em>new Three</em>.<b>PlaneHelper( )</b> 				<em>// 模拟平面</em>
+<em>const</em> <i>add</i> = <em>new Three</em>.<b>RectAreaLightHelper( )</b> 			<em>// RectAreaLight </em>
+<em>const</em> <i>add</i> = <em>new Three</em>.<b>SkeletonHelper( )</b> 				<em>// 模拟骨骼</em>
+<u># 添加到场景</u>
+<s>scene</s>.<b>add</b>( <i>add</i> )

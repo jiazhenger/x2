@@ -1,0 +1,10 @@
+<u># 用法</u>
+<em>1、根据指定的 interpolator 返回 n 个等间隔的均匀采样, 其中 n 是一个大于 1 的整数。第一个采样点总是取 t = 0 时的值而最后一个值总是取 t = 1 处的值。这个方法可以从给定的插值器中取固定数量的等间隔的值</em>
+<em>2、这种方法不适用于不返回副本的插值器, 比如 d3.interpolateArray, d3.interpolateDate 和 d3.interpolateObject。对于这些插值器，你必须对其包装，每次插值时返回一个副本</em>
+<u># 语法</u>
+<em>const interpolate</em> = <q>d3</q>.<b>quantize</b>(<s>interpolate</s>, <s>n</s>)
+<u># 参数</u>
+<s>interpolate</s> ：<em>必需，一个插值器</em>
+<s>n</s> ：<em>必需，数组</em>
+<u># 示例：</u>
+<em>const r</em> = <q>d3</q>.<b>quantize</b>(<q>d3.interpolateRgb.gamma</q>(<em>2.2</em>), <em>5</em>) 		<em>// => [ƒ, ƒ, ƒ, ƒ, ƒ]</em>

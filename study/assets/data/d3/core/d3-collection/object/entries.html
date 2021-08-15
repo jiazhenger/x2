@@ -1,0 +1,17 @@
+<u># 用法</u>
+<em>1、返回一个包含对象(object)(一个关联数组)中名称以及值(键和值， key and value)的数组 (array)</em>
+<em>2、每一个实体都是有键值对的对象</em>
+<em>3、返回数组的顺序未定义</em>
+<u># 语法</u>
+<q>d3</q>.<b>entries</b>(<s>object</s>)
+<u># 参数</u>
+<s>object</s> ：<em>必需，一个数组或对象类型数据</em>
+<u># 示例</u>
+<em># 对象</em>
+<em>const arr</em> = <q>d3</q>.<b>entries</b>(<em>{ a:0, b: 1}</em>)		<em>// => [{key:'a', value:0},{key:'b', value:1}]</em>
+<em># 数组</em>
+<em>const arr</em> = <q>d3</q>.<b>entries</b>(<em>[ 'a', 'b' ]</em>)		<em>// => [{key:'0', value:'a'},{key:'1', value:'b'}]</em>
+<em># 字符串</em>
+<em>const arr</em> = <q>d3</q>.<b>entries</b>(<em>'ab'</em>)			<em>// => [{key:'0', value:'a'},{key:'1', value:'b'}]</em>
+<em># 数字</em>
+<em>const arr</em> = <q>d3</q>.<b>entries</b>(<em>123</em>)			<em>// => [ ]</em>

@@ -1,0 +1,11 @@
+<u># 用法</u>
+<em>用于将一个 JSON 字符串转换为对象</em>
+<u># 语法</u>
+<em>const json</em> = <q>JSON</q>.<b>parse</b>(<s>text</s>, <s>reviver</s>)
+<u># 参数</u>
+<s>text</s>: <em>必需。一个有效的 JSON 字符串</em>
+<s>reviver</s>: <em>必需。一个转换结果的函数， 将为对象的每个成员调用此函数</em>
+<u># 返回值</u>
+<em>JSON 对象</em>
+<u># 示例</u>
+<em>const json</em> = <q>JSON</q>.<b>parse</b>(<s>'{a:0}'</s>, <s>(key,value) => value</s>)

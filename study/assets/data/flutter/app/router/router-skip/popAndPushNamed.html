@@ -1,0 +1,10 @@
+<u># 语法</u>
+<b>Navigator.of(context).popAndPushNamed</b>(
+	<tt>String</tt> <em>routeName</em>, 			<em>// 路由名称  => /login</em>
+	{ 
+		<tt>TO</tt> <s>result</s>, 			<em>// 携带参数 => </em>
+		<tt>Object</tt> <s>arguments</s>, 	<em>// 携带参数 => arguments:{ a:1, b:2 }</em>
+	}, 		
+).<b>then</b>((<tt>Object</tt> <u>value</u>){		});
+<em># 示例</em>
+<b>Navigator.of(context).popAndPushNamed</b>(<em>'/login'</em>, <s>arguments</s>:<em>{'a':1,'b':2}</em>)

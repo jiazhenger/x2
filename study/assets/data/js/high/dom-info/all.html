@@ -1,0 +1,64 @@
+<em>const</em> <s>getInfo</s> = <u>function</u> (<em>s</em>) {
+	<em>const</em> <q>r</q> = <em>s</em>.<b>getBoundingClientRect( )</b>
+	<em>return</em> {
+		<i>width</i> 	: <q>r</q>.<i>width</i>,				<em>// 宽度 ===</em> <q>offsetWidth</q> <em>===</em> <q>width + padding + border</q>
+		<i>height</i> 	: <q>r</q>.<i>height</i>,			<em>// 高度 ===</em>  <q>offsetHeight</q> <em>===</em> <q>height + padding + border</q>
+		<i>x</i> 		: <q>r</q>.<i>x</i>,					<em>//</em> <u>元素左端</u><em>距离</em><u>窗口左端</u><em>的距离</em>
+		<i>y</i> 		: <q>r</q>.<i>y</i>,					<em>//</em> <u>元素顶部</u><em>距离</em><u>窗口顶部</u><em>的距离</em>
+		<i>left</i>		: <em>parseInt</em>(<q>r</q>.<i>left</i>),		<em>//</em> <u>元素左端</u><em>距离</em><u>窗口左端</u><em>的距离(会受横向滚动条影响)</em> <u>绝对偏移</u> <em>===</em> <q>scrollLeft + left</q> <em>===</em> <q>getOffset(el).offsetLeft <q>
+		<i>top</i> 		: <em>parseInt</em>(<q>r</q>.<i>top</i>)		<em>//</em> <u>元素顶部</u><em>距离</em><u>窗口顶部</u><em>的距离(会受纵向滚动条影响)</em> <u>绝对偏移</u> <em>===</em> <q>scrollTop + top</q> <em>===</em> <q>getOffset(el).offsetTop<q>
+		<i>right</i> 	: <em>parseInt</em>(<q>r</q>.<i>right</i>)		<em>//</em> <u>元素右端</u><em>距离</em><u>窗口左端</u><em>的距离 ===</em> <q>left + width</q>
+		<i>bottom</i> 	: <em>parseInt</em>(<q>r</q>.<i>bottom</i>)	<em>//</em> <u>元素底部</u><em>距离</em><u>窗口顶部</u><em>的距离 ===</em> <q>top + height</q>
+	}
+}
+<em># 自定义获取信息 1：</em>
+<em>const</em> <s>getInfo</s> = <u>function</u> (<u>s</u>) {	
+	<em>const</em> <q>r</q> = <em>s</em>.<b>getBoundingClientRect( )</b>
+	<em>return</em> {
+		<b>offsetLeft</b> 		: <q>r</q>.<i>left</i>,				<em>//</em> <u>元素左端</u><em>距离</em><u>窗口左端</u><em>的距离</em> <u>绝对偏移</u> <em>===</em> <q>scrollLeft + let</q> <em>===</em> <q>getOffset(el).offsetLeft <q>
+		<b>offsetTop</b>		: <q>r</q>.<i>top</i>,				<em>//</em> <u>元素顶部</u><em>距离</em><u>窗口顶部</u><em>的距离</em> <u>绝对偏移</u> <em>===</em> <q>scrollLeft + top</q> <em>===</em> <q>getOffset(el).offsetTop<q>
+		<b>offsetRight</b> 		: <q>r</q>.<i>right</i>,				<em>//</em> <u>元素右端</u><em>距离</em><u>窗口左端</u><em>的距离</em>
+		<b>offsetBottom</b> 	: <q>r</q>.<i>bottom</i>,			<em>//</em> <u>元素底部</u><em>距离</em><u>窗口顶部</u><em>的距离</em>
+		<b>width</b> 			: <q>r</q>.<i>width</i>, 			<em>// 有边框宽度</em>
+		<b>width</b>			: <q>r</q>.<i>width</i>,				<em>// 有边框高度</em>
+		<b>clientWidth</b> 		: <u>s</u>.<i>clientWidth</i>, 		<em>// 无边框宽度</em>
+		<b>clientHeight</b>		: <u>s</u>.<i>clientHeight</i>,		<em>// 无边框高度</em>
+		<b>scrollWidth</b> 		: <u>s</u>.<i>scrollWidth</i>,		<em>// 横向滚动宽度</em>
+		<b>scrollHeight</b>		: <u>s</u>.<i>scrollHeight</i>,		<em>// 纵向滚动高度</em>
+		<b>scrollLeft</b> 		: <u>s</u>.<i>scrollLeft</i>,			<em>// 横向滚动距离</em>
+		<b>scrollTop</b> 		: <u>s</u>.<i>scrollTop</i>,			<em>// 纵向滚动距离</em>
+		<b>posTop</b> 			: <u>s</u>.<i>offsetTop</i>,			<em>// 向上相对偏移距离</em>
+		<b>posLeft</b> 			: <u>s</u>.<i>offsetLeft</i>,			<em>// 向左相对偏移距离</em>
+		<b>left</b>				: <em>parseInt</em>(<u>s</u>.<q>style</q>.<i>left</i>),	<em>// 左定位</em>
+		<b>top</b> 				: <em>parseInt</em>(<u>s</u>.<q>style</q>.<i>top</i>),	<em>// 上定位</em>
+	}
+}
+<em># 自定义获取信息 2：</em>
+<em>const</em> <s>getInfo</s> = <u>function</u> (<em>s</em>) {	
+	<em>let offsetTop = s.offsetTop</em>
+	<em>let offsetLeft = s.offsetLeft</em>
+	<em>let parent = s.offsetParent</em>
+	<em>while(parent){</em>
+		<em>offsetTop += parent.offsetTop</em>
+		<em>offsetLeft += parent.offsetLeft</em>
+		<em>parent = parent.offsetParent</em>
+	}
+	<em>return</em> {
+		<b>offsetLeft</b>,									<em>//</em> <u>元素左端</u><em>距离</em><u>窗口左端</u><em>的距离</em>
+		<b>offsetTop</b>,									<em>//</em> <u>元素顶部</u><em>距离</em><u>窗口顶部</u><em>的距离</em>
+		<b>offsetRight</b> 		: <em>s</em>.<i>offsetWidth</i> + <i>offsetLeft</i>,		<em>//</em> <u>元素右端</u><em>距离</em><u>窗口左端</u><em>的距离</em>
+		<b>offsetBottom</b> 	: <em>s</em>.<i>offsetHeight</i> + <i>offsetTop</i>,	<em>//</em> <u>元素底部</u><em>距离</em><u>窗口顶部</u><em>的距离</em>
+		<b>offsetWidth</b> 		: <em>s</em>.<i>offsetWidth</i>, 				<em>// 有边框宽度</em>
+		<b>offsetHeight</b>		: <em>s</em>.<i>offsetHeight</i>,				<em>// 有边框高度</em>
+		<b>clientWidth</b> 		: <em>s</em>.<i>clientWidth</i>, 				<em>// 无边框宽度</em>
+		<b>clientHeight</b>		: <em>s</em>.<i>clientHeight</i>,				<em>// 无边框高度</em>
+		<b>scrollWidth</b> 		: <em>s</em>.<i>scrollWidth</i>,				<em>// 横向滚动宽度</em>
+		<b>scrollHeight</b>		: <em>s</em>.<i>scrollHeight</i>,				<em>// 纵向滚动高度</em>
+		<b>scrollLeft</b> 		: <em>s</em>.<i>scrollLeft</i>,					<em>// 横向滚动距离</em>
+		<b>scrollTop</b> 		: <em>s</em>.<i>scrollTop</i>,					<em>// 纵向滚动距离</em>
+		<b>posTop</b> 			: <em>s</em>.<i>offsetTop</i>,					<em>// 向上相对偏移距离</em>
+		<b>posLeft</b> 			: <em>s</em>.<i>offsetLeft</i>,					<em>// 向左相对偏移距离</em>
+		<b>left</b>				: <em>parseInt</em>(<em>s</em>.<q>style</q>.<i>left</i>),			<em>// 左定位</em>
+		<b>top</b> 				: <em>parseInt</em>(<em>s</em>.<q>style</q>.<i>top</i>),			<em>// 上定位</em>
+	}
+}

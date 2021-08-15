@@ -1,0 +1,22 @@
+<em>const docDefinition</em> = {
+	
+}
+<em>const</em> <q>tableLayouts</q> = {
+	<b>exampleLayout</b>: {
+		<s>hLineWidth</s> :  <em> (i, node)</em> => {
+			<em>if (i === 0 || i === node.table.body.length) { return 0 }</em>
+			<em>return (i === node.table.headerRows) ? 2 : 1</em>
+		},
+		<s>vLineWidth</s>	: <em>i => 0</em>,
+		<s>hLineColor</s>	: <em>i => i === 1 ? 'black' : '#aaa'</em>,
+		<s>paddingLeft</s>	: <em>i =>  i === 0 ? 0 : 8</em>,
+		<s>paddingRight</s>	: <em>(i, node) => (i === node.table.widths.length - 1) ? 0 : 8</em>
+	}
+}
+<em># 客户端使用</em>
+<em># 绑在 pdfMake</em>
+<u>pdfMake.tableLayouts</u> = <q>tableLayouts</q>
+<em># 传入 createPdf( )</em>
+<u>pdfMake.createPdf</u>(<em>docDefinition</em>, <q>{ tableLayouts }</q>)
+<em># 服务端使用</em>
+<em>const pdfDoc</em> = <u>printer.createPdfKitDocument</u>(<em>docDefinition</em>, <q>{ tableLayouts }</q>);

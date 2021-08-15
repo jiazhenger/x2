@@ -1,0 +1,12 @@
+<u># 用法</u>
+<em>存储当前事件，相当于 event</em>
+<u># 语法</u>
+<em>const event</em> = <b>d3.event</b>
+<u># 示例</u>
+<em>selection</em>.<q>on</q>(<u>'click'</u>,<u>function</u>(<q>data</q>,<q>index</q>){ 
+	<em>const event</em> = <b>d3.event</b>
+	<em>event.preventDefault( )			// 阻止默认事件</em>
+	<em>event.stopPropagation( )		// 阻止冒泡事件</em>
+	<em>keycode = event.keyCode 		// 按键 keyCode</em>
+	<em>...</em>
+})

@@ -1,0 +1,10 @@
+<em>const Koa= require('koa')</em>
+<em>const app = new Koa( )</em>
+<em># 引入外部路由</em>
+<em>const</em> <b>about</b> = <em>require('pages/about')</em>
+<em>const</em> <b>news</b> = <em>require('pages/news')</em>
+<em># 使用路由</em>
+<q>app.use</q>( <b>about</b>.<u>routes( )</u> ).<q>use</q>( <b>about</b>.<u>allowedMethods( )</u> )
+<q>app.use</q>( <b>news</b>.<u>routes( )</u> ).<q>use</q>( <b>news</b>.<u>allowedMethods( )</u> )
+<em># 启用 HTTP 服务</em>
+<em>app.listen(3005)</em>

@@ -1,0 +1,12 @@
+<u># 用法</u>
+<em>创建 pdf</em>
+<u># 语法</u>
+<em>const pdf</em> = <q>printer</q>.<b>createPdf</b>(<s>docDefinition</s>, <s>tableLayouts</s>, <s>fonts</s>, <s>vfs</s>)
+<u># 参数</u>
+<s>docDefinition</s>	: <em>必需。pdf 内容配置</em>
+<s>tableLayouts</s>	: <em>可选。layout 对象</em>
+<s>fonts</s>		: <em>可选。配置字体</em>
+<s>vfs</s>			: <em>可选</em>
+<u># 示例</u>
+<em>const pdf</em> = <q>pdfMake</q>.<b>createPdf</b>(<s>{ content:'' }</s>)
+<em>const pdf</em> = <q>pdfMake</q>.<b>createPdf</b>(<s>{ content:'' }</s>, <s>{ tableLayouts: { exampleLayout:{ } } }</s>)

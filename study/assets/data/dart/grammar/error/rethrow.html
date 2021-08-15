@@ -1,0 +1,10 @@
+<q>try</q> {
+	<q>try</q> {
+		
+	} <q>catch</q>(<s>e</s>, <s>s</s>) {
+		<em>print</em>(<s>e</s>.<i>runtimeType</i>);		<em>// 抛出第一次异常</em>
+		<b>rethrow</b>; 					<em>// 允许继续抛出异常</em>
+	}
+} <q>catch</q>(<s>e</s>, <s>s</s>) { 	
+	<em>print</em>(<s>e</s>.<i>runtimeType</i>);			<em>// 抛出第二次异常</em>
+}

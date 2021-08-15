@@ -1,0 +1,17 @@
+<u># 用法</u>
+<em>1、用于在脚本执行过程中编译正则表达式</em>
+<em>2、也可用于改变和重新编译正则表达式</em>
+<u># 语法</u>
+<em>RegExpObject</em>.<b>compile</b>(<s>regexp</s>, <s>modifier</s>)
+<u># 参数</u>
+<s>regexp</s> : <em>必需。正则表达式</em>
+<s>modifier</s> : <em>必需。规定匹配的类型。'g' 用于全局匹配，'i' 用于区分大小写，'gi' 用于全局区分大小写的匹配</em>
+<u># 返回值</u>
+<em>布尔值</em>
+<u># 示例</u>
+<em>const str</em> = <em>'man is old woman'</em>
+<em>let reg</em> = <u>/man/g</u>
+<em>let newStr</em> = <em>str</em>.<b>replace</b>(<em>reg</em>, <em>'abc'</em>)  		<em>// => 123 is old wo123</em>
+<em>reg</em> = <u>/(wo)?man/g</u>
+<em>reg</em>.<b>compile</b>(<em>reg</em>) 						<em>// 改变正则表达式</em>
+<em>newStr</em> = <em>str</em>.<b>replace</b>(<em>reg</em>, <em>'abc'</em>) 			<em>// => 123 is old 123</em>

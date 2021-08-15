@@ -1,0 +1,14 @@
+<u># 语法</u>
+<tt>Iterable &lt;Match&gt;</tt> <b>matchAsPrefix</b>(
+	<tt>String</tt> <em>string</em>, 			<em># 匹配字符串</em>
+	[ <tt>int</tt> <em>start</em> = <i>0</i> ] 		<em># 开始位置</em>
+)
+<u># 示例</u>
+<tt>Match</tt> <u>m</u> = (<em>'123'</em>).<q>matchAsPrefix</q>(<em>'123456'</em>)
+<tt>String</tt> <em>input</em> 			=  <u>m</u>.<s>input</s>			<em>// 原字符串 </em>
+<tt>int</tt> <em>start</em> 				=  <u>m</u>.<s>start</s>			<em>// 匹配字符串的开始位置</em>
+<tt>int</tt> <em>end</em> 				=  <u>m</u>.<s>end</s>				<em>// 匹配字符串的结束位置</em>
+<tt>int</tt> <em>group</em> 			=  <u>m</u>.<s>group(0)</s>		<em>// 获取匹配的字符串 => 123456</em>
+<tt>List&lt;String&gt;</tt> <em>groups</em> 	=  <u>m</u>.<s>groups([0])</s>		<em>// 获取匹配的字符串</em>
+<tt>int</tt> <em>count</em> 				=  <u>m</u>.<s>groupCount</s>		<em>// group 的数量</em>
+<tt>int</tt> <em>pattern</em> 			=  <u>m</u>.<s>pattern</s>			<em>// 返回匹配的正则表达式</em>

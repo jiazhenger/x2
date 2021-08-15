@@ -1,0 +1,17 @@
+<u># 用法</u>
+<em>构建一个 RGB 颜色通道的颜色对象. 返回的颜色对象中包含 r, g 和 b 三个属性</em>
+<u># 语法</u>
+<q>d3</q>.<b>rgb</b>(<s>r</s>, <s>g</s>, <s>b</s>, <s>opacity</s>)
+<q>d3</q>.<b>rgb</b>(<s>specifier</s>)
+<q>d3</q>.<b>rgb</b>(<s>color</s>)
+<u># 参数</u>
+<s>r</s> ： <em>必需，r 值</em>
+<s>g</s> ： <em>必需，g 值</em>
+<s>b</s> ： <em>必需，b 值</em>
+<s>opacity</s> ： <em>可选，透明度，[0,1]</em>
+<s>specifier</s> ： <em>必需，颜色字符串</em>
+<s>color</s> ： <em>必需，颜色字符串</em>
+<u># 示例</u>
+<em>const r</em> = <q>d3</q>.<q>rgb</q>(<em>0,0,0,0.5</em>)		<em>// => Rgb {r: 0, g: 0, b: 0, opacity: 0.5}</em>
+<em>const r</em> = <q>d3</q>.<q>rgb</q>(<em>red</em>)		<em>// => Rgb {r: 255, g: 0, b: 0, opacity: 1}</em>
+<em>const r</em> = <q>d3</q>.<q>rgb</q>(<em>rgba(0,0,0,.5)</em>)		<em>// => Rgb {r: 0, g: 0, b: 0, opacity: 0.5}</em>

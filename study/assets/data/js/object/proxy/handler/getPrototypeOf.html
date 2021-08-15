@@ -1,0 +1,26 @@
+<u># 用法</u>
+<em>当读取代理对象的原型时，该方法就会被调用</em>
+<u># 语法</u>
+<em>const p</em> = <q>new Proxy<q>(
+	{ }, 				<em>// 被代理的目标对象 target</em>
+	{
+		<b>getPrototypeOf</b>( <s>target</s> ){
+			return <em>{  x:1 }</em>
+		}
+	}
+)
+<u># 参数说明</u>
+<s>target</s> : <em>被代理的目标对象</em>
+<u># 返回值</u>
+<em>返回值必须是一个对象或者 null</em>
+<u># 五种操作（方法/属性/运算符）触发 JS 引擎读取一个对象的原型，也就是触发 getPrototypeOf( ) 代理方法的运行</u>
+<em>1、返回对象的原型</em>
+<em>const prototype</em> = <i>Object.getPrototypeOf</i>( <em>p</em> )
+<em>2、返回对象的原型</em>
+<em>const prototype</em> = <i>Reflect.getPrototypeOf</i>( <em>p</em> )
+<em>3、返回对象的原型</em>
+<em>const prototype</em> = <em>p</em>.<i>__proto__</i>
+<em>4、判断一个对象是否存在于另一个对象的原型链上</em>
+<em>const bool</em> = <em>p</em><i>.prototype.isPrototypeOf</i>( <em>x</em> )
+<em>5、检测 constructor.prototype 是否存在于参数 Object 的原型链上</em>
+<em>const bool</em> = <em>p</em><i> instanceof </i> <em>Object</em>

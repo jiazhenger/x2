@@ -1,0 +1,12 @@
+<u># 用法</u>
+<em>向元素中添加指定的属性节点</em>
+<u># 语法</u>
+<s>el</s>.<b>setAttributeNode</b>(<s>attributenode</s>)
+<u># 参数</u>
+<s>attributename</s>: <em>必需。添加的属性节点</em>
+<u># 兼容性</u>
+<i>ie9+</i>
+<u># 示例</u>
+<em>const</em> <s>attr</s> = <q>document.createAttribute</q>(<em>'class'</em>)
+<s>attr</s>.<q>nodeValue</q> = <em>'red'</em>
+<q>document.body</q>.<b>setAttributeNode</b>(<s>attr</s>) 		<em>// => class = 'red'</em>

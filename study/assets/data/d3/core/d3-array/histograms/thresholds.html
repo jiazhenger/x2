@@ -1,0 +1,14 @@
+<u># 用法</u>
+<em>1、如果指定了 thresholds 则将 threshold generator(阈值生成器) 设置为指定的函数或数组并返回当前的直方图生成器</em>
+<em>2、如果没有指定 thresholds 则返回当前的阈值生成器, 默认的阈值生成器参考 Sturges’ formula 实现(因此, 默认情况下, 直方图的输入数据必须为数值)</em>
+<em>3、阈值由一组数组定义: [x0, x1, …]. 小于 x0 的值放在第一个分箱中, 小于 x1 并且大于等于 x0 的放在第二个分箱中</em>
+<em>4、任何在 domain 之外的值将会被忽略. 第一个分箱的 bin.x0 属性总是等于最小的 domain 值, 最后一个分箱的 bin.x1 属性总是等于 domain 的最大值</em>
+<em>5、如果指定了 count 则表示使用 count 代替 thresholds 数组, domain 将会被设置成近似的计数区间, 参考 ticks</em>
+<u># 语法</u>
+<em>histogram</em>.<b>thresholds</b>(<s>count</s>)
+<em>histogram</em>.<b>thresholds</b>(<s>thresholds</s>)
+<u># 参数</u>
+<s>count</s> ：<em>可选</em>
+<s>thresholds</s> ：<em>可选</em>
+<u># 示例</u>
+<em>const histogram</em> = <q>d3</q>.<q>histogram( )</q>.<q>domain</q>(<em>x.domain( )</em>).<b>thresholds</b>(<em>x.ticks(20)</em>)

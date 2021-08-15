@@ -1,0 +1,14 @@
+<u># 添加事件</u>
+<em>const</em> <u>bind</u> = <q>function</q>(<s>el</s>, <s>event</s>, <s>fn</s>){
+	if (<s>el</s>.<b>addEventListener</b>) <s>el</s>.<b>addEventListener</b>(<s>event</s>, <s>fn</s>, false)
+	else if (<s>el</s>.<b>attachEvent</b>) <s>el</s>.<b>attachEvent</b>('<i>on</i>' + <s>event</s>, <s>fn</s>)
+	else if (<s>el</s>.<q>click</q>) <s>el</s>['<i>on</i>' + <s>event</s>] = <s>fn</s>
+	else <q>throw new Error</q>(<em>'your browser not suport event'</em>)
+}
+<u># 移除事件</u>
+<em>const</em> <u>unbind</u> = <q>function</q>(<s>el</s>, <s>event</s>, <s>fn</s>){
+	if (<s>el</s>.<b>removeEventListener</b>) <s>el</s>.<b>removeEventListener</b>(<s>event</s>, <s>fn</s>, false)
+	else if (<s>el</s>.<b>detachEvent</b>) <s>el</s>.<b>detachEvent</b>('<i>on</i>' + <s>event</s>, <s>fn</s>)
+	else if (<s>el</s>.<q>click</q>) <s>el</s>['<i>on</i>' + <s>event</s>] = <s>fn</s>
+	else <q>throw new Error</q>(<em>'your browser not suport event'</em>)
+}

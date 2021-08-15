@@ -1,0 +1,11 @@
+<u># 用法</u>
+<em>1、调用指定的函数一次，通过在当前的选择以及任何可选参数。无论指定函数的返回值是什么，call 操作符总是返回当前的选择</em>
+<u># 语法</u>
+<em>selection</em>.<b>call</b>( <u>selection => { }</u> )
+<u># 函数 this 指向 null</u>
+<u># 示例</u>
+<em># 连写</em>
+<q>d3.selectAll</q>(<em>'p'</em>).<b>call</b>( <u>s</u> => <u>s</u>.<q>text</q>(<em>'text'</em>) )
+<em># 拆分</em>
+<em>const</em> <s>myFn</s> = <u>s</u> => <u>s</u>.<q>text</q>(<em>'text'</em>)
+<q>d3.selectAll</q>(<em>'p'</em>).<b>call</b>(<s>myFn</s>)

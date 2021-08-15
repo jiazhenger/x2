@@ -1,0 +1,24 @@
+<u># 用法</u>
+<em>添加 dom 到元素内部</em>
+<u># 语法</u>
+<em>selection</em>.<b>append</b>(<s>name</s>,<s>before</s>)
+<u># 参数</u>
+<s>name</s> ：<em>必需，插入的 html 元素</em>（<u>字符串</u>）<em>或 已存在的 node 元素</em>（<u>函数</u>）
+<s>before</s> ：<em>可选，插入位置</em>（<u>字符串、函数</u>）
+<q>:first-child</q> : 		<em>// 插入到子元素最前</em>
+<q>:last-child</q> :  		<em>// 插入到子元素最后</em>
+<q>:nth-child(3)</q> : 	<em>// 插入到第3个子元素</em>
+<u># 函数 this 指向当前 dom</u>
+<u># 示例</u>
+<em># 插入 html 元素到子元素最后，同 append( )</em>
+<em>selection</em>.<b>insert</b>(<em>'div'</em>)
+<em># 插入 html 元素到指定位置</em>
+<em>selection</em>.<b>insert</b>(<em>'div'</em>,'<b>:last-child</b>')
+<em># 函数计算插入元素</em>
+<em>selection</em>.<b>insert</b>(<u>function</u>(<q>data</q>,<q>index</q>){
+	<u>return</u> <q>index</q> <em>% 2 === 0</em> <u>?</u> <u>document.querySelector('.class')</u> : <u>document.querySelector('#id')</u>
+},'<b>:first-child</b>')
+<em># 函数计算位置</em>
+<em>selection</em>.<b>insert</b>(<em>'div'</em>, <u>function</u>(<q>data</q>,<q>index</q>){
+	<u>return</u> <u>this.childNodes[2]</u> 			<em>// 返回子元素的一个 node</em>
+})

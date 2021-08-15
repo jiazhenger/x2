@@ -1,0 +1,18 @@
+<u># 用法</u>
+<em>自定义替换匹配全部</em>
+<u># 语法</u>
+<tt>String</tt> <b>replaceAllMapped</b>(
+ 	<tt>Pattern</tt> <em>from</em> , 						<em># 匹配字符串，或正则表达式</em>
+ 	<tt>String</tt> <em>replace</em><s>(</s> <tt>Match</tt> <u>match</u> <s>)</s> 		<em># 替换匹配函数</em>
+)
+<u># 示例</u>
+<em># 一般函数</em>
+<tt>String</tt> <em>str</em>  = (<em>'123456'</em>).<b>replaceAllMapped</b>(		<em>// => abc3456</em>
+	<em>'1'</em>,
+	<s>(</s> <tt>Match</tt> <u>m</u> <s>)</s>{ <q>return</q> <em>'abc'</em>; }
+);
+<em># 箭头函数</em>
+<tt>String</tt> <em>str</em>  = (<em>'123456'</em>).<b>replaceAllMapped</b>(
+	<em>'1'</em>,
+	<s>(</s> <tt>Match</tt> <u>m</u> <s>)</s> => '<i>$</i>{ <u>m</u>[2] } <i>$</i>{ <u>m</u>[1] } <i>$</i>{ <u>m</u>[1].<q>isEmpty</q> ? <em>'way'</em> : <em>'ay'</em> }'
+);

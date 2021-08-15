@@ -1,0 +1,27 @@
+<u># 用法</u>
+<em>1、设置相机位置（眼睛位置或者说相机拍照位置）</em>
+<em>2、一个相机对象绕转一个坐标中心做圆周运动，同时观看方向一直指向该坐标中心，需要每次改变 .position 属性后，重新一遍 .lookAt() 方法以便于更新相机对象视图矩阵的旋转部分</em>
+<em>3、形象点说就是改变相机观察的实现方向，因为相机镜头指向的方向不会自动随着相机位置变化而自动变化，需要手动执行 .lookAt() 方法</em>
+<u># 语法</u>
+<em>camera</em>.<b>lookAt</b>( <s>x</s>, <s>y</s>, <s>z</s> )
+<em>camera</em>.<b>lookAt</b>( { <s>x</s> : <em>0</em>, <s>y</s> : <em>0</em>, <s>z</s> : <em>0</em> } )
+<em>camera</em>.<b>lookAt</b>( <s>scene.position</s> ) 		<em>// 看向场景对象</em>
+<u># 参数</u>
+<s>x</s> : <em>x 轴</em>
+<s>y</s> : <em>y 轴</em>
+<s>z</s> : <em>z 轴</em>
+<u># 示例</u>
+<em>var angle = 0</em>
+<u>function</u> <u>render</u>( ) {
+	<em>// 执行渲染操作</em>
+	<em>renderer</em>.<u>render</u>(<em>scene</em>, <em>camera</em>)	
+	<q>requestAnimationFrame</q>(<u>render</u>)
+	<em>// 每次执行 render 函数，累加 0.005 改变角度值 angle</em>
+	<em>angle += 0.005</em>
+	<em>// 重新设置相机位置，相机在XOY平面绕着坐标原点旋转运动</em>
+	<em>camera</em>.<q>position</q>.<q>x</q> = <em>200*Math.sin(angle)</em>
+	<em>camera</em>.<q>position</q>.<q>y</q> = <em>200*Math.cos(angle)</em>
+	<em>// 相机位置改变后，注意执行.looAt()方法重新计算视图矩阵旋转部分</em>
+	<em>// 如果不执行.looAt()方法，相当于相机镜头方向保持在首次执行`.lookAt()`的时候</em>
+	<em>camera</em>.<b>lookAt</b>(<em>0,0,0</em>);
+}

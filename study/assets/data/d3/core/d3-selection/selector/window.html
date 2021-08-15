@@ -1,0 +1,10 @@
+<u># 用法</u>
+<em>返回指定的 node 所属的 window。如果 node 为 Node 则返回所属文档的默认视图,如果 node 为 document 则返回其默认视图, 其他情况返回 node</em>
+<u># 语法</u>
+<q>d3</q>.<b>window</b>(<s>node</s>)
+<u># 参数</u>
+<s>node</s> ：<em>必需，node 节点</em>（<u>node</u>）
+<u># 示例</u>
+<em># html node 都返回 Window 顶级对象</em>
+<em>const window</em> = <q>d3</q>.<b>window</b>(<u>document</u>)
+<em>const window</em> = <q>d3</q>.<b>window</b>(<u>document.body</u>)

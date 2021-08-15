@@ -1,0 +1,19 @@
+<u># 用法</u>
+<em>规定请求的类型、URL 以及是否异步处理请求</em>
+<u># post 与 get 优势</u>
+<em>1、GET 比 POST 更简单更快</em>
+<em>2、以下情况使用 POST 请求</em>
+		<em>(1) 无法使用缓存文件（更新服务器上的文件或数据库）</em>
+		<em>(2) 向服务器发送大量数据（POST 没有数据量限制）</em>
+		<em>(3) 发送包含未知字符的用户输入时，POST 比 GET 更稳定也更可靠</em>
+<u># 语法</u>
+<em>xhr</em>.<b>open</b>(<s>method</s>, <s>url</s>, <s>async</s>)
+<u># 参数</u>
+<s>method</s>	: <em>必需。 请求的类型：</em><u>GET(get)</u>、<u>POST(post)</u>
+<s>url</s>		: <em>必需。api 请求地址</em>
+<s>async</s>	: <em>可选。</em><u>true（异步）</u>、<u>false（同步）</u>
+<u># 示例</u>
+<em>xhr</em>.<b>open</b>(<s>'GET'</s>, <s>/api/search</s>, <s>true</s>)
+<em>xhr</em>.<b>open</b>(<s>'get'</s>, <s>/api/search</s>, <s>true</s>)
+<em>xhr</em>.<b>open</b>(<s>'POST'</s>, <s>/api/search</s>, <s>true</s>)
+<em>xhr</em>.<b>open</b>(<s>'post'</s>, <s>/api/search</s>, <s>true</s>)

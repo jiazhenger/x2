@@ -1,0 +1,62 @@
+&lt;<u>manifest</u> 
+	<em>xmlns:android="http://schemas.android.com/apk/res/android"</em> 
+	<b>package</b>="<s>com.example.flutterapp</s>"</em>		<em>&lt;!-- 应用包名（支付宝需要用到） --&gt;</em>
+	<em>&lt;!-- 应用名称 --&gt;</em>
+	&lt;<u>application</u>
+		<q>android</q>:<em>name="io.flutter.app.FlutterApplication"</em>
+		<q>android</q>:<b>label</b>=<s>"诺森医学"</s>					<em>&lt;!-- app 桌面显示名称 --&gt;</em>
+				
+		<q>android</q>:<em>installLocation="preferExternal"</em>
+		<q>android</q>:<b>icon</b>="<i>@mipmap/</i><s>ic_launcher</s>"		<em>&lt;!-- app 桌面显示图标：flutter_app\android\app\src\main\res --&gt;</em>
+		
+		<q>android</q>:<b>usesCleartextTraffic</b>=<s>"true"</s> 			<em>&lt;!-- 允许 Android 不加密的 http 请求访问 --&gt;</em>
+		
+		<q>android</q>:<b>networkSecurityConfig</b>=<s>"@xml/network_security_config"</s> 			<em>&lt;!-- 允许 WebView http 访问 --&gt;</em>
+<em>&lt;!-- 在 <u>android/app/src/main/res/xml/</u> 下面创建 <s>network_security_config.xml</s> --&gt;</em>
+<em>&lt;?xml version="1.0" encoding="utf-8"?&gt;</em>
+<em>&lt;network-security-config&gt;</em>
+	<em>&lt;base-config cleartextTrafficPermitted="true"&gt</em>
+		<em>&lt;trust-anchors&gt</em>
+			<em>&lt;certificates src="system" /&gt</em>
+		<em>&lt;/trust-anchors&gt</em>
+	<em>&lt;/base-config&gt</em>
+<em>&lt;/network-security-config&gt</em>
+							
+	&gt;
+        &lt;<u>activity</u>
+			<q>android</q>:<em>name=".MainActivity"</em>
+			<q>android</q>:<em>launchMode="singleTop"</em>
+			<q>android</q>:<em>theme="@style/LaunchTheme"</em>
+			<q>android</q>:<em>configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"</em>
+			<q>android</q>:<em>hardwareAccelerated="true"</em>
+			<q>android</q>:<em>windowSoftInputMode="adjustResize"</em>
+		&gt;
+			<em>&lt;!--  --&gt;</em>
+			&lt;<u>meta-data</u>
+				<q>android</q>:<em>name="io.flutter.embedding.android.NormalTheme"</em>
+				<q>android</q>:<em>resource="@style/NormalTheme"/&gt;</em>
+			/&gt;
+			<em>&lt;!--  --&gt;</em>
+			&lt;<u>meta-data</u>>
+				<q>android</q>:<em>name="io.flutter.embedding.android.SplashScreenDrawable"</em> 
+				<q>android</q>:<em>resource="@drawable/launch_background"</em>
+			/&gt;
+			<em>&lt;!--  --&gt;</em>
+			&lt;<u>intent-filter</u>&gt;
+				&lt;<u>action</u> <q>android</q>:<em>name="android.intent.action.MAIN"/&gt;</em>
+				&lt;<u>category</u> <q>android</q>:<em>name="android.intent.category.LAUNCHER"/&gt;</em>
+			&lt;/<u>intent-filter</u>&gt;
+		&lt;/<u>activity</u>&gt;
+		<em>&lt;!--  --&gt;</em>
+		&lt;<u>meta-data</u> <q>android</q>:<em>name="flutterEmbedding"</em> <q>android</q>:<em>value="2"</em> /&gt;
+	&lt;/<u>application</u>&gt;
+	<em># 权限配置</em>
+	<em>&lt;!-- 允许访问网络 --&gt;</em>
+	&lt;<b>uses-permission</b> <q>android</q>:<b>name</b>="<i>android.permission</i>.<s>INTERNET</s>" /&gt;
+	<em>&lt;!-- 允许获取网络信息状态 --&gt;</em>
+	&lt;<b>uses-permission</b> <q>android</q>:<b>name</b>="<i>android.permission</i>.<s>ACCESS_NETWORK_STATE</s>" /&gt;
+	<em>&lt;!-- 获取当前 WiFi 接入的状态以及 WLAN 热点的信息 --&gt;</em>
+	&lt;<b>uses-permission</b> <q>android</q>:<b>name</b>="<i>android.permission</i>.<s>ACCESS_WIFI_STATE</s>" /&gt;
+	<em>&lt;!-- 允许访问电话 --&gt;</em>
+	&lt;<b>uses-permission</b> <q>android</q>:<b>name</b>="<i>android.permission</i>.<s>READ_PHONE_STATE</s>" /&gt;
+&lt;/<u>manifest&gt</u>;

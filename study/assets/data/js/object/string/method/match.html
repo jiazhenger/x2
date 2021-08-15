@@ -1,0 +1,15 @@
+<u># 用法</u>
+<em>在字符串内检索指定的值，或找到一个或多个正则表达式的匹配</em>
+<u># 语法</u>
+<em>const arr</em> = <em>stringObject</em>.<b>match</b>(<s>searchvalue</s>)
+<em>const arr</em> <em>stringObject</em>.<b>match</b>(<s>regexp</s>))
+<u># 参数</u>
+<s>searchvalue</s>: <em>必需。规定要检索的字符串值</em>
+<s>regexp</s>: <em>必需。规定要匹配的模式的 RegExp 对象。如果该参数不是 RegExp 对象，则需要首先把它传递给 RegExp 构造函数，将其转换为 RegExp 对象</em>
+<u># 返回值</u>
+<em>返回一个数组，其中存放匹配的结果。如果未找到匹配，则返回值为 null</em>
+<u># 注释</u>
+<em>1、在全局检索模式下，match() 即不提供与子表达式匹配的文本的信息，也不声明每个匹配子串的位置。如果您需要这些全局检索的信息，可以使用 RegExp.exec()</em>
+<u># 示例</u>
+<em>const str</em> = <em>'123'</em>
+<em>const rs</em> = <em>str</em>.<b>match</b>(<s>/\w/g</s>) 		<em>// => [ ] 或 null</em>

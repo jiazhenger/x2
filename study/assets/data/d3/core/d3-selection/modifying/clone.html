@@ -1,0 +1,12 @@
+<u># 用法</u>
+<em>在所选元素之后插入所选元素的克隆，并返回包含新添加的克隆元素的选择集。如果 deep 为真则选中元素的后代元素也会被克隆(深度克隆)。否则仅仅克隆所选元素自身</em>
+<u># 语法</u>
+<em>selection</em>.<b>clone</b>(<s>deep</s>)
+<u># 参数</u>
+<s>deep</s> ：<em>可选，是否深度克隆</em>（<u>Boolean</u>）
+<u># 示例</u>
+<em>selection</em>.<b>clone</b>( <u>true</u> ) 			<em>// 深度克隆</em>
+<em># 等价于</em>
+<em>selection.select(function( ) {</em>
+	<em>return this.parentNode.insertBefore(this.cloneNode(true), this.nextSibling);</em>
+<em>})</em>

@@ -1,0 +1,19 @@
+<u># 用法</u>
+<em>返回根的选择，常用于对象扩展、重写</em>
+<u># 语法</u>
+<q>d3</q>.<b>selection( )</b>	===		<q>d3</q>.<b>select</b>(<u>document.documentElement</u>)
+<u># 扩展</u>
+<em># 自定义设置属性</em>
+<u>function</u> <s>setBool</s>( <u>p</u> ){
+	<q>d3</q>.<b>selection</b>.<q>prototype</q>[<u>p</u>] = <u>function</u>( value ){
+		return arguments.length < 1 ? <q></1>this.property</q>(<u>p</u>) : <q></1>this.property</q>(<u>p</u>, value)
+	}
+}
+<em>// 设置选择框的 checked 属性</em>
+<s>setBool('<b>checked</b>')</s> 	<em>// 扩展一个 checked 方法</em>
+<q>d3</q>.<b>checked</b><u>( )</u> 		<em>// 返回选择框选中状态</em>
+<q>d3</q>.<b>checked</b><u>( true )</u> 	<em>// 选中选择框</em>
+<em>// 设置选择框的 disabled 属性</em>
+<s>setBool('<b>disabled</b>')</s> 	<em>// 扩展一个 disabled 方法</em>
+<q>d3</q>.<b>disabled</b><u>( )</u> 		<em>// 返回选择框是否禁用</em>
+<q>d3</q>.<b>disabled</b><u>( true )</u> 	<em>// 禁用选择框</em>

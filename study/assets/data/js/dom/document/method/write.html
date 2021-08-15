@@ -1,0 +1,16 @@
+<u># 用法</u>
+<em>向文档写入 HTML 表达式或 JavaScript 代码</em>
+<u># 语法</u>
+<q>document</q>.<b>write</b>(<s>exp1</s>, <s>exp2</s>, <s>exp3</s>, <s>...</s>)
+<u># 参数</u>
+<s>exp</s>: <em>必需。文本字符串、html字符串、js 代码字符串</em>
+<u># 示例</u>
+<em># 写入 html</em>
+<q>document</q>.<b>write</b>(<em>'&lt;b&gt;Hello World&lt;/b&gt;'</em>)
+<q>document</q>.<b>write</b>(<em>'&lt;b&gt;Hello'&lt;/b&gt;</em>, <em>'&lt;b&gt;World&lt;/b&gt;'</em>)
+<em># 写入 js</em>
+<q>document</q>.<b>write</b>(<em>'&lt;script&gt;alert(0)&lt;<s>\</s>/script&gt;'</em>)
+<q>document</q>.<b>write</b>(<em>'&lt;b&gt;Hello World&lt;/b&gt;'</em>,<em>'&lt;script&gt;alert(0)&lt;<s>\</s>/script&gt;'</em>)
+<em># 依次写入，不会覆盖</em>
+<q>document</q>.<b>write</b>(<em>'&lt;b&gt;Hello'&lt;/b&gt;</em>)
+<q>document</q>.<b>write</b>(<em>'&lt;b&gt;World'&lt;/b&gt;</em>)

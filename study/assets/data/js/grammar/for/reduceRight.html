@@ -1,0 +1,18 @@
+<u># 用法</u>
+<em>功能和 reduce() 功能是一样的，不同的是 reduceRight() 从数组的末尾向前将数组中的数组项做累加</em>
+<em># 语法</em>
+<em>const num = arr</em>.<b>reduceRight(</b> <u>function(</u><s>total</s>,<s>value</s>,<s>index</s>,<s>arr</s><u>){</u>
+	<b>return</b> <s>value > 1</s>
+<u>}</u>, <s>initialValue</s><b>)</b>
+<u># 参数</u>
+<s>total</s>		: <em>必需。初始值, 或者计算结束后的返回值</em>
+<s>value</s>		: <em>必需。当前元素</em>
+<s>index</s>		: <em>可选。当前元素的索引值</em>
+<s>arr</s>			: <em>可选。当前元素所属的数组对象</em>
+<s>initialValue</s>	: <em>可选。传递给函数的初始值</em>
+<u># 返回值</u>
+<em>一个布尔值</em>
+<u># 注释</u>
+<em>对于空数组是不会执行回调函数的</em>
+<u># 常用示例</u>
+<em>const num = arr</em>.<b>reduceRight((total, value)=>{  return total + value })</b>

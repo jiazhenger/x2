@@ -1,0 +1,8 @@
+<u># 用法</u>
+<em>返回 CSSRule 对象，包含 CSS 声明的样式及选择器</em>
+<u># 语法</u>
+<em>const rule</em> = <q>el.style</q>.<b>parentRule</b>
+<u># 示例</u>
+<em>const style</em> = <u>document.styleSheets[0].rules[0].style</u>
+<em>const rule</em> = <em>style</em>.<b>parentRule</b>
+<u>document.body</u>.<q>innerHTML</q> = <em>rule</em>.<q>cssText</q>

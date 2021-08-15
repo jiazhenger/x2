@@ -1,0 +1,10 @@
+<em># 定义一个异步函数，没有 return 返回值时 value = null<em>
+<tt>Future &lt;String&gt;</tt> <u>ajax( )</u> <b>async</b> {
+	<b>return</b> <em>'dart'</em>
+}
+<em># 获取异步返回值 1：<em>
+<tt>Future &lt;String&gt;</tt> <em>request( )</em> <b>async</b> {
+	<tt>String</tt> <s>value</s> = <b>await</b> <u>ajax( )</u>		<em>// await 直接返回 ajax( ) 的返回值</em>
+}
+<em># 获取异步返回值 2：<em>
+<u>ajax( )</u>.<b>then</b>( ( <s>value</s> ) {		})

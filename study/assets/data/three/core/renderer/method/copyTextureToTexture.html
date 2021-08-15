@@ -1,0 +1,12 @@
+<u># 用法</u>
+<em>将纹理的所有像素复制到一个已有的从给定位置开始的纹理中</em>
+<u># 语法</u>
+<em>renderer</em>.<b>copyTextureToTexture</b>(<s>position</s>, <s>srcTexture</s>, <s>dstTexture</s>, <s>level</s>)
+<u># 参数</u>
+<s>position</s>		：<em>必需，位置</em>（<u>new Three.Vector2( )</u>）
+<s>srcTexture</s> 		：<em>必需，源纹理</em>（<u>new THREE.Texture( )</u>）
+<s>dstTexture</s> 		：<em>必需，目标纹理</em>（<u>new THREE.Texture( )</u>）
+<s>level</s> 		：<em>必需，层别级</em>（<u>Number</u>）
+<u># 示例</u>
+<em>const renderer</em> = <q>new Three.WebGLRenderer( )</q>
+<em>renderer</em>.<b>copyTextureToTexture</b>( <s>new Three.Vector2( )</s>, <s>new THREE.Texture( )</s>, <s>1</s>)

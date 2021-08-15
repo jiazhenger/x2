@@ -1,0 +1,14 @@
+<u># 用法</u>
+<em>1、一个枚举类型的属性，返回响应数据的类型</em>
+<em>2、它允许我们手动的设置返回数据的类型.如果我们将它设置为一个空字符串，它将使用默认的 Text 类型</em>
+<u># 语法</u>
+<em>const responseType</em> = <em>xhr</em>.<b>responseType</b> 		<em>// 获取响应数据的类型</em>
+<u># 设置 ResponseType</u>
+<em>xhr</em>.<b>responseType</b> = 
+					<i>' '</i>			:	<em>字符串。为空字符串时，采用默认类型 DOMString、与设置为 text 相同</em>
+					<i>arraybuffer</i>	:	<em>返回包含二进制数据的 JavaScriptArrayBuffer </em>
+					<i>blob</i>		:	<em>返回包含二进制数据的Blob对象</em>
+					<i>document</i>	:	<em>返回 HTML Document 或 XML XMLDocument、这取决于接收到的数据的MIME类型</em>
+					<i>json</i>			:	<em>返回一个 JavaScript 对象</em>
+					<i>text</i>			:	<em>返回一个以 DOMString 对象表示的文本</em>
+					<i>ms-stream</i>	:	<em>返回下载流的一部分。此响应类型仅允许下载请求，仅 ie 支持</em>

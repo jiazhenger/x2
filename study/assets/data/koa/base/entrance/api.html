@@ -1,0 +1,43 @@
+<em>const Koa= require('koa')</em>
+<em>const Router = require('<u>koa-router</u>') </em>
+<em>const</em> <u>bodyParser</u> = <em>require</em>('<u>koa-bodyparser</u>') 		<em>//</em> <u>npm i koa-bodyparser --only=dev</u>
+<em>const app = new Koa( )</em>
+<em>const router =  new Router( )</em>
+<em># 配置让 post 方法可以获取 body 参数</em>
+<em>app.use</em>( <u>bodyParser( )</u> ) 		
+<em># get 方法：</em>
+<em>router</em>.<q>get</q>(<em>'/'</em>, <em>async</em> <s>ctx</s>=> {
+	<em># 接收数据：只能获取可选参数（/api?a=0&b=1）</em>
+	<em>const query</em> = <s>ctx</s>.<b>query</b>					<em>// => { a:0, b:1 }</em>
+	<em>const query</em> = <s>ctx</s>.<b>querystring</b>			<em>// => a=0&b=1</em>
+	<em>const query</em> = <s>ctx</s>.<q>request</q>.<b>query</b>			<em>// => { a:0, b:1 }</em>
+	<em>const query</em> = <s>ctx</s>.<q>request</q>.<b>querystring</b>		<em>// => a=0&b=1</em>
+	<em># 发送数据</em>
+	<s>ctx</s>.<b>response.body</b> = <em>'text'</em> 		
+	<s>ctx</s>.<b>body</b> = {
+		<em>code: 0</em>
+		<em>msg: 'ok',</em>
+		<em>data:{	}</em>
+	}
+})
+<em># post 方法：</em>
+<em>router</em>.<q>post</q>(<em>'/about'</em>, <em>async</em> (<u>ctx</u>,<u>next</u>) => {	
+	<em># 接收数据：可选参数（/api?a=0&b=1）</em>
+	<em>const query</em> = <s>ctx</s>.<b>query</b>					<em>// => { a:0, b:1 }</em>
+	<em>const query</em> = <s>ctx</s>.<b>querystring</b>			<em>// => a=0&b=1</em>
+	<em>const query</em> = <s>ctx</s>.<q>request</q>.<b>query</b>			<em>// => { a:0, b:1 }</em>
+	<em>const query</em> = <s>ctx</s>.<q>request</q>.<b>querystring</b>		<em>// => a=0&b=1</em>
+	<em># 接收 body 数据：1、配置 koa-bodyparser；2、前后端配置 Content-Type</em>
+	<em>const body</em> = <s>ctx</s>.<q>request</q>.<b>body</b>			<em>// => { a:0, b:1 }</em>
+	<em># 发送数据</em>
+	<s>ctx</s>.<b>response.body</b> = <em>'text'</em> 	
+	<s>ctx</s>.<b>body</b> = {
+		<em>code: 0</em>
+		<em>msg: 'ok',</em>
+		<em>data:{	}</em>
+	}
+})
+
+<em>app.use( router.routes( ) ).use( router.allowedMethods( ) )</em>
+
+<em>app.listen(3005)</em>)

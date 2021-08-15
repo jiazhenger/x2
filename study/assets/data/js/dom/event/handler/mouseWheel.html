@@ -1,0 +1,26 @@
+<em>const</em> <s>MouseWheel</s> = <u>function</u> (<em>evt</em>, <em>opt</em>) {
+	<em>const</em> <u>e</u> = <em>evt</em> || window.event
+	if (<u>e</u>.<b>wheelDelta</b>) {
+		if (<u>e</u>.<b>wheelDelta</b> &gt; 0) { 					<em>// 滑轮向上滚动</em>
+			<em>opt.onUp && opt</em>.<i>onUp(e)</i>
+		}else{								<em>// 滑轮向下滚动</em>
+			<em>opt.onDown && opt</em>.<i>onDown(e)</i>
+		}
+	} else if (<u>e</u>.<b>detail</b>) {
+		if (<u>e</u>.<b>detail</b> &lt; 0) {						<em>// 滑轮向上滚动</em>
+			<em>opt.onUp && opt</em>.<i>onUp(e)</i>
+		}else{								<em>// 滑轮向下滚动</em>
+			<em>opt.onDown && opt</em>.<i>onDown(e)</i>
+		}
+	}
+}
+
+<em>const</em> <u>onEvent</u> = e => {
+	<s>MouseWheel<s>(e,{
+		<i>onUp</i>: e => {		},
+		<i>onDown</i>: e => {		},
+	})
+}
+
+<q>document</q>.<b>onmousewheel</b> === <u>null</u> ? ( <q>window</q>.<b>onmousewheel</b> = <q>document</q>.<b>onmousewheel</b> = <u>onEvent</u> ) : <q>document.addEventListener</q>(<b>'DOMMouseScroll'</b>, <u>onEvent</u>, <em>false</em>)
+<q>document</q>.<b>onwheel</b> === <u>null</u> ? ( <q>window</q>.<b>onwheel</b> = <q>document</q>.<b>onwheel</b> = <u>onEvent</u> ) : ( <q>window</q>.<b>onmousewheel</b>  = <q>document</q>.<b>onmousewheel</b> = <u>onEvent</u> )

@@ -1,0 +1,16 @@
+<u># 用法</u>
+<em>1、返回与 current event 相关的指定标识符的触摸事件相对于指定 container 的 x 和 y 坐标</em>
+<em>2、container 可以是一个 HTML 或 SVG 容器元素，比如 G element 或者 SVG element</em>
+<em>3、坐标以二元数组的形式返回: [x, y]</em>
+<em>4、如果当前 touches 中没有与指定标识符相关联的事件则返回 null</em>
+<em>5、当仅仅有部分触摸移动的时候忽略 touchmove 会很有用</em>
+<em>6、如果没有指定 touches 则默认为当前事件的 changedTouches 属性</em>
+<u># 语法</u>
+<q>d3</q>.<b>touches</b>(<s>container</s>, <s>touch</s>, <s>identifier</s>)
+<u># 参数</u>
+<s>container</s> ：<em>必需，node</em>（<u>html、svg 节点</u>））
+<s>touches</s> ：<em>可选，</em>
+<s>identifier</s> ：<em>可选，标识符</em>
+<u># 示例</u>
+<em># 获取元素</em>
+<q>d3</q>.<b>touch</b>(<em>document.querySelector('#box')</em>) 		<em>// => [ [x,y] ]</em>

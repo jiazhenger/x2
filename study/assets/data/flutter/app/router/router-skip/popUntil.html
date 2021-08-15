@@ -1,0 +1,6 @@
+<u># 语法</u>
+<b>Navigator.of(context).popUntil</b>(
+	<tt>bool</tt> <s>Function(</s> <tt>Route&lt;dynamic&gt;</tt> <s>route )</s>, 			<em>// 是否移除路由</em>	
+).<b>then</b>((<tt>Object</tt> <u>value</u>){		});
+<em># 示例</em>
+<b>Navigator.of(context).popUntil</b>(<em>'/login'</em>, ( <s>route</s> ) => <s>route</s> == <em>false</em> )

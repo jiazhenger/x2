@@ -1,0 +1,11 @@
+<u># 用法</u>
+<em>将输出canvas的大小调整为(width, height)并考虑设备像素比，且将视口从(0, 0)开始调整到适合大小 将updateStyle设置为false以阻止对canvas的样式做任何改变</em>
+<u># 语法</u>
+<em>renderer</em>.<b>setSize</b>(<s>width</s>, <s>height</s>, <s>updateStyle</s>)
+<u># 参数</u>
+<s>width</s> ：<em>必需，宽度</em>
+<s>height</s> ：<em>必需，高度</em>
+<s>updateStyle</s> ：<em>可选，是否更新样式</em>（<u>Boolean</u>）
+<u># 示例</u>
+<em>const renderer</em> = <q>new Three.WebGLRenderer( )</q>
+<em>renderer</em>.<b>setSize</b>( <u>window.innerWidth</u>, <u>window.innerHeight</u> )

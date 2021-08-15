@@ -1,0 +1,15 @@
+<u># 第 1 种</u>
+<em>const min</em> = <b>Math.min</b>(<em>1,2,3,4,5</em>)
+<em>const max</em> = <b>Math.max</b>(<em>1,2,3,4,5</em>)
+<u># 第 2 种</u>
+<em>const min</em> = <b>Math.min</b>.<i>apply</i>(<u>null</u>, <em>[1,2,3,4,5]</em>)
+<em>const max</em> = <b>Math.max</b>.<i>apply</i>(<u>null</u>, <em>[1,2,3,4,5]</em>)
+<u># 第 3 种</u>
+<em>const min</em> = <b>Math.min</b>.<i>call</i>(<u>null</u>, <em>1, 2, 3, 4, 5</em>)
+<em>const max</em> = <b>Math.max</b>.<i>call</i>(<u>null</u>, <em>1, 2, 3, 4, 5</em>)
+<u># 第 4 种</u>
+<em>const min</em> = <em>[1,2,3,4,5]</em>.<b>sort</b>(<s>(a,b) => a - b</s>)<u>[0]</u>
+<em>const max</em> = <em>[1,2,3,4,5]</em>.<b>sort</b>(<s>(a,b) => b - a</s>)<u>[0]</u>
+<u># 第 5 种</u>
+<em>const min</em> = <em>[1,2,3,4,5]</em>.<b>sort( )</b><u>[0]</u>
+<em>const max</em> = <em>[1,2,3,4,5]</em>.<b>sort( )</b>.<b>reverse( )</b><u>[0]</u>

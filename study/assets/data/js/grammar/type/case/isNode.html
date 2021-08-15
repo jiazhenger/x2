@@ -1,0 +1,13 @@
+<u># 判断是否为节点</u>
+<em>const isNode</em> = <s>node</s> <q>instanceof</q> <b>Node</b>
+<u># 判断文本节点</u>
+<em>const isText</em> = <s>node</s>.<b>constructor</b> === <b>Text</b>
+<em>const isText</em> = <s>node</s> <q>instanceof</q> <b>Text</b>
+<u># 判断注释节点</u>
+<em>const isComment</em> = <s>node</s>.<b>constructor</b> === <b>Comment</b>
+<em>const isComment</em> = <s>node</s> <q>instanceof</q> <b>Comment</b>
+<u># 判断是否为节点列表</u>
+<em>const isNodeList</em> = <s>node</s>.<b>constructor</b> === <b>NodeList</b>
+<em>const isNodeList</em> = <s>node</s> <q>instanceof</q> <b>NodeList</b>
+<u># html 元素也属于节点</u>
+<em>const isNode</em> = <s>document.querySelector( )</s> <q>instanceof</q> <b>Node</b> 	<em>// => true</em>

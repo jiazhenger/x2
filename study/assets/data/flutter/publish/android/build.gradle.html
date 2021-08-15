@@ -1,0 +1,90 @@
+<em>// 本地配置 </em>
+<em>def localProperties = new Properties()</em>
+<em>def localPropertiesFile = rootProject.file('local.properties')</em>
+<em>if (localPropertiesFile.exists())</em> {
+	<em>localPropertiesFile.withReader('UTF-8')</em> { <em>reader -></em>
+		<em>localProperties.load(reader)</em>
+	}
+}
+<em>// </em>
+<em>def flutterRoot = localProperties.getProperty('flutter.sdk')</em>
+<em>if (flutterRoot == null)</em> {
+	<em>throw new GradleException("Flutter SDK not found. Define location with flutter.sdk in the local.properties file.")</em>
+}
+<em>// </em>
+<em>def flutterVersionCode = localProperties.getProperty('flutter.versionCode')</em>
+<em>if (flutterVersionCode == null)</em> {
+	<em>flutterVersionCode = '1'</em>
+}
+<em>// </em>
+<em>def flutterVersionName = localProperties.getProperty('flutter.versionName')</em>
+<em>if (flutterVersionName == null)</em> {
+	<em>flutterVersionName = '1.0'</em>
+}
+<em>// </em>
+<em>apply plugin: 'com.android.application'</em>
+<em>apply plugin: 'kotlin-android'</em>
+<em>apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"</em>
+<em>// 签名配置 </em>
+<b>def keystorePropertiesFile = rootProject.file("<s>key.properties</s>")</b>
+<b>def <i>keystoreProperties</i> = new Properties()</b>
+<b>if (keystorePropertiesFile.exists()) {<i>keystoreProperties</i>.load(new FileInputStream(keystorePropertiesFile))}</b>
+<em>//  </em>
+<u>android</u> {
+	<em>// 编译 sdk 版本</em>
+	<em>compileSdkVersion 28</em>
+	<em>// </em>
+	<em>sourceSets</em> {
+		<em>main.java.srcDirs += 'src/main/kotlin'</em>
+	}
+	<em>// </em>
+	<em>lintOptions</em> {
+		<em>disable 'InvalidPackage'</em>
+	}
+	<em>//</em>
+	<q>defaultConfig</q> {
+		<em># 指定自己唯一的应用程序ID，遵循以下限制：</em>
+		<em>1、应用ID至少包含两部分(也就是说至少有一个点,如 <s>com.example</s> )</em>
+		<em>2、每部分必须以字母开头</em>
+		<em>3、所有字符必须是 <q>字母</q>、<q>数字</q>、<q>下划线</q> [a-zA-Z0-9_]</em>
+		<em>4、app 的标识，一旦定义不能随意改变</em>
+		<em>5、如果使用了 webview, 请使用包名作为应用ID的前缀,否则,有可能会报错</em>
+		<b>applicationId</b> <s>"com.example.flutterapp"</s>
+		<em># API 级别</em>
+		<b>minSdkVersion</b> <s>21</s>		<em>// 指定最低的 API 级别</em>
+		<b>targetSdkVersion</b> <s>28</s>	<em>// 指定应用程序设计运行的 API 级别</em>
+		<em># 指定应用程序版本</em>
+		<em>versionCode flutterVersionCode.toInteger()</em> <em>指定应用程序版本号</em>
+		<em>versionName flutterVersionName</em>	<em>指定应用程序版本号字符串</em>
+	}
+	<em>// 签名证书</em>
+	<q>signingConfigs</q>{
+		<b>release</b> {
+			<b>keyAlias</b> <i>keystoreProperties</i>['<s>keyAlias</s>']
+			<b>keyPassword</b> <i>keystoreProperties</i>['<s>keyPassword</s>']
+			<b>storeFile</b> <q>file</q>(<i>keystoreProperties</i>['<s>storeFile</s>'])
+			<b>storePassword</b> <i>keystoreProperties</i>['<s>storePassword</s>']
+		}
+	}
+	<em>// 打包类型</em>
+	<q>buildTypes</q> {
+		<em>release</em> {
+			<em>// 调试签名</em>
+			<em>// signingConfig <i>signingConfigs</i>.debug</em>
+			<em>// 正式签名</em>
+			<b>signingConfig</b> <i>signingConfigs</i>.<s>release</s>
+			<em>开启混淆</em>
+			<b>minifyEnabled</b> <s>true</s>
+			<b>useProguard</b> <s>true</s>
+			<b>proguardFiles</b> <q>getDefaultProguardFile</q>('<s>proguard-android.txt</s>'), '<s>proguard-rules.pro</s>'
+		}
+	}
+}
+<em>//  </em>
+<u>flutter</u> {
+	<em>source '../..'</em>
+}
+<em>//  </em>
+<u>dependencies</u> {
+	<em>implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"</em>
+}

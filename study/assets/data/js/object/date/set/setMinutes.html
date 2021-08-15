@@ -1,0 +1,13 @@
+<u># 用法</u>
+<em>设置分钟</em>
+<u># 语法</u>
+<em>(new Date)</em>.<b>setMinutes</b>( <s>min</s>, <s>sec</s>, <s>millisec</s> )
+<em>(new Date)</em>.<b>setUTCMinutes</b>( <s>min</s>, <s>sec</s>, <s>millisec</s> )
+<u># 参数</u>
+<s>min</s>		: <em>必需。表示分钟的数值，介于 0 ~ 59 之间，以本地时间计（下同）</em>
+<s>sec</s>		: <em>可选。表示秒的数值，介于 0 ~ 59 之间</em>
+<s>millisec</s>	: <em>可选。表示毫秒的数值，介于 0 ~ 999之间</em>
+<u># 示例</u>
+<em>const date</em> = <q>new Date( )</q>
+<em>date</em>.<b>setMinutes</b>( <s>35</s> )
+<em>date</em>.<b>setUTCMinutes</b>( <s>35</s>, <s>1</s> )

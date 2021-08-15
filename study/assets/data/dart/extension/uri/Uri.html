@@ -1,0 +1,12 @@
+<u># 语法</u>
+<tt>Uri</tt> <em>u</em> = <b>Uri</b>(</em>
+	<tt>String</tt> <s>scheme</s>							:	<em>'https'</em>,
+	<tt>String</tt> <s>host</s>								:	<em>'test.com'</em>,
+	<tt>String</tt> <s>path</s>								:	<em>''</em>,
+	<tt>String</tt> <s>query</s>								:	<em>'age=10&name=20#fragmen'</em>,
+	<tt>String</tt> <s>userInfo</s>							:	<em>''</em>,
+	<tt>int</tt> <s>port</s>									:	<em>8080</em>,
+	<tt>String</tt> <s>fragment</s>							:	<em>'fragment'</em>,
+	<tt>Map&ltString String&gt</tt>  <s>queryParameters</s>		:	<em>{'age': '10', 'name': '20'}</em>,
+	<tt>Iterable&ltString String&gt</tt>  <s>pathSegments</s>		:	<em>['html5','index']</em>
+) = <em>https://test.com:8080/html5/index?age=10&name=20#fragment</em>

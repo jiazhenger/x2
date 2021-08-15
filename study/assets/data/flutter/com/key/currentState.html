@@ -1,0 +1,28 @@
+<em>final</em> <s>_key</s> = <i>GlobalKey</i>( ); 	<em>// 定义全局 key </em>
+<u>C</u>(
+	<b>key</b>: 	<s>_key</s>
+)
+<em># 获取当前 state</em>
+<em>var</em> <q>_state</q> = <s>_key</s>.<i>currentState</i>
+<em># 方法</em>
+<q>_state</q>. 		<i>validate( )</i>;						<em>// 表单验证是否通过 => </em><u>bool Function</u>
+			<i>save( )</i>;							<em>// 保存表单元素的值  => </em><u>void Function</u>
+			<i>reset( )</i>;							<em>// 重置表单  => </em></em><u>void Function</u>
+			<i>deactivate( )</i>;						<em>// 使表单无效  => </em><u>void Function</u>
+			<i>setState( ( ){ } )</i>;					<em>// 设置 state 值 => </em><u>void Function</u>
+			<i>build</i>( <u>context</u> );					<em>// 组件表示的部分用户界面  => </em><u>void Function(BuildContext context)</u>
+			<i>toDiagnosticsNode</i>( 				<em>// 返回由使用调试工具和DiagnostisNode.toStringDep的对象的调试表示形式</em><u> => DiagnosticsNode Function({String name,DiagnosticsTreeStyle style})</u>
+				<em>String</em> <i>name</i>: <em>'flutter'</em>,
+				<em>DiagnosticsTreeStyle</em> <i>style</i>:
+			);
+			<i>debugFillProperties</i>( <u>properties</u> ); 	<em>//  => </em><u>void Function(DiagnosticPropertiesBuilder properties)</u>
+			<em># 调用生命周期</em>
+			<i>initState( )</i>;
+			<i>didChangeDependencies( )</i>;
+			<i>didUpdateWidget</i>( <u>oldWidget</u> );
+			<i>reassemble( )</i>;					
+			<i>dispose( )</i>;						
+<em># 属性</em>		
+<em>Widget</em> v = <q>_state</q>.<i>widget</i> 			<em>//  返回控件</em>
+<em>BuildContext</em> v = <q>_state</q>.<i>context</i> 		<em>//  返回 context</em>
+<em>bool</em> v = <q>_state</q>.<i>mounted</i> 			<em>//  是否挂载</em>

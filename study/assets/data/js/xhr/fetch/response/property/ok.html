@@ -1,0 +1,12 @@
+<u># 用法</u>
+<em>Response 接口的只读属性 ok 包含一个布尔值，表明响应是否成功(状态码在 200-299 范围内)</em>
+<u># 语法</u>
+<em>const ok</em> = <s>response</s>.<b>ok</b>
+<u># 示例</u>
+<q>fetch</q>( ).<u>then</u>(<s>response</s> =>{
+	if(<s>response</s>.<b>ok</b>){
+		<em>// 响应成功</em>
+	}else{
+		<em>// 响应失败</em>
+	}
+} )

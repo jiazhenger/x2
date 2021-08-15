@@ -1,0 +1,21 @@
+<u># 用法</u>
+<em>1、创建渲染器对象</em>
+<em>2、左右边界的距离与上下边界的距离比值与画布的渲染窗口的宽高比例要一致，否则三维模型的显示效果会被单方向不等比例拉伸</em>
+<u># 语法</u>
+<em>const renderer</em> = <u>new</u> <q>Three</q>.<b>WebGLRenderer</b>(<s>parameters</s>)
+<u># 参数</u>
+<s>parameters</s> ：		<em>可选，一个对象</em>
+<u># parameters = </u>
+{
+	<s>canvas</s> : <u>document.querySelector('#canvas')</u>, 				<em>// 一个供渲染器绘制其输出的canvas 它和下面的domElement属性对应。 如果没有传这个参数，会创建一个新canvas</em>
+	<s>context</s> : <u>null</u>, 										<em>// 可用于将渲染器附加到已有的渲染环境(RenderingContext)中，默认 <q>null</q></em>
+	<s>precision</s> : <u>highp、mediump、lowp</u>, 						<em>// 着色器精度。默认 <q>highp</q></em>
+	<s>alpha</s> : <u>false、true</u>, 									<em>// canvas是否包含alpha (透明度)。默认 <q>false</q></em>
+	<s>premultipliedAlpha</s> : <u>true、false</u>, 						<em>//  renderer是否假设颜色有 premultiplied alpha，默认 <q>true</q></em>
+	<s>antialias</s> : <u>false、true</u>, 									<em>// 是否执行抗锯齿，默认 <q>false</q></em>
+	<s>stencil</s> : <u>true、false</u>, 									<em>// 绘图缓存是否有一个至少8位的模板缓存。 默认 <q>true</q></em>
+	<s>preserveDrawingBuffer</s> : <u>false、true</u>, 						<em>// 是否保留缓直到手动清除或被覆盖。默认 <q>false</q></em>
+	<s>powerPreference</s> : <u>default、high-performance、low-power</u>, 	<em>// 提示用户代理怎样的配置更适用于当前WebGL环境。默认为 <q>default</q></em>
+	<s>depth</s> : <u>true、false</u>, 									<em>// 绘图缓存是否有一个至少6位的深度缓存。默认为 <q>true</q></em>
+	<s>logarithmicDepthBuffer</s> : <u>false、true</u>, 					<em>// 是否使用对数深度缓存。如果要在单个场景中处理巨大的比例差异，就有必要使用。默认值为 <q>false</q></em>
+}

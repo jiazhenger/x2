@@ -1,0 +1,19 @@
+<u># 用法</u>
+<em>设置 class 样式</em>
+<u># 语法</u>
+<em>selection</em>.<b>classed</b>(<s>name</s>, <s>value</s>)
+<u># 参数</u>
+<s>name</s> ：<em>必需，className</em>（<u>字符串</u>）、<em>样式判断对象</em>（<u>对象字面量</u>）
+<s>value</s> ：<em>必需，true：添加、false：删除</em>（<u>布尔值</u>）
+<u># 示例</u>
+<em># 判断指定 className 是否存在，存在返回 true，不存在返回 false</em>
+<em>const bool</em> = <em>selection</em>.<b>classed</b>(<em>'fx'</em>)
+<em># 新增 className</em>
+<em>selection</em>.<b>classed</b>(<em>'fx'</em>, <q>true</q>)
+<em>selection</em>.<b>classed</b>(<em>'fx wh rel'</em>, <q>true</q>)
+<em># 移除 className</em>
+<em>selection</em>.<b>classed</b>(<em>'fx'</em>, <q>false</q>)
+<em>selection</em>.<b>classed</b>(<em>'fx wh rel'</em>, <q>false</q>)
+<em># 新增移除 className</em>
+<q>setObj</q>('<b>classed</b>') 							<em>// 重写 classed</em>
+<em>selection</em>.<b>classed</b>(<b>{</b> <em>fx:<q>true</q>, wh:<q>false</q>, 'abs_lt':<q>false</q></em> <b>}</b>)

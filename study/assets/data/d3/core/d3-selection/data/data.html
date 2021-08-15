@@ -1,0 +1,18 @@
+<u># 用法</u>
+<em>数据传递</em>
+<u># 语法</u>
+<em>selection</em>.<b>data</b>(<s>values</s>,<s>key</s>)
+<u># 参数</u>
+<s>value</s> ：<em>必需，一个数组</em>（<u>数组、函数</u>）
+<s>key</s> ：<em>可选，返回 key 值</em>（<u>函数</u>）
+<u># 函数 this 指向当前 document</u>
+<u># 示例</u>
+<em># 返回数据，有绑定的数据，返回绑定的数据，无绑定数据，返回 selectAll( ) 选择的全部节点个数的一个数组</em>
+<em>const arr</em> = <em>selection</em>.<b>data</b>( )
+<em># 添加数组</em>
+<em>selection</em>.<b>data</b>(<em>[ 0, 1, 2 ]</em>)
+<em>selection</em>.<b>data</b>(<em>[ 0, 1, 2 ]</em>, <u>(data,index)=> data</u>)
+<em># 函数添加数组</em>
+<em>selection</em>.<b>data</b>(<u>function</u>(<q>data</q>,<q>index</q>){
+	<u>return</u> <em>[ 0, 1, 2 ]</em>
+}, <u>d=>d</u>)

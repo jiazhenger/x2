@@ -1,0 +1,16 @@
+<u># 用法</u>
+<em>创建 pdf</em>
+<u># 语法</u>
+<em>const</em> <s>pdfDoc</s> = <em>printer</em>.<b>createPdfKitDocument</b>(<s>docDefinition</s>, <s>tableLayouts</s>)
+<u># 参数</u>
+<s>docDefinition</s>	: <em>必需。pdf 内容配置</em>
+<s>tableLayouts</s>	: <em>可选。layout 对象</em>
+<u># 示例</u>
+<em>const PdfPrinter= <em>require('pdfmake/src/printer')</em>
+<em>const printer = new PdfPrinter(fonts)</em>
+<em>const pdfDoc</em> = <em>printer</em>.<b>createPdfKitDocument</b>(<s>{ content:'' }</s>, <s>{ tableLayouts: { exampleLayout:{ } } }</s>)
+<em># 将生成的 pdf 存储到指定文件目录</em>
+<em>pdfDoc</em>.<q>pipe</q>(<u>fs.createWriteStream</u>(<em>path.join(__dirname, '../pdf/report.pdf')</em>)).<q>on</q>('<em>finish</em>', ( ) => {
+   
+})
+<em>pdfDoc</em>.<q>end( )</q> 	<em>// 结束创建</em>

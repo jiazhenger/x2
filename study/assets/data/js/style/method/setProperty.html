@@ -1,0 +1,15 @@
+<u># 用法</u>
+<em>用于设置一个新的 CSS 属性，同时也可以修改 CSS 声明块中已存在的属性</em>
+<u># 语法</u>
+<s>el.style</s>.<b>setProperty</b>(<s>propertyname</s>, <s>value</s>, <s>priority</s>)
+<u># 参数</u>
+<s>propertyname</s>: <em>必需。一个字符串，表示创建或修改的属性</em>
+<s>value</s> : <em>可选。新的属性值</em>
+<s>priority</s> : <em>可选。字符串，规定是否需要设置属性的优先级 important。值：</em>
+		<i>important</i> : <em></em>
+		<i>undefined</i> : <em></em>
+		<i>''</i> : <em></em>
+<u># 示例</u>
+<em>const style</em> = <u>document.styleSheets[0].rules[0]</u>.<i>style</i>
+<em>const style</em> = <u>document.querySelector('#id')</u>.<i>style</i>
+<em>style</em>.<b>setProperty</b>(<s>'color'</s>, <s>'red'</s>)

@@ -1,0 +1,9 @@
+<u># 用法</u>
+<em>如果使用，它包含阴影贴图的引用</em>
+<u># 语法</u>
+<em>renderer</em>.<b>shadowMap</b> = {
+	<s>enabled</s> 		: <u>false</u>, 			<em>// 在场景中使用阴影贴图</em>
+	<s>autoUpdate</s> 	: <u>false</u>,			<em>// 启用场景中的阴影自动更新</em>
+	<s>needsUpdate</s> 	: <u>false</u>,			<em>// 场景中的阴影贴图会在下次render调用时刷新</em>
+	<s>type</s> 		: <u>Three.PCFShadowMap、Three.BasicShadowMap、PCFSoftShadowMap</u> 		<em>// 定义阴影贴图类型 (未过滤, 关闭部分过滤, 关闭部分双线性过滤)</em>
+}

@@ -1,0 +1,20 @@
+<u># 用法</u>
+<em>当 readyState 属性改变时触发该事件</em>
+
+<u># readyState 语法</u>
+<em>const status</em> = <em>window</em>.<q>document</q>.<b>readyState</b>
+<u># readyState 值</u>
+<s>uninitialized</s>		: <em>还未开始载入</em>
+<s>loading</s>			: <em>载入中</em>
+<s>interactive</s>		: <em>已加载，文档与用户可以开始交互</em>
+<s>complete</s>		: <em> 载入完成</em>
+
+<u># onreadystatechange 语法</u>
+<em>document</em>.<b>onreadystatechange</b> = <u>function</u>( <em>e</em> ){
+	<em>const readyState</em> = <q>document</q>.<i>readyState</i>
+	<em>const readyState</em> = <u>this</u>.<i>readyState</i>
+}
+<em>document</em>.<q>addEventListener</q>('<b>readystatechange</b>', <em>e</em> => {
+	<em>const readyState</em> = <q>document</q>.<i>readyState</i>
+	<em>const readyState</em> = <u>this</u>.<i>readyState</i>
+})

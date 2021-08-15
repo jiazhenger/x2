@@ -1,0 +1,13 @@
+<u># 用法</u>
+<em>用于从数组的指定位置拷贝元素到数组的另一个指定位置中</em>
+<u># 语法</u>
+<em>const arr</em> = <em>arrayObject</em>.<b>copyWithin</b>(<s>target</s>, <s>start</s>, <s>end</s>)
+<u># 参数</u>
+<s>target</s>	: <em>必需。复制到指定目标索引位置</em>
+<s>start</s>	: <em>可选。元素复制的起始位置</em>
+<s>end</s>		: <em>可选。停止复制的索引位置 (默认为 array.length)。如果为负值，表示倒数</em>
+<u># 返回值</u>
+<em>返回一个新的数组</em>
+<u># 示例</u>
+<em>const arr</em> = <em>[ 1, 2, 3, 4, 5 ]</em>
+<em>const newArr</em> = <em>arr</em>.<b>copyWithin</b>(<s>3</s>, <s>0</s>, <s>2</s>) 		<em>// => [1, 2, 1, 2, 5]</em>

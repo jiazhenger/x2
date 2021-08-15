@@ -1,0 +1,17 @@
+<u># 用法</u>
+<em>用于移除由 attachEvent( ) 方法添加的事件句柄</em>
+<u># 语法</u>
+<q>window</q>.<b>detachEvent</b>(<s>event</s>, <s>function</s>)
+<q>document</q>.<b>detachEvent</b>(<s>event</s>, <s>function</s>)
+<q>document.body</q>.<b>detachEvent</b>(<s>event</s>, <s>function</s>)
+<q>document.getElementById( )</q>.<b>detachEvent</b>(<s>event</s>, <s>function</s>)
+<q>document.querySelector( )</q>.<b>detachEvent</b>(<s>event</s>, <s>function</s>)
+<u># 参数</u>
+<s>event</s>		: <em>必需。字符串，指定事件名</em>
+<s>function</s>		: <em>必需。指定要事件触发时执行的函数</em>
+<u># 兼容性</u>
+<i>ie8 -</i>
+<u># 示例</u>
+<em>const <s>fn</s> = function( ){	}</em>
+<em>document.body</em>.<q>attachEvent</q>('<s>click</s>', <s>fn</s>)
+<em>document.body</em>.<b>detachEvent</b>('<s>click</s>', <s>fn</s>)

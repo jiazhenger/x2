@@ -1,0 +1,24 @@
+<u># HTMLElement 属于 Node</u>
+<u># 判断是否为 html 元素</u>
+<em>const isElement</em> = <s>node</s> <q>instanceof</q> <b>HTMLElement</b>
+<em>const isElement</em> = 	( <u>typeof</u> <b>HTMLElement</b> === <em>'object'</em> )		<u>?</u>	( <s>node</s> <q>instanceof</q> <b>HTMLElement</b> )	<u>:</u>	( <u>typeof</u> <s>node</s> === <i>'object'</i> <em>&&</em> <s>node</s>.<q>nodeType</q> === <i>1</i> <em>&&</em> <u>typeof</u> <s>node</s>.<q>nodeName</q> === <i>'string'</i> )
+<u># 示例</u>
+<em>const bool</em>  = <s>document.body</s> <q>instanceof</q> <b>HTMLElement</b> 					<em>// => true</em>
+<em>const bool</em>  = <s>document.getElementById( )</s> <q>instanceof</q> <b>HTMLElement</b> 		<em>// => true</em>
+<em>const bool</em>  = <s>document.querySelector( )</s> <q>instanceof</q> <b>HTMLElement</b> 		<em>// => true</em>
+<em>const bool</em>  = <s>el.parentNode</s> <q>instanceof</q> <b>HTMLElement</b> 					<em>// => true</em>
+
+<u># 判断是否为具体的 html 元素</u>
+<em>const isDiv</em> = <s>node</s>.<b>constructor</b> === <b>HTMLDivElement</b>
+<em>const isDiv</em> = <s>node</s> <q>instanceof</q> <b>HTMLDivElement</b>
+<u># 示例</u>
+<em>const bool</em>  = <s>document.body</s> <q>instanceof</q> <b>HTMLBodyElement</b> 					<em>// => true</em>
+<em>const bool</em>  = <s>document.getElementById( )</s> <q>instanceof</q> <b>HTMLDivElement</b> 		<em>// => true</em>
+<em>const bool</em>  = <s>document.querySelector( )</s> <q>instanceof</q> <b>HTMLSpanElement</b> 		<em>// => true</em>
+
+<u># 判断是否为 HTML 元素对象列表</u>
+<em>const isHTMLCollection</em> = <s>node</s>.<b>constructor</b> === <b>HTMLCollection</b>
+<em>const isHTMLCollection</em> = <s>node</s> <q>instanceof</q> <b>HTMLCollection</b>
+<u># 示例</u>
+<em>const bool</em>  = <s>document.body.children</s> <q>instanceof</q> <b>HTMLCollection</b> 					<em>// => true</em>
+<em>const bool</em>  = <s>document.getElementsByClassName( )</s> <q>instanceof</q> <b>HTMLCollection</b> 		<em>// => true</em>

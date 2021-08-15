@@ -1,0 +1,13 @@
+<u># 用法</u>
+<em>清除</em>
+<u># 语法</u>
+<em>renderer</em>.<b>clear</b>(<s>color</s>, <s>depth</s>, <s>stencil</s>)
+<u># 参数</u>
+<s>color</s>	：<em>可选，如果设置, 颜色会被清除</em>（<u>Boolean</u>）
+<s>depth</s>	：<em>可选，如果设置, 深度缓存会被清除</em>（<u>Boolean</u>）
+<s>stencil</s>	：<em>可选，如果设置, 模板缓存会被清除</em>（<u>Boolean</u>）
+<u># 示例</u>
+<em>const renderer</em> = <q>new Three.WebGLRenderer( )</q>
+<em>renderer</em>.<b>clear</b>( <s>true</s>, <s>false</s>, <s>false</s> ) <em> === </em> <em>renderer</em>.<b>clearColor( )</b>
+<em>renderer</em>.<b>clear</b>( <s>false</s>, <s>true</s>, <s>false</s> ) <em> === </em> <em>renderer</em>.<b>Depth( )</b>
+<em>renderer</em>.<b>clear</b>( <s>false</s>, <s>false</s>, <s>true</s> ) <em> === </em> <em>renderer</em>.<b>Stencil( )</b>

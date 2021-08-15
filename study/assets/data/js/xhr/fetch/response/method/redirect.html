@@ -1,0 +1,11 @@
+<u># 用法</u>
+<em>返回一个可以重定向到指定URL的Response</em>
+<u># 语法</u>
+<em>const body</em> = <em>response</em>.<b>redirect</b>(<s>url</s>, <s>status</s>)
+<u># 参数</u>
+<s>url</s> : <em>必需。新响应来源的 URL</em>
+<s>status</s> : <em>必需。用于响应的可选的状态码(例如，302.)</em>
+<u># 示例</u>
+<q>fetch</q>( ).<u>then</u>(<em>response</em> => {
+	<em>response</em>.<b>redirect</b>(<s>'https://www.example.com'</s>, <s>302</s>)
+})

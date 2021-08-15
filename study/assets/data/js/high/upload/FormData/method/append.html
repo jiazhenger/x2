@@ -1,0 +1,14 @@
+<u># 用法</u>
+<em>向 FormData 中添加新的属性值，FormData 对应的属性值存在也不会覆盖原值，而是新增一个值，如果属性不存在则新增一项属性值</em>
+<u># 语法</u>
+<em>fd</em>.<b>append</b>(<s>name</s>, <s>value</s>)
+<u># 参数</u>
+<s>name</s>: <em>必需。包含的数据对应的表单名称</em>
+<s>value</s>: <em>必需。表单的值。可以是USVString 或 Blob (包括子类型，如 File)</em>
+<u># 添加一般参数</u>
+<em>const fd</em> = <q>new FormData( )</q>
+<em>fd</em>.<b>append</b>(<s>'name'</s>, <s>'javascript'</s>)
+<em>fd</em>.<b>append</b>(<s>'age'</s>, <s>'20'</s>)
+<u># 添加上传文件</u>
+<em>const fd</em> = <q>new FormData( )</q>
+<em>fd</em>.<b>append</b>(<s>'file'</s>, <u>e.target.files[0]</u>)

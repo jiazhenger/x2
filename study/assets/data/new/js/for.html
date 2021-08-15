@@ -1,0 +1,107 @@
+// 对象存
+<b><b>let</b></b> obj <b>=</b> <b><b>{</b></b> x<b> : </b>1<b>,</b> y<b> : </b>2 <b><b>}</b></b>
+obj<b>.</b>x <b>=</b> 3
+obj<b>['</b>y<b>']</b> <b>=</b> 4
+obj <b>=</b> <b>{</b> <b>...</b>obj<b>,</b> x<b> : </b>3<b>,</b> y<b> : </b>4 <b>}</b>
+
+// 对象取
+<b>const</b> obj <b>=</b> <b>{</b> a<b> : </b>1<b>,</b> b<b> : </b>2 <b>}</b>
+<b>var</b> a <b>=</b> obj.a
+<b>var</b> b <b>=</b> obj<b>[</b>b<b>]</b>
+<b>const</b> <b>{</b> a<b>,</b> b <b>}</b> <b>=</b> obj
+
+// 对象合并
+<b>const</b> a <b>=</b> <b>{</b> x<b> : </b>1 <b>}</b>
+<b>const</b> y <b>=</b> <b>{</b> y<b> : </b>2 <b>}</b>
+<b>const</b> c <b>=</b> <b>{</b> <b>...</b>a<b>,</b> <b>...</b>b <b>}</b>
+
+// 对象简写
+<b>var</b> a <b>=</b> 1
+<b>var</b> b <b>=</b> 2
+<b>const</b> obj <b>=</b> <b>{</b> a<b>,</b> b <b>}</b> <b>=</b> <b>{</b> a<b> : </b>a<b>,</b> b<b> : </b>b <b>}</b>
+
+// 数组存
+<b>let</b> arr <b>=</b> <b>[</b> 1<b>,</b> 2<b>,</b> 3 <b>]</b>
+arr<b>[</b>0<b>]</b> <b>=</b> 2
+arr<b>[</b>3<b>]</b> <b>=</b> 4
+arr <b>=</b> <b>[</b> <b>...</b>arr<b>,</b> 4<b>]</b>
+
+// 数组取
+<b>let</b> arr <b>=</b> <b>[</b> 1<b>,</b> 2 <b>]</b>
+<b>let</b> a <b>=</b> arr<b>[</b>0<b>]</b>
+<b>let</b> b <b>=</b> arr<b>[</b>1<b>]</b>
+
+// 数组合并
+<b>const</b> a <b>=</b> <b>[</b> 1 <b>]</b>
+<b>const</b> b <b>=</b> <b>[</b> 2 <b>]</b>
+<b>const</b> c <b>=</b> <b>[</b> <b>...</b>a<b>,</b> <b>...</b>b <b>]</b>
+
+# 对象循环
+<b>const</b> obj <b>=</b> <b>{</b> x<b> : </b>1<b>,</b> y<b> : </b>2 <b>}</b>
+<b>for</b><b>(</b><b>var</b> i <b>in</b> obj<b>)</b><b>{</b>
+	console.log<b>(</b>i<b>)</b>
+	console.log<b>(</b>obj<b>[</b>i<b>]</b><b>)</b>
+<b>}</b>
+
+# 数组循环
+// 基本循环
+<b>const</b> arr <b>=</b> <b>[</b> 5<b>,</b> 6<b>,</b> 7 <b>]</b>
+<b>for</b><b>(</b><b>var</b> i<b>=</b>0<b>;</b> i<b>&lt;</b>arr.<b>length</b><b>;</b> i++<b>)</b><b>{</b>
+	console.log<b>(</b>arr<b>[</b>i<b>]</b><b>)</b>
+<b>}</b>
+
+// 循环索引
+<b>const</b> arr <b>=</b> <b>[</b> 5<b>,</b> 6<b>,</b> 7 <b>]</b>
+<b>for</b><b>(</b><b>let</b> i <b>in</b> arr<b>)</b><b>{</b>
+	console.log<b>(</b>arr<b>[</b>i<b>]</b><b>)</b>
+<b>}</b>
+
+// 循环值
+<b>const</b> arr <b>=</b> <b>[</b> 5<b>,</b> 6<b>,</b> 7 <b>]</b>
+<b>for</b><b>(</b><b>let</b> v <b>b</b> arr<b>)</b><b>{</b>
+	console.log<b>(</b>v<b>)</b>
+<b>}</b>
+
+// 仅循环
+<b>const</b> arr <b>=</b> <b>[</b> 5<b>,</b> 6<b>,</b> 7 <b>]</b>
+arr.<b>forEach<b>(</b><b>function</b><b>(</b><s>value</s><b>,</b> <s>index</s><b>)</b><b>{</b>
+	console.log<b>(</b><s>value</s><b>)</b>
+	console.log<b>(</b><s>index</s><b>)</b>
+<b>}</b><b>)</b>
+// 循环返回新数组
+<b>const</b> arr <b>=</b> <b>[</b> 5<b>,</b> 6<b>,</b> 7 <b>]</b>
+arr <b>=</b> arr.<b>map</b><b>(</b><b>(</b> <s>value</s><b>,</b> <s>index</s><b>)</b> <b>=></b> <b>(</b><b>{</b> <s>value</s> + 10 <b>}</b><b>)</b> <b>)</b>
+
+// 过滤返回新数组
+<b>const</b> arr <b>=</b> <b>[</b> 5<b>,</b> 6<b>,</b> 7 <b>]</b>
+arr <b>=</b> arr.<b>filter</b><b>(</b> <b>(</b><s>value</s><b>,</b> <s>index</s><b>)</b> <b>=></b> <s>value</s> >6 <b>)</b>
+
+// 一个为真，返回 true
+<b>const</b> arr <b>=</b> <b>[</b> 5<b>,</b> 6<b>,</b> 7 <b>]</b>
+<b>const</b> bool <b>=</b> arr.<b>some</b><b>(</b> <b>(</b><s>value</s><b>,</b> <s>index</s><b>)</b> <b>=></b> <s>value</s> <b>=</b><b>=</b><b>=</b> 5 <b>)</b>
+
+// 全部为真，返回 true
+<b>const</b> arr <b>=</b> <b>[</b> 5<b>,</b> 6<b>,</b> 7 <b>]</b>
+<b>const</b> bool <b>=</b> arr.<b>every</b><b>(</b> <b>(</b><s>value</s><b>,</b> <s>index</s><b>)</b> <b>=></b> <s>value</s> &gt<b>;</b> 8 <b>)</b>
+
+// 返回符合条件的第一个元素
+<b>const</b> arr <b>=</b> <b>[</b> 5<b>,</b> 6<b>,</b> 7 <b>]</b>
+<b>const</b> rows <b>=</b> arr.<b>find</b><b>(</b> <b>(</b><s>value</s><b>,</b> <s>index</s><b>)</b> <b>=></b> <s>value</s> <b>=</b><b>=</b><b>=</b> 6 <b>)</b>
+
+// 返回符合条件的第一个元素的索引值
+<b>const</b> arr <b>=</b> <b>[</b> 5<b>,</b> 6<b>,</b> 7 <b>]</b>
+<b>const</b> index <b>=</b> arr.<b>findIndex</b><b>(</b> <b>(</b><s>value</s><b>,</b> <s>index</s><b>)</b> <b>=></b> <s>value</s> <b>=</b><b>=</b><b>=</b> 7 <b>)</b>
+
+// 将数组元素计算为一个值，求和
+<b>const</b> arr <b>=</b> <b>[</b> 5<b>,</b> 6<b>,</b> 7 <b>]</b>
+<b>const</b> num <b>=</b> arr.<b>reduce</b><b>(</b> funciton<b>(</b><s>total</s><b>,</b> <s>value</s><b>,</b> <s>index</s><b>)</b><b>{</b>
+	return total + <s>value</s>
+<b>}</b><b>,</b> 10 <b>)</b>
+
+// 条件循环 1
+<b>let</b> index <b>=</b> 0
+<b>while(</b> index &lt; 5<b>)</b><b>{</b> index++ <b>}</b>
+
+// 条件循环 2
+<b>let</b> index <b>=</b> 0
+<b>do{</b> index ++ <b>}</b> <b>while(</b> index &lt; 5 <b>)</b>

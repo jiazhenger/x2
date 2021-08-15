@@ -1,0 +1,21 @@
+<em># 扩展实现对象传值</em>
+<u>function</u> <s>setObj</s>( <b>attr</b> ){
+	<em>const</em> <u>old</u> = <q>d3.selection.prototype</q>[<b>attr</b>]
+	<q>d3.selection.prototype</q>[<b>attr</b>] = ( ) => {
+		if (arguments.length === 1) {
+			if ({}.toString.call(arguments[0]) === '[object Object]') {
+				for (let item in arguments[0]) { <u>old</u>.call(this, item, arguments[0][item]) }	
+				return this
+			} else {
+				return <u>old</u>.call(this, arguments[0])
+			}
+		} else if (arguments.length === 2) {
+			return <u>old</u>.call(this, arguments[0], arguments[1])
+		}
+	}
+}
+<em># 重写 attr, style, classed, property</em>
+<s>setObj('<b>attr</b>')</s> 			<em>// <q>d3</q>.<b>attr</b>({ id:'box' })</em>
+<s>setObj('<b>style</b>')</s> 		<em>// <q>d3</q>.<b>style</b>({ color:'red' })</em>
+<s>setObj('<b>classed</b>')</s> 		<em>// <q>d3</q>.<b>classed</b>({ fx:true })</em>
+<s>setObj('<b>property</b>')</s> 	<em>// <q>d3</q>.<b>property</b>({ checked:true, disabled:true })</em>

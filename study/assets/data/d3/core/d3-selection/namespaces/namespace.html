@@ -1,0 +1,11 @@
+<u># 用法</u>
+<em>1、限定指定的命名，可能不包含命名空间前缀</em>
+<em>2、如果name包含了冒号(:)，则冒号之前的子串被作为命名空间前缀注册到 d3.namespaces</em>
+<em>3、返回一个包含 space 和 local 属性的对象用以描述完整的命名空间 URL 和 local 名称</em>
+<u># 语法</u>
+<q>d3</q>.<b>namespace</b>(<s>name</s>)
+<u># 参数</u>
+<s>name</s> ：<em>必需，命名空间名称</em>（<u>node</u>）
+<u># 示例</u>
+<em>const r</em> = <q>d3</q>.<b>namespace</b>(<em>'svg:text'</em>) 			<em>// {space: "http://www.w3.org/2000/svg", local: "text"}</em>
+<em>const r</em> = <q>d3</q>.<b>namespace</b>(<em>'xlink:href'</em>) 		<em>// {space: "http://www.w3.org/1999/xlink", local: "href"}</em>

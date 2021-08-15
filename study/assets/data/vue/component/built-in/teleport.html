@@ -1,0 +1,19 @@
+<em># 将组件或模板添加到 body 后面</em>
+&lt;<b>teleport</b> 
+	<s>to</s>			= '<u>body</u>' 		<em>// 目标 dom 容器</em>
+	<s>:disabled</s>		= '<em>false</em>'		<em>// <u>true</u>：不添加到目标容器，直接显示在声明位置；<u>false</u>: 默认，添加到目标容器</em>
+'&gt;
+	<em>&lt;div&gt;&lt;/div&gt;</em>
+	<em>&lt;my-component /&gt;</em>
+&lt;/<b>teleport</b>&gt;
+
+<em># 添加组件或模板到目标容器</em>
+&lt;<b>teleport</b> <s>to</s>='<u>#id</u>' '&gt;<em>&lt;div&gt;&lt;/div&gt;</em>&lt;/<b>teleport</b>&gt;
+&lt;<b>teleport</b> <s>to</s>='<u>.calss</u>' '&gt;<em>&lt;div&gt;&lt;/div&gt;</em>&lt;/<b>teleport</b>&gt;
+&lt;<b>teleport</b> <s>to</s>='<u>html</u>' '&gt;<em>&lt;my-component /&gt;</em>&lt;/<b>teleport</b>&gt;
+<em>&lt;div id='</em><u>id</u><em>' class='</em><u>class</u><em>' &gt;&lt;/div&gt;</em>
+
+<em># 添加多个组件或模板到目标容器</em>
+&lt;<b>teleport</b> <s>to</s>='<u>#name</u>' '&gt;<em>&lt;div&gt;&lt;/div&gt;</em>&lt;/<b>teleport</b>&gt;
+&lt;<b>teleport</b> <s>to</s>='<u>#name</u>' '&gt;<em>&lt;my-component /&gt;</em>&lt;/<b>teleport</b>&gt;
+<em>&lt;div id='</em><u>name</u><em>' &gt;&lt;/div&gt;</em>

@@ -1,0 +1,17 @@
+<u># 用法</u>
+<em>1、返回指定 node 的局部变量</em>
+<em>2、如果 node 没有被定义局部变量，则返回最近的定义了局部变量的祖先节点的局部变量</em>
+<em>3、如果都没有定义的话返回 undefined</em>
+<u># 语法</u>
+<em>local</em>.<b>get</b>(<s>node</s>)
+<u># 参数</u>
+<s>node</s> ：<em>必需，node 节点</em>（<u>node</u>）
+<u># 示例</u>
+<em>const</em>  <u>local</u> = <q>d3</q>.<q>local( )</q>
+<em># 与 selection.each 结合使用：</em>
+<q>d3</q>.<q>select(<em>'p'</em>)</q>.<q>data(<em>[ 1 ]</em>)</q>.<q>each</q>(<u>function</u>(<s>d</s>) { 
+	<u>local</u>.<b>set</b>(<u>this</u>, <s>d</s>) 
+	<em>rs</em> = <u>local</u>.<b>get</b>(<u>this</u>)  		<em>// => 1</em>
+})
+<em># 直接获取 node</em>
+<em>const r</em> = <u>local</u>.<b>get</b>(<u>document.querySelector</u>(<em>'#box'</em>))

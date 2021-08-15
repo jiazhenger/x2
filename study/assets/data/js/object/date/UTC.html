@@ -1,0 +1,15 @@
+<u># 用法</u>
+<em>根据世界时返回 1970 年 1 月 1 日 到指定日期的毫秒数</em>
+<u># 语法</u>
+<em>const time</em> = <b>Date.UTC</b>( <s>year</s>, <s>month</s>, <s>day</s>, <s>hours</s>, <s>minutes</s>, <s>seconds</s>, <s>ms</s>)	<em>// 年、月、日、时、分、秒、毫秒</em>
+<u># 参数</u>
+<s>year</s>: <em>必需。表示年份的四位数字</em>
+<s>month</s>: <em>必需。表示月份的整数，介于 0 ~ 11。</em>
+<s>day</s>: <em>必需。表示日期的整数，介于 1 ~ 31</em>
+<s>hours</s>: <em>可选。表示小时的整数，介于 0 ~ 23</em>
+<s>minutes</s>: <em>可选。表示分钟的整数，介于 0 ~ 59</em>
+<s>seconds</s>: <em>可选。表示秒的整数，介于 0 ~ 59</em>
+<s>ms</s>: <em>可选。表示毫秒的整数，介于 0 ~ 999</em>
+<u># 示例</u>
+<em>const time</em> = <b>Date.UTC</b>( <s>2020</s>, <s>6</s>, <s>17</s>, <s>0</s>, <s>15</s>, <s>20</s>, <s>30</s>)
+<em>const time</em> = <b>Date.UTC</b>( <s>'2020'</s>, <s>'6'</s>, <s>'17'</s>, <s>'0'</s>, <s>'15'</s>, <s>'20'</s>, <s>'30'</s>)

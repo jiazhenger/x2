@@ -1,0 +1,17 @@
+<u># 用法</u>
+<em>对指定的数组执行线性扫描, 根据指定的比较器返回最小元素的索引. 如果给定的数组中没有可比较的元素 ( 比如比较时返回 NaN ) 则返回 undefined. 如果没有指定 comparator 则默认为 ascending(升序)</em>
+<u># 语法</u>
+<q>d3</q>.<b>scan</b>(<s>arry</s>,  <s>comparator</s>)
+<u># 参数</u>
+<s>array</s> ： <em>必需，数组</em>
+<s>comparator</s> ： <em>可选，对比函数</em>
+<u># 示例</u>
+<em># 默认对比</em>
+<em>const r</em> = <q>d3</q>.<b>scan</b>(<em>[ ]</em>) 				<em>// => undefined</em>
+<em>const r</em> = <q>d3</q>.<b>scan</b>(<em>[ 1, 2 ]</em>) 			<em>// => 0</em>
+<em>const r</em> = <q>d3</q>.<b>scan</b>(<em>[ 1, 2 ]</em>) 			<em>// => 1</em>
+<em>const r</em> = <q>d3</q>.<b>scan</b>(<em>[ 2, 2]</em>) 			<em>// => 0</em>
+<em># 自定义</em>
+<em>const r</em> = <q>d3</q>.<b>scan</b>(<em>[ 2, 1]</em>, <u>function</u>(<s>a/s>, <s>b</s>){ 			<em>// => 1</em>
+	<u>return</u> <s>a</s> - <s>b</s>
+})

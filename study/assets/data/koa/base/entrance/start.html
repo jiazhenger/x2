@@ -1,0 +1,11 @@
+<em>const</em> <b>Koa</b> = <u>require('koa')</u>		<em>//</em> <u>npm i koa--only=dev</u>
+<em>const</em> <s>app</s> = <b>new Koa( )</b>
+<em># 输出内容</em>
+<s>app</s>.<i>use</i>( <em>async</em> <u>ctx</u> => {
+	<u>ctx</u>.<i>body</i> = <em>'Hello Koa'</em> 					<em>// 直接输出内容</em>
+	<u>ctx</u>.<i>response.body</i> = <em>'Hello Koa'</em> 			<em>// api 输出内容</em>
+})
+<em># 启用 HTTP 服务</em>
+<s>app</s>.<i>listen</i>(<em>3005</em>, ( )=>{ 			<em>// 启用服务成功后执行</em>
+	<em>console.log('localhost:',3005)</em>
+})

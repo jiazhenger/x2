@@ -1,0 +1,16 @@
+<em>&lt;template&gt;&lt;button</em> <s>@click</s><em>='</em><u>run</u><em>'&gt;{{</em> <u>obj.x</u> <em>}}&lt;/button&gt;</em><em>&lt;/template&gt;</em>
+
+<em>&lt;script&gt;</em>
+	<em>import</em> { <b>ref</b> } <em>from 'vue'</em>
+	<em>export default</em> {
+		<i>setup( )</i>{
+			<em>const</em> <u>foo</u> = <b>ref</b>( <em>0</em> ) 					<em>// 声明一个简单响应值</em>
+			<em>const</em> <u>obj</u> = <b>ref</b>( <em>{ x: { m:{ n:1 } } }</em> ) 			<em>// 声明一个复杂响应值</em>
+			<em>const</em> <u>run</u> = ( ) => { 					<em>// 声明响应事件</em>
+				<u>foo</u>.<s>value</s> <em>++</em>						<em>// 动态改变响应值</em>
+				<u>obj</u>.<s>value</s>.<em>x.m.n ++</em>					<em>// 动态改变响应值</em>	
+			} 		
+			<em>return</em> { <u>foo</u>, <u>count</u>, <u>run</u> } 				<em>// 暴露给模板使用的变量或方法</em>
+		}
+	}
+<em>&lt;/script&gt;</em>

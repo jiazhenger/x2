@@ -1,0 +1,14 @@
+<em>import</em> { <b>defineAsyncComponent</b>  } <em>from 'vue'</em>
+
+<em>export default</em>{
+	<i>components</i>: {
+		<u>Header</u> : <b>defineAsyncComponent</b>( <em>( )=>import('/src/components/header.vue')</em> ),
+		<u>Header</u> : <b>defineAsyncComponent</b>({
+			<s>loader</s>				: <em>( )=>import('/src/components/header.vue')</em>,
+			<s>delay</s>				: <em>1000</em>,					<em>// 延迟加载时间</em>
+			<s>timeout</s>				: <em>3000</em>,					<em>// 超时时间</em>
+			<s>errorComponent</s>		: <em>ErrorComponent</em>,			<em>// 出错时显示组件</em>
+			<s>loadingComponent</s>	: <em>LoadingComponent</em>		<em>// 加载时显示组件</em>
+		})
+	}
+}
