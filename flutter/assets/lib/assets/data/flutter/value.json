@@ -1,0 +1,463 @@
+[
+    {
+        "name": "Color",
+        "title": "颜色值",
+        "children": [
+            {
+                "name": "Colors",
+                "title": "颜色常量",
+                "children": [
+                    { "name": "Colors.x", "title": "颜色常量", "path": "/Colors" },
+                    { "name": "CupertinoColors.x", "title": "颜色常量", "path": "/CupertinoColors" }
+                ]
+            },
+            {
+                "name": "Color",
+                "title": "自定义颜色",
+                "children": [
+                    { "name": "Color", "title": "十六进制颜色"},
+                    { "name": "Color.fromRGBO", "title": "RGBO 颜色", "path": "/ColorFromRGBO" },
+                    { "name": "Color.fromARGB", "title": "ARGB 颜色", "path": "/ColorFromARGB" },
+                    { "name": "Color.x", "title": "颜色属性及方法", "path": "/ColorX" }
+                ]
+            },
+            { "name": "ColorScheme", "title": "颜色组合" }
+        ]
+    },
+    {
+        "name": "IconData",
+        "title": "图标",
+        "children": [
+            { "name": "Icons.x", "title": "图标常量", "path": "/Icons", "x": 1 },
+            { "name": "CupertinoIcons", "title": "IOS 图标常量", "path": "/CupertinoIcons" }
+        ]
+    },
+    {
+        "name": "Date",
+        "title": "日期值",
+        "children": [
+            { "name": "DateTime", "title": "日期" },
+            { "name": "TimeOfDay", "title": "时间" },
+            { "name": "Duration", "title": "时间段" }
+        ]
+    },
+    {
+        "name": "Router",
+        "title": "路由值",
+        "children": [
+            {
+                "name": "Route<dynamic>",
+                "title": "构建页面",
+                "children": [
+                    { "name": "MaterialPageRoute", "title": "动态创建页面" },
+                    { "name": "PageRouteBuilder", "title": "页面构造器" }
+                ]
+            },
+            { "name": "RouteSettings", "title": "路由配置" }
+        ]
+    },
+    {
+        "name": "Theme",
+        "title": "主题值",
+        "children": [
+            { "name": "AppBarTheme", "title": "AppBar 主题" },
+            { "name": "BottomAppBarTheme", "title": "app 底部导航主题" },
+            { "name": "TextTheme", "title": "文本主题" },
+            { "name": "DialogTheme(", "title": "对话框主题" },
+            { "name": "InputDecorationTheme", "title": "输入框装饰主题" },
+            { "name": "TabBarTheme", "title": "选项栏主题" },
+            { "name": "CardTheme", "title": "卡片主题"},
+            { "name": "PageTransitionsTheme", "title": "页面转场动画主题" }
+        ]
+    },
+    {
+        "name": "ThemeData",
+        "title": "主题数据值",
+        "children": [
+            {
+                "name": "ThemeData",
+                "title": "全局主题数据",
+                "children": [
+                    { "name": "ThemeData", "title": "主题数据"},
+                    { "name": "ThemeData.row", "title": "主题数据", "path": "/ThemeDataRow" },
+                    { "name": "ThemeData.x", "title": "主题数据", "path": "/ThemeDataX" }
+                ]
+            },
+            {
+                "name": "Form",
+                "title": "表单主题数据",
+                "children": [
+                    { "name": "CheckboxThemeData", "title": "多选框主题数据" },
+                    { "name": "RadioThemeData", "title": "单选框主题数据" },
+                    { "name": "SwitchThemeData", "title": "切换框主题数据" },
+                    { "name": "TimePickerThemeData", "title": "时间选择器主题数据" },
+                    { "name": "SliderThemeData", "title": "滑动主题数据" }
+                ]
+            },
+            {
+                "name": "IOS",
+                "title": "IOS 主题数据",
+                "children": [
+                    { "name": "CupertinoThemeData", "title": "IOS 主题数据" },
+                    { "name": "CupertinoTextThemeData", "title": "IOS 文本主题数据" },
+                    { "name": "CupertinoIconThemeData", "title": "IOS 图标主题数据" },
+                    { "name": "NoDefaultCupertinoThemeData", "title": "IOS 导航扶手主题数据" }
+                ]
+            },
+            {
+                "name": "Button",
+                "title": "按钮主题数据",
+                "children": [
+                    { "name": "ButtonBarThemeData", "title": "按钮组主题数据" },
+                    { "name": "TextButtonThemeData", "title": "文本按钮主题数据"  },
+                    { "name": "FloatingActionButtonThemeData", "title": "浮动按钮组主题数据" },
+                    { "name": "ElevatedButtonThemeData", "title": "阴影按钮主题数据" },
+                    { "name": "OutlinedButtonThemeData", "title": "镂空按钮主题数据"}
+                ]
+            },
+            {
+                "name": "Popup",
+                "title": "弹窗主题数据",
+                "children": [
+                    { "name": "PopupMenuThemeData", "title": "弹窗菜单主题数据"},
+                    { "name": "SnackBarThemeData", "title": "弹窗小提示主题数据" },
+                    { "name": "BottomSheetThemeData", "title": "下滑弹窗主题数据" }
+                ]
+            },
+            {
+                "name": "Navigation",
+                "title": "导航主题数据",
+                "children": [
+                    { "name": "BottomNavigationBarThemeData", "title": "底部导航按钮主题数据" },
+                    { "name": "NavigationRailThemeData", "title": "导航扶手主题数据"}
+                ]
+            },
+            { "name": "IconThemeData", "title": "图标主题" },
+            { "name": "ChipThemeData", "title": "碎片主题数据" },
+            { "name": "DividerThemeData", "title": "分割线主题数据" },
+            { "name": "TooltipThemeData", "title": "工具提示主题数据" },
+            { "name": "DataTableThemeData", "title": "数据表格主题数据" },
+            { "name": "MaterialBannerThemeData", "title": "banner 主题数据"},
+            { "name": "TextSelectionThemeData", "title": "文本选中主题数据" },
+            {
+                "name": "Fun",
+                "title": "相关功能",
+                "children": [
+                    { "name": "Typography", "title": "文本主题排版"}
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Style",
+        "title": "样式值",
+        "children": [
+            {
+                "name": "Text", "title": "文本样式",
+                "children": [
+                    { "name": "TextStyle", "title": "文本样式" },
+                    { "name": "StrutStyle", "title": "支撑样式" },
+                    { "name": "TextHeightBehavior", "title": "文本高度行为" },
+                    { "name": "FontFeature", "title": "字体特性" }
+                ]
+            },
+            {
+                "name": "Offset", "title": "偏移",
+                "children": [
+                    { "name": "EdgeInsets", "title": "边缘" },
+                    { "name": "EdgeInsetsDirectional", "title": "边缘方向" },
+                    { "name": "Offset", "title": "偏移" },
+                    { "name": "ViewportOffset", "title": "视图偏移" }
+                ]
+            },
+            {
+                "name": "Alignment", "title": "对齐",
+                "children": [
+                    { "name": "Alignment", "title": "对齐" },
+                    { "name": "FractionalOffset", "title": "对齐" },
+                    { "name": "AlignmentDirectional", "title": "对齐"}
+                ]
+            },
+            {
+                "name": "Shadow", "title": "阴影",
+                "children": [
+                    { "name": "Shadow", "title": "阴影" },
+                    { "name": "BoxShadow", "title": "盒子阴影" }
+                ]
+            },
+            {
+                "name": "Border", "title": "边框",
+                "children": [
+                    { "name": "BorderSide", "title": "单边样式" },
+                    { "name": "Border", "title": "边框" },
+                    { "name": "InputBorder", "title": "输入框边框" },
+                    { "name": "TableBorder", "title": "表格边框" },
+                    { "name": "ShapeBorder", "title": "形状边框" }
+                ]
+            },
+            {
+                "name": "Radius", "title": "圆角",
+                "children": [
+                    { "name": "BorderRadius", "title": "圆角" },
+                    { "name": "Radius", "title": "圆角值" }
+                ]
+            },
+            {
+                "name": "Decoration", "title": "装饰",
+                "children": [
+                    { "name": "BoxDecoration", "title": "盒子装饰" },
+                    { "name": "ShapeDecoration", "title": "形状装饰" },
+                    { "name": "UnderlineTabIndicator", "title": "下划线装饰" }
+                ]
+            },
+            {
+                "name": "Gradient", "title": "渐变",
+                "children": [
+                    { "name": "LinearGradient", "title": "线性渐变", "path": "/LinearGradient" },
+                    { "name": "RadialGradient", "title": "扫描式渐变", "path": "/RadialGradient" },
+                    { "name": "SweepGradient", "title": "环形渲染", "path": "/SweepGradient" }
+                ]
+            },
+            {
+                "name": "Filter", "title": "滤镜",
+                "children": [
+                    { "name": "MaskFilter", "title": "遮罩滤镜", "path": "/MaskFilter" },
+                    { "name": "ColorFilter", "title": "颜色滤镜", "path": "/ColorFilter" },
+                    { "name": "ImageFilter", "title": "图片滤镜", "path": "/ImageFilter" }
+                ]
+            },
+            {
+                "name": "Size", "title": "尺寸",
+                "children": [
+                    { "name": "Size", "title": "限制尺寸", "path": "/Size" },
+                    { "name": "BoxConstraints", "title": "限制尺寸", "path": "/BoxConstraints" }
+                ]
+            },
+            {
+                "name": "Matrix", "title": "矩阵",
+                "children": [
+                    { "name": "Matrix4", "title": "矩阵" },
+                    { "name": "rotation", "title": "旋转"},
+                    { "name": "scale", "title": "缩放" },
+                    { "name": "translation", "title": "位移"},
+                    { "name": "skew", "title": "扭曲" },
+                    { "name": "solve", "title": "缩放" }
+                ]
+            },
+            {
+                "name": "Text", "title": "文本",
+                "children": [
+                    { "name": "TextEditingValue", "title": "文本框值" },
+                    { "name": "TextRange", "title": "文本范围" },
+                    { "name": "TextSelection", "title": "文本选择" },
+                    { "name": "TextPosition", "title": "文本位置" }
+                ]
+            },
+            {
+                "name": "Shape", "title": "形状",
+                "children": [
+                    { "name": "SliderTrackShape", "title": "滑动轨道形状" },
+                    { "name": "RangeSliderValueIndicatorShape", "title": "指示器形状" },
+                    { "name": "RangeSliderThumbShape", "title": "滑动块形状" },
+                    { "name": "RangeSliderTrackShape", "title": "滑动轨道形状" },
+                    { "name": "RangeSliderTickMarkShape", "title": "刻度线形状"},
+                    { "name": "NotchedShape", "title": "锯齿形状" }
+                ]
+            },
+            {
+                "name": "Vector", "title": "Vector",
+                "children": [
+                    { "name": "Vector2", "title": "" },
+                    { "name": "Vector3", "title": ""},
+                    { "name": "Vector4", "title": "" },
+                    { "name": "Quaternion", "title": "" }
+                ]
+            },
+            { "name": "ButtonStyle", "title":"按钮样式" }
+        ]
+    },
+    {
+        "name": "Image",
+        "title": "图片值",
+        "children": [
+            { "name": "AssetImage", "title": "引入本地图片" },
+            { "name": "NetworkImage", "title": "引入网络图片" },
+            { "name": "DecorationImage", "title": "装饰图片" }
+        ]
+    },
+    {
+        "name": "Animation",
+        "title": "动画值",
+        "children": [
+            { "name": "AnimationController", "title": "动画控制器" },
+            { "name": "CurvedAnimation", "title": "曲线动画" },
+            { "name": "AlwaysStoppedAnimation", "title": "总是停止动画" },
+            {
+                "name": "Curves",
+                "title": "动画过渡",
+                "children": [
+                    { "name": "Curves.x", "title": "动画效果", "path": "/Curves" },
+                    { "name": "Interval", "title": "动画效果" }
+                ]
+            },
+            {
+                "name": "Tween",
+                "title": "补间动画",
+                "children": [
+                    { "name": "Tween", "title": "数字渐变" },
+                    { "name": "ColorTween", "title": "颜色渐变" },
+                    { "name": "EdgeInsetsTween", "title": "位移" },
+                    { "name": "BorderRadiusTween", "title": "方形变圆" },
+                    { "name": "AlignmentGeometryTween", "title": "对齐变化" },
+                    { "name": "AlignmentTween", "title": "对齐变化" },
+                    { "name": "BorderTween", "title": "边框变化" },
+                    { "name": "DecorationTween", "title": "装饰变化" },
+                    { "name": "RelativeRectTween", "title": "" },
+                    { "name": "BoxConstraintsTween", "title": "限制变化" },
+                    { "name": "ConstantTween", "title": "常量变化" },
+                    { "name": "CurveTween", "title": "曲线变化" },
+                    { "name": "FractionalOffsetTween", "title": "偏移变化" },
+                    { "name": "IntTween", "title": "整数变化" },
+                    { "name": "MaterialPointArcTween", "title": "" },
+                    { "name": "MaterialRectArcTween", "title": "" },
+                    { "name": "MaterialRectCenterArcTween", "title": "" },
+                    { "name": "RectTween", "title": "" },
+                    { "name": "ReverseTween", "title": "" },
+                    { "name": "ShapeBorderTween", "title": "形状变化" },
+                    { "name": "SizeTween", "title": "尺寸变化" },
+                    { "name": "StepTween", "title": "步骤变化" },
+                    { "name": "TextStyleTween", "title": "文本样式" },
+                    { "name": "ThemeDataTween", "title": "主题变化" },
+                    { "name": "Matrix4Tween", "title": "矩阵变化" },
+                    { "name": "Matrix4Tween", "title": "" }
+                ]
+            },
+            {
+                "name": "AnimatedWidget",
+                "title": "动画基类",
+                "children": [
+                    { "name": "AnimatedWidget", "title": "控件动画" },
+                    { "name": "AnimatedWidgetBaseState", "title": "具有隐式动画的控件的基类" }
+                ]
+            },
+            { "name": "PageTransitionsBuilder", "title": "页面转场动画" }
+        ]
+    },
+    {
+        "name": "Delegate",
+        "title": "委托值",
+        "children": [
+            { "name": "SliverGridDelegate", "title": "栅格设置" },
+            { "name": "SliverChildDelegate", "title": "滚动列表" }
+        ]
+    },
+    {
+        "name": "Form",
+        "title": "表单值",
+        "children": [
+            { "name": "TextInputFormatter", "title": "表单验证" },
+            { "name": "ToolbarOptions", "title": "工具栏选项" },
+            { "name": "RangeLabels", "title": "范围标签" },
+            { "name": "RangeValues", "title": "范围值" }
+        ]
+    },
+    {
+        "name": "Table",
+        "title": "表格值",
+        "children": [
+            { "name": "FixedColumnWidth", "title": "固定列宽度" }
+        ]
+    },
+    {
+        "name": "Popup",
+        "title": "弹窗值",
+        "children": [
+            { "name": "OverlayEntry", "title": "全局覆盖悬浮内容" }
+        ]
+    },
+    {
+        "name": "Event",
+        "title": "事件值",
+        "children": [
+            { "name": "TapGestureRecognizer", "title": "手势事件" },
+            { "name": "FocusNode", "title": "焦点事件" },
+            { "name": "FocusScopeNode", "title": "焦点范围节点" },
+            { "name": "DraggableScrollableNotification", "title":"拖动滚动通知" }
+        ]
+    },
+    {
+        "name": "Async",
+        "title": "异步值",
+        "children": [
+            { "name": "Future", "title": "异步返回数据" },
+            { "name": "Stream", "title": "异步返回流数据" }
+        ]
+    },
+    {
+        "name": "Painting",
+        "title": "绘图值",
+        "children": [
+            { "name": "Paint", "title": "画笔", "path": "/Paint" }
+        ]
+    },
+    {
+        "name": "Key",
+        "title": "Key 值",
+        "children": [
+            {
+                "name": "GlobalKey",
+                "title": "全局 Key",
+                "children": [
+                    { "name": "GlobalKey", "title": "全局 Key" },
+                    { "name": "GlobalKey.currentContext", "title": "当前上下文信息", "path": "/GlobalKeyCurrentContext", "x": 1 }
+                ]
+            },
+            { "name": "ValueKey", "title": "key 值" },
+            { "name": "Key", "title": "" }
+        ]
+    },
+    {
+        "name": "Locale",
+        "title": "语言值",
+        "children": [
+            { "name": "Locale", "title": "地区" }
+        ]
+    },
+    {
+        "name": "DataType",
+        "title": "数据类型值",
+        "children": [
+            { "name": "null", "title": "Null"  },
+            { "name": "int", "title": "整数" },
+            { "name": "double", "title": "双精度" },
+            { "name": "String", "title": "字符串" },
+            { "name": "bool", "title": "布尔" },
+            { "name": "List", "title": "列表" },
+            { "name": "Map", "title": "映射" },
+            { "name": "Float64List", "title": "数据类型", "path": "/Float64List" },
+            { "name": "Uint8List", "title": "数据类型" },
+            { "name": "Int32List", "title": "数据类型" },
+            { "name": "Int64List", "title": "数据类型" }
+        ]
+    },
+    {
+        "name": "Cupertino",
+        "title": "Cupertino 值",
+        "children": [
+            { "name": "CupertinoPickerDefaultSelectionOverlay", "title": "在选择器上的覆盖" }
+        ]
+    },
+    {
+        "name": "Rest",
+        "title": "其它值",
+        "children": [
+            { "name": "Rect", "title": "" },
+            { "name": "RelativeRect", "title": ""},
+            { "name": "MaterialStateProperty", "title": "设置状态属性" },
+            { "name": "VisualDensity", "title": "视觉密度" },
+            { "name": "MediaQueryData", "title": "媒体查询数据配置" },
+            { "name": "PlaceholderDimensions", "title": "" },
+            { "name": "ShortcutManager", "title": "" }
+        ]
+    }
+]

@@ -1,0 +1,21 @@
+[
+    {
+        "title": "加载效果",
+        "children": [
+            { "keyword": "数据加载", "path": "/pageLoading" }
+        ]
+    },
+    {
+        "title": "表单",
+        "children": [
+            { "keyword": "select", "path": "/select" },
+            { "keyword": "radio", "path": "/radio" }
+        ]
+    },
+    {
+        "title": "弹窗",
+        "children": [
+            { "keyword": "确认弹窗", "path": "/popConfirm" }
+        ]
+    }
+]

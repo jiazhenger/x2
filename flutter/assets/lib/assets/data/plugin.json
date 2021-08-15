@@ -1,0 +1,60 @@
+[
+    {
+        "title": "相机",
+        "children": [
+            { "name":"camera", "title": "身份证拍照", "path": "/idcard" },
+            { "name":"barcode_scan", "title": "扫码" }
+        ]
+    },
+    {
+        "title": "日期",
+        "children": [
+            { "name": "flutter_cupertino_date_picker_fork", "title":"IOS 风格日期选择器" }
+        ]
+    },
+    {
+        "title": "加载",
+        "children": [
+            { "name": "loading" },
+            { "name": "loading_animations" }
+        ]
+    },
+    {
+        "title": "轮播",
+        "children": [
+            { "name": "flutter_swiper", "title": "轮播图" }
+        ]
+    },
+    {
+        "title": "html",
+        "children": [
+            { "name": "webview_flutter", "title":"webview" },
+            { "name": "flutter_html", "title":"在 flutter 中使用 html" }
+        ]
+    },
+    {
+        "title": "获取信息",
+        "children": [
+            { "name": "package_info", "title": "获取 package 管理信息" },
+            { "name": "device_info", "title": "获取设备管理信息" }
+        ]
+    },
+    {
+        "title": "外部交互",
+        "children": [
+            { "name": "url_launcher", "title": "外部交互" }
+        ]
+    },
+    {
+        "title": "图表",
+        "children": [
+            { "name": "flutter_charts", "title": "Echarts 图表" }
+        ]
+    },
+    {
+        "title": "其它",
+        "children": [
+            { "name": "flutter_intro", "title": "新手引导" }
+        ]
+    }
+]
